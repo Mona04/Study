@@ -1,1 +1,0 @@
-https://ha-young.github.io/2020/gatsby/make-blog/install-gatsby-select-starter/
