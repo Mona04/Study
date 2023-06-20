@@ -15,6 +15,8 @@ description: "Hello World"
 
 $$ \mathrm{A}$$
 
+mathjax_support
+
 ## 주의사항
 
 vscode 에서는 terminal 은 powershell 안될 때 cmd 로 하면 됨
