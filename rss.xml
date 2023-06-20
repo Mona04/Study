@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 20 Jun 2023 17:24:25 GMT</lastBuildDate><item><title><![CDATA[New Beginnings]]></title><description><![CDATA[Far far away, behind the word mountains, far from the countries Vokalia and
-Consonantia, there live the blind texts. Separated they live in…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/new-beginnings/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/new-beginnings/</guid><pubDate>Thu, 28 May 2015 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;Far far away, behind the word mountains, far from the countries Vokalia and
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://mona04.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 20 Jun 2023 17:51:15 GMT</lastBuildDate><item><title><![CDATA[New Beginnings]]></title><description><![CDATA[Far far away, behind the word mountains, far from the countries Vokalia and
+Consonantia, there live the blind texts. Separated they live in…]]></description><link>https://mona04.github.io/new-beginnings/</link><guid isPermaLink="false">https://mona04.github.io/new-beginnings/</guid><pubDate>Thu, 28 May 2015 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;Far far away, behind the word mountains, far from the countries Vokalia and
 Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
 right at the coast of the Semantics, a large language ocean. A small river named
 Duden flows by their place and supplies it with the necessary regelialia.&lt;/p&gt;
@@ -90,36 +90,35 @@ would be the word &quot;and&quot; and the Little Blind Text should turn around a
 to its own, safe country. But nothing the copy said could convince her and so it
 didn’t take long until a few insidious Copy Writers ambushed her, made her drunk
 with Longe and Parole and dragged her into their agency, where they abused her
-for their projects again and again.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[New Beginnings]]></title><description><![CDATA[진행중 freecodecamp 완료]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/공부할거/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/공부할거/</guid><pubDate>Thu, 28 May 2015 22:40:32 GMT</pubDate><content:encoded>&lt;h2&gt;진행중&lt;/h2&gt;
+for their projects again and again.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[New Beginnings]]></title><description><![CDATA[진행중 freecodecamp 완료]]></description><link>https://mona04.github.io/공부할거/</link><guid isPermaLink="false">https://mona04.github.io/공부할거/</guid><pubDate>Thu, 28 May 2015 22:40:32 GMT</pubDate><content:encoded>&lt;h2&gt;진행중&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.freecodecamp.org/learn/&quot;&gt;freecodecamp&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;완료&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[My Second Post!]]></title><description><![CDATA[Wow! I love blogging so much already. Did you know that "despite its name, salted duck eggs can also be made from
-chicken eggs, though the…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/my-second-post/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/my-second-post/</guid><pubDate>Wed, 06 May 2015 23:46:37 GMT</pubDate><content:encoded>&lt;p&gt;Wow! I love blogging so much already.&lt;/p&gt;
+chicken eggs, though the…]]></description><link>https://mona04.github.io/my-second-post/</link><guid isPermaLink="false">https://mona04.github.io/my-second-post/</guid><pubDate>Wed, 06 May 2015 23:46:37 GMT</pubDate><content:encoded>&lt;p&gt;Wow! I love blogging so much already.&lt;/p&gt;
 &lt;p&gt;Did you know that &quot;despite its name, salted duck eggs can also be made from
 chicken eggs, though the taste and texture will be somewhat different, and the
 egg yolk will be less rich.&quot;?
 (&lt;a href=&quot;https://en.wikipedia.org/wiki/Salted_duck_egg&quot;&gt;Wikipedia Link&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;Yeah, I didn&apos;t either.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Set gatsby for blogging]]></title><description><![CDATA[기본세팅 방법 node.js 를 다운받는다. node.js command prompt 에서  로 gatsby 를 설치한다. Gatsby Starters  or  포트번호를 바꾸는건  옵션으로 가능하다. $$ \mathrm{A}$$ mathjax…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/blogging-framework/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/blogging-framework/</guid><pubDate>Fri, 01 May 2015 22:12:03 GMT</pubDate><content:encoded>&lt;h2&gt;기본세팅 방법&lt;/h2&gt;
+&lt;p&gt;Yeah, I didn&apos;t either.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Set gatsby for blogging]]></title><description><![CDATA[기본세팅 방법 node.js 를 다운받는다. node.js command prompt 에서  로 gatsby 를 설치한다. Gatsby Starters  or…]]></description><link>https://mona04.github.io/blogging-framework/</link><guid isPermaLink="false">https://mona04.github.io/blogging-framework/</guid><pubDate>Fri, 01 May 2015 22:12:03 GMT</pubDate><content:encoded>&lt;h2&gt;기본세팅 방법&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;node.js 를 다운받는다.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;node.js command prompt 에서 &lt;code class=&quot;language-text&quot;&gt;npm install -g gatsby-cli&lt;/code&gt; 로 gatsby 를 설치한다.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.gatsbyjs.com/docs/starters/&quot;&gt;Gatsby Starters&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;gatsby develop&lt;/code&gt; or &lt;code class=&quot;language-text&quot;&gt;gatsby build&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;node.js 를 다운받는다.&lt;/li&gt;
+&lt;li&gt;node.js command prompt 에서 &lt;code class=&quot;language-text&quot;&gt;npm install -g gatsby-cli&lt;/code&gt; 로 gatsby 를 설치한다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.gatsbyjs.com/docs/starters/&quot;&gt;Gatsby Starters&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;gatsby develop&lt;/code&gt; or &lt;code class=&quot;language-text&quot;&gt;gatsby build&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;ul&gt;
 &lt;li&gt;포트번호를 바꾸는건 &lt;code class=&quot;language-text&quot;&gt;-p 4000&lt;/code&gt; 옵션으로 가능하다.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;이때 &lt;code class=&quot;language-text&quot;&gt;gatsby ~&lt;/code&gt; 하고 바로 실행할 수도 있고
+&lt;code class=&quot;language-text&quot;&gt;npm run [script name]&lt;/code&gt; 으로 지정된 스크립트를 실행할 수도 있다.
+스크립트는 &lt;code class=&quot;language-text&quot;&gt;package.json&lt;/code&gt; 의 &lt;code class=&quot;language-text&quot;&gt;scripts&lt;/code&gt; 에 있다.&lt;/p&gt;
+&lt;h3&gt;&lt;a href=&quot;https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/how-gatsby-works-with-github-pages/&quot;&gt;host on github page&lt;/a&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;npm i gh-pages&lt;/code&gt; 로 깃허브 블로그 배포용 플러그인을 받는다.&lt;/li&gt;
+&lt;/ol&gt;
 &lt;p&gt;$$ \mathrm{A}$$&lt;/p&gt;
 &lt;p&gt;mathjax_support&lt;/p&gt;
 &lt;h2&gt;주의사항&lt;/h2&gt;
-&lt;p&gt;vscode 에서는 terminal 은 powershell 안될 때 cmd 로 하면 됨&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Hello World]]></title><description><![CDATA[This is my first post on my new fake blog! How exciting! I'm sure I'll write a lot more interesting things in the future. Oh, and here's a…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/hello-world/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/hello-world/</guid><pubDate>Fri, 01 May 2015 22:12:03 GMT</pubDate><content:encoded>&lt;p&gt;This is my first post on my new fake blog! How exciting!&lt;/p&gt;
+&lt;p&gt;vscode 에서는 terminal 은 powershell 안될 때 cmd 로 하면 됨&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Hello World]]></title><description><![CDATA[This is my first post on my new fake blog! How exciting! I'm sure I'll write a lot more interesting things in the future. Oh, and here's a…]]></description><link>https://mona04.github.io/hello-world/</link><guid isPermaLink="false">https://mona04.github.io/hello-world/</guid><pubDate>Fri, 01 May 2015 22:12:03 GMT</pubDate><content:encoded>&lt;p&gt;This is my first post on my new fake blog! How exciting!&lt;/p&gt;
 &lt;p&gt;I&apos;m sure I&apos;ll write a lot more interesting things in the future.&lt;/p&gt;
 &lt;p&gt;Oh, and here&apos;s a great quote from this Wikipedia on
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Salted_duck_egg&quot;&gt;salted duck eggs&lt;/a&gt;.&lt;/p&gt;
@@ -138,7 +137,7 @@ firm-textured, round yolk that is bright orange-red in color.&lt;/p&gt;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/8058f3f26913fea3b6a89a73344fe94a/e1596/salty_egg.jpg&quot;
+    href=&quot;/study-log/static/8058f3f26913fea3b6a89a73344fe94a/e1596/salty_egg.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -151,13 +150,13 @@ firm-textured, round yolk that is bright orange-red in color.&lt;/p&gt;
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Chinese Salty Egg&quot;
         title=&quot;&quot;
-        src=&quot;/static/8058f3f26913fea3b6a89a73344fe94a/828fb/salty_egg.jpg&quot;
-        srcset=&quot;/static/8058f3f26913fea3b6a89a73344fe94a/ff44c/salty_egg.jpg 158w,
-/static/8058f3f26913fea3b6a89a73344fe94a/a6688/salty_egg.jpg 315w,
-/static/8058f3f26913fea3b6a89a73344fe94a/828fb/salty_egg.jpg 630w,
-/static/8058f3f26913fea3b6a89a73344fe94a/0ede0/salty_egg.jpg 945w,
-/static/8058f3f26913fea3b6a89a73344fe94a/3ac88/salty_egg.jpg 1260w,
-/static/8058f3f26913fea3b6a89a73344fe94a/e1596/salty_egg.jpg 2048w&quot;
+        src=&quot;/study-log/static/8058f3f26913fea3b6a89a73344fe94a/828fb/salty_egg.jpg&quot;
+        srcset=&quot;/study-log/static/8058f3f26913fea3b6a89a73344fe94a/ff44c/salty_egg.jpg 158w,
+/study-log/static/8058f3f26913fea3b6a89a73344fe94a/a6688/salty_egg.jpg 315w,
+/study-log/static/8058f3f26913fea3b6a89a73344fe94a/828fb/salty_egg.jpg 630w,
+/study-log/static/8058f3f26913fea3b6a89a73344fe94a/0ede0/salty_egg.jpg 945w,
+/study-log/static/8058f3f26913fea3b6a89a73344fe94a/3ac88/salty_egg.jpg 1260w,
+/study-log/static/8058f3f26913fea3b6a89a73344fe94a/e1596/salty_egg.jpg 2048w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
