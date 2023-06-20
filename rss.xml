@@ -1,4 +1,113 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://mona04.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 20 Jun 2023 17:51:15 GMT</lastBuildDate><item><title><![CDATA[New Beginnings]]></title><description><![CDATA[Far far away, behind the word mountains, far from the countries Vokalia and
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://mona04.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 20 Jun 2023 18:22:33 GMT</lastBuildDate><item><title><![CDATA[Set gatsby for blogging]]></title><description><![CDATA[기본세팅 방법 node.js 를 다운받는다. node.js command prompt 에서  로 gatsby 를 설치한다. .  로 Starter 를 보통 넣는다. Gatsby Starters…]]></description><link>https://mona04.github.io/blogging-framework/</link><guid isPermaLink="false">https://mona04.github.io/blogging-framework/</guid><pubDate>Invalid Date</pubDate><content:encoded>&lt;h2&gt;기본세팅 방법&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;node.js 를 다운받는다.&lt;/li&gt;
+&lt;li&gt;node.js command prompt 에서 &lt;code class=&quot;language-text&quot;&gt;npm install -g gatsby-cli&lt;/code&gt; 로 gatsby 를 설치한다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;gatsby new [SITE_DIRECTORY] [URL_OF_STARTER_GIT_REPO]&lt;/code&gt;.
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;SITE_DIRECtORY&lt;/code&gt; 로 Starter 를 보통 넣는다. &lt;a href=&quot;https://www.gatsbyjs.com/docs/starters/&quot;&gt;Gatsby Starters&lt;/a&gt; 를 참고하자.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;gatsby new gatsby-starter-blog [URL_OF_STARTER_GIT_REPO]&lt;/code&gt; 를 많이 하더라.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;npm run develop&lt;/code&gt; 으로 실시간 디버그가 가능하게 한다.&lt;/li&gt;
+&lt;li&gt;블로깅한다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;npm run deploy&lt;/code&gt; 로 배포한다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Command&lt;/h3&gt;
+&lt;p&gt;vscode 에서는 terminal 은 powershell 에서 안되면 cmd 로 하면 된다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;gatsby ~&lt;/code&gt; 하고 바로 실행할 수도 있고
+&lt;code class=&quot;language-text&quot;&gt;npm run [script name]&lt;/code&gt; 으로 지정된 스크립트를 실행할 수도 있다.
+플러그인 관련 커맨드도 실행해야하므로 보통 스크립트를 쓴다.
+스크립트는 &lt;code class=&quot;language-text&quot;&gt;package.json&lt;/code&gt; 의 &lt;code class=&quot;language-text&quot;&gt;scripts&lt;/code&gt; 에 있다.&lt;/p&gt;
+&lt;p&gt;포트번호를 바꾸는건 &lt;code class=&quot;language-text&quot;&gt;-p 4000&lt;/code&gt; 옵션으로 가능하다.&lt;/p&gt;
+&lt;h3&gt;&lt;a href=&quot;https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/how-gatsby-works-with-github-pages/&quot;&gt;host on github page&lt;/a&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;npm i gh-pages&lt;/code&gt; 로 깃허브 블로그 배포용 플러그인을 받는다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;gatsby-config.js&lt;/code&gt; 에서 &lt;code class=&quot;language-text&quot;&gt;pathPrefix: &quot;[repository name]&quot;&lt;/code&gt; 을 추가&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;package.json&lt;/code&gt; 에서 &lt;code class=&quot;language-text&quot;&gt; &quot;deploy&quot;: &quot;gatsby build --prefix-paths &amp;amp;&amp;amp; gh-pages -d public -b [branch name]&quot;&lt;/code&gt; 스크립트 추가.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;$$ \mathrm{A}$$&lt;/p&gt;
+&lt;p&gt;mathjax_support&lt;/p&gt;
+&lt;h2&gt;주의사항&lt;/h2&gt;
+&lt;h1&gt;README 에서 따온 기본설명&lt;/h1&gt;
+&lt;h2&gt;🚀 Quick start&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Create a Gatsby site.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Use the Gatsby CLI (&lt;a href=&quot;https://www.gatsbyjs.com/docs/tutorial/getting-started/part-0/#gatsby-cli&quot;&gt;install instructions&lt;/a&gt;) to create a new site, specifying the blog starter.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# create a new Gatsby site using the blog starter&lt;/span&gt;
+gatsby new my-blog-starter https://github.com/gatsbyjs/gatsby-starter-blog&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Start developing.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Navigate into your new site’s directory and start it up.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; my-blog-starter/
+gatsby develop&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Open the source code and start editing!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Your site is now running at &lt;code class=&quot;language-text&quot;&gt;http://localhost:8000&lt;/code&gt;!&lt;/p&gt;
+&lt;p&gt;Note: You&apos;ll also see a second link: &lt;code class=&quot;language-text&quot;&gt;http://localhost:8000/___graphql&lt;/code&gt;. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the &lt;a href=&quot;https://www.gatsbyjs.com/docs/tutorial/getting-started/part-4/#use-graphiql-to-explore-the-data-layer-and-write-graphql-queries&quot;&gt;Gatsby Tutorial&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Open the &lt;code class=&quot;language-text&quot;&gt;my-blog-starter&lt;/code&gt; directory in your code editor of choice and edit &lt;code class=&quot;language-text&quot;&gt;src/pages/index.js&lt;/code&gt;. Save your changes and the browser will update in real time!&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;🚀 Quick start (Netlify)&lt;/h2&gt;
+&lt;p&gt;Deploy this starter with one click on &lt;a href=&quot;https://app.netlify.com/signup&quot;&gt;Netlify&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-blog&quot;&gt;&lt;img src=&quot;https://www.netlify.com/img/deploy/button.svg&quot; alt=&quot;Deploy to Netlify&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;🧐 What&apos;s inside?&lt;/h2&gt;
+&lt;p&gt;A quick look at the top-level files and directories you&apos;ll see in a typical Gatsby project.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;.
+├── node_modules
+├── src
+├── .gitignore
+├── gatsby-browser.js
+├── gatsby-config.js
+├── gatsby-node.js
+├── gatsby-ssr.js
+├── LICENSE
+├── package.json
+└── README.md&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;/node_modules&lt;/code&gt;&lt;/strong&gt;: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;/src&lt;/code&gt;&lt;/strong&gt;: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. &lt;code class=&quot;language-text&quot;&gt;src&lt;/code&gt; is a convention for “source code”.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;.gitignore&lt;/code&gt;&lt;/strong&gt;: This file tells git which files it should not track / not maintain a version history for.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;gatsby-browser.js&lt;/code&gt;&lt;/strong&gt;: This file is where Gatsby expects to find any usage of the &lt;a href=&quot;https://www.gatsbyjs.com/docs/reference/config-files/gatsby-browser/&quot;&gt;Gatsby browser APIs&lt;/a&gt; (if any). These allow customization/extension of default Gatsby settings affecting the browser.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;gatsby-config.js&lt;/code&gt;&lt;/strong&gt;: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the &lt;a href=&quot;https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/&quot;&gt;config docs&lt;/a&gt; for more detail).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;gatsby-node.js&lt;/code&gt;&lt;/strong&gt;: This file is where Gatsby expects to find any usage of the &lt;a href=&quot;https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/&quot;&gt;Gatsby Node APIs&lt;/a&gt; (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;gatsby-ssr.js&lt;/code&gt;&lt;/strong&gt;: This file is where Gatsby expects to find any usage of the &lt;a href=&quot;https://www.gatsbyjs.com/docs/reference/config-files/gatsby-ssr/&quot;&gt;Gatsby server-side rendering APIs&lt;/a&gt; (if any). These allow customization of default Gatsby settings affecting server-side rendering.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;LICENSE&lt;/code&gt;&lt;/strong&gt;: This Gatsby starter is licensed under the 0BSD license. This means that you can see this file as a placeholder and replace it with your own license.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;package.json&lt;/code&gt;&lt;/strong&gt;: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;README.md&lt;/code&gt;&lt;/strong&gt;: A text file containing useful reference information about your project.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;🎓 Learning Gatsby&lt;/h2&gt;
+&lt;p&gt;Looking for more guidance? Full documentation for Gatsby lives &lt;a href=&quot;https://www.gatsbyjs.com/&quot;&gt;on the website&lt;/a&gt;. Here are some places to start:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;For most developers, we recommend starting with our &lt;a href=&quot;https://www.gatsbyjs.com/docs/tutorial/getting-started/&quot;&gt;in-depth tutorial for creating a site with Gatsby&lt;/a&gt;.&lt;/strong&gt; It starts with zero assumptions about your level of ability and walks through every step of the process.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;To dive straight into code samples, head &lt;a href=&quot;https://www.gatsbyjs.com/docs/&quot;&gt;to our documentation&lt;/a&gt;.&lt;/strong&gt; In particular, check out the &lt;em&gt;Guides&lt;/em&gt;, &lt;em&gt;API Reference&lt;/em&gt;, and &lt;em&gt;Advanced Tutorials&lt;/em&gt; sections in the sidebar.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[New Beginnings]]></title><description><![CDATA[Far far away, behind the word mountains, far from the countries Vokalia and
 Consonantia, there live the blind texts. Separated they live in…]]></description><link>https://mona04.github.io/new-beginnings/</link><guid isPermaLink="false">https://mona04.github.io/new-beginnings/</guid><pubDate>Thu, 28 May 2015 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;Far far away, behind the word mountains, far from the countries Vokalia and
 Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
 right at the coast of the Semantics, a large language ocean. A small river named
@@ -98,27 +207,7 @@ chicken eggs, though the…]]></description><link>https://mona04.github.io/my-se
 chicken eggs, though the taste and texture will be somewhat different, and the
 egg yolk will be less rich.&quot;?
 (&lt;a href=&quot;https://en.wikipedia.org/wiki/Salted_duck_egg&quot;&gt;Wikipedia Link&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;Yeah, I didn&apos;t either.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Set gatsby for blogging]]></title><description><![CDATA[기본세팅 방법 node.js 를 다운받는다. node.js command prompt 에서  로 gatsby 를 설치한다. Gatsby Starters  or…]]></description><link>https://mona04.github.io/blogging-framework/</link><guid isPermaLink="false">https://mona04.github.io/blogging-framework/</guid><pubDate>Fri, 01 May 2015 22:12:03 GMT</pubDate><content:encoded>&lt;h2&gt;기본세팅 방법&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;node.js 를 다운받는다.&lt;/li&gt;
-&lt;li&gt;node.js command prompt 에서 &lt;code class=&quot;language-text&quot;&gt;npm install -g gatsby-cli&lt;/code&gt; 로 gatsby 를 설치한다.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.gatsbyjs.com/docs/starters/&quot;&gt;Gatsby Starters&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;gatsby develop&lt;/code&gt; or &lt;code class=&quot;language-text&quot;&gt;gatsby build&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;포트번호를 바꾸는건 &lt;code class=&quot;language-text&quot;&gt;-p 4000&lt;/code&gt; 옵션으로 가능하다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;이때 &lt;code class=&quot;language-text&quot;&gt;gatsby ~&lt;/code&gt; 하고 바로 실행할 수도 있고
-&lt;code class=&quot;language-text&quot;&gt;npm run [script name]&lt;/code&gt; 으로 지정된 스크립트를 실행할 수도 있다.
-스크립트는 &lt;code class=&quot;language-text&quot;&gt;package.json&lt;/code&gt; 의 &lt;code class=&quot;language-text&quot;&gt;scripts&lt;/code&gt; 에 있다.&lt;/p&gt;
-&lt;h3&gt;&lt;a href=&quot;https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/how-gatsby-works-with-github-pages/&quot;&gt;host on github page&lt;/a&gt;&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;npm i gh-pages&lt;/code&gt; 로 깃허브 블로그 배포용 플러그인을 받는다.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;$$ \mathrm{A}$$&lt;/p&gt;
-&lt;p&gt;mathjax_support&lt;/p&gt;
-&lt;h2&gt;주의사항&lt;/h2&gt;
-&lt;p&gt;vscode 에서는 terminal 은 powershell 안될 때 cmd 로 하면 됨&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Hello World]]></title><description><![CDATA[This is my first post on my new fake blog! How exciting! I'm sure I'll write a lot more interesting things in the future. Oh, and here's a…]]></description><link>https://mona04.github.io/hello-world/</link><guid isPermaLink="false">https://mona04.github.io/hello-world/</guid><pubDate>Fri, 01 May 2015 22:12:03 GMT</pubDate><content:encoded>&lt;p&gt;This is my first post on my new fake blog! How exciting!&lt;/p&gt;
+&lt;p&gt;Yeah, I didn&apos;t either.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Hello World]]></title><description><![CDATA[This is my first post on my new fake blog! How exciting! I'm sure I'll write a lot more interesting things in the future. Oh, and here's a…]]></description><link>https://mona04.github.io/hello-world/</link><guid isPermaLink="false">https://mona04.github.io/hello-world/</guid><pubDate>Fri, 01 May 2015 22:12:03 GMT</pubDate><content:encoded>&lt;p&gt;This is my first post on my new fake blog! How exciting!&lt;/p&gt;
 &lt;p&gt;I&apos;m sure I&apos;ll write a lot more interesting things in the future.&lt;/p&gt;
 &lt;p&gt;Oh, and here&apos;s a great quote from this Wikipedia on
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Salted_duck_egg&quot;&gt;salted duck eggs&lt;/a&gt;.&lt;/p&gt;
