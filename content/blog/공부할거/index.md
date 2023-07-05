@@ -9,6 +9,8 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
 
 [freecodecamp](https://www.freecodecamp.org/learn/)
 
+이거랑 CodePen(js 쪽)
 
 
 ## 완료
+
