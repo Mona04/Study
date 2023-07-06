@@ -30,6 +30,30 @@ vscode 에서는 terminal 은 powershell 에서 안되면 cmd 로 하면 된다.
 포트번호를 바꾸는건 ```-p 4000``` 옵션으로 가능하다.
 
 
+### WebPack Config 설정
+
+```
+// gatsby-node.js
+/**
+ * @type {import('gatsby').GatsbyNode['onCreateWebpackConfig']}
+ */
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      alias: {
+        components: path.resolve(__dirname, 'src/components'),
+        templates: path.resolve(__dirname, 'src/templates'),
+        scss: path.resolve(__dirname, 'src/scss'),
+      },
+    },
+  })
+}
+```
+
+```gatsby-node.js``` 에서 설정할 수 있다.
+
+
+
 
 
 ### [host on github page](https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/how-gatsby-works-with-github-pages/)

@@ -329,3 +329,28 @@ a:focus {
     list-style-position: inside;
   }
 }
+
+
+
+@media (prefers-color-scheme: light) {
+  .dark-mode-title {
+    display:none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    background: #111;
+    color: #fff;    
+  }  
+  .light-mode-title {
+    display:none;
+  }  
+}
+
+
+button.dark  {
+  background-color: red;
+  width: 100rem;
+  height:  100rem;
+}
