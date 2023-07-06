@@ -15,6 +15,9 @@ Category 별로 글 목록을 볼 수 있어야하고, Post Title, Content, Tag 
 
 latex 지원을 위해서 mathjax 를 생각하고 있다.
 
+영작을 위해 한영모드가 있으면 좋겠다. 
+
 ## 디자인하기
 
 SASS 와 다크모드를 우선 구현하자.
+
