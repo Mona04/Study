@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "jsx": "react",
+    "module": "esnext",
+    "moduleResolution": "node",  
+
+    "strict": true,    /* Enable all strict type-checking options. */
+    "strictNullChecks": true,  /*cannot alloc null undefined in number and what not.*/
+
+    "sourceMap": true,
+    "baseUrl": "./src", 
+    "paths": {
+          //"@assets/*": ["assets/*"],
+    }
+  },
+  "include": ["./src/**/*", "gatsby-node.js", "./gatsby-config.ts", "./plugins/**/*", "global.d.ts", "tsconfig.json"]
+}

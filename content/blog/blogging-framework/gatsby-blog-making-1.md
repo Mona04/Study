@@ -30,7 +30,8 @@ vscode 에서는 terminal 은 powershell 에서 안되면 cmd 로 하면 된다.
 포트번호를 바꾸는건 ```-p 4000``` 옵션으로 가능하다.
 
 
-### WebPack Config 설정
+
+### [Custom Webpack Config](https://www.gatsbyjs.com/docs/how-to/custom-configuration/add-custom-webpack-config/)
 
 ```
 // gatsby-node.js
@@ -38,21 +39,32 @@ vscode 에서는 terminal 은 powershell 에서 안되면 cmd 로 하면 된다.
  * @type {import('gatsby').GatsbyNode['onCreateWebpackConfig']}
  */
 exports.onCreateWebpackConfig = ({ actions }) => {
+  console.log(path.resolve(__dirname, "src"));
   actions.setWebpackConfig({
     resolve: {
-      alias: {
-        components: path.resolve(__dirname, 'src/components'),
-        templates: path.resolve(__dirname, 'src/templates'),
-        scss: path.resolve(__dirname, 'src/scss'),
-      },
+      modules: ["node_modules", path.resolve(__dirname, "src"), ],
     },
   })
 }
+
 ```
 
-```gatsby-node.js``` 에서 설정할 수 있다.
+기본 참조 디렉토리는 위처럼 첨부할 수 있다. ```node_modules``` 는 gatsby 의 기본 설정으로 되어있는 거라 빼놓으면 안된다. 이렇게 해놓으면 ```./../test.css``` 를 ```test.css``` 로 대체할 수 있다.
 
 
+### Type Script
+
+gatsby 5.0 기준으로 기본적으로 제공한다. 그런데 vscode 에서 인식을 못해서 몇가지 설정을 만져줘야한다. 
+
+1. ```tsconfig.json```
+  + gatsby 샘플 프로젝트에서 ```tsconfig.json``` 을 제공하니 [참고](https://github.com/gatsbyjs/gatsby/blob/master/starters/gatsby-starter-minimal-ts/tsconfig.json).
+
+2. ```global.d.ts```
+  + scss 인식을 못하면 ```declare module '*.scss';``` 를 추가해보자.
+
+
+
+하지만 이 상태에서는 
 
 
 

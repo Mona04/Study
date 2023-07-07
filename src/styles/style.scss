@@ -339,15 +339,52 @@ a:focus {
 }
 
 @media (prefers-color-scheme: dark) {
-  html {
-    background: #111;
-    color: #fff;    
-  }  
+  //html {
+  //  background-color: #111;  
+  //}  
   .light-mode-title {
     display:none;
   }  
 }
 
+$themes: (
+  "light": (
+    "background": white
+  ),
+  "dark": (
+    "background": black
+  )
+);
+
+@each $theme-name, $properties in $themes {
+  html[data-theme="#{$theme-name}"] {
+    // define a css variable for each property
+    @each $name, $property in $properties {
+      --#{$name}: #{$property};
+
+      @if ($name == "primary") {
+        --#{$name}-dark: #{darken($property, 10%)};
+        --#{$name}-darker: #{darken($property, 20%)};
+      }
+    }
+  }
+}
+//:root[data-theme="light"] {
+//  --color-text: #{$text-color-1};
+//  --color-background: #{$bg-color-1};
+//  --color-btn : #{$btn-color-1};
+//}
+//
+//:root[data-theme="dark"] {
+//--color-text: #{$text-color-2};
+//--color-background: #{$bg-color-2};
+//--color-btn : #{$btn-color-2};
+//}
+
+html[data-theme="dark"] {
+  background-color: var(--background);
+  //background-color: red;
+}
 
 button.dark  {
   background-color: red;

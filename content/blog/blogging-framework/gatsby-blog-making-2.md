@@ -5,19 +5,16 @@ description: "Hello World"
 ---
 
 
-## 필요한 기능
+## 구현관련 특이사항
 
-Category 별로 글 목록을 볼 수 있어야하고, Post Title, Content, Tag 및 Category 로 검색기능이 필요하다.
+### Styling
 
-다크모드가 필요하다.
+css module 을 사용하려면 파일 이름을 ```[name].module.css``` 처럼 중간에 ```.module``` 이 필요하다.
 
-공부상태를 이쁘게 표현할 Component 를 홈 화면에 띄우고 싶다.
+webpack 의 tree shaking (산출물에서의 불필요한 코드 제거) 를 위해선 전체를 import 하지 않는 것이 권장된다.
 
-latex 지원을 위해서 mathjax 를 생각하고 있다.
-
-영작을 위해 한영모드가 있으면 좋겠다. 
-
-## 디자인하기
-
-SASS 와 다크모드를 우선 구현하자.
+```
+import * as styles from 'style.module.css' // 
+import { dark } from 'style.module.css'
+```
 

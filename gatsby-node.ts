@@ -3,26 +3,23 @@
  *
  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/
  */
-
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 // Define the template for blog post
-const blogPost = path.resolve(`./src/templates/blog-post.js`)
+const blogPost : string = path.resolve(`./src/templates/blog-post.js`)
 
 
 /**
  * @type {import('gatsby').GatsbyNode['onCreateWebpackConfig']}
  */
-exports.onCreateWebpackConfig = ({ actions }) => {
+exports.onCreateWebpackConfig = ({ actions }: any) => {
   actions.setWebpackConfig({
     resolve: {
-      modules: [path.resolve(__dirname, "src"), "node_modules"],
-      /*alias: {
-        components: path.resolve(__dirname, 'src/components'),
-        templates: path.resolve(__dirname, 'src/templates'),
-        scss: path.resolve(__dirname, 'src/scss'),
-      },*/
+      modules: ["node_modules", path.resolve(__dirname, "src"), ],
+      alias: {
+        '@base':  path.resolve(__dirname, "src")
+      }
     },
   })
 }
@@ -31,7 +28,12 @@ exports.onCreateWebpackConfig = ({ actions }) => {
 /**
  * @type {import('gatsby').GatsbyNode['createPages']}
  */
-exports.createPages = async ({ graphql, actions, reporter }) => {
+type MDRemark = {
+  id:number, 
+  fields:{slug:string}
+}
+
+exports.createPages = async ({ graphql, actions, reporter }:any) => {
   const { createPage } = actions
 
   // Get all markdown blog posts sorted by date
@@ -56,14 +58,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
 
-  const posts = result.data.allMarkdownRemark.nodes
+  const posts : MDRemark[] = result.data.allMarkdownRemark.nodes
 
   // Create blog posts pages
   // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
   // `context` is available in the template as a prop and as a variable in GraphQL
 
   if (posts.length > 0) {
-    posts.forEach((post, index) => {
+    posts.forEach((post:MDRemark, index:number) => {
       const previousPostId = index === 0 ? null : posts[index - 1].id
       const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
 
@@ -83,7 +85,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 /**
  * @type {import('gatsby').GatsbyNode['onCreateNode']}
  */
-exports.onCreateNode = ({ node, actions, getNode }) => {
+exports.onCreateNode = ({ node, actions, getNode }:any) => {
   const { createNodeField } = actions
 
   if (node.internal.type === `MarkdownRemark`) {
