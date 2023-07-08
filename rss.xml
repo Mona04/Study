@@ -1,16 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://mona04.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 20 Jun 2023 18:22:33 GMT</lastBuildDate><item><title><![CDATA[Set gatsby for blogging]]></title><description><![CDATA[기본세팅 방법 node.js 를 다운받는다. node.js command prompt 에서  로 gatsby 를 설치한다. .  로 Starter 를 보통 넣는다. Gatsby Starters…]]></description><link>https://mona04.github.io/blogging-framework/</link><guid isPermaLink="false">https://mona04.github.io/blogging-framework/</guid><pubDate>Invalid Date</pubDate><content:encoded>&lt;h2&gt;기본세팅 방법&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://mona04.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 08 Jul 2023 07:06:57 GMT</lastBuildDate><item><title><![CDATA[No title]]></title><description><![CDATA[sidebar                    [content table]]]></description><link>https://mona04.github.io/blogging-framework/설계/</link><guid isPermaLink="false">https://mona04.github.io/blogging-framework/설계/</guid><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;         navbar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;sidebar                    [content table]&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;        본 문
+        
+        댓글&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Make Blog using Gatsby - 1]]></title><description><![CDATA[기본세팅 방법 node.js 를 다운받는다. node.js command prompt 에서  로 gatsby 를 설치한다. .  로 Starter 를 보통 넣는다. Gatsby Starters 를 참고하자.  를 많이 하더라. bloging…]]></description><link>https://mona04.github.io/blogging-framework/gatsby-blog-making-1/</link><guid isPermaLink="false">https://mona04.github.io/blogging-framework/gatsby-blog-making-1/</guid><pubDate>Invalid Date</pubDate><content:encoded>&lt;h2&gt;기본세팅 방법&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;node.js 를 다운받는다.&lt;/li&gt;
 &lt;li&gt;node.js command prompt 에서 &lt;code class=&quot;language-text&quot;&gt;npm install -g gatsby-cli&lt;/code&gt; 로 gatsby 를 설치한다.&lt;/li&gt;
 &lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;gatsby new [SITE_DIRECTORY] [URL_OF_STARTER_GIT_REPO]&lt;/code&gt;.
 &lt;ul&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;SITE_DIRECtORY&lt;/code&gt; 로 Starter 를 보통 넣는다. &lt;a href=&quot;https://www.gatsbyjs.com/docs/starters/&quot;&gt;Gatsby Starters&lt;/a&gt; 를 참고하자.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;SITE_DIRECTORY&lt;/code&gt; 로 Starter 를 보통 넣는다. &lt;a href=&quot;https://www.gatsbyjs.com/docs/starters/&quot;&gt;Gatsby Starters&lt;/a&gt; 를 참고하자.&lt;/li&gt;
 &lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;gatsby new gatsby-starter-blog [URL_OF_STARTER_GIT_REPO]&lt;/code&gt; 를 많이 하더라.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;bloging
+&lt;ol&gt;
 &lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;npm run develop&lt;/code&gt; 으로 실시간 디버그가 가능하게 한다.&lt;/li&gt;
-&lt;li&gt;블로깅한다.&lt;/li&gt;
 &lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;npm run deploy&lt;/code&gt; 로 배포한다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3&gt;Command&lt;/h3&gt;
 &lt;p&gt;vscode 에서는 terminal 은 powershell 에서 안되면 cmd 로 하면 된다.&lt;/p&gt;
@@ -25,81 +32,37 @@
 &lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;gatsby-config.js&lt;/code&gt; 에서 &lt;code class=&quot;language-text&quot;&gt;pathPrefix: &quot;[repository name]&quot;&lt;/code&gt; 을 추가&lt;/li&gt;
 &lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;package.json&lt;/code&gt; 에서 &lt;code class=&quot;language-text&quot;&gt; &quot;deploy&quot;: &quot;gatsby build --prefix-paths &amp;amp;&amp;amp; gh-pages -d public -b [branch name]&quot;&lt;/code&gt; 스크립트 추가.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;$$ \mathrm{A}$$&lt;/p&gt;
-&lt;p&gt;mathjax_support&lt;/p&gt;
-&lt;h2&gt;주의사항&lt;/h2&gt;
-&lt;h1&gt;README 에서 따온 기본설명&lt;/h1&gt;
-&lt;h2&gt;🚀 Quick start&lt;/h2&gt;
+&lt;h3&gt;&lt;a href=&quot;https://www.gatsbyjs.com/docs/how-to/custom-configuration/add-custom-webpack-config/&quot;&gt;Custom Webpack Config&lt;/a&gt;&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// gatsby-node.js
+/**
+ * @type {import(&apos;gatsby&apos;).GatsbyNode[&apos;onCreateWebpackConfig&apos;]}
+ */
+exports.onCreateWebpackConfig = ({ actions }) =&gt; {
+  console.log(path.resolve(__dirname, &quot;src&quot;));
+  actions.setWebpackConfig({
+    resolve: {
+      modules: [&quot;node_modules&quot;, path.resolve(__dirname, &quot;src&quot;), ],
+    },
+  })
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;기본 참조 디렉토리는 위처럼 첨부할 수 있다. &lt;code class=&quot;language-text&quot;&gt;node_modules&lt;/code&gt; 는 gatsby 의 기본 설정으로 되어있는 거라 빼놓으면 안된다. 이렇게 해놓으면 &lt;code class=&quot;language-text&quot;&gt;./../test.css&lt;/code&gt; 를 &lt;code class=&quot;language-text&quot;&gt;test.css&lt;/code&gt; 로 대체할 수 있다.&lt;/p&gt;
+&lt;h3&gt;Type Script&lt;/h3&gt;
+&lt;p&gt;gatsby 5.0 기준으로 기본적으로 제공한다. 그런데 vscode 에서 인식을 못해서 몇가지 설정을 만져줘야한다.&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Create a Gatsby site.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Use the Gatsby CLI (&lt;a href=&quot;https://www.gatsbyjs.com/docs/tutorial/getting-started/part-0/#gatsby-cli&quot;&gt;install instructions&lt;/a&gt;) to create a new site, specifying the blog starter.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# create a new Gatsby site using the blog starter&lt;/span&gt;
-gatsby new my-blog-starter https://github.com/gatsbyjs/gatsby-starter-blog&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Start developing.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Navigate into your new site’s directory and start it up.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; my-blog-starter/
-gatsby develop&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Open the source code and start editing!&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Your site is now running at &lt;code class=&quot;language-text&quot;&gt;http://localhost:8000&lt;/code&gt;!&lt;/p&gt;
-&lt;p&gt;Note: You&apos;ll also see a second link: &lt;code class=&quot;language-text&quot;&gt;http://localhost:8000/___graphql&lt;/code&gt;. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the &lt;a href=&quot;https://www.gatsbyjs.com/docs/tutorial/getting-started/part-4/#use-graphiql-to-explore-the-data-layer-and-write-graphql-queries&quot;&gt;Gatsby Tutorial&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Open the &lt;code class=&quot;language-text&quot;&gt;my-blog-starter&lt;/code&gt; directory in your code editor of choice and edit &lt;code class=&quot;language-text&quot;&gt;src/pages/index.js&lt;/code&gt;. Save your changes and the browser will update in real time!&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;tsconfig.json&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2&gt;🚀 Quick start (Netlify)&lt;/h2&gt;
-&lt;p&gt;Deploy this starter with one click on &lt;a href=&quot;https://app.netlify.com/signup&quot;&gt;Netlify&lt;/a&gt;:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-blog&quot;&gt;&lt;img src=&quot;https://www.netlify.com/img/deploy/button.svg&quot; alt=&quot;Deploy to Netlify&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;🧐 What&apos;s inside?&lt;/h2&gt;
-&lt;p&gt;A quick look at the top-level files and directories you&apos;ll see in a typical Gatsby project.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;.
-├── node_modules
-├── src
-├── .gitignore
-├── gatsby-browser.js
-├── gatsby-config.js
-├── gatsby-node.js
-├── gatsby-ssr.js
-├── LICENSE
-├── package.json
-└── README.md&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;/node_modules&lt;/code&gt;&lt;/strong&gt;: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;/src&lt;/code&gt;&lt;/strong&gt;: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. &lt;code class=&quot;language-text&quot;&gt;src&lt;/code&gt; is a convention for “source code”.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;.gitignore&lt;/code&gt;&lt;/strong&gt;: This file tells git which files it should not track / not maintain a version history for.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;gatsby-browser.js&lt;/code&gt;&lt;/strong&gt;: This file is where Gatsby expects to find any usage of the &lt;a href=&quot;https://www.gatsbyjs.com/docs/reference/config-files/gatsby-browser/&quot;&gt;Gatsby browser APIs&lt;/a&gt; (if any). These allow customization/extension of default Gatsby settings affecting the browser.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;gatsby-config.js&lt;/code&gt;&lt;/strong&gt;: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the &lt;a href=&quot;https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/&quot;&gt;config docs&lt;/a&gt; for more detail).&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;gatsby-node.js&lt;/code&gt;&lt;/strong&gt;: This file is where Gatsby expects to find any usage of the &lt;a href=&quot;https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/&quot;&gt;Gatsby Node APIs&lt;/a&gt; (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;gatsby-ssr.js&lt;/code&gt;&lt;/strong&gt;: This file is where Gatsby expects to find any usage of the &lt;a href=&quot;https://www.gatsbyjs.com/docs/reference/config-files/gatsby-ssr/&quot;&gt;Gatsby server-side rendering APIs&lt;/a&gt; (if any). These allow customization of default Gatsby settings affecting server-side rendering.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;LICENSE&lt;/code&gt;&lt;/strong&gt;: This Gatsby starter is licensed under the 0BSD license. This means that you can see this file as a placeholder and replace it with your own license.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;package.json&lt;/code&gt;&lt;/strong&gt;: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;README.md&lt;/code&gt;&lt;/strong&gt;: A text file containing useful reference information about your project.&lt;/p&gt;
-&lt;/li&gt;
+&lt;ul&gt;
+&lt;li&gt;gatsby 샘플 프로젝트에서 &lt;code class=&quot;language-text&quot;&gt;tsconfig.json&lt;/code&gt; 을 제공하니 &lt;a href=&quot;https://github.com/gatsbyjs/gatsby/blob/master/starters/gatsby-starter-minimal-ts/tsconfig.json&quot;&gt;참고&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;global.d.ts&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2&gt;🎓 Learning Gatsby&lt;/h2&gt;
-&lt;p&gt;Looking for more guidance? Full documentation for Gatsby lives &lt;a href=&quot;https://www.gatsbyjs.com/&quot;&gt;on the website&lt;/a&gt;. Here are some places to start:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;scss 인식을 못하면 &lt;code class=&quot;language-text&quot;&gt;declare module &apos;*.scss&apos;;&lt;/code&gt; 를 추가해보자.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;자주 찾을 공식 문서&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.gatsbyjs.com/docs/reference/gatsby-project-structure/&quot;&gt;gatsby-project-structure&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;For most developers, we recommend starting with our &lt;a href=&quot;https://www.gatsbyjs.com/docs/tutorial/getting-started/&quot;&gt;in-depth tutorial for creating a site with Gatsby&lt;/a&gt;.&lt;/strong&gt; It starts with zero assumptions about your level of ability and walks through every step of the process.&lt;/p&gt;
@@ -107,7 +70,19 @@ gatsby develop&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;To dive straight into code samples, head &lt;a href=&quot;https://www.gatsbyjs.com/docs/&quot;&gt;to our documentation&lt;/a&gt;.&lt;/strong&gt; In particular, check out the &lt;em&gt;Guides&lt;/em&gt;, &lt;em&gt;API Reference&lt;/em&gt;, and &lt;em&gt;Advanced Tutorials&lt;/em&gt; sections in the sidebar.&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[New Beginnings]]></title><description><![CDATA[Far far away, behind the word mountains, far from the countries Vokalia and
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Make Blog using Gatsby - 2]]></title><description><![CDATA[구현관련 특이사항 Styling css module 을 사용하려면 파일 이름을  처럼 중간에  이 필요하다. webpack 의 tree shaking (산출물에서의 불필요한 코드 제거) 를 위해선 전체를 import 하지 않는 것이 권장된다.]]></description><link>https://mona04.github.io/blogging-framework/gatsby-blog-making-2/</link><guid isPermaLink="false">https://mona04.github.io/blogging-framework/gatsby-blog-making-2/</guid><pubDate>Invalid Date</pubDate><content:encoded>&lt;h2&gt;구현관련 특이사항&lt;/h2&gt;
+&lt;h3&gt;Styling&lt;/h3&gt;
+&lt;p&gt;css module 을 사용하려면 파일 이름을 &lt;code class=&quot;language-text&quot;&gt;[name].module.css&lt;/code&gt; 처럼 중간에 &lt;code class=&quot;language-text&quot;&gt;.module&lt;/code&gt; 이 필요하다.&lt;/p&gt;
+&lt;p&gt;webpack 의 tree shaking (산출물에서의 불필요한 코드 제거) 를 위해선 전체를 import 하지 않는 것이 권장된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;import * as styles from &apos;style.module.css&apos; // 
+import { dark } from &apos;style.module.css&apos;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Make Blog using Gatsby - 3]]></title><description><![CDATA[필요한 기능 Category 별로 글 목록을 볼 수 있어야하고, Post Title, Content, Tag 및 Category 로 검색기능이 필요하다. 다크모드가 필요하다. 공부상태를 이쁘게 표현할 Component…]]></description><link>https://mona04.github.io/blogging-framework/gatsby-blog-making-3/</link><guid isPermaLink="false">https://mona04.github.io/blogging-framework/gatsby-blog-making-3/</guid><pubDate>Invalid Date</pubDate><content:encoded>&lt;h2&gt;필요한 기능&lt;/h2&gt;
+&lt;p&gt;Category 별로 글 목록을 볼 수 있어야하고, Post Title, Content, Tag 및 Category 로 검색기능이 필요하다.&lt;/p&gt;
+&lt;p&gt;다크모드가 필요하다.&lt;/p&gt;
+&lt;p&gt;공부상태를 이쁘게 표현할 Component 를 홈 화면에 띄우고 싶다.&lt;/p&gt;
+&lt;p&gt;latex 지원을 위해서 mathjax 를 생각하고 있다.&lt;/p&gt;
+&lt;p&gt;영작을 위해 한영모드가 있으면 좋겠다.&lt;/p&gt;
+&lt;h2&gt;디자인하기&lt;/h2&gt;
+&lt;p&gt;SASS 와 다크모드를 우선 구현하자.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[New Beginnings]]></title><description><![CDATA[Far far away, behind the word mountains, far from the countries Vokalia and
 Consonantia, there live the blind texts. Separated they live in…]]></description><link>https://mona04.github.io/new-beginnings/</link><guid isPermaLink="false">https://mona04.github.io/new-beginnings/</guid><pubDate>Thu, 28 May 2015 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;Far far away, behind the word mountains, far from the countries Vokalia and
 Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
 right at the coast of the Semantics, a large language ocean. A small river named
@@ -199,8 +174,9 @@ would be the word &quot;and&quot; and the Little Blind Text should turn around a
 to its own, safe country. But nothing the copy said could convince her and so it
 didn’t take long until a few insidious Copy Writers ambushed her, made her drunk
 with Longe and Parole and dragged her into their agency, where they abused her
-for their projects again and again.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[New Beginnings]]></title><description><![CDATA[진행중 freecodecamp 완료]]></description><link>https://mona04.github.io/공부할거/</link><guid isPermaLink="false">https://mona04.github.io/공부할거/</guid><pubDate>Thu, 28 May 2015 22:40:32 GMT</pubDate><content:encoded>&lt;h2&gt;진행중&lt;/h2&gt;
+for their projects again and again.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[New Beginnings]]></title><description><![CDATA[진행중 freecodecamp https://codepen.io/your-work 완료]]></description><link>https://mona04.github.io/공부할거/</link><guid isPermaLink="false">https://mona04.github.io/공부할거/</guid><pubDate>Thu, 28 May 2015 22:40:32 GMT</pubDate><content:encoded>&lt;h2&gt;진행중&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.freecodecamp.org/learn/&quot;&gt;freecodecamp&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://codepen.io/your-work&quot;&gt;https://codepen.io/your-work&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;완료&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[My Second Post!]]></title><description><![CDATA[Wow! I love blogging so much already. Did you know that "despite its name, salted duck eggs can also be made from
 chicken eggs, though the…]]></description><link>https://mona04.github.io/my-second-post/</link><guid isPermaLink="false">https://mona04.github.io/my-second-post/</guid><pubDate>Wed, 06 May 2015 23:46:37 GMT</pubDate><content:encoded>&lt;p&gt;Wow! I love blogging so much already.&lt;/p&gt;
 &lt;p&gt;Did you know that &quot;despite its name, salted duck eggs can also be made from
@@ -226,7 +202,7 @@ firm-textured, round yolk that is bright orange-red in color.&lt;/p&gt;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/study-log/static/8058f3f26913fea3b6a89a73344fe94a/e1596/salty_egg.jpg&quot;
+    href=&quot;/blog/static/8058f3f26913fea3b6a89a73344fe94a/e1596/salty_egg.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -239,13 +215,13 @@ firm-textured, round yolk that is bright orange-red in color.&lt;/p&gt;
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Chinese Salty Egg&quot;
         title=&quot;&quot;
-        src=&quot;/study-log/static/8058f3f26913fea3b6a89a73344fe94a/828fb/salty_egg.jpg&quot;
-        srcset=&quot;/study-log/static/8058f3f26913fea3b6a89a73344fe94a/ff44c/salty_egg.jpg 158w,
-/study-log/static/8058f3f26913fea3b6a89a73344fe94a/a6688/salty_egg.jpg 315w,
-/study-log/static/8058f3f26913fea3b6a89a73344fe94a/828fb/salty_egg.jpg 630w,
-/study-log/static/8058f3f26913fea3b6a89a73344fe94a/0ede0/salty_egg.jpg 945w,
-/study-log/static/8058f3f26913fea3b6a89a73344fe94a/3ac88/salty_egg.jpg 1260w,
-/study-log/static/8058f3f26913fea3b6a89a73344fe94a/e1596/salty_egg.jpg 2048w&quot;
+        src=&quot;/blog/static/8058f3f26913fea3b6a89a73344fe94a/828fb/salty_egg.jpg&quot;
+        srcset=&quot;/blog/static/8058f3f26913fea3b6a89a73344fe94a/ff44c/salty_egg.jpg 158w,
+/blog/static/8058f3f26913fea3b6a89a73344fe94a/a6688/salty_egg.jpg 315w,
+/blog/static/8058f3f26913fea3b6a89a73344fe94a/828fb/salty_egg.jpg 630w,
+/blog/static/8058f3f26913fea3b6a89a73344fe94a/0ede0/salty_egg.jpg 945w,
+/blog/static/8058f3f26913fea3b6a89a73344fe94a/3ac88/salty_egg.jpg 1260w,
+/blog/static/8058f3f26913fea3b6a89a73344fe94a/e1596/salty_egg.jpg 2048w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
