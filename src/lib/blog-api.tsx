@@ -4,7 +4,7 @@ import matter from 'gray-matter'
 import { remark } from 'remark'
 import html from 'remark-html'
 
-const postsDirectory = join(process.cwd(), '_content/')
+const postsDirectory = join(process.cwd(), '_content/blog/')
 
 export async function getDirents(path: string) {
   return new Promise<fs.Dirent[]>((resolve, reject)=>{
@@ -14,17 +14,16 @@ export async function getDirents(path: string) {
   });  
 }
 
-export async function* getDirentsRecursive(path: string) : string[]
+export async function* getDirentsRecursive(path: string) : AsyncGenerator<fs.Dirent>
 {
-  const dirents = await getDirents(postsDirectory)
+  const dirents = await getDirents(path)
   for(const dirent of dirents)
   {
-    const res = join(path, dirent.name)
     if(dirent.isDirectory()) {
-      yield* getDirentsRecursive(res);
+      yield* getDirentsRecursive(join(path, dirent.name));
     } else{
-      yield res;
-    }
+      yield dirent;
+    }  
   }
 }
 
@@ -32,8 +31,7 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
   type Items = {
     [key: string]: string
   }
-  //console.log(slug);
-  return null;
+
   const items: Items = {}
 
   if(!slug.match(/.md$/)){
@@ -65,12 +63,11 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
 
 
 export async function getAllPosts(fields: string[] = []) {
-  let a = getDirentsRecursive(postsDirectory)
-  return null;
-    //.map((slug) => getPostBySlug(slug, fields))
+  getDirentsRecursive(postsDirectory).
+  .map((slug) => getPostBySlug(slug, fields))
     // sort posts by date in descending order
-    //.sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
-  //return posts
+  .sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
+  return posts
 }
 
 //export default async function markdownToHtml(markdown: string) {
