@@ -1,6 +1,17 @@
 
 
-## 
+## 기본설정
+
+### Type Script
+
+1. ```tsconfig.json```
+  + gatsby 샘플 프로젝트에서 ```tsconfig.json``` 을 제공하니 [참고](https://github.com/gatsbyjs/gatsby/blob/master/starters/gatsby-starter-minimal-ts/tsconfig.json).
+
+2. ```global.d.ts```
+  + scss 인식을 못하면 ```declare module '*.scss';``` 를 추가해보자.
+
+
+
 
 ## github page deploy
 

@@ -2,7 +2,7 @@
 
 import * as React from 'react'
 import * as Utils from "utils/ssr-helper"
-import toggleStyle from "styles/controls/toggleSwitch.module.scss";
+import toggleStyle from "@/styles/controls/toggleSwitch.module.scss";
 import useSWR from 'swr'
 
 interface IProps{}

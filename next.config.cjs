@@ -5,6 +5,11 @@ const path = require('path')
  */
 module.exports = (phase, { defaultConfig }) => 
 {
+  if(phase == PHASE_DEVELOPMENT_SERVER)
+  {
+
+  }
+  
   return {
     output: 'export',
     trailingSlash: true,
@@ -19,8 +24,8 @@ module.exports = (phase, { defaultConfig }) =>
       includePaths: [path.join(__dirname, 'styles')],
       
     },
-    experimental: {
-      instrumentationHook: true,
-    }
+    //experimental: {
+    //  instrumentationHook: true,
+    //}
   }
 }

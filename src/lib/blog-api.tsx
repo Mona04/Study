@@ -4,21 +4,19 @@ import matter from 'gray-matter'
 import { remark } from 'remark'
 import html from 'remark-html'
 
+
 const postsDirectory = join(process.cwd(), '_content/blog/')
 
 export function getDirents(path: string) {
-  return new Promise<fs.Dirent[]>((resolve, reject)=>{
-    fs.readdir(path, {"withFileTypes": true}, (err, files)=>{
-      resolve(files);
-    });
-  });  
+  return fs.readdirSync(path, {"withFileTypes": true, });
 }
 
 export async function* getDirentsRecursive(path: string) : AsyncGenerator<fs.Dirent>
 {
-  const dirents = await getDirents(path)
+  const dirents = getDirents(path)
   for(const dirent of dirents)
   {
+    console.log(dirent.path)
     if(dirent.isDirectory()) {
       yield* getDirentsRecursive(join(path, dirent.name));
     } else{
@@ -66,7 +64,7 @@ export async function getAllPosts(fields: string[] = []) {
   
   for await (const a of getDirentsRecursive(postsDirectory))
   {
-    console.log(a.);
+    //console.log(a.);
     //console.log(a.name + " " + fs.statSync(a.path).mtime)
   }
   return null;

@@ -1,12 +1,14 @@
-declare module '*.scss';
-declare module '*.css';
+//declare module '*.scss';
+//declare module '*.css';
 
 declare global {
   type Author = {
     name: string
     picture: string
   }
-  
+  interface AAA {
+    aaa: any;
+  }
   //type Post = {
   //  slug: string
   //  title: string
@@ -31,4 +33,7 @@ declare global {
     }
     content: string
   }
+}
+type AAA = {
+  aaa: any;
 }
