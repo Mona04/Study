@@ -1,5 +1,3 @@
-
-
 import Head from 'next/head';
 import * as Blog from 'lib/blog-api'
 import styles from '../styles/Home.module.css';

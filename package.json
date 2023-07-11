@@ -5,7 +5,8 @@
     "dev": "next dev -p 4000",
     "build": "next build",
     "start": "next start",
-    "deploy": "next build && gh-pages -d out -b gh-pages"
+    "deploy": "next build && gh-pages -d out -b gh-pages",
+    "blogs": "node ./src/scripts/blogs.js"
   },
   "dependencies": {
     "gh-pages": "^5.0.0",
