@@ -6,7 +6,7 @@ import html from 'remark-html'
 
 const postsDirectory = join(process.cwd(), '_content/blog/')
 
-export async function getDirents(path: string) {
+export function getDirents(path: string) {
   return new Promise<fs.Dirent[]>((resolve, reject)=>{
     fs.readdir(path, {"withFileTypes": true}, (err, files)=>{
       resolve(files);
@@ -63,14 +63,33 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
 
 
 export async function getAllPosts(fields: string[] = []) {
-  getDirentsRecursive(postsDirectory).
-  .map((slug) => getPostBySlug(slug, fields))
+  
+  for await (const a of getDirentsRecursive(postsDirectory))
+  {
+    console.log(a.);
+    //console.log(a.name + " " + fs.statSync(a.path).mtime)
+  }
+  return null;
+  //.map((slug) => getPostBySlug(slug, fields))
     // sort posts by date in descending order
-  .sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
-  return posts
+  //.sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
+  //return posts
 }
 
 //export default async function markdownToHtml(markdown: string) {
 //  const result = await remark().use(html).process(markdown)
 //  return result.toString()
 //}
+
+export function watchAndUpdate(path: string)
+{
+  console.log("asfd")
+  //fs.watch(path, function (event, filename) {
+  //  console.log('event is: ' + event);
+  //  if (filename) {
+  //      console.log('filename provided: ' + filename);
+  //  } else {
+  //      console.log('filename not provided');
+  //  }
+  //});
+}
