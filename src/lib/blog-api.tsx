@@ -14,11 +14,11 @@ export function getDirents(path: string) {
 export async function* getDirentsRecursive(path: string) : AsyncGenerator<fs.Dirent>
 {
   const dirents = getDirents(path)
-  for(const dirent of dirents)
+  for(let dirent of dirents)
   {
-    console.log(dirent.path)
+    dirent.path = join(path, dirent.name);
     if(dirent.isDirectory()) {
-      yield* getDirentsRecursive(join(path, dirent.name));
+      yield* getDirentsRecursive(dirent.path);
     } else{
       yield dirent;
     }  

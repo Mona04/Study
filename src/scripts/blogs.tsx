@@ -1,12 +1,42 @@
 import fs from 'fs'
 import * as Blog from './../lib/blog-api.js'
 
+interface MDPosts {
+  [id: string] : any;
+}
 (async () => {
-  console.log("asdfsadfasdfasdfs")
-  for await (const a of Blog.getDirentsRecursive("_content"))
-  {
-
-    //console.log(a.name);
-    //console.log(a.name + " " + fs.statSync(a.path).mtime)
+  let posts : MDPosts  = {};
+  for await (const dirent of Blog.getDirentsRecursive("_content"))
+  {    
+    posts[dirent.path] = fs.statSync(dirent.path);
   }
+
+  fs.writeFileSync("posts", JSON.stringify(posts));
+  //let stream = fs.createWriteStream("posts", );
+  //stream.once('open', (fd)=>{
+  //  stream.write(JSON.stringify(posts));
+  //});
+  let readStream = fs.readFileSync("posts");
+  let posts2 : MDPosts = JSON.parse(readStream.toString());
+  Object.entries(posts2).map( ([k, v])=> {
+    console.log("k" + ' ' + v);
+  });
+  //https://stackoverflow.com/questions/13698043/observe-file-changes-with-node-js
+
 })();
+
+function formatDate(date : Date) {
+  var d = new Date(date),
+      month = '' + (d.getMonth() + 1),
+      day = '' + d.getDate(),
+      year = d.getFullYear();
+  var hour = '' + d.getHours(),
+      minute = '' + d.getMinutes();
+
+  if (month.length < 2) 
+      month = '0' + month;
+  if (day.length < 2) 
+      day = '0' + day;
+
+  return [year, month, day, [hour, minute].join(':')].join('-');
+}
