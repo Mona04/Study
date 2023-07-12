@@ -25,6 +25,15 @@ interface MDPosts {
 
 })();
 
+fs.watch('_content', {"recursive": true}, function (event, filename) {
+  console.log('event is: ' + event);
+  if (filename) {
+      console.log('filename provided: ' + filename);
+  } else {
+      console.log('filename not provided');
+  }
+});
+
 function formatDate(date : Date) {
   var d = new Date(date),
       month = '' + (d.getMonth() + 1),
