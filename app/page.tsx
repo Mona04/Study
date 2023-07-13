@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import { Metadata } from 'next'
 import * as Blog from 'lib/blog-api'
 import styles from '../styles/Home.module.css';
 
@@ -21,11 +21,7 @@ export default function Page() {
   //console.log(allPosts)
 
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>            
+    <div className={styles.container}>        
 			<main>
 				<h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
@@ -81,6 +77,10 @@ export default function Page() {
   );
 }
 
+export const metadata: Metadata = {
+  title: 'My Page Title',
+  icons: '/favicon.ico'
+}
 
 /*
 const HeroPost = ({

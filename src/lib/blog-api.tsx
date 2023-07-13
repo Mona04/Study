@@ -3,7 +3,8 @@ import { join } from 'path'
 import matter from 'gray-matter'
 import { remark } from 'remark'
 import html from 'remark-html'
-
+import { cache } from 'react'
+import { promises } from 'dns'
 
 const postsDirectory = join(process.cwd(), '_content/blog/')
 
@@ -91,3 +92,18 @@ export function watchAndUpdate(path: string)
   //  }
   //});
 }
+
+
+export const posts = cache(async () : Promise<string[][]> => 
+{
+  let posts : string[][] = [];
+  for await (const dirent of getDirentsRecursive("_content/blog/"))
+  {    
+    posts.push(dirent.path.split(/[\\\/]/).slice(2, -1) );
+  }
+  
+
+  return posts;
+})
+
+export const fff = cache(async(id:number) : Promise<number> => { console.log(id); return 1;});

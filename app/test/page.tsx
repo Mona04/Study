@@ -1,9 +1,9 @@
 'use client'
 
 import * as React from 'react'
+import { Metadata } from 'next'
 import * as Utils from "utils/ssr-helper"
 import toggleStyle from "@/styles/controls/toggleSwitch.module.scss";
-import useSWR from 'swr'
 
 interface IProps{}
 interface IState{bDarkMode: boolean}
@@ -43,14 +43,12 @@ class DarkModeToggle extends React.Component<IProps, IState>
 
 
 const TestPage = () => {
-  const fetcher = (url: string) => fetch(url).then((r) => r.json());
-  const { data, error } = useSWR('../aaa.json', fetcher);
-
+  // const data = await fetch('../aaa.json');
   //alert(data);
   return (
     <main>
       <h1>Test Page</h1>
-      <p>{data?.aaa}</p>
+
 
       <DarkModeToggle/>
   
@@ -58,6 +56,9 @@ const TestPage = () => {
   )
 }
 
-export const Head = () => <title>Test</title>
+export const metadata: Metadata = {
+  title: 'My Page Title',
+  icons: '/favicon.ico'
+}
 
 export default TestPage
