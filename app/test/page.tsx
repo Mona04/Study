@@ -4,6 +4,7 @@ import * as React from 'react'
 import { Metadata } from 'next'
 import * as Utils from "utils/ssr-helper"
 import toggleStyle from "@/styles/controls/toggleSwitch.module.scss";
+import aaa2 from "raw-loader!./aaa.md"
 
 interface IProps{}
 interface IState{bDarkMode: boolean}
