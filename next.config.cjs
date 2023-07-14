@@ -18,11 +18,6 @@ module.exports = (phase, { defaultConfig }) =>
       { buildId, dev, isServer, defaultLoaders, nextRuntime, webpack }
     ) => {
 
-      config.module.rules.push({
-        test: /\.md$/,
-        use: 'raw-loader',
-      })
-
       return config
     },
     sassOptions: {
