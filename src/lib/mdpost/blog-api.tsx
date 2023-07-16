@@ -1,10 +1,12 @@
 import fs from 'fs'
 import { join } from 'path'
 import matter from 'gray-matter'
+import { cache } from 'react'
 import { remark } from 'remark'
 import html from 'remark-html'
-import { cache } from 'react'
 import { promises } from 'dns'
+import {splitExtension} from "utils/utils"
+
 
 const postsDirectory = join(process.cwd(), '_content/blog/')
 
@@ -93,16 +95,36 @@ export function watchAndUpdate(path: string)
   //});
 }
 
-
-export const posts = cache(async () : Promise<string[][]> => 
-{
+export const posts = cache(async (
+  path : string, 
+  opt : { bUseCache: boolean, cachePath: string}) 
+  : Promise<string[][]> => 
+{  
   let posts : string[][] = [];
-  for await (const dirent of getDirentsRecursive("_content/blog/"))
-  {    
-    posts.push(dirent.path.split(/[\\\/]/).slice(2, -1) );
-  }
-  
 
+  let bReload = !opt.bUseCache || !fs.existsSync(opt.cachePath);
+
+  if(bReload){
+    console.log("Search Posts...")
+
+    for await (const dirent of getDirentsRecursive(path))
+    {    
+      let dirs = dirent.path.split(/[\\\/]/);
+      let ff = splitExtension(dirs.slice(-1)[0]);
+      if(ff != undefined && ff[1].toLowerCase() == 'md'){    
+        posts.push([...dirs.slice(2, -1), ff[0]] );
+      }
+    }
+
+    fs.writeFileSync(opt.cachePath, JSON.stringify(posts), {});
+  }
+  else if(!fs.existsSync(opt.cachePath)){
+    let readStream = fs.readFileSync(opt.cachePath);
+    posts = JSON.parse(readStream.toString());
+  }
+
+  //global.allPosts = posts;
+  
   return posts;
 })
 

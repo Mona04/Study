@@ -1,5 +1,4 @@
 import { Metadata } from 'next'
-import * as Blog from 'lib/blog-api'
 import styles from '../styles/Home.module.css';
 
 import * as Utils from 'utils/ssr-helper'
@@ -10,16 +9,6 @@ import * as Utils from 'utils/ssr-helper'
 
 export default function Page() {
 
-  const allPosts = Blog.getAllPosts([
-    'title',
-    'date',
-    'slug',
-    'author',
-    'coverImage',
-    'excerpt',
-  ]);
-  //console.log(allPosts)
-
   return (
     <div className={styles.container}>        
 			<main>
@@ -28,7 +17,7 @@ export default function Page() {
         </h1>
 
         <p className={styles.description}>
-          fdsfsdfds <code>pages/index.js</code>
+          {Date.now()} <code>pages/index.js2</code>
         </p>
 
         <div className={styles.grid}>

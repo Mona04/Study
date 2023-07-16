@@ -1,4 +1,6 @@
-import fs from 'fs'
+//import fs from 'fs'
+let fs = require('fs')
+/*
 import * as Blog from './../lib/blog-api.js'
 
 interface MDPosts {
@@ -12,7 +14,7 @@ interface MDPosts {
   }
 
   fs.writeFileSync("posts", JSON.stringify(posts));
-  //let stream = fs.createWriteStream("posts", );
+  //let stream = fs.createWriteStream("public/posts", );
   //stream.once('open', (fd)=>{
   //  stream.write(JSON.stringify(posts));
   //});
@@ -23,17 +25,24 @@ interface MDPosts {
   });
   //https://stackoverflow.com/questions/13698043/observe-file-changes-with-node-js
 
-})();
+});
+*/
+console.log("start =======================")
 
 fs.watch('_content', {"recursive": true}, function (event, filename) {
   console.log('event is: ' + event);
   if (filename) {
-      console.log('filename provided: ' + filename);
+    console.log('filename provided: ' + filename);
   } else {
-      console.log('filename not provided');
+    console.log('filename not provided');
   }
 });
+/* 
+*/
 
+console.log("end =======================")
+
+/*
 function formatDate(date : Date) {
   var d = new Date(date),
       month = '' + (d.getMonth() + 1),
@@ -49,3 +58,4 @@ function formatDate(date : Date) {
 
   return [year, month, day, [hour, minute].join(':')].join('-');
 }
+*/

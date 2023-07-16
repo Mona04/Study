@@ -20,7 +20,8 @@
     "baseUrl": "./src/", 
     "paths": {
       "@/styles/*": ["styles/*"],
-      "@/lib/*": ["lib/*"]
+      "@/lib/*": ["lib/*"],
+      "@/public/*": ["./public/*"]
     },
     "plugins": [
       {
