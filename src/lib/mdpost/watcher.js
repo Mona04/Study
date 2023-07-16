@@ -9,8 +9,10 @@ module.exports = (path) => {
     .on('change', async (path, stats) => {
       console.log(path);
       //console.log(event, path);
-      const cache = require('next/cache');
-      cache.revalidateTag('mdpost');
+      const cache = require('next/cache');    
+      //const tag = request.nextUrl.searchParams.get('tag')
+      //console.log(tag)
+      //cache.revalidatePath("http://localhost:4000/");
     });
   
     //const config = require('next/config')
