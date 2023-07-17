@@ -8,16 +8,16 @@ export default async function Page({ params }: { params: { categories: string[],
 
   const chokidar = require('chokidar');
 
-  chokidar.watch('./_content', {ignoreInitial: true})
-  .on('change', async (path, stats) => {
-    console.log(path);
-    //console.log(event, path);
-    const cache = require('next/cache');    
-    fetch("http://localhost:4000/-hot-reload/")
-    //const tag = request.nextUrl.searchParams.get('tag')
-    //console.log(tag)
-    //cache.revalidateTag('mdpost');
-  })
+  //chokidar.watch('./_content', {ignoreInitial: true})
+  //.on('change', async (path, stats) => {
+  //  console.log(path);
+  //  //console.log(event, path);
+  //  const cache = require('next/cache');    
+  //  fetch("http://localhost:4000/-hot-reload/")
+  //  //const tag = request.nextUrl.searchParams.get('tag')
+  //  //console.log(tag)
+  //  //cache.revalidateTag('mdpost');
+  //})
   var a = await fetch("http://localhost:4000/", {next: {revalidate: 1, tags:['mdpost']}});
   console.log(await a.text());
   return <div>

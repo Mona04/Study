@@ -51,8 +51,7 @@ module.exports = (phase, { defaultConfig }) =>
       if(isServer){
         if(nextRuntime == 'nodejs'){
           const watcher = require('./src/lib/mdpost/watcher');
-          //watcher('_content');
-          //https://ibrahimovic.tistory.com/47
+          watcher('_content');
         }
       }
       else{
