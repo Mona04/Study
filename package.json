@@ -2,7 +2,7 @@
   "homepage": "https://mona04.github.io/study-log/",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 4000",
+    "dev": "node ./src/scripts/hot-reload.js -p 4000 -d _content",
     "start": "next build && next start -p 4000",
     "deploy": "next build && gh-pages -d out -b gh-pages",
     "blogs": "ts-node ./src/scripts/blogs.tsx"

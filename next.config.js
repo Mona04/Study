@@ -50,13 +50,10 @@ module.exports = (phase, { defaultConfig }) =>
     ) => {
       if(isServer){
         if(nextRuntime == 'nodejs'){
-          const watcher = require('./src/lib/mdpost/watcher');
-          watcher('_content');
         }
       }
       else{
-        if(dev){
-        
+        if(dev){        
         }
       }
       
