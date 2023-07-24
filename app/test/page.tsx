@@ -4,6 +4,7 @@ import * as React from 'react'
 import { Metadata } from 'next'
 import * as Utils from "utils/ssr-helper"
 import DarkModeToggle from '@/components/darkmode-toggle'
+import BlogSearch from '@/components/blog-search'
 
 
 const TestPage = () => {
@@ -15,7 +16,7 @@ const TestPage = () => {
 
 
       <DarkModeToggle/>
-  
+      <BlogSearch/>
     </main>
   )
 }
