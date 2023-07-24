@@ -6,7 +6,7 @@ import { remark } from 'remark'
 import html from 'remark-html'
 import { promises } from 'dns'
 import {splitExtension} from "utils/utils"
-
+import { allPosts, Post } from '@/contentlayer/generated'
 
 const postsDirectory = join(process.cwd(), '_content/blog/')
 
@@ -61,7 +61,12 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
   return items
 }
 
-
+export function search(keyword:string) : Post[] {
+  var reg = new RegExp(keyword, 'gi')
+  return allPosts.filter((post, index, posts)=>{
+    return post.title.match(reg);
+  });
+}
 
 export async function getAllPosts(fields: string[] = []) {
   

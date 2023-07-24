@@ -19,8 +19,10 @@
     "jsx": "preserve",
     "baseUrl": "./src/", 
     "paths": {
+      "@/contentlayer/generated": ["../.contentlayer/generated"],
       "@/styles/*": ["styles/*"],
       "@/lib/*": ["lib/*"],
+      "@/components/*": ["components/*"],
       "@/public/*": ["./public/*"]
     },
     "plugins": [
@@ -38,7 +40,8 @@
     ".next/types/**/*.ts",
     "global.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    ".contentlayer/generated"
   ],
   "exclude": [
     "node_modules"

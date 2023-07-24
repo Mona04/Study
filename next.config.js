@@ -1,21 +1,17 @@
 const path = require('path')
 const { PHASE_PRODUCTION_BUILD, PHASE_DEVELOPMENT_SERVER } = require("next/constants");
-
+const { withContentlayer } = require('next-contentlayer')
 
 /**
  * @type {import('next').NextConfig}
  */
-module.exports = (phase, { defaultConfig }) => 
+const configs = (phase, { defaultConfig }) => 
 {
 
   if(phase == PHASE_DEVELOPMENT_SERVER)
   {
     if(global.watch == undefined){
-    
-      //const chokidar = require('chokidar');
-      //global.watch = chokidar.watch('_content', ).on('all', (event, path) => {
-      //  console.log(event, path);
-      //});
+
     }
 
   }
@@ -23,7 +19,9 @@ module.exports = (phase, { defaultConfig }) =>
   return {
     output: 'export',
     trailingSlash: true,
-
+    reactStrictMode: true, 
+    swcMinify: true,
+    
     sassOptions: {
       includePaths: [path.join(__dirname, 'styles')],
       
@@ -61,3 +59,5 @@ module.exports = (phase, { defaultConfig }) =>
     },
   }
 }
+
+module.exports = withContentlayer(configs);
