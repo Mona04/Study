@@ -17,13 +17,23 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "baseUrl": "./src/", 
+    "baseUrl": "./src/",
     "paths": {
-      "@/contentlayer/generated": ["../.contentlayer/generated"],
-      "@/styles/*": ["styles/*"],
-      "@/lib/*": ["lib/*"],
-      "@/components/*": ["components/*"],
-      "@/public/*": ["./public/*"]
+      "@/contentlayer/generated": [
+        "../.contentlayer/generated"
+      ],
+      "@/styles/*": [
+        "styles/*"
+      ],
+      "@/lib/*": [
+        "lib/*"
+      ],
+      "@/components/*": [
+        "components/*"
+      ],
+      "@/public/*": [
+        "./public/*"
+      ]
     },
     "plugins": [
       {
@@ -33,15 +43,16 @@
     "strictNullChecks": true
   },
   "ts-node": {
-    "esm": true,
-  }, 
+    "esm": true
+  },
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "global.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".contentlayer/generated"
+    ".contentlayer/generated",
+    "out/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"

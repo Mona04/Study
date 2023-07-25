@@ -4,8 +4,8 @@
   "scripts": {
     "dev": "concurrently \"contentlayer dev\" \"next dev -p 4000\"",
     "start": "next build && next start -p 4000",
-    "deploy": "next build && gh-pages -d out -b gh-pages",
-    "blogs": "ts-node ./src/scripts/blogs.tsx"
+    "build": "contentlayer build && next build",
+    "deploy": "gh-pages -d out -b gh-pages"
   },
   "dependencies": {
     "next": "13.4.9",

@@ -18,6 +18,8 @@ const configs = (phase, { defaultConfig }) =>
 
   return {
     output: 'export',
+    distDir: 'out',
+    basePath: '/study-log',
     trailingSlash: true,
     reactStrictMode: true, 
     swcMinify: true,
@@ -34,9 +36,6 @@ const configs = (phase, { defaultConfig }) =>
       pagesBufferLength: 10,
     },
 
-    publicRuntimeConfig : {
-      postCachePath: "./src/_cache/posts"
-    },
     //experimental: {
     //  instrumentationHook: true,
     //},
@@ -60,4 +59,4 @@ const configs = (phase, { defaultConfig }) =>
   }
 }
 
-module.exports = withContentlayer(configs);
+module.exports = configs;
