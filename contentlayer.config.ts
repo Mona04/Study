@@ -12,5 +12,12 @@ export const Post = defineDocumentType(() => ({
     url: { type: 'string', resolve: (post) => `/posts/${post._raw.flattenedPath}` },
   },
 }))
+//https://yiyb-blog.vercel.app/posts/nextjs-contentlayer-blog
 
-export default makeSource({ contentDirPath: '_content', documentTypes: [Post] })
+export default makeSource({
+   contentDirPath: '_content', 
+   documentTypes: [Post],
+   mdx:{
+    
+   }
+  })
