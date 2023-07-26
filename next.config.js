@@ -11,14 +11,14 @@ const configs = (phase, { defaultConfig }) =>
     output: 'export',
     distDir: 'out',
     basePath: phase == PHASE_PRODUCTION_BUILD ? '/study-log' : "",
-    trailingSlash: true,
-    reactStrictMode: true, 
-    swcMinify: true,
-    
     sassOptions: {
       includePaths: [path.join(__dirname, 'styles')],
       
-    },
+    },    
+
+    trailingSlash: true,
+    reactStrictMode: true, 
+    swcMinify: true,
     
     onDemandEntries: {
       // period (in ms) where the server will keep pages in the buffer

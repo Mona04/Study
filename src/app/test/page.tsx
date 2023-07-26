@@ -1,8 +1,5 @@
-'use client'
-
 import * as React from 'react'
 import { Metadata } from 'next'
-import * as Utils from "utils/ssr-helper"
 import DarkModeToggle from '@/components/darkmode-toggle'
 import BlogSearch from '@/components/blog-search'
 
@@ -13,7 +10,7 @@ const TestPage = () => {
   return (
     <main>
       <h1>Test Page</h1>
-
+      <p>한글rhk 컴퓨터</p>
 
       <DarkModeToggle/>
       <BlogSearch/>

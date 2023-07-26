@@ -1,3 +1,5 @@
+'use client'
+
 import * as React from 'react'
 import * as Utils from "utils/ssr-helper"
 import { allPosts } from '@/contentlayer/generated'

@@ -1,5 +1,13 @@
 /* CSS Custom Properties Definitions */
 
+@font-face {
+  font-family: "mabinogi_classic";
+  font-weight: 400;
+  src: url("fonts/Mabinogi_Classic_OTF.otf");
+}
+
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
 :root {
   --maxWidth-none: "none";
   --maxWidth-xs: 20rem;
@@ -27,14 +35,18 @@
   --spacing-20: 5rem;
   --spacing-24: 6rem;
   --spacing-32: 8rem;
-  --fontFamily-sans: "MontserratVariable", system-ui, -apple-system,
+
+  --fontFamily-sans: "Noto Sans KR", "MontserratVariable", system-ui, -apple-system,
     BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
     "Noto Color Emoji";
-  --fontFamily-serif: "Merriweather", "Georgia", Cambria, "Times New Roman",
+  --fontFamily-serif:  "Merriweather", "Georgia", Cambria, "Times New Roman",
     Times, serif;
-  --font-body: var(--fontFamily-serif);
+  --fontFamily-mabi: "mabinogi_classic";
+
+  --font-body: var(--fontFamily-sans);
   --font-heading: var(--fontFamily-sans);
+
   --fontWeight-normal: 400;
   --fontWeight-bold: 700;
   --fontWeight-black: 900;
@@ -381,9 +393,11 @@ $themes: (
 //--color-btn : #{$btn-color-2};
 //}
 
+$colorex : red;
 
 html {
   background-color: var(--color-page-background);
   //background-color: red;
 }
 @import "@/styles/_variables.scss";
+

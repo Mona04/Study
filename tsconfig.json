@@ -29,7 +29,7 @@
         "lib/*"
       ],
       "@/components/*": [
-        "components/*"
+        "app/_components/*",
       ],
       "@/public/*": [
         "./public/*"

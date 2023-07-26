@@ -1,4 +1,6 @@
 $a: black;
+
 [data-theme="dark"] {
-    --color-page-background: #{$a};
+  --color-page-background: #{$a};
+  --color-border: #666666;
 }

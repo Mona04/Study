@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import styles from '../styles/Home.module.css';
+import styles from '../../styles/Home.module.css';
 
 import * as Utils from 'utils/ssr-helper'
 
