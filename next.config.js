@@ -7,19 +7,10 @@ const { withContentlayer } = require('next-contentlayer')
  */
 const configs = (phase, { defaultConfig }) => 
 {
-
-  if(phase == PHASE_DEVELOPMENT_SERVER)
-  {
-    if(global.watch == undefined){
-
-    }
-
-  }
-
   return {
     output: 'export',
     distDir: 'out',
-    basePath: '/study-log',
+    basePath: phase == PHASE_PRODUCTION_BUILD ? '/study-log' : "",
     trailingSlash: true,
     reactStrictMode: true, 
     swcMinify: true,

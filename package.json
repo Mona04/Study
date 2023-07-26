@@ -5,7 +5,7 @@
     "dev": "concurrently \"contentlayer dev\" \"next dev -p 4000\"",
     "start": "next build && next start -p 4000",
     "build": "contentlayer build && next build",
-    "deploy": "gh-pages -d out -b gh-pages"
+    "deploy": "node ./src/scripts/nojekyll.js & gh-pages -d out -b gh-pages -t true"
   },
   "dependencies": {
     "next": "13.4.9",
