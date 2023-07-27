@@ -23,7 +23,7 @@ class DarkModeToggle extends React.Component<IProps, IState>
   }
 
   componentDidMount() {
-    Utils.isBroswerPreferDarkMode() ? Utils.setDarkMode() : Utils.setLightMode();
+    //Utils.isBroswerPreferDarkMode() ? Utils.setDarkMode() : Utils.setLightMode();
   }
 
   onChange(e: React.InputHTMLAttributes<HTMLInputElement>) : void 
@@ -37,7 +37,7 @@ class DarkModeToggle extends React.Component<IProps, IState>
     return (
       <div className={toggleStyle.toggleBtn} suppressHydrationWarning={true}>
         <input id='darkmode-btn' name='darkmode-btn' type='checkbox'           
-               onChange={this.onChange}/>
+               onChange={this.onChange} checked={this.state.bDarkMode}/>
         <label htmlFor="darkmode-btn">Toggle</label>         
       </div>
     );

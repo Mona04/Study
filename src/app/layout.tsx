@@ -1,24 +1,31 @@
-import Script from 'next/script'
+import { Metadata } from 'next'
 import MastHead from "@/components/masthead"
+import {SetInitialColorMode} from "utils/ssr-helper"
 import '@/styles/globals.scss'
 
+ 
+export const metadata: Metadata = {
+  title: '...',
+  description: '...',
+  other: {
+    
+  }
+}
 
 export default function RootLayout(
   {children,}: {
     children: React.ReactNode
   }) {
     return (
-      <html lang="en">
+      <html lang="en" suppressHydrationWarning={true}>        
         <body>
+          <script
+            dangerouslySetInnerHTML={{
+            __html: SetInitialColorMode
+          }}></script>
           <MastHead/>
-          {children}
-       
-        </body>
-        <Script 
-          dangerouslySetInnerHTML={{
-            __html: `document.documentElement.getAttribute('data-theme') === 'dark' ? document.documentElement.setAttribute('data-theme', 'dark') : document.documentElement.setAttribute('data-theme', 'light')`
-          }}
-        />
+          {children}       
+        </body>   
       </html>
     )
   }
