@@ -1,8 +1,50 @@
 .masthead {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:  100%;
   border-bottom: 1px solid var(--color-border);
-  border-bottom-style: groove;
   display: flex;
+  flex-direction: row;
+  background-color: var(--color-page-background);
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  width:  var(--spacing-18);
+  height: var(--nav-container-height);
+
+  .menu-lines {   
+    height: var(--spacing-5);
+    width:  var(--spacing-10);
+    z-index: 2;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+  
+    .line {
+      display: block;
+      height: 0.14rem;
+      width: var(--spacing-6);
+      border-radius: 10px;
+      background: var(--color-text);
+    }
+  }
+  
+  .menu-lines:hover {
+    .line {
+      background: var(--color-text-light);
+    }
+  }
+}
+
+
+
+button.menu-btn {
+
 }
   
 .site-logo img {
@@ -15,8 +57,10 @@
   display: flex;
   -ms-flex-item-align: center;
   align-self: center;
+  vertical-align: middle;
+  font-family: var(--fontFamily-sans);
   font-weight: bold;
-  color: blue;
+
 
     // z-index: 20;
 }

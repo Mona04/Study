@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import MastHead from "@/components/masthead"
+import SideBar from "@/components/sidebar"
 import {SetInitialColorMode} from "utils/ssr-helper"
 import '@/styles/globals.scss'
 
@@ -17,14 +18,17 @@ export default function RootLayout(
     children: React.ReactNode
   }) {
     return (
-      <html lang="en" suppressHydrationWarning={true}>        
+      <html lang="en" >        
         <body>
           <script
             dangerouslySetInnerHTML={{
             __html: SetInitialColorMode
           }}></script>
+          <SideBar/>
           <MastHead/>
-          {children}       
+          <main>
+            {children}
+          </main>
         </body>   
       </html>
     )

@@ -5,9 +5,15 @@ function MastHead() {
 
   return (
     <div className={style.masthead}>
-      <div className={style['masthead-menu']}>
-        <a className={style['site-title']}>{BLOG_NAME}</a>
+      <div className={style['menu']} title="menu">
+        <div className={style["menu-lines"]}>
+          <div className={style["line"]}></div>
+          <div className={style["line"]}></div>
+          <div className={style["line"]}></div>
+        </div>
       </div>
+      <a className={style['site-title']}>{BLOG_NAME}</a>
+
     </div>
   );
 }
