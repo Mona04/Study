@@ -1,11 +1,15 @@
 .masthead {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 0px;
   width:  100%;
+  height: var(--nav-container-height);
+
   display: flex;
   flex-direction: row;
-  user-select: none;
+  column-gap: var(--spacing-4);
+
+  user-select: none;  
+  
   border-bottom: 1px solid var(--color-border);
   background-color: var(--color-page-background);
 }
@@ -15,8 +19,7 @@
   justify-content: center;
   align-items: center;
   
-  width:  var(--nav-container-height);
-  height: var(--nav-container-height);
+  width:  var(--spacing-14);
   margin: 5px;
 
   .menu-lines {   
@@ -36,18 +39,67 @@
   }
 }
 
-.menu-btn:hover {
-  .menu-lines {
-    .line {
-      background: var(--color-text-dimmed);
-    }
+
+.menu-btn:hover .menu-lines {
+  cursor: pointer;
+  .line {
+    background: var(--color-text-dimmed);
   }
 }
 
-button.menu-btn {
-
+.animate:not(.change) .menu-lines {
+  .line1 {
+    animation: rotateR 150ms ease-in forwards reverse; 
+  }
+  .line2 {
+    animation: fade 150ms ease-in forwards reverse; 
+  }
+  .line3 {
+    animation: rotateL 150ms ease-in forwards reverse;
+  }
 }
-  
+
+.change.animate .menu-lines {
+  .line1 {
+    animation: rotateR 150ms ease-in forwards alternate;
+  }
+  .line2 {
+    animation: fade 150ms ease-in forwards alternate;
+  }
+  .line3 {
+    animation: rotateL 150ms ease-in forwards alternate;
+  }
+}
+
+
+
+@keyframes rotateL{
+  0% {
+    transform: translateY(0px) rotate(0);
+  }
+  100% {
+    transform: translateY(-0.45rem) rotate(-45deg);
+  }
+}
+@keyframes rotateR{
+  0% {
+    transform: translateY(0px) rotate(0);
+  }
+  100% {
+    transform: translateY(0.45rem) rotate(45deg);
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+
+
+
 .site-logo img {
   max-height: 2rem;
 }

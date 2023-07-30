@@ -10,18 +10,18 @@ function saveDarkModeFromLocal() : void {
   window.localStorage.setItem("theme", isDarkMode() ? "dark" : 'light');
 }
 export function isDarkMode() : boolean {
-    if(!isBrowser()) return false;
-    return document.documentElement.getAttribute(darkModeAttribute) === 'dark' ||  window.matchMedia("(prefers-color-scheme: dark)").matches;
+  if(!isBrowser()) return false;
+  return document.documentElement.getAttribute(darkModeAttribute) === 'dark' ||  window.matchMedia("(prefers-color-scheme: dark)").matches;
 }
 export function setDarkMode() : void { 
-    if(!isBrowser()) return;
-    document.documentElement.setAttribute(darkModeAttribute, 'dark'); 
-    saveDarkModeFromLocal();
+  if(!isBrowser()) return;
+  document.documentElement.setAttribute(darkModeAttribute, 'dark'); 
+  saveDarkModeFromLocal();
 }
 export function setLightMode() : void { 
-    if(!isBrowser()) return;
-    document.documentElement.setAttribute(darkModeAttribute, 'light') 
-    saveDarkModeFromLocal();
+  if(!isBrowser()) return;
+  document.documentElement.setAttribute(darkModeAttribute, 'light') 
+  saveDarkModeFromLocal();
 }
 export function toggleDarkMode() : void { isDarkMode() ? setLightMode() : setDarkMode();}
 

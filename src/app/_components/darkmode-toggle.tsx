@@ -1,47 +1,33 @@
 'use client'
 
-import * as React from 'react'
-import * as Utils from "utils/ssr-helper"
-import toggleStyle from "@/styles/components/toggleSwitch.module.scss";
+import {useState, useEffect} from 'react'
+import * as Utils from "utils/darkmode-helper"
+import toggleStyle from "./darkmode-toggle.module.scss";
 
-interface IProps{}
-interface IState{bDarkMode: boolean}
-
-class DarkModeToggle extends React.Component<IProps, IState>
+//https://alvarotrigo.com/blog/toggle-switch-css/
+//https://gwan-woo-jeong.github.io/blog/change-theme/
+//https://typescript-kr.github.io/pages/classes.html
+function DarkModeToggle()
 {
-  defaultTheme : StyleSheet | undefined;
-  darkTheme : StyleSheet | undefined;
-  constructor(props:IProps)
-  {
-    super(props);
+  const [bDarkMode, setDarkMode] = useState<boolean>(false);
 
-    this.state = {bDarkMode: Utils.isDarkMode()}
-    this.onChange = this.onChange.bind(this);
-    //https://alvarotrigo.com/blog/toggle-switch-css/
-    //https://gwan-woo-jeong.github.io/blog/change-theme/
-    //https://typescript-kr.github.io/pages/classes.html
-  }
+  useEffect(()=> {
+    setDarkMode(Utils.isDarkMode());
+  })
 
-  componentDidMount() {
-    //Utils.isBroswerPreferDarkMode() ? Utils.setDarkMode() : Utils.setLightMode();
-  }
-
-  onChange(e: React.InputHTMLAttributes<HTMLInputElement>) : void 
+  const onChange = (e: React.InputHTMLAttributes<HTMLInputElement>) : void =>
   {   
     Utils.toggleDarkMode();
-    this.setState({bDarkMode: Utils.isDarkMode()});
+    setDarkMode(Utils.isDarkMode());
   };
 
-  render()
-  {
-    return (
-      <div className={toggleStyle.toggleBtn} suppressHydrationWarning={true}>
-        <input id='darkmode-btn' name='darkmode-btn' type='checkbox'           
-               onChange={this.onChange} checked={this.state.bDarkMode}/>
-        <label htmlFor="darkmode-btn">Toggle</label>         
-      </div>
-    );
-  }
+  return (
+    <div className={toggleStyle.toggleBtn} >
+      <input id='darkmode-btn' name='darkmode-btn' type='checkbox'           
+             onChange={onChange} checked={bDarkMode}/>
+      <label htmlFor="darkmode-btn">Toggle</label>         
+    </div>
+  );
 }
 
 export default DarkModeToggle;

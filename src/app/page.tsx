@@ -1,7 +1,6 @@
 import { Metadata } from 'next'
 import styles from '../../styles/Home.module.css';
 
-import * as Utils from 'utils/ssr-helper'
 
 //type Props = {
 //  allPosts: Post[]
@@ -10,7 +9,7 @@ import * as Utils from 'utils/ssr-helper'
 export default function Page() {
 
   return (
-    <div className={styles.container}>        
+    <div className={styles.container} suppressHydrationWarning={true}>        
 			<main>
 				<h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
@@ -60,16 +59,7 @@ export default function Page() {
           </a>
         </div>
 			</main>
-			<footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
-        </a>
-      </footer>
+
 
 			
     </div>

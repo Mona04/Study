@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Metadata } from 'next'
-import DarkModeToggle from '@/components/darkmode-toggle'
 import BlogSearch from '@/components/blog-search'
+import DarkModeToggle from '@/components/darkmode-toggle'
 
 
 const TestPage = () => {

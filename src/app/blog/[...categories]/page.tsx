@@ -1,28 +1,24 @@
-
-import * as Blog from 'lib/mdpost/blog-api'
 import { allPosts } from '@/contentlayer/generated'
+import * as Blog from 'lib/mdpost/blog-api'
+import PostView from './post-view'
 
-
+// slug 에서 blog 는 제외한 나머지가 필요함
 export const generateStaticParams = async () => allPosts.map((post) => ({ categories: post._raw.flattenedPath.split('/').slice(1) }))
 
 export const generateMetadata = ({ params }: { params: { categories: string[] } }) => {
-  const cur = ['blog', ...params.categories.slice(-1)].join('/')
+  const cur = ['blog', ...params.categories].join('/')
   const post = allPosts.find((post) => post._raw.flattenedPath === cur)
-  if (!post) throw new Error(`Post not found for slug: ${params.categories}`)
+  if (!post) throw new Error(`Post not found for slug: params : ${cur}`)
   return { title: post.title }
 }
 
 export default async function Page({ params }: { params: { categories: string[], name: string} }) {
-  const cur = ['blog', ...params.categories.slice(-1)].join('/')
+  const cur = ['blog', ...params.categories].join('/')
   const post = allPosts.find((post) => post._raw.flattenedPath === cur)
   if (!post) throw new Error(`Post not found for slug: ${params.categories}`)
 
   return <div>
-    <h1 className="text-3xl font-bold">{post.title}</h1>
-    <div>My Slugs: {params.categories}</div>
-    <div>My Slugs: {params.name}</div>
-    <div>My Slugs: {Date.now()}</div>
-
+    {PostView(post)}
   </div>
 }
 
