@@ -47,6 +47,18 @@
   }
 }
 
+.menu-btn.animate:not(.change) .menu-lines {
+  .line1 {
+    transform: translateY(0.45rem) rotate(45deg);
+  }
+  .line2 {
+    opacity: 0%;
+  }
+  .line3 {
+    transform: translateY(-0.45rem) rotate(-45deg);
+  }
+}
+
 .animate:not(.change) .menu-lines {
   .line1 {
     animation: rotateR 150ms ease-in forwards reverse; 

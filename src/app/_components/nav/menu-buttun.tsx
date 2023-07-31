@@ -17,7 +17,7 @@ function MenuButton() {
     // animation 인식 안해서 딜레이로 해결
     setTimeout(() => {
       target.classList.add(style.animate);
-    }, 10);
+    }, 1);
   
   };
 

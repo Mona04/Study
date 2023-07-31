@@ -13,7 +13,7 @@
 @supports (backdrop-filter: none){
   .leftone{
     backdrop-filter: blur(100px) brightness(90%); 
-    -webkit-backdrop-filter: grayscale(10%);
+    //-webkit-backdrop-filter: grayscale(10%);
   }
 }
 

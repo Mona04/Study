@@ -16,16 +16,16 @@ const configs = (phase, { defaultConfig }) =>
       
     },    
 
-    trailingSlash: true,
     reactStrictMode: true, 
     swcMinify: true,
+    trailingSlash: true,
     
-    onDemandEntries: {
-      // period (in ms) where the server will keep pages in the buffer
-      maxInactiveAge: 36000 * 1000,
-      // number of pages that should be kept simultaneously without being disposed
-      pagesBufferLength: 10,
-    },
+    //onDemandEntries: {
+    //  // period (in ms) where the server will keep pages in the buffer
+    //  maxInactiveAge: 36000 * 1000,
+    //  // number of pages that should be kept simultaneously without being disposed
+    //  pagesBufferLength: 10,
+    //},
 
     //experimental: {
     //  instrumentationHook: true,

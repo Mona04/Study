@@ -1,5 +1,4 @@
 import { allPosts } from '@/contentlayer/generated'
-import * as Blog from 'lib/mdpost/blog-api'
 import PostView from './post-view'
 
 // slug 에서 blog 는 제외한 나머지가 필요함
@@ -17,9 +16,12 @@ export default async function Page({ params }: { params: { categories: string[],
   const post = allPosts.find((post) => post._raw.flattenedPath === cur)
   if (!post) throw new Error(`Post not found for slug: ${params.categories}`)
 
-  return <div>
-    {PostView(post)}
-  </div>
+  return (
+    <div>
+      <PostView title={post.title} postHtml={post.body.html}/>
+    </div>
+  ) 
+    
 }
 
 export const dynamicParams = false // true | false,

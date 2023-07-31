@@ -20,7 +20,7 @@ function MakeCategoryView(category : Category, slug: string = '', depth : number
   return (
     <div>
       <div className={style["category-item-" + depth]}>        
-        <Link href={slug} prefetch={false}>
+        <Link href={slug}>
           {`${category.category}(${category.count})`}
         </Link>
       </div>
@@ -46,6 +46,11 @@ async function sidebar() {
 
   return (
     <div className={style.sidebar}>
+          <div>
+          <Link href="/">
+            {"Home Page"}
+          </Link>
+        </div>
       { MakeCategoriesView(categories) }
     </div>   
   );
@@ -54,10 +59,7 @@ async function sidebar() {
 function SideBar() {
   return (
     <aside>
-      <SideBarInteract>
-        <div>
-
-        </div>
+      <SideBarInteract>    
         {sidebar()}
       </SideBarInteract>  
     </aside>
