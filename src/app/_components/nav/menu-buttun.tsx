@@ -7,18 +7,15 @@ function MenuButton() {
   const context = useContext(Context);
   const [bOpen, setOpen] = useState(context !== undefined ? context?.statemgr.bMenuOpened : false);
   
-  const onClickMenu = (event:  React.MouseEvent<HTMLElement>) => {    
-    !bOpen ? context?.statemgr.openMenu() : context?.statemgr.closeMenu();
-    setOpen(!bOpen);
-
-    event.currentTarget.classList.remove(style.animate);
+  const onClickMenu = (event:  React.MouseEvent<HTMLElement>) => {      
     const target = event.currentTarget;
+    target.classList.add(style.animate);
 
-    // animation 인식 안해서 딜레이로 해결
-    setTimeout(() => {
-      target.classList.add(style.animate);
-    }, 1);
-  
+    // 애니메이션이 끝나고 상태를 바꿈. 상태를 바꾸면 자동으로 다시 그리게 됨.
+    setTimeout(()=>{
+      !bOpen ? context?.statemgr.openMenu() : context?.statemgr.closeMenu();
+      setOpen(!bOpen);
+    }, 150);  
   };
 
   return (

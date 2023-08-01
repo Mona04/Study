@@ -47,7 +47,7 @@
   }
 }
 
-.menu-btn.animate:not(.change) .menu-lines {
+.menu-btn.change .menu-lines {
   .line1 {
     transform: translateY(0.45rem) rotate(45deg);
   }
@@ -59,7 +59,7 @@
   }
 }
 
-.animate:not(.change) .menu-lines {
+.animate.change .menu-lines {
   .line1 {
     animation: rotateR 150ms ease-in forwards reverse; 
   }
@@ -71,7 +71,7 @@
   }
 }
 
-.change.animate .menu-lines {
+.animate:not(.change) .menu-lines {
   .line1 {
     animation: rotateR 150ms ease-in forwards alternate;
   }
