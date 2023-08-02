@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "concurrently \"contentlayer dev\" \"next dev -p 4000\"",
     "start": "next build && next start -p 4000",
-    "build": "contentlayer build && next build",
+    "build": "next build",
     "postbuild": "next-sitemap & node ./src/scripts/nojekyll.js & gh-pages -d out -b gh-pages -t true",
     "test": "jest --watch",
     "test:ci": "jest --ci"
@@ -14,7 +14,7 @@
     "contentlayer": "^0.3.1",
     "fs": "^0.0.1-security",
     "gray-matter": "^4.0.3",
-    "next": "^13.4.13-canary.8",
+    "next": "^13.4.12",
     "next-contentlayer": "^0.3.1",
     "next-sitemap": "^4.1.8",
     "react": "18.2.0",

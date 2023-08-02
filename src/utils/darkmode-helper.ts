@@ -11,7 +11,7 @@ function saveDarkModeFromLocal() : void {
 }
 export function isDarkMode() : boolean {
   if(!isBrowser()) return false;
-  return document.documentElement.getAttribute(darkModeAttribute) === 'dark' ||  window.matchMedia("(prefers-color-scheme: dark)").matches;
+  return document.documentElement.getAttribute(darkModeAttribute) === 'dark';
 }
 export function setDarkMode() : void { 
   if(!isBrowser()) return;
@@ -27,7 +27,7 @@ export function toggleDarkMode() : void { isDarkMode() ? setLightMode() : setDar
 
 
 function setInitialColorMode() {
-  if(localStorage.getItem("theme") === "dark" ||  window.matchMedia("(prefers-color-scheme: dark)").matches)
+  if(window.matchMedia("(prefers-color-scheme: dark)").matches && localStorage.getItem("theme") !== "light")
   {
     document.documentElement.setAttribute("data-theme", "dark");
   }  

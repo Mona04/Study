@@ -1,10 +1,10 @@
 import { Metadata } from 'next'
 import styles from '../../styles/Home.module.css';
 
-
-//type Props = {
-//  allPosts: Post[]
-//}
+export const metadata: Metadata = {
+  title: 'My Page Title',
+  icons: '/favicon.ico'
+}
 
 export default function Page() {
 
@@ -14,10 +14,6 @@ export default function Page() {
 				<h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
-
-        <p className={styles.description}>
-          {Date.now()} <code>pages/index.js2</code>
-        </p>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
@@ -58,52 +54,7 @@ export default function Page() {
             </p>
           </a>
         </div>
-			</main>
-
-
-			
+			</main>			
     </div>
   );
 }
-
-export const metadata: Metadata = {
-  title: 'My Page Title',
-  icons: '/favicon.ico'
-}
-
-/*
-const HeroPost = ({
-  title,
-  coverImage,
-  date,
-  excerpt,
-  author,
-  slug,
-}: Props) => {
-  return (
-    <section>
-      <div>
-        <p>{title}</p>
-      </div>
-    </section>
-  )
-}
-
-export  function Index({ allPosts }: Props) {
-
-  return (
-    <>
-      {heroPost && (
-        <HeroPost
-            title={heroPost.title}
-            coverImage={heroPost.coverImage}
-            date={heroPost.date}
-            author={heroPost.author}
-            slug={heroPost.slug}
-            excerpt={heroPost.excerpt}
-          />
-        )}
-    </>
-  )
-}
-}*/

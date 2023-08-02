@@ -1,7 +1,7 @@
 ---
 title: Make Blog using Gatsby - 3
-date: "2023-06-21 T22:12:03.284Z"
-description: "Hello World"
+date: 2023-06-21 T22:12:03.284Z
+description: Hello World
 ---
 
 

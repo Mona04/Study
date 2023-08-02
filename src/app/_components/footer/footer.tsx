@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function Footer()
 {
   var currentdate = new Date(); 
@@ -15,7 +17,7 @@ export default function Footer()
         rel="noopener noreferrer"
       >
         Powered by{' '}
-        <img src="/vercel.svg" alt="Vercel" />
+        <Image src="/vercel.svg" alt="Vercel" />
       </a>
       <p>last build time: {datetime}</p>
     </footer>
