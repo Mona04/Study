@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from 'nextwrap/image'
 
 export default function Footer()
 {
@@ -17,7 +17,7 @@ export default function Footer()
         rel="noopener noreferrer"
       >
         Powered by{' '}
-        <Image src="/vercel.svg" alt="Vercel" />
+        <Image src="/vercel.svg" alt="Vercel" width={100} height={100}/>
       </a>
       <p>last build time: {datetime}</p>
     </footer>

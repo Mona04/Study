@@ -10,7 +10,7 @@ const configs = (phase, { defaultConfig }) =>
   return {
     output: 'export',
     distDir: 'out',
-    basePath: phase == PHASE_PRODUCTION_BUILD ? '/study-log' : "",
+    basePath: phase == PHASE_PRODUCTION_BUILD ? process.env.BASE_PATH : "",
     sassOptions: {
       includePaths: [path.join(__dirname, 'styles')],
       
@@ -18,8 +18,7 @@ const configs = (phase, { defaultConfig }) =>
 
     reactStrictMode: true, 
     swcMinify: true,
-    trailingSlash: true,
-    
+    trailingSlash: false,
     //onDemandEntries: {
     //  // period (in ms) where the server will keep pages in the buffer
     //  maxInactiveAge: 36000 * 1000,

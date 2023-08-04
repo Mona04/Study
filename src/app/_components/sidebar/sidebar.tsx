@@ -1,4 +1,4 @@
-import Link from "next/link"
+import Link from "nextwrap/link"
 
 import {BLOG_NAME, CATEGORY_DISPLAY_DEPTH} from "configs/blog-config"
 import {blogCategories, Category, Categories} from 'utils/blog-helper'
@@ -20,7 +20,7 @@ function MakeCategoryView(category : Category, slug: string = '', depth : number
   return (
     <div>
       <div className={style["category-item-" + depth]}>        
-        <Link href={slug}>
+        <Link href={`${slug}`}>
           {`${category.category}(${category.count})`}
         </Link>
       </div>
