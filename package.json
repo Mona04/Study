@@ -1,13 +1,16 @@
 {
   "homepage": "https://mona04.github.io/study-log/",
   "private": true,
-  "scripts": {
-    "dev": "concurrently \"contentlayer dev\" \"next dev -p 4000\"",
+  
+  "scripts": {  
+    "dev": "contentlayer build & next dev -p 4000",
     "start": "next build && next start -p 4000",
     "build": "next build",
-    "postbuild": "next-sitemap & node ./src/scripts/nojekyll.js & gh-pages -d out -b gh-pages -t true",
+    "deploy": "next build",
+    "postdeploy": "next-sitemap & node ./src/scripts/nojekyll.js & gh-pages -d out -b gh-pages -t true",
     "test": "jest --watch",
-    "test:ci": "jest --ci"
+    "test:ci": "jest --ci",
+    "bbb": "node ./src/scripts/blog.js"
   },
   "dependencies": {
     "chokidar": "^3.5.3",

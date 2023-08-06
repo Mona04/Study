@@ -1,5 +1,5 @@
-var fs = require('fs-extra');
-var path = require('path');
+const fs = require('fs-extra');
+const path = require('path');
 
 const base = path.resolve("");
-fs.writeFileSync(base + '/out/.nojekyll', "");
+fs.writeFileSync(`${base}/out/.nojekyll`, "");

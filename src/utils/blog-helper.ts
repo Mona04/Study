@@ -1,20 +1,22 @@
 import {cache} from 'react'
 import { allPosts } from '@/contentlayer/generated'
 
-export type Categories = {
-  [category: string] : Category;
+
+type BlogDirectories = {
+  [category: string] : BlogDirectory;
 }
 
-export type Category = {
+export type BlogDirectory = {
   category: string,
   count: number,
-  childs: Categories
+  childs: BlogDirectories
 }
 
-export const blogCategories = cache(async () => {
+// Tree 구조로 현재 블로그 글을 표현
+const _blogDirectories = cache(() => {
   console.log("construct categories...")
 
-  const categories : Categories = {};
+  const categories : BlogDirectories = {};
   
   allPosts.map(post=>{
     const slugs = post._raw.flattenedPath.split('/');
@@ -34,4 +36,34 @@ export const blogCategories = cache(async () => {
   });  
 
   return categories;
-})
+});
+
+export const blogDirectories = _blogDirectories();
+
+type BlogSlugs = {
+  [category: string] : { bPost : boolean};
+}
+
+const _platBlogSlugs = (() => {
+  const categories: BlogSlugs = {};
+  
+  allPosts.map(post=>{
+    const slugs = post._raw.flattenedPath.split('/');
+    let category: string = "";
+    for(let i = 0; i < slugs.length; i++)
+    {
+      const slug = slugs[i];
+      category += `/${slug}`
+      if(categories[category] === undefined) {
+        categories[category] = {
+          bPost : i == slugs.length-1
+        };
+      }
+    }
+  });  
+
+  return categories;
+})();
+
+export const blogSlugs = Object.keys(_platBlogSlugs).map(slug=>slug.split('/').slice(2));
+export const blogSlugDict = _platBlogSlugs;

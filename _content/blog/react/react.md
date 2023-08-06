@@ -1,7 +1,6 @@
 ---
 title: Let's study React
-date: "2015-05-28T22:40:32.169Z"
-description: 리액으으으응나아아아.
+date: 2015-01-01
 ---
 
 [react 튜토리얼](https://react.vlpt.us/basic/01-concept.html)
@@ -17,3 +16,7 @@ description: 리액으으으응나아아아.
 [종속성 주입, React Context vs Redux vs ...](https://olaf-go.medium.com/context-api-vs-redux-e8a53df99b8)
 
 [테스트 라이브러리](https://www.daleseo.com/react-testing-library/)
+
+[Why CommonJS and ES Modules Can’t Get Along](https://redfin.engineering/node-modules-at-war-why-commonjs-and-es-modules-cant-get-along-9617135eeca1)
+
+[모듈은 한번만 평가된다.](https://stackoverflow.com/questions/37325667/does-es6-module-importing-execute-the-code-inside-the-imported-file)

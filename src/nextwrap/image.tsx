@@ -12,10 +12,19 @@ export default (
     width?: number | undefined, height?: number | undefined,
     fill?: boolean | undefined
   })=>{
-
-  return (
-    <Image src={`${process.env.BASE_PATH}${src}`} alt={alt} width={width} height={height} fill={fill}>
-      {children}
-    </Image>
-  )
+  if( process.env.NODE_ENV == 'production')
+  {
+    return (
+      <Image src={`${process.env.BASE_PATH}${src}`} alt={alt} width={width} height={height} fill={fill} priority={true}>
+        {children}
+      </Image>
+    )
+  }
+  else{
+    return (
+      <Image src={`${src}`} alt={alt} width={width} height={height} fill={fill} priority={true}>
+        {children}
+      </Image>
+    )
+  }
 }
