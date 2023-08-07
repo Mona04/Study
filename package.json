@@ -6,8 +6,8 @@
     "dev": "contentlayer build & next dev -p 4000",
     "start": "next build && next start -p 4000",
     "build": "next build",
-    "deploy": "next build",
-    "postdeploy": "next-sitemap & node ./src/scripts/nojekyll.js & gh-pages -d out -b gh-pages -t true",
+    "predeploy": "next build",
+    "deploy": "next-sitemap & node ./src/scripts/nojekyll.js & gh-pages -d out -b gh-pages -t true",
     "test": "jest --watch",
     "test:ci": "jest --ci",
     "bbb": "node ./src/scripts/blog.js"

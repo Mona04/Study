@@ -1,11 +1,12 @@
 import Link from "nextwrap/link"
 
 import {CATEGORY_DISPLAY_DEPTH} from "configs/blog-config"
-import {blogDirectories, BlogDirectory} from 'utils/blog-helper'
+import {postDirectories, PostDirectory} from 'utils/post-helper'
+
 import style from "./sidebar.module.scss"
 
 
-function MakeCategoryView(category : BlogDirectory, slug: string = '', depth : number = 0)
+function MakeCategoryView(category : PostDirectory, slug: string = '', depth : number = 0)
 {
   slug += '/' + category.category;
 
@@ -26,7 +27,7 @@ function MakeCategoryView(category : BlogDirectory, slug: string = '', depth : n
 }
 
 export default (() => {  
-  const categories = blogDirectories;
+  const categories = postDirectories;
   return (
     <div>
       { Object.values(categories).map(sub => MakeCategoryView(sub)) }

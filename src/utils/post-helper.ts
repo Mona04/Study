@@ -1,22 +1,24 @@
-import {cache} from 'react'
+import { cache } from 'react'
 import { allPosts } from '@/contentlayer/generated'
 
 
-type BlogDirectories = {
-  [category: string] : BlogDirectory;
+type PostDirectories = {
+  [category: string] : PostDirectory;
 }
 
-export type BlogDirectory = {
+export type PostDirectory = {
   category: string,
   count: number,
-  childs: BlogDirectories
+  childs: PostDirectories
 }
 
-// Tree 구조로 현재 블로그 글을 표현
-const _blogDirectories = cache(() => {
+/**
+ * Tree 구조로 현재 포스트 글을 표현
+ */
+const _postDirectories = cache(() => {
   console.log("construct categories...")
 
-  const categories : BlogDirectories = {};
+  const categories : PostDirectories = {};
   
   allPosts.map(post=>{
     const slugs = post._raw.flattenedPath.split('/');
@@ -38,14 +40,19 @@ const _blogDirectories = cache(() => {
   return categories;
 });
 
-export const blogDirectories = _blogDirectories();
+export const postDirectories = _postDirectories();
 
-type BlogSlugs = {
+
+
+type PostSlugs = {
   [category: string] : { bPost : boolean};
 }
 
-const _platBlogSlugs = (() => {
-  const categories: BlogSlugs = {};
+/**
+ * "/blog/react/myreact.md" 같은 형식으로 모든 카테고리에 대한 dictionary
+ */
+const _postSlugs = (() => {
+  const categories: PostSlugs = {};
   
   allPosts.map(post=>{
     const slugs = post._raw.flattenedPath.split('/');
@@ -65,5 +72,4 @@ const _platBlogSlugs = (() => {
   return categories;
 })();
 
-export const blogSlugs = Object.keys(_platBlogSlugs).map(slug=>slug.split('/').slice(2));
-export const blogSlugDict = _platBlogSlugs;
+export const postSlugs = _postSlugs;

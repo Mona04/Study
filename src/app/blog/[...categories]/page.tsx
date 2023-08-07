@@ -1,21 +1,18 @@
-import { allPosts } from '@/contentlayer/generated'
 import PostView from './post-view'
 import CategoryView from './category-view'
-import {blogSlugs, blogSlugDict} from 'utils/blog-helper'
+import { blogSlugs, checkSlug, getPost} from './../blog-helper'
 
 type Params = {
   params: { categories: string[] } 
 }
 
-const getPost = (params: { categories: string[] }  ) => {
-  const cur = ['blog', ...params.categories].join('/')
-  return allPosts.find((post) => post._raw.flattenedPath === cur)
-}
-
+/**
+ * @returns  [ {categories: []:string }] 형태어야 함
+ */
 export const generateStaticParams = () => blogSlugs;
 
 export const generateMetadata = ({ params }: Params) => {
-  const post = getPost(params);
+  const post = getPost(params.categories);
   if (!post) {
     return {}
     
@@ -24,29 +21,30 @@ export const generateMetadata = ({ params }: Params) => {
 }
 
 export default function Page({ params }: Params) {
-  const slug = ["", 'blog', ...params.categories].join('/');
-  if(slug in blogSlugDict == false) {
+ 
+  const checked = checkSlug(params.categories);
+  if(checked == null) {
     throw new Error(`Post not found for slug: ${params.categories}`)
   }
 
-  if(blogSlugDict[slug].bPost == false)
+  if(checked.bPost == false)
   {
     return (
-      <CategoryView categories={slug}/>
+      <CategoryView categories={params.categories}/>
     )
   }
-  const post = getPost(params);
-  if (!post){
-    console.log("asfd")
-  } 
-
-
-  return (
-    <div>
-      <PostView title={post.title} postHtml={post.body.html} raw={post.body.raw}/>
-    </div>
-  ) 
-    
+  else{
+    const post = getPost(params.categories);
+    if (post == undefined){
+      throw new Error(`Post not found for slug: ${params.categories}`)
+    } 
+  
+    return (
+      <div>
+        <PostView title={post.title} postHtml={post.body.html} raw={post.body.raw}/>
+      </div>
+    ) 
+  }    
 }
 
 export const dynamicParams = false // true | false,

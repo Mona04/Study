@@ -1,10 +1,10 @@
-import { allPosts } from '@/contentlayer/generated'
+import { getPosts } from './../blog-helper'
 
-export default function PostView({categories}: {categories:string}) {
+export default function PostView({categories}: {categories:string[]}) {
   
   return (
     <main>
-      { allPosts.map(post=>{ 
+      { getPosts(categories).map(post=>{ 
           return <p>{post.title}</p>
         })}
     </main>

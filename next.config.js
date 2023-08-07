@@ -8,7 +8,7 @@ const { withContentlayer } = require('next-contentlayer')
  */
 const configs = (phase, { defaultConfig }) => 
 {
-  return {
+  return withContentlayer({
     output: 'export',
     distDir: 'out',
     basePath: phase == PHASE_PRODUCTION_BUILD ? process.env.BASE_PATH : "",
@@ -32,7 +32,6 @@ const configs = (phase, { defaultConfig }) =>
     //  instrumentationHook: true,
     //},
 
-
     webpack: (
       config,
       { buildId, dev, isServer, defaultLoaders, nextRuntime, webpack }
@@ -48,7 +47,7 @@ const configs = (phase, { defaultConfig }) =>
       
       return config
     },
-  }
+  });
 }
 
-module.exports = withContentlayer(configs);
+module.exports = configs;
