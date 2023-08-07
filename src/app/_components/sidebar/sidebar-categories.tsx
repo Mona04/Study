@@ -26,11 +26,11 @@ function MakeCategoryView(category : PostDirectory, slug: string = '', depth : n
   );
 }
 
-export default (() => {  
+export default () => {  
   const categories = postDirectories;
   return (
     <div>
       { Object.values(categories).map(sub => MakeCategoryView(sub)) }
     </div>   
   );
-})();
+};

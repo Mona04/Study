@@ -1,5 +1,5 @@
 'use client'
-import StateMgr from "./state-manager"
+import StateMgr from "./statemanager"
 import {createContext} from 'react'
 
 class GlobalContext {

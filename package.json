@@ -1,7 +1,6 @@
 {
   "homepage": "https://mona04.github.io/study-log/",
   "private": true,
-  
   "scripts": {  
     "dev": "contentlayer build & next dev -p 4000",
     "start": "next build && next start -p 4000",

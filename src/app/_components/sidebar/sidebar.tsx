@@ -1,7 +1,7 @@
 import Link from "nextwrap/link"
 
 import SideBarInteract from './sidebar-interact'
-import sideBarCategory from './sidebar-categories'
+import SideBarCategory from './sidebar-categories'
 import style from "./sidebar.module.scss"
 
 
@@ -15,7 +15,7 @@ function SideBar() {
               {"Home Page"}
             </Link>
           </div>     
-          {sideBarCategory}
+          <SideBarCategory/>
         </div>
       </SideBarInteract>  
     </aside>
