@@ -7,7 +7,7 @@
     "build": "next build",
     "predeploy": "next build",
     "deploy": "next-sitemap & node ./src/scripts/nojekyll.js & gh-pages -d out -b gh-pages -t true",
-    "test": "jest --watch",
+    "test": "jest --watch ",
     "test:ci": "jest --ci",
     "bbb": "node ./src/scripts/blog.js"
   },
