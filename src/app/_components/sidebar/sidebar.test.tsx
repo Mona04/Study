@@ -4,7 +4,7 @@ import {allPosts} from '@/contentlayer/generated'
 
 describe('Categgory Test', () => {
   it('Categgory Show Test', () => {
-    console.log(allPosts)
+    console.log(allPosts.length)
     //const screen = render(<><SideBarCategory/></>);
     //
     //const homeurl = screen.getByText("Home");
