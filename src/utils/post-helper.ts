@@ -1,4 +1,3 @@
-import { cache } from 'react'
 import { allPosts } from '@/contentlayer/generated'
 
 
@@ -15,12 +14,14 @@ export type PostDirectory = {
 /**
  * Tree 구조로 현재 포스트 글을 표현
  */
-const _postDirectories = cache(() => {
+const _postDirectories = () => {
   console.log("construct categories...")
 
   const categories : PostDirectories = {};
   
   allPosts.map(post=>{
+    if(post._raw == undefined) return;
+
     const slugs = post._raw.flattenedPath.split('/');
     let cur_category = categories;
     for(var slug of slugs)
@@ -38,7 +39,7 @@ const _postDirectories = cache(() => {
   });  
 
   return categories;
-});
+};
 
 export const postDirectories = _postDirectories();
 
@@ -55,6 +56,8 @@ const _postSlugs = (() => {
   const categories: PostSlugs = {};
   
   allPosts.map(post=>{
+    if(post._raw == undefined) return;
+    
     const slugs = post._raw.flattenedPath.split('/');
     let category: string = "";
     for(let i = 0; i < slugs.length; i++)

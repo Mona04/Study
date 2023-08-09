@@ -19,14 +19,15 @@ function MenuButton() {
   };
 
   return (
-    <div className={[style['menu-btn'], bOpen ? style.change : ''].join(' ')} title="menu"
+    <button className={[style['menu-btn'], bOpen ? style.change : ''].join(' ')} 
+         title="toggle menu" id='menu-toggle-btn' 
          onClick={onClickMenu}>
       <div className={style["menu-lines"]}>
         <div className={[style['line'], style['line1']].join(' ')}></div>
         <div className={[style['line'], style['line2']].join(' ')}></div>
         <div className={[style['line'], style['line3']].join(' ')}></div>
       </div>
-    </div>
+    </button>
   )
 }
 

@@ -12,7 +12,9 @@ function SideBar() {
         <div className={style.sidebar} >
           <div>
             <Link href="/">
-              {"Home Page"}
+              <p>
+                {"Home Page"}
+              </p>
             </Link>
           </div>     
           <SideBarCategory/>
