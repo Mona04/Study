@@ -25,3 +25,14 @@ view back on the skyline of her hometown _Bookmarksgrove_, the headline of
  and the subline of her own road, the Line
 Lane. Pityful a rhetoric question ran over her cheek, then she continued her
 way. On her way she met a copy.
+
+
+```c++
+#include <iostream>
+using namespace std;
+void main()
+{
+  int a = 0;
+  cout << a << endl;
+}
+```

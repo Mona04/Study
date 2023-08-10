@@ -1,4 +1,4 @@
-import {render, fireEvent, waitFor, getByAltText} from '@testing-library/react'
+import {render, fireEvent, waitFor } from '@testing-library/react'
 
 import {ContextProvider, Context} from "@/context/context"
 import SideBar from './sidebar'
@@ -12,19 +12,12 @@ describe('Categgory Test', () => {
       <MastHead/>
       <SideBar/>
     </ContextProvider>);
+
     const togglebtn = screen.getByRole('button', {name: /toggle menu/i});
     fireEvent.click(togglebtn);
 
-    await new Promise((r) => setTimeout(r, 2000));
-    await waitFor(()=>
-    {
-      expect(screen.getByText(/Home/i)).toBeDefined()
-    })
+    const homeurl = await waitFor(()=>screen.getByText(/Home/i, {}));
 
-    //fireEvent()
-    //console.log(homeurl);
+    expect(homeurl).toBeDefined();
   })
 })
-// https://univdev.tistory.com/45
-// https://loy124.tistory.com/364
-// https://www.daleseo.com/react-testing-library/

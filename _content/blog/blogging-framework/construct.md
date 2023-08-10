@@ -25,6 +25,9 @@ openai api 써서 페이지도 하나
 
 마비옛체 서체의 출처 표기를 권장합니다. 예) 이 페이지에는 마비노기가 제공한 마비옛체 서체가 적용되어 있습니다.
 
+rehype-prism-plus 를 쓴 [이유](https://www.timegambit.com/blog/blog-log/compare-code-parsing-library)
+=> 조금 용량 많아도 더 이쁨
+
 ## 디자인하기
 
 SASS 와 다크모드를 우선 구현하자.

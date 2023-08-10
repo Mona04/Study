@@ -1,5 +1,6 @@
 // contentlayer.config.ts
 import { defineDocumentType, makeSource } from 'contentlayer/source-files'
+import highlight from 'rehype-highlight'
 
 export const Post = defineDocumentType(() => ({
   name: 'Post',
@@ -16,9 +17,8 @@ export const Post = defineDocumentType(() => ({
 //https://yiyb-blog.vercel.app/posts/nextjs-contentlayer-blog
 
 export default makeSource({
-   contentDirPath: '_content', 
-   documentTypes: [Post],
-   mdx:{
-    
-   }
+    contentDirPath: '_content', 
+    documentTypes: [Post],
+    markdown:{ rehypePlugins: [highlight] },
+    mdx:{ rehypePlugins: [highlight] }
   })
