@@ -1,6 +1,8 @@
 // contentlayer.config.ts
 import { defineDocumentType, makeSource } from 'contentlayer/source-files'
-import highlight from 'rehype-highlight'
+import highlight from 'rehype-prism-plus'
+import title from 'rehype-code-titles'
+
 
 export const Post = defineDocumentType(() => ({
   name: 'Post',
@@ -19,6 +21,21 @@ export const Post = defineDocumentType(() => ({
 export default makeSource({
     contentDirPath: '_content', 
     documentTypes: [Post],
-    markdown:{ rehypePlugins: [highlight] },
+    markdown:{ 
+      rehypePlugins: [
+        [
+          title,
+          {
+            titleSeparator: ':'
+          }
+        ],
+        [
+          highlight,
+          {
+            showLineNumbers: true
+          }
+        ]
+      ]    
+    },
     mdx:{ rehypePlugins: [highlight] }
-  })
+})

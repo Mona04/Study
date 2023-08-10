@@ -9,7 +9,7 @@ import SideBar from "@/components/sidebar/sidebar"
 import Footer from "@/components/footer/footer"
 
 import '@/styles/globals.scss'
-
+import '@/styles/include.css'
 
  
 export const metadata: Metadata = {

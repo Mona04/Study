@@ -32,10 +32,7 @@ const configs = (phase, { defaultConfig }) =>
     //  instrumentationHook: true,
     //},
 
-    webpack: (
-      config,
-      { buildId, dev, isServer, defaultLoaders, nextRuntime, webpack }
-    ) => {
+    webpack: (config, { buildId, dev, isServer, defaultLoaders, nextRuntime, webpack }) => {
       if(isServer){
         if(nextRuntime == 'nodejs'){
         }
@@ -44,7 +41,7 @@ const configs = (phase, { defaultConfig }) =>
         if(dev){        
         }
       }
-      
+
       return config
     },
   });
