@@ -35,6 +35,8 @@ openai api 써서 페이지도 하나
 react 를 써보고 싶어 gatsby 랑 nextjs 중에 고민했는데 컴파일 속도보고 nextjs 로 정했다.
 
 
+[Tailwind 장단점](https://ykss.netlify.app/translation/the_pros_and_cons_of_tailwindcss/)
+
 
 ## 기능구현
 

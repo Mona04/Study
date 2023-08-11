@@ -2,6 +2,7 @@
 import { defineDocumentType, makeSource } from 'contentlayer/source-files'
 import highlight from 'rehype-prism-plus'
 import title from 'rehype-code-titles'
+import prettyCode from 'rehype-pretty-code'
 
 
 export const Post = defineDocumentType(() => ({
@@ -23,16 +24,15 @@ export default makeSource({
     documentTypes: [Post],
     markdown:{ 
       rehypePlugins: [
+   
         [
-          title,
+          prettyCode,
           {
-            titleSeparator: ':'
-          }
-        ],
-        [
-          highlight,
-          {
-            showLineNumbers: true
+            showLineNumbers: true,
+            grid: true,
+            theme: 'rose-pine-moon',
+            dark: 'github-dark-dimmed',
+            light: 'github-light',
           }
         ]
       ]    

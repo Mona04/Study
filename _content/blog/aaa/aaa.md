@@ -27,7 +27,21 @@ Lane. Pityful a rhetoric question ran over her cheek, then she continued her
 way. On her way she met a copy.
 
 
-```cpp:main.cpp  [1,3-4] showLineNumbers 
+## Code Syntax Highlight Test
+
+```c# {1-3,4} showLineNumbers /Hello/
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Hello, World!");
+    }
+}
+```
+
+```cpp title="main.cpp" caption="adsf" showLineNumbers{1} {1,3-4} 
 #include <iostream>
 using namespace std;
 void main()
@@ -38,3 +52,9 @@ void main()
 ```
 
 한글입니다.
+
+https://delba.dev/blog/next-blog-build-time-syntax-highlighting
+https://rehype-pretty-code.netlify.app/
+https://www.mridul.tech/blogs/how-to-use-scss-with-tailwind-in-next-js
+https://tailwindcss.com/docs/using-with-preprocessors
+https://www.mridul.tech/blogs/how-to-use-scss-with-tailwind-in-next-js
