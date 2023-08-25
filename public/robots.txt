@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://mona04.github.io/study-log/
+
+# Sitemaps
+Sitemap: https://mona04.github.io/study-log/sitemap.xml

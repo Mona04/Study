@@ -1,7 +1,7 @@
 {
+  "homepage": "https://mona04.github.io/study-log/",
   "private": true,
   "scripts": {
-<<<<<<< HEAD
     "dev": "contentlayer build & next dev -p 4000",
     "start": "next build && next start -p 4000",
     "build": "next build",
@@ -38,16 +38,5 @@
     "jest": "^29.6.2",
     "jest-environment-jsdom": "^29.6.2",
     "typescript-plugin-css-modules": "^5.0.1"
-=======
-    "dev": "contentlayer build & next dev",
-    "build": "next build"
-  },
-  "dependencies": {
-    "contentlayer": "^0.3.4",
-    "next": "^13.4.12",
-    "next-contentlayer": "^0.3.4",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
->>>>>>> 43ab02d7fb61642bfb9b8c473a6d83541e39aa23
   }
 }
