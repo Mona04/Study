@@ -1,3 +1,10 @@
+---
+title: "Make a Blog using NextJS"
+description: "Hello World"
+date: 2023-06-21
+---
+
+
 First take.
 
 Every parents want to take their baby in a cheep price to pediatrictians who is better than others nearby.
