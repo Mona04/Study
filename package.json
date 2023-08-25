@@ -1,6 +1,44 @@
 {
   "private": true,
   "scripts": {
+<<<<<<< HEAD
+    "dev": "contentlayer build & next dev -p 4000",
+    "start": "next build && next start -p 4000",
+    "build": "next build",
+    "predeploy": "next build",
+    "deploy": "next-sitemap & node ./src/scripts/nojekyll.js & gh-pages -d out -b gh-pages -t true",
+    "test": "jest --watch ",
+    "bbb": "node ./src/scripts/blog.js"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.14",
+    "chokidar": "^3.5.3",
+    "contentlayer": "^0.3.4",
+    "fs": "^0.0.1-security",
+    "next": "^13.4.12",
+    "next-contentlayer": "^0.3.4",
+    "next-sitemap": "^4.1.8",
+    "postcss": "^8.4.27",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.10.1",
+    "rehype-pretty-code": "^0.10.0",
+
+    "sass": "^1.63.6",
+    "tailwindcss": "^3.3.3",
+    "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.22.10",
+    "@testing-library/react": "^14.0.0",
+    "@types/jest": "^29.5.3",
+    "@types/node": "20.4.1",
+    "@types/react": "18.2.14",
+    "gh-pages": "^5.0.0",
+    "jest": "^29.6.2",
+    "jest-environment-jsdom": "^29.6.2",
+    "typescript-plugin-css-modules": "^5.0.1"
+=======
     "dev": "contentlayer build & next dev",
     "build": "next build"
   },
@@ -10,5 +48,6 @@
     "next-contentlayer": "^0.3.4",
     "react": "18.2.0",
     "react-dom": "18.2.0"
+>>>>>>> 43ab02d7fb61642bfb9b8c473a6d83541e39aa23
   }
 }
