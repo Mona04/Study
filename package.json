@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "autoprefixer": "^10.4.14",
-    "chokidar": "^3.5.3",
     "contentlayer": "^0.3.4",
     "fs": "^0.0.1-security",
     "next": "^13.4.12",
@@ -23,7 +22,6 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.10.1",
     "rehype-pretty-code": "^0.10.0",
-
     "sass": "^1.63.6",
     "tailwindcss": "^3.3.3",
     "typescript": "5.1.6"
