@@ -1,8 +1,10 @@
 ---
 title: "Make a Blog using NextJS"
+tag: [a, b, c, d]
 date: 2023-06-21
-description: ["Hello World"]   
+description: "asdf"
 ---
+
 
 
 First take.

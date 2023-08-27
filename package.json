@@ -1,14 +1,23 @@
 {
   "private": true,
   "scripts": {
-    "dev": "contentlayer build & next dev",
-    "build": "next build"
+    "dev": "contentlayer build --clearCache & next dev",
+    "build": "next build",
+    "cb": "contentlayer build --clearCache"
   },
   "dependencies": {
     "contentlayer": "^0.3.4",
+    "gray-matter": "^4.0.3",
     "next": "^13.4.12",
     "next-contentlayer": "^0.3.4",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "remark-frontmatter": "^4.0.1",
+    "remark-parse": "^10.0.2",
+    "unified": "^11.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "18.2.21",
+    "typescript": "5.2.2"
   }
 }

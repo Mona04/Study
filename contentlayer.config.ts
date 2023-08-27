@@ -1,16 +1,16 @@
 // contentlayer.config.ts
-import { defineDocumentType, makeSource } from 'contentlayer/source-files'
+import { ListFieldDefItem, defineDocumentType, makeSource } from 'contentlayer/source-files'
 
 
 export const Post = defineDocumentType(() => ({
   name: 'Post',
   filePathPattern: `**/*.(md|mdx)`,
-  contentType: 'mdx',
+  contentType: 'markdown',
   fields: {
-    title:        { type: 'string',   required: true },
-    date:         { type: 'date',     required: true },
-    description:  { type: 'string',   required: false},
-    excerpt:      { type: 'string',   required: false},
+    title:        { required: true, type: 'string' },
+    date:         { required: true, type: 'date',  },
+    description:  { required: true, type: 'string'},
+    tag:          { required: true, type: 'list', of: {type: "string"}},
   },
 }))
 
