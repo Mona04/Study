@@ -44,7 +44,6 @@ pre>code {
 }
 
 
-
 [data-chars-id] {
   border-bottom-width: 2px;
   padding: .25rem;
@@ -92,7 +91,6 @@ div[data-rehype-pretty-code-fragment] pre {
   /* border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px; */
   border-radius: 5px;
-  margin-top: 5px;
   margin-bottom: 5px;
   overflow-x: hidden;
 }
@@ -100,6 +98,10 @@ div[data-rehype-pretty-code-fragment] pre {
 div[data-rehype-pretty-code-fragment] .line {
   background-color: rgba(25, 25, 25) !important;
 }
+
+/* title */
+
+
 
 div[data-rehype-pretty-code-title] {
   padding: 3px;
