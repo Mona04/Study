@@ -1,7 +1,7 @@
 import Link from "next/link"
 
 
-export default ({children, href, className}: {children: React.ReactNode, href: string, className?: string | undefined, })=>{
+export default ({children, href, className}: {children: React.ReactNode, href: string | undefined, className?: string | undefined, })=>{
   if( process.env.NODE_ENV == 'production')
   {
     return (

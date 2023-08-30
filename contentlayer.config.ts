@@ -1,4 +1,3 @@
-// contentlayer.config.ts
 import { defineDocumentType, makeSource } from 'contentlayer/source-files'
 import prettyCode from 'rehype-pretty-code'
 
@@ -8,10 +7,10 @@ export const Post = defineDocumentType(() => ({
   filePathPattern: `**/*.(md|mdx)`,
   contentType: 'mdx',
   fields: {
-    title:        { type: 'string',   required: true },
-    date:         { type: 'date',     required: true },
-    description:  { type: 'string',   required: false},
-    excerpt:      { type: 'string',   required: false}
+    title:        { required: true,  type: 'string',  },
+    date:         { required: true,  type: 'date',     },
+    description:  { required: false, type: 'string',   },
+    tags:         { required: false, type: 'list', of: {type: 'string'} }
   },  
   computedFields: {
     url: { type: 'string', resolve: (post) => `/posts/${post._raw.flattenedPath}` },
@@ -25,6 +24,7 @@ export default makeSource({
     mdx:{ 
       rehypePlugins: [
         [
+          // https://rehype-pretty-code.netlify.app/
           prettyCode,
           {
             showLineNumbers: true,
@@ -35,11 +35,12 @@ export default makeSource({
             onVisitTitle(element:any) {
               element.children.push({
                 type: 'element',
-                tagName: 'div',
+                tagName: 'copy',
                 properties: { className: ['copy'] },
                 children: [{ type: 'text', value: 'Copy' }]
               });
             },
+
           }
         ]
       ]    

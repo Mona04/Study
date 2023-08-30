@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import styles from '../../styles/Home.module.css';
+import styles from '@/styles/Home.module.css';
 
 export const metadata: Metadata = {
   title: 'My Page Title',
