@@ -18,7 +18,13 @@ const configs = (phase, { defaultConfig }) =>
     {
         engines: {
             // Provide custom YAML engine to avoid parsing of date values https://github.com/jonschlinkert/gray-matter/issues/62)
-            yaml: (str) => yaml.parse(str),
+            yaml: (str) => {
+              console.log(str)
+              if(str != undefined && str.length > 0 && str[str.length-1] == '\r'){
+                str = str.slice(0, str.length-1);
+              }
+              return yaml.parse(str)
+            }
         },
     })
   console.log(file.matter);
