@@ -8,7 +8,7 @@ description: "asdf"
 
 
 First take.
-
+d
 Every parents want to take their baby in a cheep price to pediatrictians who is better than others nearby.
 But in most case parent do not pay by their money but insurance pay it.  
 In my country, all people should be included in the government health insurance.
