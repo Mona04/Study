@@ -2,13 +2,28 @@ const path = require('path')
 const { PHASE_PRODUCTION_BUILD, PHASE_DEVELOPMENT_SERVER } = require("next/constants");
 const { withContentlayer } = require('next-contentlayer')
 
-
 /**
  * @type {import('next').NextConfig}
  */
 const configs = (phase, { defaultConfig }) => 
 {
-  return withContentlayer({
+  const graymatter = require('gray-matter')
+  const fs = require('fs')
+  const yaml = require('yaml')
+
+  let str = fs.readFileSync("_content/end-with-quote.md", {encoding: 'utf-8', flag: 'r'});   
+  //console.log(yaml.parse(str));
+  const file = graymatter(
+    str,
+    {
+        engines: {
+            // Provide custom YAML engine to avoid parsing of date values https://github.com/jonschlinkert/gray-matter/issues/62)
+            yaml: (str) => yaml.parse(str),
+        },
+    })
+  console.log(file.matter);
+
+  return ({
     output: 'export',
     distDir: 'out',
     basePath: phase == PHASE_PRODUCTION_BUILD ? process.env.BASE_PATH : "",
