@@ -7,7 +7,7 @@ import Pre from 'utils/code-highlight/code-highlight'
 
 const Components : MDXComponents = {
   a: ({ href, children }) => <Link href={href}>{children}</Link>,
-  //pre: ({ children }) => <div>{children}</div>
+  title: ({ children }) => <div data-code-title>{children}</div>,
   copy: ({childrent}) => <div>asdf</div>
 }
 

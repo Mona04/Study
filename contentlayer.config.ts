@@ -32,18 +32,29 @@ export default makeSource({
             theme: {
               dark: 'rose-pine-moon',
             },
-            onVisitTitle(element:any) {
-              element.children.push({
-                type: 'element',
-                tagName: 'copy',
-                properties: { className: ['copy'] },
-                children: [{ type: 'text', value: 'Copy' }]
-              });
-            },
-
+            onVisitTitle: onVisitTitle
           }
         ]
       ]    
     },
     markdown:{ rehypePlugins: [prettyCode] }
 })
+
+function onVisitTitle(element: any) 
+{
+  if(element.children.length > 0){
+    const title = element.children[0];
+    element.children[0] = {
+      type: 'element',
+      tagName: 'title',
+      children: [title]
+    }
+  }
+
+  element.children.push({
+    type: 'element',
+    tagName: 'copy',
+    properties: { className: ['copy'] },
+    children: [{ type: 'text', value: 'Copy' }]
+  });
+}
