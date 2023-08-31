@@ -2,7 +2,6 @@
 
 import {useContext, useState} from "react"
 import {Context} from '@/context/context'
-import style from "./masthead.module.scss"
 
 import {AiOutlineSearch} from 'react-icons/ai'
 

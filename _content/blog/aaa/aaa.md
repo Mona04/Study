@@ -51,6 +51,9 @@ void main()
 }
 ```
 
+```cout{:.a}``` is good
+
+
 ```cpp title="main.cpp" caption="adsf" showLineNumbers{1} {2-3,5} 
 #include <iostream>
 using namespace std;

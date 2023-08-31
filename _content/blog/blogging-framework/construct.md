@@ -69,13 +69,15 @@ react 를 써보고 싶어 gatsby 랑 nextjs 중에 고민했는데 컴파일 �
 
 ### Syntax Highlight
 
-Contentlayer 에서 html 로 변환할 때 code 부분에 rehype 도 처리해준다.
+Contentlayer 에서 rehype 관련 모듈을 넣어줄 수가 있다.
 
-이때 
-
-rehype-prism-plus 를 쓴 [이유](https://www.timegambit.com/blog/blog-log/compare-code-parsing-library)
-=> 조금 용량 많아도 더 이쁨
-+ cdn 으로 css 들고오면 로딩도 빠름.
-+ https://cdnjs.com/libraries/highlight.js
+많이 사용되는 것으로는
+[Rehype Highlight](https://www.npmjs.com/package/rehype-highlight), 
+[Rehype Prism Plus](https://www.npmjs.com/package/rehype-prism-plus), 
+[Rehype Pretty Code](https://rehype-pretty-code.netlify.app/)
+가 있엇는데 난 마지막 것을 선택했다.
++ server side 에서 미리 파싱하는 특성 상 html 용량이 조금 나가지만 더 빠르다.
++ 줄/단어 하이라이트 같은 부가 기능도 붙어있고 커스터마이즈도 편하다.
++ 문서도 잘되어있어서 Rehype Prism Plus 대신 써보았다. 
 
 https://bepyan.github.io/blog/nextjs-blog/3-mdx-plugin

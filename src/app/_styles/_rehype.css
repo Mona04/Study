@@ -1,62 +1,35 @@
-/* Code Line Numbering */
-
-code {
-  counter-reset: line;
-}
- 
-code > [data-line]::before {
-  counter-increment: line;
-  content: counter(line);
- 
-  /* Other styling */
-
-  display: inline-block;
-  width: 1rem;
-  margin-right: 1rem;
-  text-align: right;
-  color: gray;
-}
- 
-code[data-line-numbers-max-digits='2'] > [data-line]::before {
-  width: 2rem;
-}
- 
-code[data-line-numbers-max-digits='3'] > [data-line]::before {
-  width: 3rem;
-}
-
-pre>code {
+/**
+* container 
+*/
+pre > code {
   display: grid;
-  counter-reset: line
 }
-
-/* container */
 
 div[data-rehype-pretty-code-fragment] pre {
-  max-width: 59rem;
-  padding: 10px;
-  background-color: rgba(25, 25, 25) !important;
-  /* border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px; */
+  /*max-width: var(--code-width);*/
+
+  padding: 0.8rem 0.8rem 0.8rem 0.0rem; /*left padding is 0 for highlight line*/
+
   margin-top: 5px;
   margin-bottom: 5px;
-  border-radius: 5px;
-  overflow-x: hidden;
+  border-radius: 10px;
+
+  /* make scrollbar if overflow */
+  overflow-x: auto;
 }
 
+/* container with title */
 div[data-rehype-pretty-code-title] + pre {
-  border-radius: 0px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
   margin-top: 0px;
 }
 
-div[data-rehype-pretty-code-fragment] .line {
-  background-color: rgba(25, 25, 25) !important;
-}
-
 /* title */
-
 div[data-rehype-pretty-code-title] {
-  background-color: var(--color-code-title);
+  /*max-width: var(--code-width);*/
+
+  background-color: #343541;
 
   color: var(--color-text-dimmed);
   font-size: 0.7em;
@@ -67,20 +40,28 @@ div[data-rehype-pretty-code-title] {
   border-radius: 5px 5px 0px 0px;
   margin-top: 5px;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
+  
 
   .title {
-
+    text-align: left;
+    margin-left: 1em;
+  }
+  .copy {
+    margin-left: auto;
+    margin-right: 1em;
   }
 }
 
-/* content */
+/** 
+* content
+*/
 
 [data-line] {
   border-left-width: 2px;
   border-left-color: #0000;
-  padding-left: 1.5rem;
+  padding-left: 0rem;
   padding-right: 1.5rem;
   padding-top: 0.0rem;
   padding-bottom: 0.0rem;
@@ -130,11 +111,13 @@ div[data-rehype-pretty-code-title] {
 }
 
 
-/* highlight */
+/**
+* highlight
+*/
 
 [data-highlighted-line] {
   background: #c8c8ff1a;
-  --tw-border-opacity: 1;
+  border-left-color:#005b99;
 }
 
 [data-highlighted-chars] {
@@ -142,3 +125,73 @@ div[data-rehype-pretty-code-title] {
   background-color: #52525b80;
   box-shadow: 0 0 0 4px #52525b80
 }
+
+/**
+* Code Line Numbering 
+*/
+
+code {
+  counter-reset: line;
+}
+
+pre>code {
+  display: grid;
+  counter-reset: line
+}
+ 
+code > [data-line]::before {
+  counter-increment: line;
+  content: counter(line);
+ 
+  /* Other styling */
+
+  display: inline-block;
+  width: 1rem;
+  margin-right: 1.2rem;
+  margin-left: 0.4rem;
+  text-align: right;
+  color: gray;
+}
+
+/* Increase the width of line numbers based on the digit count */
+code[data-line-numbers-max-digits='2'] > [data-line]::before {
+  width: 2rem;
+}
+ 
+code[data-line-numbers-max-digits='3'] > [data-line]::before {
+  width: 3rem;
+}
+
+code[data-line-numbers-max-digits='3'] > [data-line]::before {
+  width: 4rem;
+}
+
+/**
+* scrollbar
+*/
+
+div[data-rehype-pretty-code-fragment] pre::-webkit-scrollbar {
+  height: 12px;
+  background-color: transparent;
+}
+
+div[data-rehype-pretty-code-fragment] pre::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+div[data-rehype-pretty-code-fragment] pre::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: rgba(150,150,150);
+}
+
+/**
+* Dark / Light Mode
+
+[data-theme="dark"] pre[data-theme='light']{
+  display: none;
+}
+[data-theme="light"]  pre[data-theme='dark'] {
+  display: none;
+}
+*/

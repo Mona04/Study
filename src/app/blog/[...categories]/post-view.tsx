@@ -2,13 +2,13 @@
 import { useMDXComponent } from 'next-contentlayer/hooks';
 import type { MDXComponents } from 'mdx/types'
 
+import {Copy} from '@/components/code-highlight/code-highlight'
 import Link from 'nextwrap/link'
-import Pre from 'utils/code-highlight/code-highlight'
 
 const Components : MDXComponents = {
   a: ({ href, children }) => <Link href={href}>{children}</Link>,
-  title: ({ children }) => <div data-code-title>{children}</div>,
-  copy: ({childrent}) => <div>asdf</div>
+  title: ({ children }) => <div className='title'>{children}</div>,
+  copy: ({childrent}) => <Copy/>
 }
 
 export default function PostView({title, code, raw}: {title:string, code: string, raw: string}) {
