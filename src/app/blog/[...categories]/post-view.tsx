@@ -8,7 +8,7 @@ import Link from 'nextwrap/link'
 const Components : MDXComponents = {
   a: ({ href, children }) => <Link href={href}>{children}</Link>,
   title: ({ children }) => <div className='title'>{children}</div>,
-  copy: ({childrent}) => <Copy/>
+  copy: ({children}) => <Copy code={children}/>
 }
 
 export default function PostView({title, code, raw}: {title:string, code: string, raw: string}) {

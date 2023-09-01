@@ -1,7 +1,7 @@
 ---
 title: "Make a Blog using NextJS"
 date: 2023-06-21
-description: "Hello World"   
+description: Hello World 
 ---
 
 ## 필요한 기능
@@ -80,4 +80,4 @@ Contentlayer 에서 rehype 관련 모듈을 넣어줄 수가 있다.
 + 줄/단어 하이라이트 같은 부가 기능도 붙어있고 커스터마이즈도 편하다.
 + 문서도 잘되어있어서 Rehype Prism Plus 대신 써보았다. 
 
-https://bepyan.github.io/blog/nextjs-blog/3-mdx-plugin
+요즘 Code Block 은 Copy 버튼이 붙어있다. 이를 구현하기 위해서 [claritydev blog](https://claritydev.net/blog/copy-to-clipboard-button-nextjs-mdx-rehype) 를 참고하여 구현하였다.

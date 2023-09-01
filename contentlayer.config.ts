@@ -1,6 +1,7 @@
 import { defineDocumentType, makeSource } from 'contentlayer/source-files'
-import prettyCode from 'rehype-pretty-code'
 import { readFileSync } from 'fs'
+import {visit} from 'unist-util-visit'
+import prettyCode from 'rehype-pretty-code'
 
 export const Post = defineDocumentType(() => ({
   name: 'Post',
@@ -22,9 +23,38 @@ export default makeSource({
     contentDirPath: '_content', 
     documentTypes: [Post],
     mdx:{ 
-      rehypePlugins: [        
+      rehypePlugins: [             
+        // unified transformer to save original code
+        [          
+          () => async (tree)  => {
+            visit(tree, 'element', (node, index, parent) => {
+              if(parent?.tagName === 'div' && parent?.properties?.['data-rehype-pretty-code-fragment'] != undefined){
+                const [header, pre] = node?.children;
+                if(header?.tagName != 'div'){
+
+                }
+                //header.children?.map((v:any)=>{
+                //  console.log(v)
+                //})
+              }              
+      
+              return;
+              if(node?.children?.length > 1){
+               
+              }
+             
+              if(node?.type === 'element' && node?.tagName === 'pre'){
+                const [codeEl] = node.children;
+ 
+                if (codeEl.tagName !== "code") return;
+       
+                node.raw = codeEl.children?.[0].value;
+              }
+            })
+          }
+        ],        
+        // https://rehype-pretty-code.netlify.app/
         [
-          // https://rehype-pretty-code.netlify.app/
           prettyCode,
           {
             grid: true,
@@ -38,7 +68,7 @@ export default makeSource({
             ),
             onVisitTitle: onVisitTitle,
           }
-        ]
+        ]               
       ]    
     },
     markdown:{ rehypePlugins: [prettyCode] }
