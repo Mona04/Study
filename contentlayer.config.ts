@@ -29,7 +29,7 @@ export default makeSource({
           () => async (tree)  => {
             visit(tree, 'element', (node, index, parent) => {
               if(parent?.tagName === 'div' && parent?.properties?.['data-rehype-pretty-code-fragment'] != undefined){
-                const [header, pre] = node?.children;
+                const [header, pre] = parent?.children;
                 if(header?.tagName != 'div'){
 
                 }
