@@ -27,4 +27,3 @@ style module 에서 클래스 이름에 ```-``` 가 들어간다면 ```MyModule[
 ### Style
 
 external css 가 scss 에서 ```@import``` 하면 적용이 안된다. ```<Link>``` 를 쓰던가 css 로 하면 된다. ```@import``` 가 순서대로 하나씩 로딩하는거라 시간이 걸린다고 하지만 유지관리 하기가 불편해서 그냥 css 로 했다.
-

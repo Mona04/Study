@@ -14,8 +14,7 @@ const configs = (phase, { defaultConfig }) =>
     basePath: phase == PHASE_PRODUCTION_BUILD ? process.env.BASE_PATH : "",
 
     sassOptions: {
-      includePaths: [path.join(__dirname, 'styles')],
-      
+      includePaths: [path.join(__dirname, 'src/app/_styles')],
     },    
 
     reactStrictMode: true, 

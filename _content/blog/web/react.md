@@ -24,3 +24,5 @@ date: 2015-01-01
 
 
 [웹개발 아키텍쳐](https://blog.rhostem.com/posts/2018-07-22-web-architecture-101?_sm_nck=1)
+
+[noopener noreferrer](https://joshua-dev-story.blogspot.com/2020/12/html-rel-noopener-noreferrer.html)

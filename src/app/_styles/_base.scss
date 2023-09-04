@@ -1,10 +1,14 @@
-
 html {
   line-height: var(--lineHeight-normal);
   font-size: var(--fontSize-root);
   background-color: var(--color-page-background);
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  @include breakpoint(max-width $small){
+    font-size: 14px;  
+  }
 }
 
 body {
@@ -15,11 +19,15 @@ body {
 }
 
 main {
-  margin-top: var(--nav-container-height);
-}
-
-footer {
-  padding: var(--spacing-6) var(--spacing-0);
+  @include breakpoint(max-width $medium){
+    margin: 1rem 1rem;
+  }
+  @include breakpoint(min-width $medium){
+    margin: 1rem 5rem;
+  }
+  @include breakpoint(min-width $medium-wide){
+    margin: 1rem 8rem;
+  }
 }
 
 hr {

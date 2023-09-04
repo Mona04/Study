@@ -1,5 +1,5 @@
 ---
-title: My Second Post!
+title: My Second Post
 date: 2015-05-25
 ---
 

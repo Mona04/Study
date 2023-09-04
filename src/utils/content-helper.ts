@@ -15,10 +15,12 @@ export type PostDirectory = {
  * Tree 구조로 현재 포스트 글을 표현
  */
 const _postDirectories = () => {
-  console.log("construct categories...")
-
-  const categories : PostDirectories = {};
+  const st = performance.now();
   
+  console.log("construct categories...")
+  
+  const categories : PostDirectories = {};
+
   allPosts.map(post=>{
     if(post._raw == undefined) return;
 
@@ -38,6 +40,9 @@ const _postDirectories = () => {
     }
   });  
 
+  var ed = performance.now();
+  console.log(`post category takes ${(ed-st)/1000}`);
+
   return categories;
 };
 
@@ -50,7 +55,8 @@ type PostSlugs = {
 }
 
 /**
- * "/blog/react/myreact.md" 같은 형식으로 모든 카테고리에 대한 dictionary
+ * "/blog/react/myreact.md" 같은 형식으로 모든 directory 를 저장. 그리고 post 인지 체크.
+ * react 의 generateStaticParams() 에 유용함.
  */
 const _postSlugs = (() => {
   const categories: PostSlugs = {};
@@ -60,6 +66,7 @@ const _postSlugs = (() => {
     
     const slugs = post._raw.flattenedPath.split('/');
     let category: string = "";
+
     for(let i = 0; i < slugs.length; i++)
     {
       const slug = slugs[i];
@@ -70,6 +77,7 @@ const _postSlugs = (() => {
         };
       }
     }
+
   });  
 
   return categories;

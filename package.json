@@ -2,13 +2,13 @@
   "homepage": "https://mona04.github.io/study-log/",
   "private": true,
   "scripts": {
-    "dev": "contentlayer build & next dev -p 4000",
-    "start": "next build && next start -p 4000",
+    "dev": "next dev -p 4000",  
     "build": "next build",
     "predeploy": "next build",
     "deploy": "next-sitemap & node ./src/scripts/nojekyll.js & gh-pages -d out -b gh-pages -t true",
     "test": "jest --watch ",
-    "bbb": "node ./src/scripts/blog.js"
+    "bt": "node ./src/scripts/blog.js",
+    "cb": "contentlayer build "
   },
   "dependencies": {
     "next": "^13.4.12",
@@ -22,7 +22,9 @@
     "contentlayer": "~0.3.4",
     "next-contentlayer": "~0.3.4",
     "unist-util-visit": "^5.0.0",
+    "remark-math": "^5.1.1",
     "rehype-pretty-code": "^0.10.0",
+    "rehype-mathjax": "^4.0.3",
     "fs": "^0.0.1-security",
     
     "autoprefixer": "^10.4.14",

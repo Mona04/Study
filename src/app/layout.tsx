@@ -10,7 +10,6 @@ import Search from "@/components/search/search"
 import Footer from "@/components/footer/footer"
 
 import '@/styles/global.scss'
-
  
 export const metadata: Metadata = {
   title: '...',
@@ -25,6 +24,7 @@ export default function RootLayout({children,}: {children: React.ReactNode}) {
     <html lang="en" >        
       <body>
         <script dangerouslySetInnerHTML={{__html: SetInitialColorMode }}></script>
+        <link rel='stylesheet' href='//fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+KR&display=swap'/>
         <ContextProvider>
           <MastHead/>
 
@@ -33,8 +33,8 @@ export default function RootLayout({children,}: {children: React.ReactNode}) {
             
           {children}    
 
-          <Footer/>     
-        </ContextProvider>        
+          <Footer/>
+        </ContextProvider>
       </body>   
     </html>
   )

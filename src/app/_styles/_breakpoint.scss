@@ -1,0 +1,29 @@
+$BreakPoint-Settings: (
+  'medium': (min-width: 22.11),
+  'mobile-extra-small': (min-width:  340px),
+  'mobile-portrait-only': (max-width:  479px),
+  'mobile-landscape': (max-width:  816px),
+  'tablet-portrait': (min-width: 768px),
+  'desktop-template': (min-width: 769px),
+  'tablet-portrait-only': (max-width: 768px),
+  'tablet-big': (min-width: 970px),
+  'desktop': (min-width: 1024px),
+  'desktop-medium': (min-width: 1200px),
+  'desktop-large': (min-width: 1440px),
+  'desktop-extra-large': (min-width: 1920px)
+);
+
+@mixin breakpoint($query, $no-query: false) {
+  @if length($query) == 2 {
+    $modifier: nth($query, 1);
+    $size: nth($query, 2);
+    @if type-of($modifier) == string && type-of($size) == number {
+      @media only all and ($modifier: $size) {
+        @content;
+      }
+    }
+  }
+  @else{
+    @error "Unfortunately, no value could be retrieved from `#{type-of(nth($query,1))}`. Please make sure it is defined in `$breakpoints` map.";
+  }
+}

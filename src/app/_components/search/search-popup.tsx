@@ -1,4 +1,3 @@
-
 'use client'
 
 import * as React from 'react'
@@ -32,12 +31,10 @@ class BlogSearch extends React.Component<IProps, IState>
 
   onClick(e: React.InputHTMLAttributes<HTMLInputElement>) : void 
   {   
-    console.log("asdf")
-    const posts = allPosts
-      .filter((post) => post.title.includes(this.state.keyword))
-      .reduce((acc, cur)=>{ return acc = acc + cur.title + '\n'; }, ""); 
-    console.log(posts)
-    this.setState({searched: posts});
+    //const posts = allPosts
+    //  .filter((post) => post.title.includes(this.state.keyword))
+    //  .reduce((acc, cur)=>{ return acc = acc + cur.title + '\n'; }, "");
+    //this.setState({searched: posts});
   };
 
   render()

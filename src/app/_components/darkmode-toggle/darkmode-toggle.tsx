@@ -7,7 +7,7 @@ import toggleStyle from "./darkmode-toggle.module.scss";
 //https://alvarotrigo.com/blog/toggle-switch-css/
 //https://gwan-woo-jeong.github.io/blog/change-theme/
 //https://typescript-kr.github.io/pages/classes.html
-function DarkModeToggle()
+function DarkModeToggle({className}: {className?: string|undefined})
 {
   const [bDarkMode, setDarkMode] = useState<boolean>(false);
 
@@ -22,7 +22,7 @@ function DarkModeToggle()
   };
 
   return (
-    <div className={toggleStyle.toggleBtn} >
+    <div className={[toggleStyle.toggleBtn, className].join(' ')} >
       <input id='darkmode-btn' name='darkmode-btn' type='checkbox'           
              onChange={onChange} checked={bDarkMode}/>
       <label htmlFor="darkmode-btn">Toggle</label>         

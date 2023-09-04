@@ -1,4 +1,9 @@
-@import url(//fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+KR&display=swap);
+/**
+* Global SCSS
+* module.scss 가 production 에서 bundler 에 의해 먼저 오게 되는 현상이 있다. 
+* @import 는 css 의 가장 위에 와야 하는데 이게 안되므로 문제가 된다.
+* 따라서 link 로 해결되는 폰드 등은 layout 에 넣어두었다.
+*/
 @font-face {
   font-family: "mabinogi_classic";
   font-weight: 400;
@@ -24,7 +29,7 @@
     --spacing-#{$i}: #{0.25rem * $i};
   }
   
-  --fontFamily-sans: 'Noto Sans KR', 'Noto Sans', "mabinogi_classic", system-ui, -apple-system, 
+  --fontFamily-sans: 'Noto Sans KR', 'Noto Sans', system-ui, -apple-system, 
                       BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
                       sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
                       "Noto Color Emoji";
@@ -35,10 +40,12 @@
   --font-body: var(--fontFamily-sans);
   --font-heading: var(--fontFamily-sans);
   
+  --fontSize-root: 16px;
+
   --fontWeight-normal: 400;
   --fontWeight-bold: 700;
   --fontWeight-black: 900;
-  --fontSize-root: 16px;
+  
   --lineHeight-none: 1;
   --lineHeight-tight: 1.1;
   --lineHeight-normal: 1.5;
@@ -55,7 +62,6 @@
   --fontSize-7: 2.986rem;
   
   --nav-height: var(--spacing-12);
-  --code-width: var(--maxWidth-3xl);
 }
 
 /* HTML elements */
@@ -85,5 +91,6 @@
 @tailwind utilities;
 
 @import "@/styles/_variables.scss";
+@import "@/styles/_breakpoint.scss";
 @import "@/styles/_base.scss";
-@import '@/styles/_rehype.css';
+@import '@/styles/_rehype.scss';

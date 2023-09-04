@@ -6,8 +6,6 @@ pre > code {
 }
 
 div[data-rehype-pretty-code-fragment] pre {
-  /*max-width: var(--code-width);*/
-
   padding: 0.8rem 0.8rem 0.8rem 0.0rem; /*left padding is 0 for highlight line*/
 
   margin-top: 5px;
@@ -27,11 +25,9 @@ div[data-rehype-pretty-code-title] + pre {
 
 /* title */
 div[data-rehype-pretty-code-title] {
-  /*max-width: var(--code-width);*/
-
   background-color: #343541;
 
-  color: var(--color-text-dimmed);
+  color: #999999;
   font-size: 0.7em;
   font-weight: 700;
 

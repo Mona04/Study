@@ -21,6 +21,7 @@ module.exports = {
       colors: {
         'color-primary'         : 'var(--color-primary)',
         'color-page-background' : 'var(--color-page-background)',
+        'color-border'          : 'var(--color-border)',
         'color-text'            : 'var(--color-text)',
         'color-text-light'      : 'var(--color-text-light)',
         'color-text-dimmed'     : 'var(--color-text-dimmed)',

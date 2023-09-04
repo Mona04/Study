@@ -1,4 +1,7 @@
 .toggleBtn {
+  
+  $size: 1.5em;
+  $gap: 0.2em;
 
   input[type=checkbox]{
     height: 0;
@@ -9,21 +12,21 @@
   label {
     cursor: pointer;
     text-indent: -9999px;
-    width: 200px;
-    height: 100px;
+    width: $size * 2;
+    height: $size;
     background: grey;
     display: block;
-    border-radius: 100px;
+    border-radius: 2.5rem;
     position: relative;
   }
     
   label:after {
     content: '';
     position: absolute;
-    top: 5px;
-    left: 5px;
-    width: 90px;
-    height: 90px;
+    top: $gap;
+    left:  $gap;
+    width: $size - 2 * $gap;
+    height: $size - 2 * $gap;
     background: #fff;
     border-radius: 90px;
     transition: 0.3s;
@@ -34,7 +37,7 @@
   }
     
   input:checked + label:after {
-    left: calc(100% - 5px);
+    left: calc(100% - $gap);
     transform: translateX(-100%);
   }
 

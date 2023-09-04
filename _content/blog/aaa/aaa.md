@@ -101,6 +101,12 @@ int main() {
 
 한글입니다.
 
+$ \log(\mathrm{N})  $
+
+$$
+ \log(N)
+$$
+
 https://delba.dev/blog/next-blog-build-time-syntax-highlighting
 https://rehype-pretty-code.netlify.app/
 https://www.mridul.tech/blogs/how-to-use-scss-with-tailwind-in-next-js

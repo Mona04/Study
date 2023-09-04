@@ -12,19 +12,13 @@ export default (
     width?: number | undefined, height?: number | undefined,
     fill?: boolean | undefined
   })=>{
-  if( process.env.NODE_ENV == 'production')
-  {
-    return (
-      <Image src={`${process.env.BASE_PATH}${src}`} alt={alt} width={width} height={height} fill={fill} priority={true}>
-        {children}
-      </Image>
-    )
-  }
-  else{
-    return (
-      <Image src={`${src}`} alt={alt} width={width} height={height} fill={fill} priority={true}>
-        {children}
-      </Image>
-    )
-  }
+  const cur_path : string = process.env.NODE_ENV == 'production' ? 
+    `${process.env.BASE_PATH}${src}` :
+    `${src}`;
+    
+  return (
+    <Image src={cur_path} alt={alt} width={width} height={height} fill={fill}>
+      {children}
+    </Image>
+  )    
 }
