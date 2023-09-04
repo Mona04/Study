@@ -3,6 +3,15 @@ title: AAA
 date: 2015-05-28
 ---
 
+
+
+$ \log(\mathrm{N})  $
+
+$$
+ \log(N)
+$$
+
+
 Far far away, behind the word mountains, far from the countries Vokalia and
 Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
 right at the coast of the Semantics, a large language ocean. A small river named
@@ -100,12 +109,6 @@ int main() {
 ```
 
 한글입니다.
-
-$ \log(\mathrm{N})  $
-
-$$
- \log(N)
-$$
 
 https://delba.dev/blog/next-blog-build-time-syntax-highlighting
 https://rehype-pretty-code.netlify.app/

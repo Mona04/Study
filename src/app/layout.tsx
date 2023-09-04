@@ -25,6 +25,7 @@ export default function RootLayout({children,}: {children: React.ReactNode}) {
       <body>
         <script dangerouslySetInnerHTML={{__html: SetInitialColorMode }}></script>
         <link rel='stylesheet' href='//fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+KR&display=swap'/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossOrigin="anonymous"/>
         <ContextProvider>
           <MastHead/>
 

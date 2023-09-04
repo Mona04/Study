@@ -1,4 +1,3 @@
-
 import { useMDXComponent } from 'next-contentlayer/hooks';
 import type { MDXComponents } from 'mdx/types'
 
@@ -10,13 +9,15 @@ const Components : MDXComponents = {
   titlebar: ({children, code, ...props}) => <TitleBar code={code} properties={props}>{children}</TitleBar>,
 }
 
-export default function PostView({title, code, raw}: {title:string, code: string, raw: string}) {
+export default function PostView({title, code, raw}: {title:string, code: string, raw: string}) 
+{
   const MDXComponent = useMDXComponent(code || '');
+
   return (
     <main>
       <p>-</p>
       <h1 className="text-3xl font-bold">{title}</h1>
-      <MDXComponent components={Components}/>
+      <MDXComponent components={Components} />
     </main>
   )
 }

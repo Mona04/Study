@@ -4,6 +4,7 @@ import { visit } from 'unist-util-visit'
 import prettyCode from 'rehype-pretty-code'
 import rm_math from 'remark-math'
 import mathjax from 'rehype-mathjax'
+import katex from 'rehype-katex'
 
 export const Post = defineDocumentType(() => ({
   name: 'Post',
@@ -26,10 +27,9 @@ export default makeSource({
     documentTypes: [Post],
     mdx:{ 
       remarkPlugins: [ [rm_math,]],
-      rehypePlugins: [             
+      rehypePlugins: [
         [ preprocess ],        
-        [ mathjax,],
-        // https://rehype-pretty-code.netlify.app/
+        // https://rehype-pretty-code.netlify.app/        
         [
           prettyCode,
           {
@@ -45,10 +45,16 @@ export default makeSource({
             //onVisitTitle: onVisitTitle,
           }
         ],
+        // https://github.com/remarkjs/remark-math/issues/80
+        //[ mathjax,],
+        [ katex ],
         [ postprocess]
-      ]    
+      ]
     },
-    markdown:{ rehypePlugins: [prettyCode] }
+    markdown:{ 
+      remarkPlugins: [ [rm_math,]],
+      rehypePlugins: [ katex, prettyCode] 
+    }
 })
 
 /**
