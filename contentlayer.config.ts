@@ -24,30 +24,14 @@ export const Post = defineDocumentType(() => ({
 
 export default makeSource({
     contentDirPath: '_content', 
-    documentTypes: [Post],
+    documentTypes: [Post, Post2],
     mdx:{ 
       remarkPlugins: [ [rm_math,]],
       rehypePlugins: [
-        [ preprocess ],        
-        // https://rehype-pretty-code.netlify.app/        
-        [
-          prettyCode,
-          {
-            grid: true,
-            showLineNumbers: true,
-            keepBackground: true,
-            //theme: {
-            //  dark: 'github-dark',//'rose-pine-moon',
-            //},
-            theme: JSON.parse(
-              readFileSync(new URL('../../../src/configs/pretty-code-theme.json', import.meta.url), 'utf-8')
-            ),
-            //onVisitTitle: onVisitTitle,
-          }
-        ],
-        // https://github.com/remarkjs/remark-math/issues/80
-        //[ mathjax,],
-        [ katex ],
+        [ preprocess ],                    
+        [ prettyCode, prettyCodeOption ],
+        [ mathjax,],
+        //[ katex ],
         [ postprocess]
       ]
     },
@@ -56,6 +40,26 @@ export default makeSource({
       rehypePlugins: [ katex, prettyCode] 
     }
 })
+
+/**
+ * // https://rehype-pretty-code.netlify.app/    
+ * @returns 
+ */
+function prettyCodeOption()
+{
+  return  {
+    grid: true,
+    showLineNumbers: true,
+    keepBackground: true,
+    //theme: {
+    //  dark: 'github-dark',//'rose-pine-moon',
+    //},
+    theme: JSON.parse(
+      readFileSync(new URL('../../../src/configs/pretty-code-theme.json', import.meta.url), 'utf-8')
+    ),
+    //onVisitTitle: onVisitTitle,
+  };
+}
 
 /**
    Unified transformer to save original code.

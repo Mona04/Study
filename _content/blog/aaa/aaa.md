@@ -5,7 +5,7 @@ date: 2015-05-28
 
 
 
-$ \log(\mathrm{N})  $
+$ \log(\mathrm{N})  $ 는 무엇을하는가
 
 $$
  \log(N)
