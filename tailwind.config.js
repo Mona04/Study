@@ -31,6 +31,9 @@ module.exports = {
         'fontSize-6': 'var(--fontSize-6)'
       }
     },
+    screens: {
+      'phone': {'max': '480px'}
+    }
   },
   plugins: [],
 }
