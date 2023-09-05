@@ -32,9 +32,11 @@ export default function RootLayout({children,}: {children: React.ReactNode}) {
           <SideBar/>
           <Search/>
             
-          {children}    
+          <div className='tw-mt-nav-height tw-min-h-screen tw-relative'>
+            {children}
+          </div>
 
-          <Footer/>
+          <Footer className='tw-w-full tw-h-2 tw-absolute tw-bottom-0'/>
         </ContextProvider>
       </body>   
     </html>

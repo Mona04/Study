@@ -27,7 +27,7 @@ module.exports = {
         'color-text-dimmed'     : 'var(--color-text-dimmed)',
       },
       spacing: {
-        'nav-height': 'var(--nav-heigh)',
+        'nav-height': 'var(--nav-height)',
         'fontSize-6': 'var(--fontSize-6)'
       }
     },

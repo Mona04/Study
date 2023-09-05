@@ -86,7 +86,7 @@ Contentlayer 에서 rehype 관련 모듈을 넣어줄 수가 있다.
 
 요즘 Code Block 은 Copy 버튼이 붙어있다. 이를 구현하기 위해서 [claritydev blog](https://claritydev.net/blog/copy-to-clipboard-button-nextjs-mdx-rehype) 를 참고하여 구현하였다.
 
-```visit``` 을 이용해서 전처리/후처리를 하여 처리한다는게 핵심이다.
+```unist-util-visit``` 을 이용해서 전처리/후처리를 하여 처리한다는게 핵심이다.
 
 성능 차이가 궁금해서 포스트 1000개로 테스트도 해봤다.
 
