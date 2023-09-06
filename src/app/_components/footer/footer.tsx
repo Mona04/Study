@@ -2,8 +2,6 @@ import Link from 'nextwrap/link'
 import {AUTHOR, GIT} from 'configs/blog-config'
 import {AiFillGithub} from 'react-icons/ai'
 
-
-
 function Follow({className}:{className?: string}){
   return (
     <div className={className}>
@@ -41,7 +39,10 @@ function BuildTime({className}:{className?: string})
   return (
     <div className={className}>
       <div>
-        {`Last Build:  ${date.getHours()}:${date.getMinutes()}`}
+        'Last Build:'
+      </div>
+      <div>
+        {`  ${date.getHours()}:${date.getMinutes()}`}
       </div>
       <div className='tw-ml-1'>
         {`${date.getFullYear()}/${date.getMonth()+1}/${date.getDate()}`}
@@ -50,17 +51,21 @@ function BuildTime({className}:{className?: string})
   )
 }
 
-export default function Footer()
+export default function Footer({className}: {className?:string|undefined})
 {
   return (
-    <footer className='tw-backdrop-brightness-95' >
-      <div className='tw-flex tw-p-4 tw-mr-4 tw-ml-4 tw-mt-20 tw-text-xs dark:tw-border-t-color-border dark:tw-border-t-2'>
-        <div className='tw-flex-col'>
-          <Follow className='tw-mb-3'/>
-          <Ment className=" "/>
-        </div>    
-        <BuildTime className='tw-flex tw-self-end tw-ml-auto'/>
-      </div>  
+    <footer className={className}>
+      <div className='tw-backdrop-brightness-95'>
+        <div className='tw-flex tw-p-4 tw-mr-4 tw-ml-4 tw-text-xs 
+                        dark:tw-border-t-color-border dark:tw-border-t-2'>
+          <div className='tw-flex-col'>
+            <Follow className='tw-mb-3'/>
+            <Ment className=" "/>
+          </div>    
+          {/* build time 정보는 휴대폰에선 안보이게 (공간없음) */}
+          <BuildTime className='tw-flex tw-self-end tw-ml-auto phone:tw-absolute phone:tw-collapse'/>
+        </div>  
+      </div>
     </footer>
   );
 }

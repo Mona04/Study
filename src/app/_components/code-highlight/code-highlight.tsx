@@ -4,6 +4,7 @@ import { useState, useRef } from 'react'
 import { LuClipboardCopy, LuCheck } from 'react-icons/lu'
 import { copyToClipboard } from 'utils/utils';
 
+
 export function TitleBar({children, code, ...props}: {children?: React.ReactNode[], code: string, properties: any}){
  
   const [isCopied, setIsCopied] = useState(false);

@@ -46,7 +46,7 @@ function setInitialColorMode() {
  * 주석도 들어가서 주석은 replace() 로 제거했다.
  */
 export const SetInitialColorMode = `(function() {
-    ${setInitialColorMode.toString().replace(/\/\*[\s\S]*?\*\/|(?<=[^:])\/\/.*|^\/\/.*/g,'')}
+    ${setInitialColorMode.toString().replace(/(\/\*)[^(\*\/)]*(\*\/)/g,'')}
     setInitialColorMode();
   })()
 `;
