@@ -13,8 +13,24 @@ export default function PostView({title, code, raw}: {title:string, code: string
 {
   const MDXComponent = useMDXComponent(code || '');
 
+  const mathjax = `
+<script>
+  window.MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]},
+    startup: {
+      typeset: false
+    }
+  }
+});
+</script>
+<script type="text/javascript"
+     src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+`
+
   return (
     <main>
+      <div dangerouslySetInnerHTML={{__html: mathjax}}/>
       <p>-</p>
       <h1 className="text-3xl font-bold">{title}</h1>
       <MDXComponent components={Components} />

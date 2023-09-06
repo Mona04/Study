@@ -24,13 +24,13 @@ export const Post = defineDocumentType(() => ({
 
 export default makeSource({
     contentDirPath: '_content', 
-    documentTypes: [Post, Post2],
+    documentTypes: [Post],
     mdx:{ 
-      remarkPlugins: [ [rm_math,]],
+      //remarkPlugins: [ [rm_math,]],
       rehypePlugins: [
         [ preprocess ],                    
         [ prettyCode, prettyCodeOption ],
-        [ mathjax,],
+        //[ mathjax,],
         //[ katex ],
         [ postprocess]
       ]

@@ -26,7 +26,6 @@
     "rehype-pretty-code": "^0.10.0",
     "rehype-mathjax": "^4.0.3",
     "rehype-katex": "^6.0.3",
-    "rehype-react": "^8.0.0",
     "fs": "^0.0.1-security",
     
     "autoprefixer": "^10.4.14",

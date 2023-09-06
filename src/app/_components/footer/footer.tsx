@@ -39,10 +39,10 @@ function BuildTime({className}:{className?: string})
   return (
     <div className={className}>
       <div>
-        'Last Build:'
+        Last Build:
       </div>
-      <div>
-        {`  ${date.getHours()}:${date.getMinutes()}`}
+      <div className='tw-ml-1'>
+        {`${date.getHours()}:${date.getMinutes()}`}
       </div>
       <div className='tw-ml-1'>
         {`${date.getFullYear()}/${date.getMonth()+1}/${date.getDate()}`}
