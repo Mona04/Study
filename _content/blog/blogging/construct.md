@@ -95,7 +95,11 @@ Contentlayer 에서 rehype 관련 모듈을 넣어줄 수가 있다.
 
 ### Latex
 
-MathJax 는 [Next.js hydration issue](https://github.com/remarkjs/remark-math/issues/80) 가 있었다.
+MathJax 는 [NextJS hydration issue](https://github.com/remarkjs/remark-math/issues/80) 가 현재 블로그를 만드는 시점에 있다. 
+
+markdown 을 html 로 변환하면 문제가 없는데 mdx 로 변환했을 때 문제가 생긴다. 
+
+나는 code copy button 등을 이유로 mdx 를 사용하고 있기 때문에 
 
 
 ### TOC

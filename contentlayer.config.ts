@@ -23,7 +23,7 @@ export const Post = defineDocumentType(() => ({
 }))
 
 export default makeSource({
-    contentDirPath: '_content', 
+    contentDirPath: '_content/blog/aaa', 
     documentTypes: [Post],
     mdx:{ 
       //remarkPlugins: [ [rm_math,]],
@@ -66,7 +66,12 @@ function prettyCodeOption()
  * @returns 
  */
 function preprocess() {
-  return  async (tree : any)  => {
+  return  async (tree : any, ...prop: any)  => {
+    console.log(prop[0].data)
+    visit(tree, 'mdxjsEsm', (node) => {
+      console.log(node.data.estree.body.declaration);
+    })
+
     visit(tree, 'element', (node) => {
       if(node?.tagName === 'pre'){
         const [codeEl] = node.children;  

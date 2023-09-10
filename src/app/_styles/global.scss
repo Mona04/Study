@@ -25,7 +25,8 @@
   --maxWidth-wrapper: var(--maxWidth-2xl);
   --spacing-px: "1px";
   
-  @for $i from 0 through 40{
+  --spacing-0: 0.1rem;
+  @for $i from 1 through 40{
     --spacing-#{$i}: #{0.25rem * $i};
   }
   
