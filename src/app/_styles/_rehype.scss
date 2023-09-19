@@ -181,3 +181,8 @@ div[data-rehype-pretty-code-fragment] pre::-webkit-scrollbar-thumb {
   display: none;
 }
 */
+
+
+pre > rawcode {
+  display: none;
+}

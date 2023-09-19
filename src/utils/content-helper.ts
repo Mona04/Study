@@ -1,5 +1,8 @@
 import { allPosts } from '@/contentlayer/generated'
 
+type BlogPost = {
+  [category: string] : PostDirectory;
+}
 
 type PostDirectories = {
   [category: string] : PostDirectory;

@@ -1,4 +1,7 @@
-
+---
+title: New Beginnings
+date: 2015-05-28
+---
 
 
 dll nuget 올리는 법.

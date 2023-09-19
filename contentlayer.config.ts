@@ -23,7 +23,7 @@ export const Post = defineDocumentType(() => ({
 }))
 
 export default makeSource({
-    contentDirPath: '_content/blog/aaa', 
+    contentDirPath: '_content/', 
     documentTypes: [Post],
     mdx:{ 
       //remarkPlugins: [ [rm_math,]],
@@ -67,9 +67,8 @@ function prettyCodeOption()
  */
 function preprocess() {
   return  async (tree : any, ...prop: any)  => {
-    console.log(prop[0].data)
     visit(tree, 'mdxjsEsm', (node) => {
-      console.log(node.data.estree.body.declaration);
+      //console.log(node.data.estree.body.declaration);
     })
 
     visit(tree, 'element', (node) => {
@@ -90,31 +89,39 @@ function preprocess() {
 function postprocess() {
   return  async (tree : any)  => {
     visit(tree, 'element', (node, index, parent) => {
-      if(node?.tagName === 'pre'){
-        const lang = node.properties['data-language'];
-        const code = parent.raw;
-        const [header, pre] = parent.children;
-        if(header == node){
-          const theme = node.properties['data-theme'];
-          parent.children.unshift(
-            {
-              type: 'element',
-              tagName: 'titlebar',
-              properties: {
-                'data-rehype-pretty-code-title': '', 
-                'data-language': lang,
-                'data-theme': theme,
-                'code': code
-              },
-              children: [{ type: 'text', value: lang }]
-            }
-          )
-        }
-        else{
-          header.tagName = 'titlebar';
-          header.properties['code'] = code;
-        }
+      if(node?.tagName !== 'pre') return;
+      
+      const lang = node.properties['data-language'];
+      const code = parent.raw;
+      const [header, pre] = parent.children;
+      if(header == node){
+        const theme = node.properties['data-theme'];
+        parent.children.unshift(
+          {
+            type: 'element',
+            tagName: 'titlebar',
+            properties: {
+              'data-rehype-pretty-code-title': '', 
+              'data-language': lang,
+              'data-theme': theme,
+              'code': code
+            },
+            children: [{ type: 'text', value: lang }]
+          }
+        )
       }
+      else{
+        header.tagName = 'titlebar';
+        header.properties['code'] = code;
+      }
+
+      node.children.unshift(
+        {
+          type: 'element',
+          tagName: 'rawcode',
+          children: [{ type: 'text', value: code }]
+        }
+      )
     })
   }
 }
