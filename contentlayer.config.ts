@@ -114,14 +114,7 @@ function postprocess() {
         header.tagName = 'titlebar';
         header.properties['code'] = code;
       }
-
-      node.children.unshift(
-        {
-          type: 'element',
-          tagName: 'rawcode',
-          children: [{ type: 'text', value: code }]
-        }
-      )
+      node.properties.code = code;
     })
   }
 }
