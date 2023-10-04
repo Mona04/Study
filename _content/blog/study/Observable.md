@@ -165,13 +165,29 @@ public class HotStream : IDisposable
 
 ## SubscribeOn vs ObserveOn
 
-```SubscribeOn()``` 은 publisher 가 구독하는 쪽에게 아이템을 날릴 때 사용할 스케듈러를 정한다.
+``` c#
+    IObservable<int> observable = Observable.Create<int>(r =>
+        {
+            // SubscribeOn() 에서 스케듈러가 적용되는 부분
+            r.OnNext(1);
+            return Disposable.Empty;
+        })
+        .ObserveOn(new EventLoopScheduler())
+        .SubscribeOn(new EventLoopScheduler());
+    observable.Subscribe(_ =>
+    {
+        // ObserveOn() 에서 스케듈러가 적용되는 부분
+    });
+```
 
-```ObserveOn()``` 은 subscriber 가 구독하여 호출될 콜백을 부르는 스케듈러를 정한다.
+```ObserveOn()``` 은 Subscriber 가 등록한 Callback 이 호출될 Scheduler 를 정한다. 기본은 ```OnNext()``` 가 호출되는 CallStack 에서 Callback 이 호출됨을 염두에 두자.
+
+```SubscribeOn()``` 은 Cold Stream 에 ```Subscribe()``` 를 할 때 Sequence 가 만들어지는 스케듈러를 바꾼다. 그래서 만약 ```Publish()```/```Connect()``` 를 쓰면 적용되지 않는다.
+
 
 
 
 
 ## 참고자료
 
-[msdn IConnectableObservable<T> Interface](https://learn.microsoft.com/en-us/previous-versions/dotnet/reactive-extensions/hh211887(v=vs.103))
+[msdn IConnectableObservable_T Interface](https://learn.microsoft.com/en-us/previous-versions/dotnet/reactive-extensions/hh211887(v=vs.103))
