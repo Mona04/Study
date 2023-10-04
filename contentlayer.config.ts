@@ -104,7 +104,7 @@ function postprocess() {
               'data-rehype-pretty-code-title': '', 
               'data-language': lang,
               'data-theme': theme,
-              'code': code
+              'data-code': code,
             },
             children: [{ type: 'text', value: lang }]
           }
@@ -114,7 +114,6 @@ function postprocess() {
         header.tagName = 'titlebar';
         header.properties['code'] = code;
       }
-      node.properties.code = code;
     })
   }
 }

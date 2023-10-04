@@ -5,15 +5,20 @@ pre > code {
   display: grid;
 }
 
-div[data-rehype-pretty-code-fragment] pre {
-  padding: 0.8rem 0.8rem 0.8rem 0.0rem; /*left padding is 0 for highlight line*/
+div[data-rehype-pretty-code-fragment] {
+  margin-bottom: 1.5em;
 
-  margin-top: 5px;
-  margin-bottom: 5px;
-  border-radius: 10px;
-
-  /* make scrollbar if overflow */
-  overflow-x: auto;
+  pre {
+    /*left padding is 0 for highlight line*/
+    padding: 0.8rem 0.8rem 0.8rem 0.0rem; 
+  
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+  
+    /* make scrollbar if overflow */
+    overflow-x: auto;
+  }
 }
 
 /* container with title */

@@ -72,7 +72,7 @@ Hot Stream 은 구독 전에 호출한 ```OnNext()``` 를 무시하며 바로바
 
 그래서 다음과 같은 결과를 보인다.
 
-``` c# title="input"
+```c# title="input"
 var stream = new HotStream<string>();
 stream.Queue.Enqueue("1");
 stream.OnNext();
@@ -84,7 +84,7 @@ for (int i = 2; i < 5; i++)
 stream.OnNext();
 ```
 
-``` title="output"
+```plaintext title="output"
 1 => 2
 2 => 2
 1 => 3
@@ -95,7 +95,7 @@ stream.OnNext();
 
 만약 ```Publish()``` 를 사용하지 않았다면 어떨까?
 
-``` title="output"
+```plaintext title="output"
 1 => 1
 1 => 2
 1 => 3
@@ -190,4 +190,4 @@ public class HotStream : IDisposable
 
 ## 참고자료
 
-[msdn IConnectableObservable_T Interface](https://learn.microsoft.com/en-us/previous-versions/dotnet/reactive-extensions/hh211887(v=vs.103))
+[msdn IConnectableObservable\<T\> Interface](https://learn.microsoft.com/en-us/previous-versions/dotnet/reactive-extensions/hh211887(v=vs.103))
