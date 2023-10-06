@@ -26,7 +26,7 @@ export default makeSource({
     contentDirPath: '_content/', 
     documentTypes: [Post],
     mdx:{ 
-      //remarkPlugins: [ [rm_math,]],
+      remarkPlugins: [ [rm_math,]],
       rehypePlugins: [
         [ preprocess ],                    
         [ prettyCode, prettyCodeOption ],
