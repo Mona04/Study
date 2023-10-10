@@ -3,6 +3,7 @@ import { Metadata } from 'next'
 
 import { ContextProvider } from "@/context/context"
 import { SetInitialColorMode } from "utils/darkmode-helper"
+import { CopyButtonScript } from "utils/markdown-helper"
 
 import MastHead from "@/components/nav/masthead"
 import SideBar from "@/components/sidebar/sidebar"
@@ -42,6 +43,9 @@ export default function RootLayout({children,}: {children: React.ReactNode}) {
             <Footer className='tw-w-full tw-absolute tw-bottom-0'/>
           </ContextProvider>
         </div>
+        {/* After React DOM is loaded. cf. defer has no effect on script tags without src attribute. */}
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+        <script dangerouslySetInnerHTML={{__html: CopyButtonScript }} defer />
       </body>   
     </html>
   )

@@ -94,6 +94,9 @@ function postprocess() {
       const lang = node.properties['data-language'];
       const code = parent.raw;
       const [header, pre] = parent.children;
+
+      // title 이 생성된 경우
+      // https://fonts.google.com/icons?selected=Material+Symbols+Outlined:content_paste:FILL@0;wght@400;GRAD@0;opsz@24&icon.query=clip
       if(header == node){
         const theme = node.properties['data-theme'];
         parent.children.unshift(
@@ -116,4 +119,9 @@ function postprocess() {
       }
     })
   }
+}
+
+function addCopyButton(parent:any)
+{
+
 }
