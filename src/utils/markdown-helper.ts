@@ -4,7 +4,6 @@
  * https://stackoverflow.com/questions/18247289/what-is-the-difference-between-queryselectorall-and-getelementsbytagname
  */
 function copyButtonScript() {
-  console.log("우르을이링ㄴㄻㄴㅇ리")
   if(!document) return;
   
   const titlebars = document.querySelectorAll("[data-rehype-pretty-code-title]");
