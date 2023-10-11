@@ -1,6 +1,6 @@
 import {render, fireEvent, waitFor, act } from '@testing-library/react'
 
-import {TitleBar} from './code-highlight'
+import {CopyButtonScript} from './markdown-helper'
 
 describe('Code Highlight Test', () => {
   it('Copy Button Test', async () => {
@@ -27,9 +27,15 @@ describe('Code Highlight Test', () => {
 
     const screen = render(
       <>
-        <TitleBar code={code} properties={props}/>
+        <script dangerouslySetInnerHTML={{__html: CopyButtonScript }} />
+        <div>
+          <div data-rehype-pretty-code-title="" data-code={code}>
+            <button></button>
+          </div>
+        </div>
       </>
     );
+    //<TitleBar code={code} properties={props}/>
 
     const togglebtn = screen.getByRole('button',);
     expect(togglebtn).toBeDefined();

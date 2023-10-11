@@ -21,30 +21,30 @@ export async function copyToClipboard(text:string) {
   // https://stackoverflow.com/questions/400212/how-do-i-copy-to-the-clipboard-in-javascript
   // https 를 사용하는 일정 버전 이상의 브라우저
   if(navigator.clipboard)
-    {
-      await navigator.clipboard.writeText(text);
+  {
+    await navigator.clipboard.writeText(text);
+  }
+  else{
+    if (!document.queryCommandSupported("copy")) {
+      return alert("Clipboard is not supported!!!");
     }
-    else{
-      if (!document.queryCommandSupported("copy")) {
-        return alert("Clipboard is not supported!!!");
-      }
       
-      const textarea = document.createElement("textarea");
-      textarea.value = text;
-      document.body.appendChild(textarea);
+    const textarea = document.createElement("textarea");
+    textarea.value = text;
+    document.body.appendChild(textarea);
       
-      // avoid scrolling to bottom
-      textarea.style.top = "0";
-      textarea.style.left = "0";
-      textarea.style.position = "fixed";
+    // avoid scrolling to bottom
+    textarea.style.top = "0";
+    textarea.style.left = "0";
+    textarea.style.position = "fixed";
 
-      textarea.focus(); // support safari? browser
-      textarea.select();
+    textarea.focus(); // support safari? browser
+    textarea.select();
 
-      if (!document.execCommand("copy")){
-        return alert("Clipboard is not supported!!!");        
-      }
-
-      document.body.removeChild(textarea);
+    if (!document.execCommand("copy")){
+      return alert("Clipboard is not supported!!!");        
     }
+
+    document.body.removeChild(textarea);
+  }
 }

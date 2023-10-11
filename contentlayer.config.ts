@@ -93,16 +93,22 @@ function postprocess() {
       
       const lang = node.properties['data-language'];
       const code = parent.raw;
+      // div.children = { header, pre } 거나 { pre } 임
       const [header, pre] = parent.children;
 
       // title 이 생성된 경우
-      // https://fonts.google.com/icons?selected=Material+Symbols+Outlined:content_paste:FILL@0;wght@400;GRAD@0;opsz@24&icon.query=clip
-      if(header == node){
+      if(header != node){
+        //header.tagName = 'div';
+        header.properties['data-code'] = code;
+        addCopyButton(header);
+      }
+      // title 이 생성되지 않은 경우
+      else{
         const theme = node.properties['data-theme'];
         parent.children.unshift(
           {
             type: 'element',
-            tagName: 'titlebar',
+            tagName: 'div',            
             properties: {
               'data-rehype-pretty-code-title': '', 
               'data-language': lang,
@@ -110,12 +116,8 @@ function postprocess() {
               'data-code': code,
             },
             children: [{ type: 'text', value: lang }]
-          }
-        )
-      }
-      else{
-        header.tagName = 'titlebar';
-        header.properties['code'] = code;
+          });
+        addCopyButton(parent.children[1]);
       }
     })
   }
@@ -123,5 +125,10 @@ function postprocess() {
 
 function addCopyButton(parent:any)
 {
-
+  parent.children.push(
+    {
+      type: 'element',
+      tagName: 'button',
+    }
+  )
 }

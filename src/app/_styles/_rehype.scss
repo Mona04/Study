@@ -36,13 +36,47 @@ div[data-rehype-pretty-code-title] {
   font-size: 0.7em;
   font-weight: 700;
 
-  padding: 3px;
+  padding: 3px 1.25em;
   height: 30px;
   border-radius: 5px 5px 0px 0px;
   margin-top: 5px;
   display: flex;
   justify-content: left;
   align-items: center;
+
+  //https://fonts.google.com/icons?selected=Material+Symbols+Outlined:content_paste:FILL@0;wght@400;GRAD@0;opsz@24&icon.query=clip
+  button
+  {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  button::before
+  {
+    font-family: "Material Symbols Outlined";
+    font-size: 1.5em;
+    align-self: baseline;
+    content: "\e14f";
+  }
+  button[checked]::before
+  {
+    font-family: "Material Symbols Outlined";
+    font-size: 1.5em;
+    align-self: baseline;
+    content: "\f88b";
+  }
+  button::after
+  {
+    //font-family: "Material Symbols Outlined";
+    content: "Copy code";
+    margin-left: 0.5em;
+  }
+  button[checked]::after
+  {
+    //font-family: "Material Symbols Outlined";
+    content: "Copied!";
+    margin-left: 0.5em;
+  }
 }
 
 /** 
@@ -186,8 +220,3 @@ div[data-rehype-pretty-code-fragment] pre::-webkit-scrollbar-thumb {
   display: none;
 }
 */
-
-
-pre > rawcode {
-  display: none;
-}
