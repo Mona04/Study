@@ -1,4 +1,4 @@
-import {allPosts} from '@/contentlayer/generated'
+import {allBlogMDPosts, allBlogMDXPosts} from '@/contentlayer/generated'
 import {postSlugs} from 'utils/content-helper'
 
 // blog 가 무조건 앞에 온다고 가정한 헬퍼
@@ -22,12 +22,12 @@ export function checkSlug(categories: string[]) {
 
 export const getPost = (categories: string[]) => {
   const cur = ['blog', ...categories].join('/')
-  return allPosts.find((post) => post._raw.flattenedPath === cur)
+  return allBlogPosts.find((post) => post._raw.flattenedPath === cur)
 }
 
 export const getPosts = (categories: string[]) => {
   const cur = ['blog', ...categories].join('/')
   var re = new RegExp(`^${cur}`, 'i');
-  return allPosts
+  return allBlogPosts
     .filter(post => post._raw.flattenedPath.match(re))
 }

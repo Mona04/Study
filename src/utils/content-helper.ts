@@ -1,4 +1,4 @@
-import { allPosts } from '@/contentlayer/generated'
+import { allBlogMDPosts, allBlogMDXPosts } from '@/contentlayer/generated'
 
 type BlogPost = {
   [category: string] : PostDirectory;
@@ -24,7 +24,7 @@ const _postDirectories = () => {
   
   const categories : PostDirectories = {};
 
-  allPosts.map(post=>{
+  const callback = (post:any) => {
     if(post._raw == undefined) return;
 
     const slugs = post._raw.flattenedPath.split('/');
@@ -41,15 +41,16 @@ const _postDirectories = () => {
       cur_category[slug].count++;
       cur_category = cur_category[slug].childs;
     }
-  });  
+  };
+ 
+  allBlogMDPosts.map(callback);
+  allBlogMDXPosts.map(callback);
 
   var ed = performance.now();
   console.log(`post category takes ${(ed-st)/1000}`);
 
   return categories;
 };
-
-export const postDirectories = _postDirectories();
 
 
 
@@ -64,7 +65,7 @@ type PostSlugs = {
 const _postSlugs = (() => {
   const categories: PostSlugs = {};
   
-  allPosts.map(post=>{
+  allBlogMDPosts.map(post=>{
     if(post._raw == undefined) return;
     
     const slugs = post._raw.flattenedPath.split('/');
@@ -85,5 +86,9 @@ const _postSlugs = (() => {
 
   return categories;
 })();
+
+
+
+export const postDirectories = _postDirectories();
 
 export const postSlugs = _postSlugs;
