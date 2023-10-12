@@ -20,9 +20,11 @@ function copyButtonScript() {
           {
             navigator.clipboard.writeText(code);
             button.setAttribute("checked", "true");
+            button.disabled = true;
           }
           setTimeout(() => {
             button.removeAttribute("checked");
+            button.disabled = false;
           }, 2000);
         }
       });
@@ -31,7 +33,7 @@ function copyButtonScript() {
 }
   
 /**
- * 본문에서 titlebar class 를 찾아서 copybutton 을 추가해주는 스크립트
+ * CopyButton 에 코드 복사기능 추가해주는 Script
  *   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
  */
 export const CopyButtonScript = `

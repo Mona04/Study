@@ -27,7 +27,6 @@ describe('Code Highlight Test', () => {
 
     const screen = render(
       <>
-        <script dangerouslySetInnerHTML={{__html: CopyButtonScript }} />
         <div>
           <div data-rehype-pretty-code-title="" data-code={code}>
             <button></button>
@@ -35,11 +34,10 @@ describe('Code Highlight Test', () => {
         </div>
       </>
     );
-    //<TitleBar code={code} properties={props}/>
-
     const togglebtn = screen.getByRole('button',);
     expect(togglebtn).toBeDefined();
-        
+    eval(CopyButtonScript);
+    
     // 내부에서 async 로 state 바꿔서 not wrapped in act warning 뜨기 때문에 
     // component update 를 기다리는 waitfor 필요
     await waitFor(()=>fireEvent.click(togglebtn));

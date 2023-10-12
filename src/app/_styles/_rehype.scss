@@ -67,13 +67,11 @@ div[data-rehype-pretty-code-title] {
   }
   button::after
   {
-    //font-family: "Material Symbols Outlined";
     content: "Copy code";
     margin-left: 0.5em;
   }
   button[checked]::after
   {
-    //font-family: "Material Symbols Outlined";
     content: "Copied!";
     margin-left: 0.5em;
   }

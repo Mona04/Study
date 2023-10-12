@@ -1,45 +1,65 @@
-import { defineDocumentType, makeSource } from 'contentlayer/source-files'
+import { defineDocumentType, makeSource, FieldDefs } from 'contentlayer/source-files'
 import { readFileSync } from 'fs'
 import { visit } from 'unist-util-visit'
+
 import prettyCode from 'rehype-pretty-code'
 import rm_math from 'remark-math'
 import mathjax from 'rehype-mathjax'
 import katex from 'rehype-katex'
 
-export const Post = defineDocumentType(() => ({
-  name: 'Post',
-  filePathPattern: `**/*.(md|mdx)`,
-  contentType: 'mdx',
-  fields: {
-    title:        { required: true,  type: 'string',  },
-    date:         { required: true,  type: 'date',     },
-    description:  { required: false, type: 'string',   },
-    tags:         { required: false, type: 'list', of: {type: 'string'} },
-    post_type:    { required: false, type: 'string'}
-  },  
+export const BlogMDPost = defineDocumentType(() => ({
+  name: 'BlogMDPost',
+  filePathPattern: `**/*.(md)`,
+  contentType: 'markdown',
+  fields: blogFields(),  
   computedFields: {
     url: { type: 'string', resolve: (post) => `/posts/${post._raw.flattenedPath}` },
   },
 }))
 
+export const BlogMDXPost = defineDocumentType(() => ({
+  name: 'BlogMDXPost',
+  filePathPattern: `**/*.(mdx)`,
+  contentType: 'mdx',
+  fields: blogFields(),
+  computedFields: {
+    url: { type: 'string', resolve: (post) => `/posts/${post._raw.flattenedPath}` },
+  },
+}))
+
+
 export default makeSource({
     contentDirPath: '_content/', 
-    documentTypes: [Post],
+    documentTypes: [BlogMDPost, BlogMDXPost],
     mdx:{ 
       remarkPlugins: [ [rm_math,]],
       rehypePlugins: [
         [ preprocess ],                    
         [ prettyCode, prettyCodeOption ],
-        //[ mathjax,],
-        //[ katex ],
+        [ katex ],
         [ postprocess]
       ]
     },
     markdown:{ 
       remarkPlugins: [ [rm_math,]],
-      rehypePlugins: [ katex, prettyCode] 
-    }
+      rehypePlugins: [
+        [ preprocess ],                    
+        [ prettyCode, prettyCodeOption ],
+        [ mathjax,],
+        [ postprocess]
+      ]
+    },
 })
+
+function blogFields() : FieldDefs {
+  return {
+    title:        { required: true,  type: 'string',  },
+    date:         { required: true,  type: 'date',     },
+    description:  { required: false, type: 'string',   },
+    tags:         { required: false, type: 'list', of: {type: 'string'} },
+    post_type:    { required: false, type: 'string'}
+  }
+}
 
 /**
  * // https://rehype-pretty-code.netlify.app/    
@@ -62,18 +82,17 @@ function prettyCodeOption()
 }
 
 /**
-   Unified transformer to save original code.
+   Unified transformer 
  * @returns 
  */
 function preprocess() {
   return  async (tree : any, ...prop: any)  => {
-    visit(tree, 'mdxjsEsm', (node) => {
-      //console.log(node.data.estree.body.declaration);
-    })
-
+    
+    // save the original code because it will be parsed for styling. 
     visit(tree, 'element', (node) => {
       if(node?.tagName === 'pre'){
-        const [codeEl] = node.children;  
+        const [codeEl] = node.children;
+
         if (codeEl.tagName === "code"){
           node.raw = codeEl.children?.[0].value;
         }  
@@ -83,11 +102,13 @@ function preprocess() {
 }
 
 /**
- * Unified transformer to make a title bar.
+ * Unified transformer
  * @returns 
  */
 function postprocess() {
   return  async (tree : any)  => {
+
+    // create a title bar for a Markdown code block.
     visit(tree, 'element', (node, index, parent) => {
       if(node?.tagName !== 'pre') return;
       
@@ -98,7 +119,7 @@ function postprocess() {
 
       // title 이 생성된 경우
       if(header != node){
-        //header.tagName = 'div';
+        header.tagName = 'div';
         header.properties['data-code'] = code;
         addCopyButton(header);
       }

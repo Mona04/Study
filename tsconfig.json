@@ -23,8 +23,8 @@
     
     "baseUrl": "./src/",
     "paths": {
-      "@/contentlayer/generated": [
-        "../.contentlayer/generated"
+      "@/public/*": [
+        "./public/*"
       ],
       "@/styles/*": [
         "app/_styles/*"
@@ -35,8 +35,8 @@
       "@/context/*": [
         "app/_context/*"
       ],
-      "@/public/*": [
-        "./public/*"
+      "@/contentlayer/generated": [
+        "../.contentlayer/generated"
       ]
     },
     "plugins": [
