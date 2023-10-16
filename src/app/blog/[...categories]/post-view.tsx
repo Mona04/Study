@@ -13,7 +13,6 @@ function MDPostView({post}: {post:BlogPost})
 
   return (
     <main>
-      <p>-</p>
       <h1 className="text-3xl font-bold">{post.title}</h1>
       <div dangerouslySetInnerHTML={{__html: post.content}}/>
     </main>
@@ -26,7 +25,6 @@ function MDXPostView({post}: {post:BlogPost})
 
   return (
     <main>
-      <p>-</p>
       <h1 className="text-3xl font-bold">{post.title}</h1>
       <MDXComponent components={Components} />
     </main>

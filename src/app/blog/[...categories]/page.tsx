@@ -54,7 +54,6 @@ export default function Page({ params }: Params) {
     ) 
   }    
 }
-//<MDPostView title={post.title} code={post.body.code} raw={post.body.raw}/>
 
 export const dynamicParams = false // true | false,
 //export const revalidate = 1 // revalidate this page every 60 seconds
