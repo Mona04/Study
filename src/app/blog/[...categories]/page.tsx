@@ -1,6 +1,6 @@
 import PostView from './post-view'
 import CategoryView from './category-view'
-import { blogSlugs, checkSlug, getPost} from './../blog-helper'
+import { postSlugs, getPostByPath } from 'utils/content-helper'
 
 type Params = {
   params: { categories: string[] } 
@@ -9,43 +9,52 @@ type Params = {
 /**
  * @returns  [ {categories: []:string }] 형태어야 함
  */
-export const generateStaticParams = () => blogSlugs;
+export const generateStaticParams = () => {
+  return Object.keys(postSlugs)
+    .filter(slug=> slug.startsWith('blog/'))
+    .map(slug=> ({ categories: slug.split('/').slice(1)}))
+}
 
 export const generateMetadata = ({ params }: Params) => {
-  const post = getPost(params.categories);
+  const path = ['blog', ...params.categories].join('/')
+  const post = getPostByPath(path);
+
   if (!post) {
-    return {}
-    
+    return {}    
   }
-  return { title: post.title }
+  return { 
+    title: post.title 
+  }
 }
 
 export default function Page({ params }: Params) {
- 
-  const checked = checkSlug(params.categories);
-  if(checked == null) {
+  const path = ['blog', ...params.categories].join('/');
+  if(!(path in postSlugs))
+  {
     throw new Error(`Post not found for slug: ${params.categories}`)
   }
 
-  if(checked.bPost == false)
+  const slug = postSlugs[path];
+  if(slug.bPost == false)
   {
     return (
-      <CategoryView categories={params.categories}/>
+      <CategoryView path={path}/>
     )
   }
   else{
-    const post = getPost(params.categories);
+    const post = getPostByPath(path);
     if (post == undefined){
       throw new Error(`Post not found for slug: ${params.categories}`)
     }    
   
     return (
       <>
-        <PostView title={post.title} code={post.body.code} raw={post.body.raw}/>
+        <PostView post={post}/>
       </>
     ) 
   }    
 }
+//<MDPostView title={post.title} code={post.body.code} raw={post.body.raw}/>
 
 export const dynamicParams = false // true | false,
 //export const revalidate = 1 // revalidate this page every 60 seconds

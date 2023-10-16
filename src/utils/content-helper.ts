@@ -3,17 +3,22 @@ import {
   allBlogMDPosts, allBlogMDXPosts 
 } from '@/contentlayer/generated'
 
-type BlogPost = {
-  isMDX : boolean,
-  title : string
-}
 
 type PostDirectories = {
   [category: string] : PostDirectory;
 }
 
+/*
+ * root/_content/mycategory1/... => mycategory1/...
+ */
 type PostSlugs = {
   [category: string] : { bPost : boolean};
+}
+
+export type BlogPost = {
+  isMDX : boolean,
+  title : string,
+  content : string // html or code
 }
 
 export type PostDirectory = {
@@ -28,8 +33,8 @@ export type PostDirectory = {
  * Tree 구조로 현재 포스트 글을 표현
  */
 const _postDirectories = () => {
-  const st = performance.now();
-  
+
+  const st = performance.now();  
   console.log("construct categories...")
   
   const categories : PostDirectories = {};
@@ -69,21 +74,25 @@ const _postDirectories = () => {
  * react 의 generateStaticParams() 에 유용함.
  */
 const _postSlugs = (() => {
+
+  const st = performance.now();  
+  console.log("construct slugs...")
+
   const slugs: PostSlugs = {};
   
   const callback = (post:any) => {
     if(post._raw == undefined) return;
     
-    const slugs = post._raw.flattenedPath.split('/');
+    const paths = post._raw.flattenedPath.split('/');
     let category: string = "";
 
-    for(let i = 0; i < slugs.length; i++)
+    for(let i = 0; i < paths.length; i++)
     {
-      const slug = slugs[i];
-      category += `/${slug}`
+      const slug = paths[i];
+      category += category === "" ? slug : `/${slug}`
       if(slugs[category] === undefined) {
         slugs[category] = {
-          bPost : i == slugs.length-1
+          bPost : i == paths.length-1
         };
       }
     }    
@@ -91,6 +100,9 @@ const _postSlugs = (() => {
   
   allBlogMDPosts.map(callback);  
   allBlogMDXPosts.map(callback);  
+
+  var ed = performance.now();
+  console.log(`post slug takes ${(ed-st)/1000}`);
 
   return slugs;
 })();
@@ -104,10 +116,12 @@ export const postSlugs = _postSlugs;
 
 
 
-export const getPostsByCategories = (categories: string[]) => {
+export const getPostsByPath = (path: string) => {
+  // flattenedPath starts with '/'
+  if(!path.startsWith('/')) path = '/' + path;
+
   const res : BlogPost[] = [];
-  const key = categories.join('/')
-  var re = new RegExp(`^${key}`, 'i');
+  var re = new RegExp(`^${path}`, 'i');
 
   allBlogMDPosts
     .filter(post => post._raw.flattenedPath.match(re))
@@ -122,32 +136,35 @@ export const getPostsByCategories = (categories: string[]) => {
   return res;
 }
 
-export const getPostByCategories = (categories: string[]) => {
-  const key = categories.join('/')
+export const getPostByPath = (path: string) => {  
 
-  let res = allBlogMDPosts
-    .find(post => post._raw.flattenedPath === key)  
-    .map(_mdPostToBlogPost);
-  if(res != undefined) return res;
-  
-  res = allBlogMDXPosts
-    .find(post => post._raw.flattenedPath === key);
-    .map(_mdxPostToBlogPost)
-  if(res != undefined) return res;
+  {
+    let res = allBlogMDPosts
+    .find(post => post._raw.flattenedPath === path)  
 
-  return res;
+    if(res != undefined) return _mdPostToBlogPost(res);
+  }
+
+  {
+    let res = allBlogMDXPosts
+    .find(post => post._raw.flattenedPath === path)  
+    
+    if(res != undefined) return _mdxPostToBlogPost(res);
+  }
 }
 
 const _mdPostToBlogPost = (post:BlogMDPost):BlogPost => (
   {
     isMDX : false,
-    title: post.title 
+    title: post.title,
+    content: post.body.html
   }
 )
 
 const _mdxPostToBlogPost = (post:BlogMDXPost):BlogPost => (
   {
     isMDX : true,
-    title: post.title 
+    title: post.title,
+    content: post.body.code
   }
 )

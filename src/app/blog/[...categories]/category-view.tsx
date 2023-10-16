@@ -1,12 +1,13 @@
-import { getPosts } from './../blog-helper'
+import { getPostsByPath } from 'utils/content-helper'
 
-export default function PostView({categories}: {categories:string[]}) {
-  
+export default function PostView({path}: {path:string}) {
   return (
     <main>
-      { getPosts(categories).map(post=>{ 
+      { 
+        getPostsByPath(path).map(post=>{ 
           return <p>{post.title}</p>
-        })}
+        })
+      }
     </main>
   )
 }
