@@ -9,7 +9,7 @@ type PostDirectories = {
 }
 
 /*
- * root/_content/mycategory1/... => mycategory1/...
+ * root/_content/mycategory1/... => /mycategory1/...
  */
 type PostSlugs = {
   [category: string] : { bPost : boolean};
@@ -18,6 +18,7 @@ type PostSlugs = {
 export type BlogPost = {
   isMDX : boolean,
   title : string,
+  slug  : string,  // start from base path. root/aaa/bbb... => /aaa/bbb...
   content : string // html or code
 }
 
@@ -89,7 +90,7 @@ const _postSlugs = (() => {
     for(let i = 0; i < paths.length; i++)
     {
       const slug = paths[i];
-      category += category === "" ? slug : `/${slug}`
+      category += `/${slug}`
       if(slugs[category] === undefined) {
         slugs[category] = {
           bPost : i == paths.length-1
@@ -117,6 +118,7 @@ export const postSlugs = _postSlugs;
 
 
 export const getPostsByPath = (path: string) => {
+  
   // flattenedPath don't starts with '/'
   if(path.startsWith('/')) path = path.slice(1);
 
@@ -137,6 +139,7 @@ export const getPostsByPath = (path: string) => {
 }
 
 export const getPostByPath = (path: string) => {  
+  
   // flattenedPath don't starts with '/'
   if(path.startsWith('/')) path = path.slice(1);
   
@@ -159,6 +162,7 @@ const _mdPostToBlogPost = (post:BlogMDPost):BlogPost => (
   {
     isMDX : false,
     title: post.title,
+    slug: '/'+post._raw.flattenedPath,
     content: post.body.html
   }
 )
@@ -167,6 +171,7 @@ const _mdxPostToBlogPost = (post:BlogMDXPost):BlogPost => (
   {
     isMDX : true,
     title: post.title,
+    slug: '/'+post._raw.flattenedPath,
     content: post.body.code
   }
 )

@@ -1,11 +1,27 @@
+import Link from "nextwrap/link"
 import { getPostsByPath } from 'utils/content-helper'
 
-export default function PostView({path}: {path:string}) {
+interface Props {
+  title: string,
+  slug: string
+}
+
+function CategoryView({title, slug}:Props){
+  return (
+    <div>
+      <Link href={slug}>
+        {title}
+      </Link>
+    </div>
+  )
+}
+
+export default function CategoriesView({path}: {path:string}) {
   return (
     <main>
       { 
         getPostsByPath(path).map(post=>{ 
-          return <p>{post.title}</p>
+          return <CategoryView key={post.slug} title={post.slug} slug={post.slug}/>
         })
       }
     </main>
