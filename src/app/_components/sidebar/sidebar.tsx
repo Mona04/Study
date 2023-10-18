@@ -1,4 +1,4 @@
-import Link from "nextwrap/link"
+import CategoryItem from "./sidebar-category-item"
 
 import Interact from './sidebar-interact'
 import SideBarCategory from './sidebar-categories'
@@ -11,11 +11,7 @@ export default function SideBar() {
     <aside>
       <Interact>  
         <div className={style.sidebar} >
-          <div>
-            <Link href="/">
-              {"Home Page"}
-            </Link>
-          </div>     
+          <CategoryItem slug="/" label="HOME" refCount={-1} depth={0}/>
           <SideBarCategory/>
         </div>
       </Interact>  

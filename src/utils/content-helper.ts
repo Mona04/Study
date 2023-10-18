@@ -117,8 +117,8 @@ export const postSlugs = _postSlugs;
 
 
 export const getPostsByPath = (path: string) => {
-  // flattenedPath starts with '/'
-  if(!path.startsWith('/')) path = '/' + path;
+  // flattenedPath don't starts with '/'
+  if(path.startsWith('/')) path = path.slice(1);
 
   const res : BlogPost[] = [];
   var re = new RegExp(`^${path}`, 'i');
@@ -137,7 +137,9 @@ export const getPostsByPath = (path: string) => {
 }
 
 export const getPostByPath = (path: string) => {  
-
+  // flattenedPath don't starts with '/'
+  if(path.startsWith('/')) path = path.slice(1);
+  
   {
     let res = allBlogMDPosts
     .find(post => post._raw.flattenedPath === path)  

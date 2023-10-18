@@ -1,7 +1,6 @@
 'use client'
 
 import * as React from 'react'
-import { allPosts } from '@/contentlayer/generated'
 
 interface IProps{}
 interface IState{

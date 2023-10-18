@@ -9,8 +9,8 @@ class StateManager {
   }
 
   public openMenu() : void {
-    //this.mMenuOpenEvent.invoke(true);
-    //this.mSearchOpenEvent.invoke(false);
+    this.mMenuOpenEvent.invoke(true);
+    this.mSearchOpenEvent.invoke(false);
   }
   public closeMenu() : void {
     this.mMenuOpenEvent.invoke(false);
