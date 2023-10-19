@@ -33,11 +33,11 @@ div[data-rehype-pretty-code-title] {
   background-color: #343541;
 
   color: #999999;
-  font-size: 0.7em;
+  font-size: 0.7rem;
   font-weight: 700;
 
   padding: 3px 1.25em;
-  height: 30px;
+  height: 2rem;
   border-radius: 5px 5px 0px 0px;
   margin-top: 5px;
   display: flex;
@@ -113,8 +113,8 @@ div[data-rehype-pretty-code-title] {
 }
 
 [data-chars-id=s],[data-chars-id=v] {
+  font-weight: 700;
     --tw-border-opacity: 1;
-    font-weight: 700;
     --tw-text-opacity: 1!important
 }
 
@@ -125,12 +125,12 @@ div[data-rehype-pretty-code-title] {
 }
 
 [data-chars-id=i] {
-    --tw-border-opacity: 1;
-    border-bottom-color: rgb(147 51 234/var(--tw-border-opacity));
-    background-color: #6b21a880;
-    font-weight: 700;
-    --tw-text-opacity: 1!important;
-    color: rgb(233 213 255/var(--tw-text-opacity))!important
+  border-bottom-color: rgb(147 51 234/var(--tw-border-opacity));
+  background-color: #6b21a880;
+  font-weight: 700;
+  --tw-border-opacity: 1;
+  --tw-text-opacity: 1!important;
+  color: rgb(233 213 255/var(--tw-text-opacity))!important
 }
 
 

@@ -20,8 +20,8 @@ function MastHead() {
                          hover:tw-text-color-text "
               href="/">{BLOG_NAME}</Link>
         
-        <SearchButton className="tw-flex tw-self-center tw-text-2xl"/>
-        <DarkModeToggle className='tw-flex tw-self-center tw-mr-4 tw-text-1xl '/>
+        <SearchButton className="tw-flex tw-self-center tw-text-xl"/>
+        <DarkModeToggle className='tw-flex tw-self-center tw-mr-4 tw-text-xl '/>
 
       </div>
     </nav>
