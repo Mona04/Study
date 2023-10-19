@@ -33,19 +33,23 @@ export default function RootLayout({children,}: {children: React.ReactNode}) {
           <ContextProvider>
             <MastHead/>
 
+            {/* popups */}
             <SideBar/>
             <Search/>
             
-            <div className='tw-mt-nav-height tw-pb-20'>
+            {/* ensure that the content does not hide the masthead and footer.  */}
+            <div className='tw-mt-nav-height tw-pb-52'>
               {children}
             </div>
 
             <Footer className='tw-w-full tw-absolute tw-bottom-0'/>
           </ContextProvider>
         </div>
+
         {/* After React DOM is loaded. cf. defer has no effect on script tags without src attribute. */}
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
         <script dangerouslySetInnerHTML={{__html: CopyButtonScript }} defer />
+
       </body>   
     </html>
   )

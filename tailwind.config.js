@@ -31,6 +31,7 @@ module.exports = {
       black: '900',
     },    
     fontSize: {
+      xs: '0.6rem',
       sm: '0.8rem',
       base: '1rem',
       xl: '1.25rem',

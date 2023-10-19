@@ -6,7 +6,7 @@ function Follow({className}:{className?: string}){
   return (
     <div className={className}>
       <Link href={GIT} target='_self' className='tw-flex tw-self-center'>
-        <AiFillGithub className='tw-text-sm tw-self-center'/>
+        <AiFillGithub className='tw-self-center'/>
         <div className='tw-ml-1 tw-font-bold'>
           GITHUB
         </div>
@@ -38,7 +38,7 @@ function BuildTime({className}:{className?: string})
   var date = new Date(); 
   return (
     <div className={className}>
-      <div>
+      <div className=''>
         Last Build:
       </div>
       <div className='tw-ml-1'>
@@ -55,15 +55,16 @@ export default function Footer({className}: {className?:string|undefined})
 {
   return (
     <footer className={className}>
-      <div className='tw-backdrop-brightness-95'>
-        <div className='tw-flex tw-p-4 tw-mr-4 tw-ml-4 tw-text-xs 
+      <div className='tw-backdrop-brightness-95  tw-text-xs'>
+        <div className='tw-flex tw-p-4 tw-mr-4 tw-ml-4
                         dark:tw-border-t-color-border dark:tw-border-t-2'>
           <div className='tw-flex-col'>
             <Follow className='tw-mb-3'/>
-            <Ment className=" "/>
+            <Ment className=""/>
           </div>    
           {/* build time 정보는 휴대폰에선 안보이게 (공간없음) */}
-          <BuildTime className='tw-flex tw-self-end tw-ml-auto phone:tw-absolute phone:tw-collapse'/>
+          <BuildTime className='tw-flex tw-self-end tw-ml-auto
+                                phone:tw-absolute phone:tw-collapse'/>
         </div>  
       </div>
     </footer>

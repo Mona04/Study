@@ -15,14 +15,14 @@ function MastHead() {
     <nav>
       <div className={style.masthead}>
         <MenuButton/>
-        <Link className="tw-align-middle tw-self-center tw-mr-auto 
+        <Link className="tw-grow tw-self-center
                          tw-font-sans tw-font-bold tw-text-color-primary tw-text-xl
                          hover:tw-text-color-text "
-              href="/">{BLOG_NAME}</Link>  
-        <div className="tw-ml-auto"/>
+              href="/">{BLOG_NAME}</Link>
+        
         <SearchButton className="tw-flex tw-self-center tw-text-2xl"/>
-        <DarkModeToggle className='tw-flex tw-self-center tw-text-1xl '/>
-        <div className="tw-mr-1"/>
+        <DarkModeToggle className='tw-flex tw-self-center tw-mr-4 tw-text-1xl '/>
+
       </div>
     </nav>
   );

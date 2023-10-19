@@ -19,16 +19,6 @@ function MakeCategoryView({category, slug = '', depth = 0}: {category : PostDire
       {subviews.length > 0 ? subviews : <></>}
     </CategoryItem>
   );
-  return (
-    <div key={`${slug}`}>
-      <div className={style["category-item-" + depth]}>        
-        <Link href={`${slug}`}>
-          {`${category.category}(${category.count})`}
-        </Link>
-      </div>
-      { subviews.length > 0 && <div>{subviews}</div> }    
-    </div>
-  );
 }
 
 export default () => {  
