@@ -38,11 +38,11 @@ export default function RootLayout({children,}: {children: React.ReactNode}) {
             <Search/>
             
             {/* ensure that the content does not hide the masthead and footer.  */}
-            <div className='tw-mt-nav-height tw-pb-52'>
+            <main className='tw-mt-nav-height tw-pb-52'>
               {children}
-            </div>
+            </main>
 
-            <Footer className='tw-w-full tw-absolute tw-bottom-0'/>
+            <Footer className='tw-w-full tw-absolute -tw-bottom-20'/>
           </ContextProvider>
         </div>
 

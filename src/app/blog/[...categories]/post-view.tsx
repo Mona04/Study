@@ -36,10 +36,13 @@ export default function PostView({post}: {post:BlogPost})
 {
 
   return (
-    <main>
+    <article>
+      <meta itemProp='headline' content={post.title}/>
+      <meta itemProp='description' content={post.description}/>
+      <meta itemProp='datePublished' content={post.date}/>
       {
         post.isMDX ? <MDXPostView post={post}/> : <MDPostView post={post}/>
       }
-    </main>
+    </article>
   )
 }

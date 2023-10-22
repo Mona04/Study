@@ -18,6 +18,8 @@ type PostSlugs = {
 export type BlogPost = {
   isMDX : boolean,
   title : string,
+  date: string,
+  description?: string,
   slug  : string,  // start from base path. root/aaa/bbb... => /aaa/bbb...
   content : string // html or code
 }
@@ -162,6 +164,8 @@ const _mdPostToBlogPost = (post:BlogMDPost):BlogPost => (
   {
     isMDX : false,
     title: post.title,
+    description: post.description,
+    date: post.date,
     slug: '/'+post._raw.flattenedPath,
     content: post.body.html
   }
@@ -171,6 +175,8 @@ const _mdxPostToBlogPost = (post:BlogMDXPost):BlogPost => (
   {
     isMDX : true,
     title: post.title,
+    description: post.description,
+    date: post.date,
     slug: '/'+post._raw.flattenedPath,
     content: post.body.code
   }

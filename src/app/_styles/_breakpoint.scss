@@ -15,6 +15,7 @@ $BreakPoint-Settings: (
 
 @mixin breakpoint($query, $no-query: false) {
   @if length($query) == 2 {
+    // nth 는 1부터 시작
     $modifier: nth($query, 1);
     $size: nth($query, 2);
     @if type-of($modifier) == string && type-of($size) == number {

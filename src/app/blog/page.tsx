@@ -1,12 +1,11 @@
 import { getPostsByPath } from 'utils/content-helper'
+import CategoryView from './[...categories]/category-view'
 
 export default function PostView() {
 
   return (
     <main>
-      { getPostsByPath("").map(post=>{ 
-          return <p>{post.title}</p>
-        })}
+      <CategoryView path=''/>
     </main>
   )
 }

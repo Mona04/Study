@@ -27,7 +27,7 @@ main {
     margin: 1rem 5rem;
   }
   @include breakpoint(min-width $medium-wide){
-    margin: 1rem 8rem;
+    margin: 1rem 15rem;
   }
 }
 
