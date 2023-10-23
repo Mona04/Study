@@ -14,7 +14,7 @@ html {
 body {
   font-family: var(--font-body);
   font-size: var(--fontSize-base);
-  line-height: var(--lineHeight-base);
+  line-height: var(--lineHeight-relaxed);
   color: var(--color-text);
   margin: 0;
 }
@@ -88,7 +88,7 @@ h3 {
 
 h4 {
   font-size: var(--fontSize-base);
-  line-height: var(--lineHeight-base);
+  line-height: var(--lineHeight-lg);
 }
 
 h5 {
@@ -118,11 +118,8 @@ h6 > a {
 /* Prose */
 
 p {
-  line-height: var(--lineHeight-relaxed);
-  --baseline-multiplier: 0.179;
-  --x-height-multiplier: 0.35;
-  margin: var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0);
-  padding: var(--spacing-0);
+  margin: 0;
+  padding: 0;
 }
 
 ul,
@@ -161,7 +158,7 @@ blockquote {
   padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-6);
   border-left: var(--spacing-1) solid var(--color-primary);
   font-size: var(--fontSize-lg);
-  line-height: var(--lineHeight-lg);
+  line-height:  var(--lineHeight-relaxed);
   font-style: italic;
   margin-bottom: var(--spacing-8);
 }
