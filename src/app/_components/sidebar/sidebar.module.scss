@@ -1,15 +1,25 @@
+@import "@/styles/_variables.scss";
+@import "@/styles/_breakpoint.scss";
+
 .sidebar {
   z-index: 10000;
   position: fixed;
   top: var(--nav-height);
-  padding: 1rem;
+  
+  overflow-y: scroll;
 
   background-color: var(--color-page-background);
   opacity: 95%;
+  
+  height: calc(100% - var(--nav-height));//100%;
+  padding: 0.5rem;
 
-  width: 100%;
-  height: auto;
-  min-height: 20%;
+  @include breakpoint(max-width $medium){
+   width: 100%;
+  }
+  @include breakpoint(min-width $medium){
+    width: 14rem;
+  }
 }
 
 @supports (backdrop-filter: none){

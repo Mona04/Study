@@ -55,7 +55,7 @@
 
 .menu-btn.change .menu-lines {
   .line1 {
-    transform: translateY(0.5rem) rotate(45deg);
+    transform: translateY(0.6rem) rotate(45deg);
   }
   .line2 {
     opacity: 0%;
@@ -104,7 +104,7 @@
     transform: translateY(0px) rotate(0);
   }
   100% {
-    transform: translateY(0.5rem) rotate(45deg);
+    transform: translateY(0.6rem) rotate(45deg);
   }
 }
 @keyframes fade {

@@ -24,10 +24,10 @@ main {
     margin: 1rem 1rem;
   }
   @include breakpoint(min-width $medium){
-    margin: 1rem 5rem;
+    margin: 1rem 6rem;
   }
   @include breakpoint(min-width $medium-wide){
-    margin: 1rem 15rem;
+    margin: 1rem 16rem;
   }
 }
 

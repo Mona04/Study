@@ -1,9 +1,5 @@
-import Link from "nextwrap/link"
 import CategoryItem from "./sidebar-category-item"
-
 import {postDirectories, PostDirectory} from 'utils/content-helper'
-
-import style from "./sidebar.module.scss"
 
 
 function MakeCategoryView({category, slug = '', depth = 0}: {category : PostDirectory, slug?: string , depth? : number})

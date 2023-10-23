@@ -18,12 +18,12 @@ function CategoryView({title, slug}:Props){
 
 export default function CategoriesView({path}: {path:string}) {
   return (
-    <main>
+    <>
       { 
         getPostsByPath(path).map(post=>{ 
           return <CategoryView key={post.slug} title={post.slug} slug={post.slug}/>
         })
       }
-    </main>
+    </>
   )
 }

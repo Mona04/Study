@@ -3,10 +3,10 @@ import Popup from './search-popup'
 
 export default function SideBar() {
   return (
-    <aside>
+    <section>
       <Interact>  
         <Popup/>
       </Interact>  
-    </aside>
+    </section>
   );
 }

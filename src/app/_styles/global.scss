@@ -73,7 +73,7 @@
     --spacing-#{$i}: #{0.25rem * $i};
   }
   
-  --nav-height: var(--spacing-12);
+  --nav-height: 3rem;
 }
 
 /* HTML elements */
@@ -103,6 +103,8 @@
 @tailwind utilities;
 
 @import "@/styles/_variables.scss";
+@import "./themes/_variables-default.scss";
+@import "./themes/_variables-dark.scss";
 @import "@/styles/_breakpoint.scss";
 @import "@/styles/_base.scss";
 @import '@/styles/_rehype.scss';
