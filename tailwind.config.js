@@ -53,7 +53,6 @@ module.exports = {
       },
       spacing: {
         'nav-height': 'var(--nav-height)',
-        '1.5em': '0.3em'
       }
     },
     screens: {
