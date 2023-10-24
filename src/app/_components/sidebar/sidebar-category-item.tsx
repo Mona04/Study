@@ -2,8 +2,9 @@
 
 import {useState, useContext, useEffect} from "react"
 import {usePathname} from 'next/navigation'
-
 import Link from "nextwrap/link"
+import {Context} from '@/context/context'
+
 import {RiArrowDownSLine, RiArrowRightSLine} from 'react-icons/ri'
 
 interface Props {
@@ -22,6 +23,7 @@ export default function CategoryItem({children, label, refCount, slug, depth} : 
   const isCurrent = pathname.split('/')[depth+1]?.toUpperCase() === label.toUpperCase();
 
   const [isCollapsed, setIsCollaped] = useState(!isCurrent || isLeaf);
+	const context = useContext(Context);
 
   useEffect(()=>{
     const disposables : (IDisposable|undefined)[] = [];
@@ -31,12 +33,14 @@ export default function CategoryItem({children, label, refCount, slug, depth} : 
     }
   });
 
-  const onClick = (event:  React.MouseEvent<HTMLElement>) => {      
+  const onClickToggle = (event:  React.MouseEvent<HTMLElement>) => {      
     setIsCollaped(!isCollapsed);
   };
 
+  const onClickLink = () => {
+    context?.statemgr.closeAll();
+  };
 
-  //if(isCurrent && isLeaf) setIsCollaped(false);
 
   return (
     <>
@@ -46,17 +50,19 @@ export default function CategoryItem({children, label, refCount, slug, depth} : 
               tw-flex tw-flex-row tw-justify-start
               tw-mb-1
               ${depth < 1 ? "tw-font-bold" : "tw-font-normal"}
-              ${depth < 1 ? "tw-text-base" : depth < 2 ? "tw-text-sm" : "tw-text-xs"}
+              ${depth < 1 ? "tw-text-xl desk:tw-text-base" : depth < 2 ? "tw-text-lg : desk:tw-text-sm" : "tw-text-base desk:tw-text-xs"}
            `}>       
         <button 
           className="tw-flex tw-flex-row tw-grow"
-          onClick={onClick}> 
-          <div className="tw-self-center tw-w-4">
+          onClick={onClickToggle}> 
+          <div className="tw-self-center tw-w-6">
             { isLeaf ? <></> : isCollapsed ? <RiArrowRightSLine/> : <RiArrowDownSLine/>} 
           </div>
-          <Link href={slug} 
+          <Link              
               className={`tw-font-sans hover:tw-font-bold tw-align-baseline
-                         ${isCurrent ? "tw-text-color-primary" : "tw-text-color-text "}`}>
+                         ${isCurrent ? "tw-text-color-primary" : "tw-text-color-text "}`}
+              href={slug}
+              onClick={onClickLink}>
             {`${label}${refCount > 0 ? ` (${refCount})` : ""}`}
           </Link>
         </button>

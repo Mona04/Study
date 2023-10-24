@@ -6,9 +6,9 @@ html {
   -moz-osx-font-smoothing: grayscale;
   
   font-size: 16px;
-  @include breakpoint(max-width $small){
-    font-size: 14px;  
-  }
+  //@include breakpoint(max-width $small){
+  //  font-size: 14px;  
+  //}
 }
 
 body {
@@ -55,8 +55,8 @@ h4,
 h5,
 h6 {
   font-family: var(--font-heading);
-  margin-top: var(--spacing-12);
-  margin-bottom: var(--spacing-6);
+  margin-top: 1.25em;
+  margin-bottom: 0.75em;
   letter-spacing: -0.025em;
 }
 
@@ -119,44 +119,46 @@ h6 > a {
 
 p {
   margin: 0;
-  padding: 0;
+  padding: 0.25rem 0;
 }
 
 ul,
 ol {
-  margin-left: var(--spacing-0);
-  margin-right: var(--spacing-0);
-  padding: var(--spacing-0);
-  margin-bottom: var(--spacing-8);
+  margin-left: 0.1rem;
+  margin-right:  0.1rem;
+  margin-bottom:  0.1rem;
+  padding:  0.1rem;
   list-style-position: outside;
   list-style-image: none;
 }
 
 ul li,
 ol li {
-  padding-left: var(--spacing-0);
-  margin-bottom: calc(var(--spacing-8) / 2);
+  padding-left: 0.1rem;
+  //margin-bottom: 1.0rem;
 }
 
 li > p {
-  margin-bottom: calc(var(--spacing-8) / 2);
+  margin-bottom: 1.0rem;
 }
 
+
 li *:last-child {
-  margin-bottom: var(--spacing-0);
+  margin-bottom: 0.25rem;
 }
 
 li > ul {
-  margin-left: var(--spacing-8);
-  margin-top: calc(var(--spacing-8) / 2);
+  margin-left: 0.85rem;
+  margin-top: 0.0rem;
+  margin-bottom: 1.25rem;
 }
 
 blockquote {
   color: var(--color-text-light);
-  margin-left: calc(-1 * var(--spacing-6));
-  margin-right: var(--spacing-8);
-  padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-6);
-  border-left: var(--spacing-1) solid var(--color-primary);
+  margin-left: -2rem;
+  margin-right: 0rem;
+  padding: 0.1rem 0.1rem 0.1rem 1.5rem;
+  border-left: 0.25rem solid var(--color-primary);
   font-size: var(--fontSize-lg);
   line-height:  var(--lineHeight-relaxed);
   font-style: italic;
@@ -164,7 +166,7 @@ blockquote {
 }
 
 blockquote > :last-child {
-  margin-bottom: var(--spacing-0);
+  margin-bottom: 0.25rem;
 }
 
 blockquote > ul,

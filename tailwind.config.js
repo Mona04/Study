@@ -56,7 +56,7 @@ module.exports = {
       }
     },
     screens: {
-      'phone': {'max': '480px'}
+      'desk': {'min': '640px'}
     }
   },
   plugins: [],

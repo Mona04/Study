@@ -20,7 +20,7 @@ function MastHead() {
             href="/">{BLOG_NAME}</Link>
       
       <SearchButton className="tw-flex tw-self-center tw-text-xl"/>
-      <DarkModeToggle className='tw-flex tw-self-center tw-mr-4 tw-text-xl '/>
+      <DarkModeToggle className='tw-flex tw-self-center tw-ml-2 tw-mr-4 tw-text-xl '/>
     </nav>
   );
 }

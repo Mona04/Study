@@ -1,13 +1,16 @@
 import Link from "next/link"
+import { MouseEventHandler } from "react";
 
+interface Props {
+  children: React.ReactNode,
+  href: string | undefined, 
+  target?: string | undefined,
+  rel?: string | undefined,
+  className?: string | undefined,
+  onClick?: MouseEventHandler<HTMLAnchorElement> | undefined
+}
 
-export default ({children, href, target = '_self', rel, className}: 
-  {
-    children: React.ReactNode,
-    href: string | undefined, 
-    target?: string | undefined,
-    rel?: string | undefined,
-    className?: string | undefined, }
+export default ({children, href, target = '_self', rel, className, onClick}:Props
   )=>{
   
   if(target == '_blank'){
@@ -20,7 +23,8 @@ export default ({children, href, target = '_self', rel, className}:
       <a className={className} 
          href={`${process.env.BASE_PATH}${href}`} 
          rel={rel} 
-         target={target}>
+         target={target}
+         onClick={onClick}>
         {children}
       </a>
     )
@@ -30,7 +34,8 @@ export default ({children, href, target = '_self', rel, className}:
       <Link className={className}
             href={href === undefined ? "" : href} 
             rel={rel} 
-            target={target}>
+            target={target}
+            onClick={onClick}>
         {children}
       </Link>
     )

@@ -72,12 +72,6 @@
   --maxWidth-4xl: 56rem;
   --maxWidth-full: "100%";
   --maxWidth-wrapper: var(--maxWidth-2xl);
-  --spacing-px: "1px";
-  
-  --spacing-0: 0.1rem;
-  @for $i from 1 through 40{
-    --spacing-#{$i}: #{0.25rem * $i};
-  }
   
   --nav-height: 3rem;
 }
@@ -95,8 +89,8 @@
 
 @media (max-width: 42rem) {
   blockquote {
-    padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-4);
-    margin-left: var(--spacing-0);
+    padding: 0.1rem 0.1rem 0.1rem 1.0rem;
+    margin-left: 0.1rem;
   }
   ul,
   ol {
