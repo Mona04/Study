@@ -119,32 +119,33 @@ h6 > a {
 
 p {
   margin: 0;
-  padding: 0.25rem 0;
+  padding: 0.25rem 0.0rem 1rem 0;
 }
 
 ul,
 ol {
-  margin-left: 0.1rem;
-  margin-right:  0.1rem;
-  margin-bottom:  0.1rem;
+  margin: 0 0.1rem 0.1rem 0.1rem;
   padding:  0.1rem;
-  list-style-position: outside;
-  list-style-image: none;
+  list-style-position: inside;
+  //list-style-image: ;
 }
 
 ul li,
 ol li {
-  padding-left: 0.1rem;
+  padding-left: 0.0rem;
   //margin-bottom: 1.0rem;
 }
-
+ul > li::before {
+  list-style-type: decimal;
+  //padding-left: 1rem;
+  content: "-";
+  margin: 0 1rem 0 0rem;
+}
+ol > li {
+  list-style-type: decimal;
+}
 li > p {
   margin-bottom: 1.0rem;
-}
-
-
-li *:last-child {
-  margin-bottom: 0.25rem;
 }
 
 li > ul {
@@ -153,22 +154,30 @@ li > ul {
   margin-bottom: 1.25rem;
 }
 
+
+li *:last-child {
+  margin-bottom: 0.25rem;
+}
+
+
 blockquote {
   color: var(--color-text-light);
-  margin-left: -2rem;
-  margin-right: 0rem;
+  margin: 0 0 2rem 0;
   padding: 0.1rem 0.1rem 0.1rem 1.5rem;
   border-left: 0.25rem solid var(--color-primary);
   font-size: var(--fontSize-lg);
   line-height:  var(--lineHeight-relaxed);
   font-style: italic;
-  margin-bottom: var(--spacing-8);
 }
 
 blockquote > :last-child {
   margin-bottom: 0.25rem;
 }
 
+blockquote p {
+  /* blockquote usually has one paragraph. */
+  padding: 0 0 0 0;
+}
 blockquote > ul,
 blockquote > ol {
   list-style-position: inside;

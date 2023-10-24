@@ -1,8 +1,9 @@
-import { defineDocumentType, makeSource, FieldDefs } from 'contentlayer/source-files'
+import { defineDocumentType, makeSource, FieldDefs, ComputedFields } from 'contentlayer/source-files'
 import { readFileSync } from 'fs'
 import { visit } from 'unist-util-visit'
 
 import prettyCode from 'rehype-pretty-code'
+import rm_gfm from 'remark-gfm'
 import rm_math from 'remark-math'
 import mathjax from 'rehype-mathjax'
 import katex from 'rehype-katex'
@@ -12,9 +13,7 @@ export const BlogMDPost = defineDocumentType(() => ({
   filePathPattern: `**/*.(md)`,
   contentType: 'markdown',
   fields: blogFields(),  
-  computedFields: {
-    url: { type: 'string', resolve: (post) => `/posts/${post._raw.flattenedPath}` },
-  },
+  computedFields: blogComputedFields(),
 }))
 
 export const BlogMDXPost = defineDocumentType(() => ({
@@ -22,28 +21,25 @@ export const BlogMDXPost = defineDocumentType(() => ({
   filePathPattern: `**/*.(mdx)`,
   contentType: 'mdx',
   fields: blogFields(),
-  computedFields: {
-    url: { type: 'string', resolve: (post) => `/posts/${post._raw.flattenedPath}` },
-  },
+  computedFields: blogComputedFields(),
 }))
-
 
 export default makeSource({
     contentDirPath: '_content/', 
     documentTypes: [BlogMDPost, BlogMDXPost],
     mdx:{ 
-      remarkPlugins: [ [rm_math,]],
+      remarkPlugins: [ rm_gfm, [rm_math,], ],
       rehypePlugins: [
-        [ preprocess ],                    
+        [ preprocess ],
         [ prettyCode, prettyCodeOption ],
         [ katex ],
         [ postprocess]
       ]
     },
     markdown:{ 
-      remarkPlugins: [ [rm_math,]],
+      remarkPlugins: [ [rm_math,] ],
       rehypePlugins: [
-        [ preprocess ],                    
+        [ preprocess ],
         [ prettyCode, prettyCodeOption ],
         [ mathjax,],
         [ postprocess]
@@ -60,6 +56,11 @@ function blogFields() : FieldDefs {
     post_type:    { required: false, type: 'string'}
   }
 }
+
+function blogComputedFields() : ComputedFields {
+  return {
+  url: { type: 'string', resolve: (post) => `/posts/${post._raw.flattenedPath}` }
+}}
 
 /**
  * // https://rehype-pretty-code.netlify.app/    
