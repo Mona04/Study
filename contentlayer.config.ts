@@ -37,7 +37,7 @@ export default makeSource({
       ]
     },
     markdown:{ 
-      remarkPlugins: [ [rm_math,] ],
+      remarkPlugins: [  rm_gfm, [rm_math,] ],
       rehypePlugins: [
         [ preprocess ],
         [ prettyCode, prettyCodeOption ],
@@ -112,20 +112,20 @@ function postprocess() {
     // create a title bar for a Markdown code block.
     visit(tree, 'element', (node, index, parent) => {
       if(node?.tagName !== 'pre') return;
-      
-      const lang = node.properties['data-language'];
-      const code = parent.raw;
+     
       // div.children = { header, pre } 거나 { pre } 임
       const [header, pre] = parent.children;
 
       // title 이 생성된 경우
       if(header != node){
+        const code = parent.raw;
         header.tagName = 'div';
         header.properties['data-code'] = code;
         addCopyButton(header);
       }
       // title 이 생성되지 않은 경우
-      else{
+      else{   
+        const lang = node.properties['data-language'];
         const theme = node.properties['data-theme'];
         parent.children.unshift(
           {
@@ -135,11 +135,11 @@ function postprocess() {
               'data-rehype-pretty-code-title': '', 
               'data-language': lang,
               'data-theme': theme,
-              'data-code': code,
             },
             children: [{ type: 'text', value: lang }]
           });
-        addCopyButton(parent.children[1]);
+        // unshift 된건 다시 검색하므로 또 넣을 이유가 없음.
+        //addCopyButton(parent.children[1]);
       }
     })
   }

@@ -9,6 +9,12 @@ html {
   //@include breakpoint(max-width $small){
   //  font-size: 14px;  
   //}
+
+    
+  --nav-height: 3rem;
+  @include breakpoint(max-width $medium){
+    --nav-height: 3.5rem;
+  }
 }
 
 body {
@@ -35,16 +41,8 @@ hr {
   background: var(--color-accent);
   height: 1px;
   border: 0;
+  margin: 1em 0;
 }
-
-/* code */
-
-code {
-  font-family: var(--fontFamily-code);
-  font-size: var(--fontSize-sm);
-  line-height: var(--lineHeight-sm);
-}
-
 
 /* Heading */
 
@@ -122,52 +120,108 @@ p {
   padding: 0.25rem 0.0rem 1rem 0;
 }
 
+
+/* list */
+
 ul,
 ol {
-  margin: 0 0.1rem 0.1rem 0.1rem;
+  margin: 0 0.1rem 0.1rem 1.5em;
   padding:  0.1rem;
-  list-style-position: inside;
-  //list-style-image: ;
+  list-style-position: outside;  // inside 는 multiline 에서 mark 무시하고 밑에 들어가서 별로임.
 }
 
 ul li,
 ol li {
   padding-left: 0.0rem;
   //margin-bottom: 1.0rem;
+  //text-indent: 62px;
 }
-ul > li::before {
-  list-style-type: decimal;
-  //padding-left: 1rem;
-  content: "-";
-  margin: 0 1rem 0 0rem;
+ul > li {
+  list-style-type: '-   ';
+  //text-indent: 62px;
 }
 ol > li {
   list-style-type: decimal;
 }
-li > p {
-  margin-bottom: 1.0rem;
-}
+
 
 li > ul {
   margin-left: 0.85rem;
   margin-top: 0.0rem;
   margin-bottom: 1.25rem;
 }
-
-
+li > ol {
+  margin-left: 0.85rem;
+  margin-top: 0.0rem;
+  margin-bottom: 1.25rem;
+}
+li > p {
+  margin-bottom: 1.0rem;
+  display: inline;
+}
 li *:last-child {
   margin-bottom: 0.25rem;
 }
 
+/* code */
+
+code {
+  font-family: var(--fontFamily-code);
+  font-size: var(--fontSize-sm);
+  line-height: var(--lineHeight-sm);
+  border-radius: 0.25em;
+  padding: 0.125em 0.4em;
+  background-color: var(--color-primary-background); // pastel 효과같음
+}
+
+/* blockquote */
 
 blockquote {
   color: var(--color-text-light);
+  background-color: var(--color-primary-background);
   margin: 0 0 2rem 0;
   padding: 0.1rem 0.1rem 0.1rem 1.5rem;
   border-left: 0.25rem solid var(--color-primary);
-  font-size: var(--fontSize-lg);
-  line-height:  var(--lineHeight-relaxed);
+
+  font-size: var(--fontSize-lg);  
+  font-family: var(--fontFamily-serif);
+  font-style:italic;
   font-style: italic;
+  line-height:  var(--lineHeight-relaxed);
+
+  
+}
+
+blockquote{
+  margin: 50px auto;
+  color: #555555;
+  padding:1.2em 30px 1.2em 75px;
+  border-left:8px solid #78C0A8 ;
+  line-height:1.6;
+  position: relative;
+  background:#EDEDED;
+}
+
+blockquote::before{
+  font-family:Arial;
+  content: "\201C";
+  color:#78C0A8;
+  font-size:3em;
+  position: absolute;
+  left: 10px;
+  top:-10px;
+}
+
+blockquote::after{
+  content: '';
+}
+
+blockquote span{
+  display:block;
+  color:#333333;
+  font-style: normal;
+  font-weight: bold;
+  margin-top:1em;
 }
 
 blockquote > :last-child {

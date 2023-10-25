@@ -6,15 +6,20 @@ description: Hello World
 
 ## 필요한 기능
 
+
 ### 블로그 포스트 관련
 
-1. 블로그 포스트를 Category 별로 표시하여 사이드 메뉴에 표시해야한다.
+1. Markdown / MDX 를 사용할 예정이다.
 
-2. Post Title, Content, Tag 및 Category 로 검색기능이 필요하다.
+2. 블로그 포스트를 Category 별로 표시하여 사이드 메뉴에 표시해야한다.
 
-3. 코드를 이쁘게 나오게 하고 싶다.
+3. Post Title, Content, Tag 및 Category 로 검색기능이 필요하다.
 
-4. 수식 표현을 위해 latex 지원이 필요하다.(mathjax?)
+4. 코드를 이쁘게 나오게 하고 싶다.
+
+5. 수식 표현을 위해 latex 지원이 필요하다.
+
+
 
 ### 페이지 관련
 
@@ -22,13 +27,12 @@ description: Hello World
 
 2. 밑에 가장 최근에 블로그를 업데이트한(빌드한) 시간을 표시하고 싶다.
 
+
 ### 기타
 
-공부상태 이쁘게 표현해서 화면에 띄우고 싶다. 
-
-영작용 포스트 페이지가 필요하다. 한글 / 영어 이렇게 나오게 하고 싶다.
-
-open ai api 를 이용해서 뭐 하나 만들고 싶다.
++ 공부상태 이쁘게 표현해서 화면에 띄우고 싶다. 
++ 영작용 포스트 페이지가 필요하다. 한글 / 영어 이렇게 나오게 하고 싶다.
++ open ai api 를 이용해서 뭐 하나 만들고 싶다.
 
 
 
@@ -86,21 +90,29 @@ Contentlayer 에서 rehype 관련 모듈을 넣어줄 수가 있다.
 
 요즘 Code Block 은 Copy 버튼이 붙어있다. 이를 구현하기 위해서 [claritydev blog](https://claritydev.net/blog/copy-to-clipboard-button-nextjs-mdx-rehype) 를 참고하여 구현하였다.
 
-```unist-util-visit``` 을 이용해서 전처리/후처리를 하여 처리한다는게 핵심이다.
+```unist-util-visit``` 을 이용해서 code 가 parse 되기 전에 원본 데이터를 따로 저장해둔다는 것이 핵심이다.
++ 성능 차이가 궁금해서 포스트 1000개로 테스트도 해봤다.```Measure-Command { start-process npm 'run contentlayer build' -wait}``` 를 사용했는데 전처리/후처리 여부는 결과에 큰 영향을 주지 않았다.
 
-성능 차이가 궁금해서 포스트 1000개로 테스트도 해봤다.
+이렇게 저장한 데이터를 실질적으로 복사하는 부분을 ```<script>``` 를 통해서 Copy 를 구현했다. markdown 에도 적용하고 싶었기 때문에 react 를 쓸 수 없었기 때문이다.
 
-```Measure-Command { start-process npm 'run contentlayer build' -wait}``` 를 사용했는데 전처리/후처리 여부는 결과에 큰 영향을 주지 않았다.
 
 
 ### Latex
 
-MathJax 는 [NextJS hydration issue](https://github.com/remarkjs/remark-math/issues/80) 가 현재 블로그를 만드는 시점에 있다. 
+```MathJax``` 는 [NextJS hydration issue](https://github.com/remarkjs/remark-math/issues/80) 가 현재 블로그를 만드는 시점에 있다. 
 
-markdown 을 html 로 변환하면 문제가 없는데 mdx 로 변환했을 때 문제가 생긴다. 
+markdown 은 처음부터 html 로 바꿔서 문제가 없는데 mdx 은 바뀐 결과물이 react 문법과 겹쳐서 그런가 문제가 생긴다.
 
-나는 code copy button 등을 이유로 mdx 를 사용하고 있기 때문에 
+그래서 mdx 는 ```katex``` 를 사용했다.
+
 
 
 ### TOC
 
+
+
+
+
+## Issue
+
+ContentLayer 가 table 을 parse 하지 않아서 ```remark-gfm``` 을 사용했는데 ```4.0.0``` 버전에서는 에러가 뜬다. ```3.x``` 버전에는 잘 동작하고 있다.

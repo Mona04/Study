@@ -14,7 +14,7 @@ function MastHead() {
   return (
     <nav className={style.masthead}>
       <MenuButton/>
-      <Link className="tw-grow tw-self-center
+      <Link className="tw-grow tw-self-center tw-ml-1
                        tw-font-sans tw-font-bold tw-text-color-primary tw-text-xl
                        hover:tw-text-color-text "
             href="/">{BLOG_NAME}</Link>

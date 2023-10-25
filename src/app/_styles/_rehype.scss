@@ -3,6 +3,7 @@
 */
 pre > code {
   display: grid;
+  background-color: transparent; 
 }
 
 div[data-rehype-pretty-code-fragment] {
@@ -14,7 +15,7 @@ div[data-rehype-pretty-code-fragment] {
   
     margin-top: 5px;
     margin-bottom: 5px;
-    border-radius: 10px;
+    border-radius: 5px;
   
     /* make scrollbar if overflow */
     overflow-x: auto;
