@@ -36,7 +36,7 @@ export default function RootLayout({children,}: {children: React.ReactNode}) {
           <MastHead/>
          
           {/* popups */}
-          <PopupBackground/>
+          <PopupBackground className='tw-z-10'/>
           <SideBar/>
           <Search/>
             

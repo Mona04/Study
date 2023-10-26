@@ -3,7 +3,11 @@
 import {useContext, useState, useEffect} from "react"
 import {Context} from '@/context/context'
 
-export default function PopupBackground() {
+interface Props{
+  className? : string | undefined
+}
+
+export default function PopupBackground({className}:Props) {
   
 	const context = useContext(Context);
   const [nOpenedPopup, setOpenedPopupNum] = useState(0);
@@ -27,14 +31,13 @@ export default function PopupBackground() {
 		context?.statemgr.closeAll();
   };
 
-
   return (
     /* A fixed-position element without a specified top value 
         defaults to a position that may not be 0, depending on the situation*/
 		<>
 		  { nOpenedPopup > 0 && 
-			  <section className="tw-fixed tw-w-full tw-h-full tw-mt-0 tw-top-nav-height tw-opacity-30 tw-bg-color-text-dimmed "
-		      			onClick={onClick}>
+			  <section className={`${className} tw-fixed tw-w-full tw-h-full tw-mt-0 tw-top-nav-height tw-opacity-30 tw-bg-color-text-dimmed`}
+		      			 onClick={onClick}>
 				</section>
 			}		
 		</>

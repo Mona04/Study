@@ -3,6 +3,8 @@ title: AAA
 date: 2015-05-28
 ---
 
+## Quote
+
 > Far far away, behind the word mountains, far from the countries Vokalia and
 Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
 right at the coast of the Semantics, a large language ocean. A small river named
@@ -13,7 +15,14 @@ Duden flows by their place and supplies it with the necessary regelialia.
 >   + item3
 >   + item4
 > + item4
-{: data-source="..." data-date="..." data-link="..."}
+>
+> ```mycode```
+> Far far away, behind the word mountains, far from the countries Vokalia and
+Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
+right at the coast of the Semantics, a large language ocean. A small river named
+Duden flows by their place and supplies it with the necessary regelialia.
+> 
+> &mdash;&mdash; hikaru
 
 ----- 
 + item1
@@ -34,15 +43,47 @@ Duden flows by their place and supplies it with the necessary regelialia.
 3. item3
    1. asdf
 
+
+## GFM
+
+### Autolink literals
+
+www.example.com, https://example.com, and contact@example.com.
+
+### Footnote
+
+A note[^1]
+
+[^1]: Big note.
+
+### Strikethrough
+
+~one~ or ~~two~~ tildes.
+
+### Table
+
+| a | b  |  c |  d  |
+| - | :- | -: | :-: |
+
+
 |제목 셀1|제목 셀2|제목 셀3|제목 셀4|
 |--|:--:|:--|--:|
 |내용 1|내용 2|내용 3|내용 4|
 |내용 5|내용 6|내용 7|내용 8|
 |내용 9|내용 10|내용 11|내용 12|
 
-```inlinecode```, ```inlinecode with lang{:js}```
+### Tasklist
 
-## Test
+* [ ] to do
+* [x] done
+
+
+
+## Test 
+
+> hFar far away, behind the word mountains, $$\log{N} \geq \sum{N}$$
+
+```inlinecode```, ```inlinecode with lang{:js}```
 
 Far far away, behind the word mountains, far from the countries Vokalia and
 Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
@@ -78,48 +119,16 @@ Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
 right at the coast of the Semantics, a large language ocean. A small river named
 Duden flows by their place and supplies it with the necessary regelialia.
 
-$$
- \log(N)
-$$
-
-
 Far far away, behind the word mountains, far from the countries Vokalia and
 Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
 right at the coast of the Semantics, a large language ocean. A small river named
 Duden flows by their place and supplies it with the necessary regelialia.
 
-## On deer horse aboard tritely yikes and much
 
-The Big Oxmox advised her not to do so, because there were thousands of bad
-Commas, wild Question Marks and devious Semikoli, but the Little Blind Text
-didn’t listen. She packed her seven versalia, put her initial into the belt and
-made herself on the way.
-
-- This however showed weasel
-- Well uncritical so misled
-  - this is very interesting
-- Goodness much until that fluid owl
-
-When she reached the first hills of the Italic Mountains, she had a last
-view back on the skyline of her hometown _Bookmarksgrove_, the headline of
- and the subline of her own road, the Line
-Lane. Pityful a rhetoric question ran over her cheek, then she continued her
-way. On her way she met a copy.
 
 
 ## Code Syntax Highlight Test
 
-```c# {1-3,4} showLineNumbers /Hello/
-using System;
-
-class Program
-{
-    static void Main()
-    {
-        Console.WriteLine("Hello, World!");
-    }
-}
-```
 
 ```cpp title="main.cpp" caption="adsf" showLineNumbers{1} {1,3-4} 
 #include <iostream>
@@ -133,6 +142,22 @@ void main()
 
 ```cout{:.a}``` is good
 
+```c# {1-3,4} showLineNumbers /Hello/
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Hello, World!");
+    }
+}
+```
+
+```js /age/#v /name/#v /setAge/#s /setName/#s /50/#i /'Taylor'/#i
+const [age, setAge] = useState(50);
+const [name, setName] = useState('Taylor');
+```
 
 ```cpp title="main.cpp" caption="adsf" showLineNumbers{1} {2-3,5} 
 #include <iostream>

@@ -50,7 +50,7 @@ export default function CategoryItem({children, label, refCount, slug, depth} : 
               tw-flex tw-flex-row tw-justify-start
               tw-mb-1
               ${depth < 1 ? "tw-font-bold" : "tw-font-normal"}
-              ${depth < 1 ? "tw-text-xl desk:tw-text-base" : depth < 2 ? "tw-text-lg : desk:tw-text-sm" : "tw-text-base desk:tw-text-xs"}
+              ${depth < 1 ? "tw-text-xl desk:tw-text-lg" : depth < 2 ? "tw-text-lg : desk:tw-text-lg" : "tw-text-base desk:tw-text-base"}
            `}>       
         <button 
           className="tw-flex tw-flex-row tw-grow"
