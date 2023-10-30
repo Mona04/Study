@@ -1,5 +1,5 @@
 import PostView from './post-view'
-import CategoryView from './category-view'
+import CategoriesView from './categories-view'
 import { postSlugs, getPostByPath } from 'utils/content-helper'
 
 type Params = {
@@ -38,7 +38,7 @@ export default function Page({ params }: Params) {
   if(slug.bPost == false)
   {
     return (
-      <CategoryView path={path}/>
+      <CategoriesView path={path}/>
     )
   }
   else{
