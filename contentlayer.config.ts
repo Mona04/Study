@@ -100,23 +100,35 @@ function preprocess() {
       }
     })
 
+    const toc : {type:string, tag: string, children: any[]} = {
+      type: 'element',
+      tag: 'toc',
+      children: []
+    };
+    const stack = [ {node:toc, lv: 0}];
+
     // add headers with links for toc.
     visit(tree, 'element', (node) => {
-      if( node?.tagName === 'h2' || 
-          node?.tagName === 'h3' || 
-          node?.tagName === 'h4' || 
-          node?.tagName === 'h5'
-        ){
-        var id = node.children[0].value;
-        node.properties.id = id;
-        node.children.unshift(
-          {
-            type: 'element',
-            tagName: 'a',
-            properties: { 'href': `#${id}`, 'className': 'header-link' },
-          }
-        );
-      }
+      const lv = node?.tagName === 'h1' ? 1 
+        : node?.tagName === 'h2' ? 2
+        : node?.tagName === 'h3' ? 3
+        : node?.tagName === 'h4' ? 4
+        : node?.tagName === 'h5' ? 5
+        : node?.tagName === 'h6' ? 6 : 1000;
+
+      if(lv > 10 || node.children.length < 1) return;
+
+      var id = node.children[0].value;
+      node.properties.id = id;
+
+      while(stack[stack.length-1].lv >= lv) stack.pop();
+      
+      stack[stack.length-1].node.children.push(
+        {
+          type: 'element',
+          tagName: 'ul',
+          children: [ {type: 'element', tagName: 'a', properties: { 'href': `#${id}`, 'className': 'header-link' }}]
+        })
     });
   }
 }
