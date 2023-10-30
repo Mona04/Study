@@ -99,6 +99,25 @@ function preprocess() {
         }  
       }
     })
+
+    // add headers with links for toc.
+    visit(tree, 'element', (node) => {
+      if( node?.tagName === 'h2' || 
+          node?.tagName === 'h3' || 
+          node?.tagName === 'h4' || 
+          node?.tagName === 'h5'
+        ){
+        var id = node.children[0].value;
+        node.properties.id = id;
+        node.children.unshift(
+          {
+            type: 'element',
+            tagName: 'a',
+            properties: { 'href': `#${id}`, 'className': 'header-link' },
+          }
+        );
+      }
+    });
   }
 }
 

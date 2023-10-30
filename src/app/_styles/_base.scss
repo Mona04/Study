@@ -25,7 +25,7 @@ body {
   margin: 0;
 }
 
-main {
+article {
   @include breakpoint(max-width $medium){
     margin: 1rem 1rem;
   }
