@@ -28,18 +28,18 @@ export default makeSource({
     contentDirPath: '_content/', 
     documentTypes: [BlogMDPost, BlogMDXPost],
     mdx:{ 
-      remarkPlugins: [ rm_gfm, [rm_math,], makeTOC ],
+      remarkPlugins: [ rm_gfm, [rm_math,]],
       rehypePlugins: [
-        [ preprocess ],
+        saveRawCode, makeTOC,
         [ prettyCode, prettyCodeOption ],
         [ katex ],
         [ postprocess]
       ]
     },
     markdown:{ 
-      remarkPlugins: [  rm_gfm, [rm_math,], makeTOC ],
+      remarkPlugins: [ rm_gfm, [rm_math,] ],
       rehypePlugins: [
-        [ preprocess ],
+        saveRawCode, makeTOC,
         [ prettyCode, prettyCodeOption ],
         [ mathjax,],
         [ postprocess]
@@ -88,37 +88,46 @@ function prettyCodeOption()
  */
 function makeTOC() {
   return  async (tree : any, ...prop: any)  => {
-
-    const toc : {type:string, children: any[]} = {
-      type: 'header',
-      children: [{type:'text', value:"TOC_CONTAINER_!@#$"}]
+    
+    const toc : {type:string, tagName:string, properties?:object, children: any[]} = {
+      type: 'element',
+      tagName: 'div',
+      properties: {className: 'toc'},
+      children: [{type:'element', tagName:'header', children:[
+        { type:'element', tagName:'h4', children:[{type:'text', value:'On This Page'}]}
+      ]}]
     };
     const stack = [{node: toc, lv: -1}];
 
-    // add headers with links for toc.
-    visit(tree, 'heading', (node) => {
- 
-      const lv = node.depth;
+    visit(tree, 'element', (node) => {
+      const lv = node?.tagName === 'h1' ? 1 
+        : node?.tagName === 'h2' ? 2
+        : node?.tagName === 'h3' ? 3
+        : node?.tagName === 'h4' ? 4
+        : node?.tagName === 'h5' ? 5
+        : node?.tagName === 'h6' ? 6 : 1000;
+      if(lv > 10) return;
 
-      if(node.children.length < 1) return;      
+      if(node.children.length < 1) return;     
+
+      // add an id to headers
       const id = node.children[0].value;
-      
+      node.properties.id = id;
+
+      // unstack until parent header appear.
       let cur = stack[stack.length-1];
       while(cur.lv >= lv) {
         stack.pop();
         cur = stack[stack.length-1];
       }
 
-      if(cur.node.children.length < 1 || cur.node.children[cur.node.children.length-1].type !== 'list'){
-        cur.node.children.push({type:'list', children: []});
+      // The first child is link or text, second is a list. 
+      if(cur.node.children.length < 2 || cur.node.children[1].tagName !== 'ul'){
+        cur.node.children.push({type:'element', tagName:'ul', children: []});
       }
-      const container = cur.node.children[cur.node.children.length-1];
-  
-      container.children.push({type: 'listItem', children: [{type:'link', url:`#${id}`, children: [ {type:'text', value:id}] }]});
-      stack.push({node:container, lv:lv});
-    
-      return;
-
+      const newItem = {type: 'element', tagName:'li', children: [{type:'element', tagName:'a', properties:{href:`#${id}`}, children: [ {type:'text', value:id}] }]};
+      cur.node.children[1].children.push(newItem);
+      stack.push({node:newItem, lv:lv});
     });
 
     tree.children.unshift(toc)
@@ -129,7 +138,7 @@ function makeTOC() {
    Unified transformer 
  * @returns 
  */
-function preprocess() {
+function saveRawCode() {
   return  async (tree : any, ...prop: any)  => {
     
     // save the original code because it will be parsed for styling. 
@@ -141,24 +150,7 @@ function preprocess() {
           node.raw = codeEl.children?.[0].value;
         }  
       }
-    })
-
-        
-    // add headers with links for toc.
-    visit(tree, 'element', (node) => {
-      const lv = node?.tagName === 'h1' ? 1 
-        : node?.tagName === 'h2' ? 2
-        : node?.tagName === 'h3' ? 3
-        : node?.tagName === 'h4' ? 4
-        : node?.tagName === 'h5' ? 5
-        : node?.tagName === 'h6' ? 6 : 1000;
-
-      if(lv > 10 || node.children.length < 1) return;
-
-      const id = node.children[0].value;
-      node.properties.id = id;
     });
-
   }
 }
 
