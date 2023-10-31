@@ -28,7 +28,7 @@ export default makeSource({
     contentDirPath: '_content/', 
     documentTypes: [BlogMDPost, BlogMDXPost],
     mdx:{ 
-      remarkPlugins: [ rm_gfm, [rm_math,], ],
+      remarkPlugins: [ rm_gfm, [rm_math,], makeTOC ],
       rehypePlugins: [
         [ preprocess ],
         [ prettyCode, prettyCodeOption ],
@@ -37,7 +37,7 @@ export default makeSource({
       ]
     },
     markdown:{ 
-      remarkPlugins: [  rm_gfm, [rm_math,] ],
+      remarkPlugins: [  rm_gfm, [rm_math,], makeTOC ],
       rehypePlugins: [
         [ preprocess ],
         [ prettyCode, prettyCodeOption ],
@@ -86,6 +86,49 @@ function prettyCodeOption()
    Unified transformer 
  * @returns 
  */
+function makeTOC() {
+  return  async (tree : any, ...prop: any)  => {
+
+    const toc : {type:string, children: any[]} = {
+      type: 'toc',
+      children: []
+    };
+    const stack = [{node: toc, lv: -1}];
+
+    // add headers with links for toc.
+    visit(tree, 'heading', (node) => {
+ 
+      const lv = node.depth;
+
+      if(node.children.length < 1) return;      
+      const id = node.children[0].value;
+      
+      let cur = stack[stack.length-1];
+      while(cur.lv >= lv) {
+        stack.pop();
+        cur = stack[stack.length-1];
+      }
+
+      if(cur.node.children.length < 1 || cur.node.children[cur.node.children.length-1].type !== 'list'){
+        cur.node.children.push({type:'list', children: []});
+      }
+      const container = cur.node.children[cur.node.children.length-1];
+  
+      container.children.push({type: 'listItem', children: [{type:'link', url:`#${id}`, children: [ {type:'text', value:id}] }]});
+      stack.push({node:container, lv:lv});
+    
+      return;
+
+    });
+
+    tree.children.unshift(toc)
+  }
+}
+
+/**
+   Unified transformer 
+ * @returns 
+ */
 function preprocess() {
   return  async (tree : any, ...prop: any)  => {
     
@@ -100,13 +143,7 @@ function preprocess() {
       }
     })
 
-    const toc : {type:string, tag: string, children: any[]} = {
-      type: 'element',
-      tag: 'toc',
-      children: []
-    };
-    const stack = [ {node:toc, lv: 0}];
-
+        
     // add headers with links for toc.
     visit(tree, 'element', (node) => {
       const lv = node?.tagName === 'h1' ? 1 
@@ -118,18 +155,10 @@ function preprocess() {
 
       if(lv > 10 || node.children.length < 1) return;
 
-      var id = node.children[0].value;
+      const id = node.children[0].value;
       node.properties.id = id;
-
-      while(stack[stack.length-1].lv >= lv) stack.pop();
-      
-      stack[stack.length-1].node.children.push(
-        {
-          type: 'element',
-          tagName: 'ul',
-          children: [ {type: 'element', tagName: 'a', properties: { 'href': `#${id}`, 'className': 'header-link' }}]
-        })
     });
+
   }
 }
 
@@ -184,4 +213,9 @@ function addCopyButton(parent:any)
       tagName: 'button',
     }
   )
+}
+
+function addLink(parent:any, url:string, text:string)
+{
+  parent.children.push({type:'link', url:url, children: [{type:'text', value:text}]})
 }
