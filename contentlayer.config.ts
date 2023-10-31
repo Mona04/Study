@@ -90,8 +90,8 @@ function makeTOC() {
   return  async (tree : any, ...prop: any)  => {
 
     const toc : {type:string, children: any[]} = {
-      type: 'toc',
-      children: []
+      type: 'header',
+      children: [{type:'text', value:"TOC_CONTAINER_!@#$"}]
     };
     const stack = [{node: toc, lv: -1}];
 
