@@ -47,8 +47,7 @@ export default function Page({ params }: Params) {
     if (post == undefined){
       throw new Error(`Post not found for slug: ${params.categories}`)
     }    
-    console.log(post.raw)
-  
+
     return (
       <>
         <TOCView post={post}/>
