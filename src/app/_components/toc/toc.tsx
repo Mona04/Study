@@ -1,48 +1,43 @@
 'use client'
-'use client'
 
 import {useContext, useState, useEffect} from "react"
-import {Context} from '@/context/context'
 
+import { BlogPost } from "utils/content-helper"
 import style from "./toc.module.scss"
 
 interface Props{
-  className? : string | undefined
+  className? : string | undefined,
+  post : BlogPost,
 }
 
-export default function PopupBackground({className}:Props) {
+export default function TOCView({className, post}:Props) {
   
-	const context = useContext(Context);
-  const [nOpenedPopup, setOpenedPopupNum] = useState(0);
+  const [toc, setTOC] = useState("");
 	
   useEffect(()=>{
     const disposables : (IDisposable|undefined)[] = [];
 
-    // 버튼 이벤트랑 연결
-    disposables.push(context?.statemgr.registMenuEvent(onMenuChanged));
+    const content = document.getElementsByTagName("article")?.[0];
+    if(content != null)
+    {
+        const headers = content.getElementsByTagName('h2');
+        console.log(content)
+        console.log(headers)
+        setTOC("!!!")
+        //content.getEle
+    }
 
     return ()=>{
       disposables.map(v=>v?.dispose());
     }
   });
 
-	const onMenuChanged = (v : boolean) => {
-		setOpenedPopupNum(nOpenedPopup + (v === true ? 1 : -1));	
-	}
-
-  const onClick = (event:  React.MouseEvent<HTMLElement>) => {
-		context?.statemgr.closeAll();
-  };
-
   return (
     /* A fixed-position element without a specified top value 
         defaults to a position that may not be 0, depending on the situation*/
 		<>
-		  { nOpenedPopup > 0 && 
-			  <section className={`${className} tw-fixed tw-w-full tw-h-full tw-mt-0 tw-top-nav-height tw-opacity-30 tw-bg-color-text-dimmed`}
-		      			 onClick={onClick}>
-				</section>
-			}		
+            {"asfdasdfasdf"}
+            {toc}
 		</>
 
   );

@@ -1,5 +1,6 @@
 import PostView from './post-view'
 import CategoriesView from './categories-view'
+import TOCView from '@/components/toc/toc'
 import { postSlugs, getPostByPath } from 'utils/content-helper'
 
 type Params = {
@@ -46,9 +47,11 @@ export default function Page({ params }: Params) {
     if (post == undefined){
       throw new Error(`Post not found for slug: ${params.categories}`)
     }    
+    console.log(post.raw)
   
     return (
       <>
+        <TOCView post={post}/>
         <PostView post={post}/>
       </>
     ) 
