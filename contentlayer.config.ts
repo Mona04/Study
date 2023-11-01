@@ -32,8 +32,8 @@ export default makeSource({
       rehypePlugins: [
         saveRawCode, makeTOC,
         [ prettyCode, prettyCodeOption ],
+        addCodeTitleBar,
         [ katex ],
-        [ postprocess]
       ]
     },
     markdown:{ 
@@ -41,8 +41,8 @@ export default makeSource({
       rehypePlugins: [
         saveRawCode, makeTOC,
         [ prettyCode, prettyCodeOption ],
+        addCodeTitleBar,
         [ mathjax,],
-        [ postprocess]
       ]
     },
 })
@@ -158,7 +158,7 @@ function saveRawCode() {
  * Unified transformer
  * @returns 
  */
-function postprocess() {
+function addCodeTitleBar() {
   return  async (tree : any)  => {
 
     // create a title bar for a Markdown code block.

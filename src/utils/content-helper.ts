@@ -17,11 +17,13 @@ type PostSlugs = {
 
 export type BlogPost = {
   isMDX : boolean,
+  slug  : string,       // start from base path. root/aaa/bbb... => /aaa/bbb...
+  content : string,     // html or code
+  raw: string,
+
   title : string,
   date: string,
   description?: string,
-  slug  : string,  // start from base path. root/aaa/bbb... => /aaa/bbb...
-  content : string // html or code
 }
 
 export type PostDirectory = {
@@ -148,7 +150,7 @@ export const getPostByPath = (path: string) => {
   {
     let res = allBlogMDPosts
     .find(post => post._raw.flattenedPath === path)  
-
+    
     if(res != undefined) return _mdPostToBlogPost(res);
   }
 
@@ -163,21 +165,23 @@ export const getPostByPath = (path: string) => {
 const _mdPostToBlogPost = (post:BlogMDPost):BlogPost => (
   {
     isMDX : false,
+    slug: '/'+post._raw.flattenedPath,
+    content: post.body.html,
+    raw: post.body.raw,
     title: post.title,
     description: post.description,
     date: post.date,
-    slug: '/'+post._raw.flattenedPath,
-    content: post.body.html
   }
 )
 
 const _mdxPostToBlogPost = (post:BlogMDXPost):BlogPost => (
   {
     isMDX : true,
+    slug: '/'+post._raw.flattenedPath,
+    content: post.body.code,
+    raw: post.body.raw,
     title: post.title,
     description: post.description,
     date: post.date,
-    slug: '/'+post._raw.flattenedPath,
-    content: post.body.code
   }
 )
