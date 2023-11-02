@@ -12,7 +12,7 @@ type Params = {
  */
 export const generateStaticParams = () => {
   return Object.keys(postSlugs)
-    .filter(slug=> slug.startsWith('/blog'))
+    .filter(slug=> slug.startsWith('/blog/'))
     .map(slug=> ({ categories: slug.split('/').slice(2)}))
 }
 

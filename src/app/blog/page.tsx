@@ -1,5 +1,4 @@
-import { getPostsByPath } from 'utils/content-helper'
-import CategoryView from './[...categories]/category-view'
+import CategoryView from './[...categories]/categories-view'
 
 export default function PostView() {
 

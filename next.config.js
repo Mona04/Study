@@ -11,7 +11,11 @@ const configs = (phase, { defaultConfig }) =>
   return withContentlayer({
     output: 'export',
     distDir: 'out',
-    basePath: phase == PHASE_PRODUCTION_BUILD ? process.env.BASE_PATH : "",
+    basePath: phase == PHASE_PRODUCTION_BUILD ? process.env.NEXT_PUBLIC_BASE_PATH : "",
+
+    env: {
+      BASE_PATH: this.basePath
+    },
 
     sassOptions: {
       includePaths: [path.join(__dirname, 'src/app/_styles')],

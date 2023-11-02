@@ -13,8 +13,8 @@ export default (
     fill?: boolean | undefined
   })=>{
   const cur_path : string = process.env.NODE_ENV == 'production' ? 
-    `${process.env.BASE_PATH}${src}` :
-    `${src}`;
+    `${src}` :
+    `${process.env.NEXT_PUBLIC_BASE_PATH}${src}`;
     
   return (
     <Image src={cur_path} alt={alt} width={width} height={height} fill={fill}>

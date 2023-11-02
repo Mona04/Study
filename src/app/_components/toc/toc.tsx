@@ -1,8 +1,15 @@
 'use client'
 
 import {useContext, useState, useEffect} from "react"
+import {usePathname} from 'next/navigation'
+
+import {unified} from "unified"
+import type {Heading, Text} from 'mdast'
+import rm_parse from "remark-parse"
+import {visit} from "unist-util-visit"
 
 import { BlogPost } from "utils/content-helper"
+import Link from "nextwrap/link"
 import style from "./toc.module.scss"
 
 interface Props{
@@ -10,40 +17,48 @@ interface Props{
   post : BlogPost,
 }
 
+
 interface MakeTOCVariable{
-  titles: string[],
-  idx: number
+  headers: Heading[],
+  idx: number,
+  currentDirectory: string,
 }
 
-function calcDepth(title:string) { return [...title].reduce((a, v) => (v === '#' ? a + 1 : a), 0);}
+function getText(header: Heading) : string { return header.children.length > 0 && header.children[0].type == 'text' ? header.children[0].value : "";}
 
 function TableItem(variable: MakeTOCVariable)
 {
   const idx = variable.idx;
-  const title = variable.titles[idx];
-  const depth = calcDepth(title);
+  const header = variable.headers[idx];
+  const headerText = getText(header);
+  const depth = header.depth;
+
   variable.idx+=1;
 
   const childs = [];
-  while(variable.titles.length > variable.idx && calcDepth(variable.titles[variable.idx]) > depth)
+  while(variable.headers.length > variable.idx && variable.headers[variable.idx].depth > depth)
   {
     childs.push(TableItem(variable));
   }
+
   return (
-    <li key={`toc-item-id-${title}${idx}`}>
-      <h4>{variable.titles[idx]}{depth}</h4>
+    <li key={`toc-item-id-${headerText}${idx}`}>
+      <Link href={`${variable.currentDirectory}#${headerText}`}>{headerText}</Link>
       { childs.length > 0 && <ul>{childs}</ul>}
     </li>
   )
 }
 
-function TOCList(titles: string[])
-{
-  let variable = {titles:titles, idx:0};
+function TOCList(headers: Heading[])
+{  
+  const pathname = usePathname();
+  let variable : MakeTOCVariable  = {headers:headers, idx:0, currentDirectory:pathname };
   const items = [];
-  for(; variable.idx < titles.length; )
+  
+  for(; variable.idx < headers.length; )
     items.push(TableItem(variable));
-  return (
+  
+    return (
     <ul>{items}</ul>
   )
 }
@@ -52,22 +67,18 @@ export default function TOCView({className, post}:Props) {
   
   //const [toc, setTOC] = useState("");
 	
-  const titles = post.raw.split(`\n`).filter((t) => t.includes('# '));
-
-  var toc = TOCList(titles);
+  const headers : Heading[] = [];
+  const mdAst = unified().use(rm_parse).parse(post.raw);
+  visit(mdAst, 'heading', (node) => {
+    if(node.depth < 6)
+    {
+        headers.push(node);
+    }
+  });
+  var toc = TOCList(headers);
 
   useEffect(()=>{
     const disposables : (IDisposable|undefined)[] = [];
-
-    const content = document.getElementsByTagName("article")?.[0];
-    if(content != null)
-    {
-        const headers = content.getElementsByTagName('h2');
-
-        //setTOC("!!!")
-        //content.getEle
-    }
-
     return ()=>{
       disposables.map(v=>v?.dispose());
     }

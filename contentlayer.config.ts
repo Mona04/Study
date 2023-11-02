@@ -2,11 +2,11 @@ import { defineDocumentType, makeSource, FieldDefs, ComputedFields } from 'conte
 import { readFileSync } from 'fs'
 import { visit } from 'unist-util-visit'
 
-import prettyCode from 'rehype-pretty-code'
-import rm_gfm from 'remark-gfm'
-import rm_math from 'remark-math'
-import mathjax from 'rehype-mathjax'
-import katex from 'rehype-katex'
+import rm_gfm      from 'remark-gfm'
+import rm_math     from 'remark-math'
+import prettyCode  from 'rehype-pretty-code'
+import mathjax     from 'rehype-mathjax'
+import katex       from 'rehype-katex'
 
 export const BlogMDPost = defineDocumentType(() => ({
   name: 'BlogMDPost',
@@ -30,7 +30,7 @@ export default makeSource({
     mdx:{ 
       remarkPlugins: [ rm_gfm, [rm_math,]],
       rehypePlugins: [
-        saveRawCode, makeTOC,
+        saveRawCode, attachHeaderID,
         [ prettyCode, prettyCodeOption ],
         addCodeTitleBar,
         [ katex ],
@@ -39,7 +39,7 @@ export default makeSource({
     markdown:{ 
       remarkPlugins: [ rm_gfm, [rm_math,] ],
       rehypePlugins: [
-        saveRawCode, makeTOC,
+        saveRawCode, attachHeaderID,
         [ prettyCode, prettyCodeOption ],
         addCodeTitleBar,
         [ mathjax,],
@@ -86,18 +86,8 @@ function prettyCodeOption()
    Unified transformer 
  * @returns 
  */
-function makeTOC() {
+function attachHeaderID() {
   return  async (tree : any, ...prop: any)  => {
-    
-    const toc : {type:string, tagName:string, properties?:object, children: any[]} = {
-      type: 'element',
-      tagName: 'div',
-      properties: {className: 'toc'},
-      children: [{type:'element', tagName:'header', children:[
-        { type:'element', tagName:'h4', children:[{type:'text', value:'On This Page'}]}
-      ]}]
-    };
-    const stack = [{node: toc, lv: -1}];
 
     visit(tree, 'element', (node) => {
       const lv = node?.tagName === 'h1' ? 1 
@@ -114,23 +104,7 @@ function makeTOC() {
       const id = node.children[0].value;
       node.properties.id = id;
 
-      // unstack until parent header appear.
-      let cur = stack[stack.length-1];
-      while(cur.lv >= lv) {
-        stack.pop();
-        cur = stack[stack.length-1];
-      }
-
-      // The first child is link or text, second is a list. 
-      if(cur.node.children.length < 2 || cur.node.children[1].tagName !== 'ul'){
-        cur.node.children.push({type:'element', tagName:'ul', children: []});
-      }
-      const newItem = {type: 'element', tagName:'li', children: [{type:'element', tagName:'a', properties:{href:`#${id}`}, children: [ {type:'text', value:id}] }]};
-      cur.node.children[1].children.push(newItem);
-      stack.push({node:newItem, lv:lv});
     });
-
-    tree.children.unshift(toc)
   }
 }
 
@@ -205,9 +179,4 @@ function addCopyButton(parent:any)
       tagName: 'button',
     }
   )
-}
-
-function addLink(parent:any, url:string, text:string)
-{
-  parent.children.push({type:'link', url:url, children: [{type:'text', value:text}]})
 }
