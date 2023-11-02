@@ -17,19 +17,8 @@ export default ({children, href, target = '_self', rel, className, onClick}:Prop
     rel = 'noopener noreferrer';
   }
 
-  if( process.env.NODE_ENV == 'production')
+  if( process.env.NODE_ENV == 'development') // 실제 client 에서는 
   {
-    return (
-      <a className={className} 
-         href={`${process.env.BASE_PATH}${href}`} 
-         rel={rel} 
-         target={target}
-         onClick={onClick}>
-        {children}
-      </a>
-    )
-  }
-  else{
     return (
       <Link className={className}
             href={href === undefined ? "" : href} 
@@ -38,6 +27,17 @@ export default ({children, href, target = '_self', rel, className, onClick}:Prop
             onClick={onClick}>
         {children}
       </Link>
+    )
+  }
+  else{
+    return (
+      <a className={className} 
+         href={`${process.env.NEXT_PUBLIC_BASE_PATH}${href}`} 
+         rel={rel} 
+         target={target}
+         onClick={onClick}>
+        {children}
+      </a>
     )
   }
 }
