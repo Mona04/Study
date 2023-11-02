@@ -8,8 +8,8 @@ import type {Heading, Text} from 'mdast'
 import rm_parse from "remark-parse"
 import {visit} from "unist-util-visit"
 
-import { BlogPost } from "utils/content-helper"
 import Link from "nextwrap/link"
+import { BlogPost } from "utils/content-helper"
 import style from "./toc.module.scss"
 
 interface Props{
@@ -43,7 +43,7 @@ function TableItem(variable: MakeTOCVariable)
 
   return (
     <li key={`toc-item-id-${headerText}${idx}`}>
-      <Link href={`${variable.currentDirectory}#${headerText}`}>{headerText}</Link>
+      <a href={`${variable.currentDirectory}#${headerText}`} className="tw-scroll-smooth">{headerText}</a>
       { childs.length > 0 && <ul>{childs}</ul>}
     </li>
   )
@@ -83,13 +83,14 @@ export default function TOCView({className, post}:Props) {
       disposables.map(v=>v?.dispose());
     }
   });
-
+  
   return (
     /* A fixed-position element without a specified top value 
         defaults to a position that may not be 0, depending on the situation*/
-		<>
+		<section className={style.toc}>
+      <h4>On This Page</h4>
       {toc}
-		</>
+		</section>
 
   );
 }

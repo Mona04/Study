@@ -2,7 +2,7 @@
 
 import {useState, useEffect} from 'react'
 import * as Utils from "utils/darkmode-helper"
-import toggleStyle from "./darkmode-toggle.module.scss";
+import style from "./darkmode-toggle.module.scss";
 
 //https://alvarotrigo.com/blog/toggle-switch-css/
 //https://gwan-woo-jeong.github.io/blog/change-theme/
@@ -22,7 +22,7 @@ function DarkModeToggle({className}: {className?: string|undefined})
   };
 
   return (
-    <div className={[toggleStyle.toggleBtn, className].join(' ')} >
+    <div className={[style.toggleBtn, className].join(' ')} >
       <input id='darkmode-btn' name='darkmode-btn' type='checkbox'           
              onChange={onChange} checked={bDarkMode}/>
       <label htmlFor="darkmode-btn">Toggle</label>         
