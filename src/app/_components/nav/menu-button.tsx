@@ -16,7 +16,7 @@ function MenuButton() {
     return ()=>{
       disposables.map(v=>v?.dispose());
     }
-  });
+  }, []);
 
   const onClickMenu = (event:  React.MouseEvent<HTMLElement>) => {      
     const target = event.currentTarget;

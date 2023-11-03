@@ -28,7 +28,12 @@ div[data-rehype-pretty-code-title] + pre {
 }
 
 /* title */
-div[data-rehype-pretty-code-title] {
+div[data-rehype-pretty-code-title] 
+{  
+  display: flex;
+  justify-content: left;
+  align-items: center;
+
   background-color: #343541;
 
   color: #999999;
@@ -39,40 +44,35 @@ div[data-rehype-pretty-code-title] {
   height: 2rem;
   border-radius: 8px 8px 0px 0px;
   margin-top: 5px;
-  display: flex;
-  justify-content: left;
-  align-items: center;
 
   //https://fonts.google.com/icons?selected=Material+Symbols+Outlined:content_paste:FILL@0;wght@400;GRAD@0;opsz@24&icon.query=clip
   button
   {
+    margin-left: auto; // align to right
     display: flex;
     align-items: center;
-    margin-left: auto;
-  }
-  button::before
-  {
-    font-family: "Material Symbols Outlined";
-    font-size: 1.5em;
-    align-self: baseline;
-    content: "\e14f";
-  }
-  button[checked]::before
-  {
-    font-family: "Material Symbols Outlined";
-    font-size: 1.5em;
-    align-self: baseline;
-    content: "\f88b";
-  }
-  button::after
-  {
-    content: "Copy code";
-    margin-left: 0.5em;
-  }
-  button[checked]::after
-  {
-    content: "Copied!";
-    margin-left: 0.5em;
+    &::before
+    {
+      font-family: "Material Symbols Outlined";
+      content: "\e14f";
+      font-size: 1.5em;
+    }
+    &[checked]::before
+    {
+      font-family: "Material Symbols Outlined";
+      content: "\f88b";
+      font-size: 1.5em;
+    }
+    &::after
+    {
+      content: "Copy code";
+      margin-left: 0.5em;
+    }
+    &[checked]::after
+    {
+      content: "Copied!";
+      margin-left: 0.5em;
+    }
   }
 }
 

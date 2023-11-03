@@ -101,7 +101,7 @@ function attachHeaderID() {
       if(node.children.length < 1) return;     
 
       // add an id to headers
-      const id = node.children[0].value;
+      const id : string = node.children[0].value.replaceAll(' ', '-');
       node.properties.id = id;
 
     });

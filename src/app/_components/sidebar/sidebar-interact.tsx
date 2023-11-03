@@ -17,7 +17,7 @@ export default function Interact({children,}: {children: React.ReactNode}) {
     return ()=>{
       disposables.map(v=>v?.dispose());
     }
-  });
+  }, []);
 
 
   return (

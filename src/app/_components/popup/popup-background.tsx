@@ -21,7 +21,7 @@ export default function PopupBackground({className}:Props) {
     return ()=>{
       disposables.map(v=>v?.dispose());
     }
-  });
+  }, []);
 
 	const onMenuChanged = (v : boolean) => {
 		setOpenedPopupNum(nOpenedPopup + (v === true ? 1 : -1));	

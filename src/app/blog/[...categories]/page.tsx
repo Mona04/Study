@@ -50,7 +50,7 @@ export default function Page({ params }: Params) {
 
     return (
       <>
-        <TOCView post={post}/>
+        <TOCView mdSrc={post.raw}/>
         <PostView post={post}/>
       </>
     ) 

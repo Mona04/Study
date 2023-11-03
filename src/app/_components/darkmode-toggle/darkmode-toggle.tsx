@@ -13,7 +13,7 @@ function DarkModeToggle({className}: {className?: string|undefined})
 
   useEffect(()=> {
     setDarkMode(Utils.isDarkMode());
-  })
+  }, [])
 
   const onChange = (e: React.InputHTMLAttributes<HTMLInputElement>) : void =>
   {   

@@ -31,7 +31,7 @@ export default function CategoryItem({children, label, refCount, slug, depth} : 
     return ()=>{
       disposables.map(v=>v?.dispose());
     }
-  });
+  }, []);
 
   const onClickToggle = (event:  React.MouseEvent<HTMLElement>) => {      
     setIsCollaped(!isCollapsed);

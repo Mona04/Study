@@ -16,7 +16,7 @@ export default function Interact({children,}: {children: React.ReactNode}) {
     return ()=>{
       disposables.map(v=>v?.dispose());
     }
-  });
+  }, []);
 
   const onMouseDown = (e : React.PointerEvent<HTMLDivElement>)=>{
     context?.statemgr.closeSearch();
