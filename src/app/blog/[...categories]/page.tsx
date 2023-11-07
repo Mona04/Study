@@ -13,7 +13,7 @@ type Params = {
 export const generateStaticParams = () => {
   return Object.keys(postSlugs)
     .filter(slug=> slug.startsWith('/blog/'))
-    .map(slug=> ({ categories: slug.split('/').slice(2)}))
+    .map(slug=> ({ categories: encodeURI(slug).split('/').slice(2)}))
 }
 
 export const generateMetadata = ({ params }: Params) => {
@@ -29,7 +29,8 @@ export const generateMetadata = ({ params }: Params) => {
 }
 
 export default function Page({ params }: Params) {
-  const path = ['/blog', ...params.categories].join('/');
+
+  const path = decodeURI(['/blog', ...params.categories].join('/'));
   if(!(path in postSlugs))
   {
     throw new Error(`Post not found for slug: ${params.categories}`)
