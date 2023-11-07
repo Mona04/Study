@@ -1,294 +1,20 @@
-1:HL["/study-log/_next/static/css/a47f4510f6be61fa.css",{"as":"style"}]
-0:["9I9S7BPuZq59Da_yHVNZp",[[["",{"children":["blog",{"children":[["categories","study/observable","c"],{"children":["__PAGE__?{\"categories\":[\"study\",\"observable\"]}",{}]}]}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/study-log/_next/static/css/a47f4510f6be61fa.css","precedence":"next"}]],"$L3"]]]]
-4:I{"id":5392,"chunks":["929:static/chunks/4f9d9cd8-4e2da51b8f15e759.js","712:static/chunks/3627521c-2c02ffe699de489f.js","685:static/chunks/685-d24e8e96f673298e.js","185:static/chunks/app/layout-9cf0ed195a88ddb7.js"],"name":"ContextProvider","async":false}
-5:I{"id":5656,"chunks":["929:static/chunks/4f9d9cd8-4e2da51b8f15e759.js","712:static/chunks/3627521c-2c02ffe699de489f.js","685:static/chunks/685-d24e8e96f673298e.js","185:static/chunks/app/layout-9cf0ed195a88ddb7.js"],"name":"","async":false}
-6:I{"id":57,"chunks":["929:static/chunks/4f9d9cd8-4e2da51b8f15e759.js","712:static/chunks/3627521c-2c02ffe699de489f.js","685:static/chunks/685-d24e8e96f673298e.js","185:static/chunks/app/layout-9cf0ed195a88ddb7.js"],"name":"","async":false}
-7:I{"id":5003,"chunks":["929:static/chunks/4f9d9cd8-4e2da51b8f15e759.js","712:static/chunks/3627521c-2c02ffe699de489f.js","685:static/chunks/685-d24e8e96f673298e.js","185:static/chunks/app/layout-9cf0ed195a88ddb7.js"],"name":"","async":false}
-8:I{"id":3084,"chunks":["929:static/chunks/4f9d9cd8-4e2da51b8f15e759.js","712:static/chunks/3627521c-2c02ffe699de489f.js","685:static/chunks/685-d24e8e96f673298e.js","185:static/chunks/app/layout-9cf0ed195a88ddb7.js"],"name":"","async":false}
-9:I{"id":3677,"chunks":["929:static/chunks/4f9d9cd8-4e2da51b8f15e759.js","712:static/chunks/3627521c-2c02ffe699de489f.js","685:static/chunks/685-d24e8e96f673298e.js","185:static/chunks/app/layout-9cf0ed195a88ddb7.js"],"name":"","async":false}
-a:I{"id":3119,"chunks":["929:static/chunks/4f9d9cd8-4e2da51b8f15e759.js","712:static/chunks/3627521c-2c02ffe699de489f.js","685:static/chunks/685-d24e8e96f673298e.js","185:static/chunks/app/layout-9cf0ed195a88ddb7.js"],"name":"","async":false}
-b:I{"id":7674,"chunks":["929:static/chunks/4f9d9cd8-4e2da51b8f15e759.js","712:static/chunks/3627521c-2c02ffe699de489f.js","685:static/chunks/685-d24e8e96f673298e.js","185:static/chunks/app/layout-9cf0ed195a88ddb7.js"],"name":"","async":false}
-c:I{"id":4277,"chunks":["929:static/chunks/4f9d9cd8-4e2da51b8f15e759.js","712:static/chunks/3627521c-2c02ffe699de489f.js","685:static/chunks/685-d24e8e96f673298e.js","185:static/chunks/app/layout-9cf0ed195a88ddb7.js"],"name":"","async":false}
-d:I{"id":7767,"chunks":["272:static/chunks/webpack-10902c0cfb4ff288.js","971:static/chunks/fd9d1056-c4b752c762ad4496.js","596:static/chunks/596-eb6abf128d61afe5.js"],"name":"default","async":false}
-e:I{"id":7920,"chunks":["272:static/chunks/webpack-10902c0cfb4ff288.js","971:static/chunks/fd9d1056-c4b752c762ad4496.js","596:static/chunks/596-eb6abf128d61afe5.js"],"name":"default","async":false}
-10:I{"id":99,"chunks":["685:static/chunks/685-d24e8e96f673298e.js","220:static/chunks/220-93cf232471935d09.js","631:static/chunks/app/blog/[...categories]/page-08890e7512189420.js"],"name":"","async":false}
+1:HL["/study-log/_next/static/css/0e8ce068fa7b1da1.css",{"as":"style"}]
+0:["Na9EsDNdl-C-BZ6WCVGS5",[[["",{"children":["blog",{"children":[["categories","study/observable","c"],{"children":["__PAGE__?{\"categories\":[\"study\",\"observable\"]}",{}]}]}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/study-log/_next/static/css/0e8ce068fa7b1da1.css","precedence":"next"}]],"$L3"]]]]
+4:HL["/study-log/_next/static/css/204fa3972c658956.css",{"as":"style"}]
+5:I{"id":5392,"chunks":["929:static/chunks/4f9d9cd8-4e2da51b8f15e759.js","712:static/chunks/3627521c-2c02ffe699de489f.js","685:static/chunks/685-d24e8e96f673298e.js","185:static/chunks/app/layout-5ee9cb8841c808d7.js"],"name":"ContextProvider","async":false}
+6:I{"id":5656,"chunks":["929:static/chunks/4f9d9cd8-4e2da51b8f15e759.js","712:static/chunks/3627521c-2c02ffe699de489f.js","685:static/chunks/685-d24e8e96f673298e.js","185:static/chunks/app/layout-5ee9cb8841c808d7.js"],"name":"","async":false}
+7:I{"id":57,"chunks":["929:static/chunks/4f9d9cd8-4e2da51b8f15e759.js","712:static/chunks/3627521c-2c02ffe699de489f.js","685:static/chunks/685-d24e8e96f673298e.js","185:static/chunks/app/layout-5ee9cb8841c808d7.js"],"name":"","async":false}
+8:I{"id":5003,"chunks":["929:static/chunks/4f9d9cd8-4e2da51b8f15e759.js","712:static/chunks/3627521c-2c02ffe699de489f.js","685:static/chunks/685-d24e8e96f673298e.js","185:static/chunks/app/layout-5ee9cb8841c808d7.js"],"name":"","async":false}
+9:I{"id":3084,"chunks":["929:static/chunks/4f9d9cd8-4e2da51b8f15e759.js","712:static/chunks/3627521c-2c02ffe699de489f.js","685:static/chunks/685-d24e8e96f673298e.js","185:static/chunks/app/layout-5ee9cb8841c808d7.js"],"name":"","async":false}
+a:I{"id":3677,"chunks":["929:static/chunks/4f9d9cd8-4e2da51b8f15e759.js","712:static/chunks/3627521c-2c02ffe699de489f.js","685:static/chunks/685-d24e8e96f673298e.js","185:static/chunks/app/layout-5ee9cb8841c808d7.js"],"name":"","async":false}
+b:I{"id":127,"chunks":["929:static/chunks/4f9d9cd8-4e2da51b8f15e759.js","712:static/chunks/3627521c-2c02ffe699de489f.js","685:static/chunks/685-d24e8e96f673298e.js","185:static/chunks/app/layout-5ee9cb8841c808d7.js"],"name":"","async":false}
+c:I{"id":7674,"chunks":["929:static/chunks/4f9d9cd8-4e2da51b8f15e759.js","712:static/chunks/3627521c-2c02ffe699de489f.js","685:static/chunks/685-d24e8e96f673298e.js","185:static/chunks/app/layout-5ee9cb8841c808d7.js"],"name":"","async":false}
+d:I{"id":4277,"chunks":["929:static/chunks/4f9d9cd8-4e2da51b8f15e759.js","712:static/chunks/3627521c-2c02ffe699de489f.js","685:static/chunks/685-d24e8e96f673298e.js","185:static/chunks/app/layout-5ee9cb8841c808d7.js"],"name":"","async":false}
+e:I{"id":7767,"chunks":["272:static/chunks/webpack-594e530ce5e74b7f.js","971:static/chunks/fd9d1056-c4b752c762ad4496.js","596:static/chunks/596-eb6abf128d61afe5.js"],"name":"default","async":false}
+f:I{"id":7920,"chunks":["272:static/chunks/webpack-594e530ce5e74b7f.js","971:static/chunks/fd9d1056-c4b752c762ad4496.js","596:static/chunks/596-eb6abf128d61afe5.js"],"name":"default","async":false}
+11:I{"id":99,"chunks":["685:static/chunks/685-d24e8e96f673298e.js","414:static/chunks/414-9bb298b7a28dec63.js","631:static/chunks/app/blog/[...categories]/page-78bbc08ce7a5da84.js"],"name":"","async":false}
 3:[["$","meta","0",{"charSet":"utf-8"}],["$","title","1",{"children":"Observable 에 관한 메모"}],["$","meta","2",{"name":"description","content":"..."}],["$","meta","3",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
-11:T96bf,<h2 id="Hot Stream / Cold Stream">Hot Stream / Cold Stream</h2>
-<div data-rehype-pretty-code-fragment=""><div data-rehype-pretty-code-title="" data-language="c#" data-theme="default" data-code="
-using System.Collections.Concurrent;
-using System.Reactive.Concurrency;
-using System.Reactive.Disposables;
-using System.Reactive.Linq;
-using System.Reactive.Subjects;
-
-namespace Test;
-
-public class HotStream<T> : IDisposable
-{
-    public ConcurrentQueue<T> Queue { get; } = new ConcurrentQueue<T>();
-    public IObservable<T> Stream => mStream;
-
-    private readonly AutoResetEvent mDequeueEvent = new AutoResetEvent(false);
-    private readonly CancellationTokenSource mCancelToken = new CancellationTokenSource();
-    private readonly IConnectableObservable<T> mStream;
-
-    public HotStream(IScheduler? scheduler = null)
-    {
-        var baseStream = Observable.Create<T>(o =>
-        {
-            while (mCancelToken.IsCancellationRequested == false)
-            {
-                mDequeueEvent.WaitOne();
-                while (Queue.TryDequeue(out T? result) &#x26;&#x26; !mCancelToken.IsCancellationRequested)
-                {
-                    o.OnNext(result);
-                }
-            }
-            o.OnCompleted();
-            return Disposable.Empty;
-        });
-
-        if (scheduler == null) scheduler = new EventLoopScheduler();
-        mStream = baseStream.SubscribeOn(scheduler).Publish();
-        mStream.Connect();
-    }
-    public void OnNext()
-    {
-        mDequeueEvent.Set();
-    }
-
-    bool bDisposed = false;
-    public void Dispose()
-    {
-        if (bDisposed == false)
-        {
-            bDisposed = true;
-            mCancelToken.Cancel();
-            mDequeueEvent.Set();
-            Queue.Clear();
-        }
-    }
-}
-">hot stream<button></button></div><pre style="background-color: #22272e" tabindex="0" data-language="c#" data-theme="default"><code data-language="c#" data-theme="default" style="display: grid;"><span data-line=""> </span>
-<span data-line=""><span style="color: #F47067">using</span><span style="color: #ADBAC7"> </span><span style="color: #F69D50">System</span><span style="color: #ADBAC7">.</span><span style="color: #F69D50">Collections</span><span style="color: #ADBAC7">.</span><span style="color: #F69D50">Concurrent</span><span style="color: #ADBAC7">;</span></span>
-<span data-line=""><span style="color: #F47067">using</span><span style="color: #ADBAC7"> </span><span style="color: #F69D50">System</span><span style="color: #ADBAC7">.</span><span style="color: #F69D50">Reactive</span><span style="color: #ADBAC7">.</span><span style="color: #F69D50">Concurrency</span><span style="color: #ADBAC7">;</span></span>
-<span data-line=""><span style="color: #F47067">using</span><span style="color: #ADBAC7"> </span><span style="color: #F69D50">System</span><span style="color: #ADBAC7">.</span><span style="color: #F69D50">Reactive</span><span style="color: #ADBAC7">.</span><span style="color: #F69D50">Disposables</span><span style="color: #ADBAC7">;</span></span>
-<span data-line=""><span style="color: #F47067">using</span><span style="color: #ADBAC7"> </span><span style="color: #F69D50">System</span><span style="color: #ADBAC7">.</span><span style="color: #F69D50">Reactive</span><span style="color: #ADBAC7">.</span><span style="color: #F69D50">Linq</span><span style="color: #ADBAC7">;</span></span>
-<span data-line=""><span style="color: #F47067">using</span><span style="color: #ADBAC7"> </span><span style="color: #F69D50">System</span><span style="color: #ADBAC7">.</span><span style="color: #F69D50">Reactive</span><span style="color: #ADBAC7">.</span><span style="color: #F69D50">Subjects</span><span style="color: #ADBAC7">;</span></span>
-<span data-line=""> </span>
-<span data-line=""><span style="color: #F47067">namespace</span><span style="color: #ADBAC7"> </span><span style="color: #F69D50">Test</span><span style="color: #ADBAC7">;</span></span>
-<span data-line=""> </span>
-<span data-line=""><span style="color: #F47067">public</span><span style="color: #ADBAC7"> </span><span style="color: #F47067">class</span><span style="color: #ADBAC7"> </span><span style="color: #F69D50">HotStream</span><span style="color: #ADBAC7">&#x3C;</span><span style="color: #F69D50">T</span><span style="color: #ADBAC7">> : </span><span style="color: #F69D50">IDisposable</span></span>
-<span data-line=""><span style="color: #ADBAC7">{</span></span>
-<span data-line=""><span style="color: #ADBAC7">    </span><span style="color: #F47067">public</span><span style="color: #ADBAC7"> </span><span style="color: #F69D50">ConcurrentQueue</span><span style="color: #ADBAC7">&#x3C;</span><span style="color: #F69D50">T</span><span style="color: #ADBAC7">> </span><span style="color: #F69D50">Queue</span><span style="color: #ADBAC7"> { </span><span style="color: #F47067">get</span><span style="color: #ADBAC7">; } </span><span style="color: #F47067">=</span><span style="color: #ADBAC7"> </span><span style="color: #F47067">new</span><span style="color: #ADBAC7"> </span><span style="color: #F69D50">ConcurrentQueue</span><span style="color: #ADBAC7">&#x3C;</span><span style="color: #F69D50">T</span><span style="color: #ADBAC7">>();</span></span>
-<span data-line=""><span style="color: #ADBAC7">    </span><span style="color: #F47067">public</span><span style="color: #ADBAC7"> </span><span style="color: #F69D50">IObservable</span><span style="color: #ADBAC7">&#x3C;</span><span style="color: #F69D50">T</span><span style="color: #ADBAC7">> </span><span style="color: #F69D50">Stream</span><span style="color: #ADBAC7"> </span><span style="color: #F47067">=></span><span style="color: #ADBAC7"> mStream;</span></span>
-<span data-line=""> </span>
-<span data-line=""><span style="color: #ADBAC7">    </span><span style="color: #F47067">private</span><span style="color: #ADBAC7"> </span><span style="color: #F47067">readonly</span><span style="color: #ADBAC7"> </span><span style="color: #F69D50">AutoResetEvent</span><span style="color: #ADBAC7"> </span><span style="color: #F69D50">mDequeueEvent</span><span style="color: #ADBAC7"> </span><span style="color: #F47067">=</span><span style="color: #ADBAC7"> </span><span style="color: #F47067">new</span><span style="color: #ADBAC7"> </span><span style="color: #F69D50">AutoResetEvent</span><span style="color: #ADBAC7">(</span><span style="color: #6CB6FF">false</span><span style="color: #ADBAC7">);</span></span>
-<span data-line=""><span style="color: #ADBAC7">    </span><span style="color: #F47067">private</span><span style="color: #ADBAC7"> </span><span style="color: #F47067">readonly</span><span style="color: #ADBAC7"> </span><span style="color: #F69D50">CancellationTokenSource</span><span style="color: #ADBAC7"> </span><span style="color: #F69D50">mCancelToken</span><span style="color: #ADBAC7"> </span><span style="color: #F47067">=</span><span style="color: #ADBAC7"> </span><span style="color: #F47067">new</span><span style="color: #ADBAC7"> </span><span style="color: #F69D50">CancellationTokenSource</span><span style="color: #ADBAC7">();</span></span>
-<span data-line=""><span style="color: #ADBAC7">    </span><span style="color: #F47067">private</span><span style="color: #ADBAC7"> </span><span style="color: #F47067">readonly</span><span style="color: #ADBAC7"> </span><span style="color: #F69D50">IConnectableObservable</span><span style="color: #ADBAC7">&#x3C;</span><span style="color: #F69D50">T</span><span style="color: #ADBAC7">> </span><span style="color: #F69D50">mStream</span><span style="color: #ADBAC7">;</span></span>
-<span data-line=""> </span>
-<span data-line=""><span style="color: #ADBAC7">    </span><span style="color: #F47067">public</span><span style="color: #ADBAC7"> </span><span style="color: #DCBDFB">HotStream</span><span style="color: #ADBAC7">(</span><span style="color: #F69D50">IScheduler</span><span style="color: #ADBAC7">? </span><span style="color: #F69D50">scheduler</span><span style="color: #ADBAC7"> </span><span style="color: #F47067">=</span><span style="color: #ADBAC7"> </span><span style="color: #6CB6FF">null</span><span style="color: #ADBAC7">)</span></span>
-<span data-line=""><span style="color: #ADBAC7">    {</span></span>
-<span data-line=""><span style="color: #ADBAC7">        </span><span style="color: #F47067">var</span><span style="color: #ADBAC7"> </span><span style="color: #F69D50">baseStream</span><span style="color: #ADBAC7"> </span><span style="color: #F47067">=</span><span style="color: #ADBAC7"> Observable.</span><span style="color: #DCBDFB">Create</span><span style="color: #ADBAC7">&#x3C;</span><span style="color: #F69D50">T</span><span style="color: #ADBAC7">>(</span><span style="color: #F69D50">o</span><span style="color: #ADBAC7"> </span><span style="color: #F47067">=></span></span>
-<span data-line=""><span style="color: #ADBAC7">        {</span></span>
-<span data-line=""><span style="color: #ADBAC7">            </span><span style="color: #F47067">while</span><span style="color: #ADBAC7"> (mCancelToken.IsCancellationRequested </span><span style="color: #F47067">==</span><span style="color: #ADBAC7"> </span><span style="color: #6CB6FF">false</span><span style="color: #ADBAC7">)</span></span>
-<span data-line=""><span style="color: #ADBAC7">            {</span></span>
-<span data-line=""><span style="color: #ADBAC7">                mDequeueEvent.</span><span style="color: #DCBDFB">WaitOne</span><span style="color: #ADBAC7">();</span></span>
-<span data-line=""><span style="color: #ADBAC7">                </span><span style="color: #F47067">while</span><span style="color: #ADBAC7"> (Queue.</span><span style="color: #DCBDFB">TryDequeue</span><span style="color: #ADBAC7">(</span><span style="color: #F47067">out</span><span style="color: #ADBAC7"> </span><span style="color: #F69D50">T</span><span style="color: #ADBAC7">? </span><span style="color: #F69D50">result</span><span style="color: #ADBAC7">) </span><span style="color: #F47067">&#x26;&#x26;</span><span style="color: #ADBAC7"> </span><span style="color: #F47067">!</span><span style="color: #ADBAC7">mCancelToken.IsCancellationRequested)</span></span>
-<span data-line=""><span style="color: #ADBAC7">                {</span></span>
-<span data-line=""><span style="color: #ADBAC7">                    o.</span><span style="color: #DCBDFB">OnNext</span><span style="color: #ADBAC7">(result);</span></span>
-<span data-line=""><span style="color: #ADBAC7">                }</span></span>
-<span data-line=""><span style="color: #ADBAC7">            }</span></span>
-<span data-line=""><span style="color: #ADBAC7">            o.</span><span style="color: #DCBDFB">OnCompleted</span><span style="color: #ADBAC7">();</span></span>
-<span data-line=""><span style="color: #ADBAC7">            </span><span style="color: #F47067">return</span><span style="color: #ADBAC7"> Disposable.Empty;</span></span>
-<span data-line=""><span style="color: #ADBAC7">        });</span></span>
-<span data-line=""> </span>
-<span data-line=""><span style="color: #ADBAC7">        </span><span style="color: #F47067">if</span><span style="color: #ADBAC7"> (scheduler </span><span style="color: #F47067">==</span><span style="color: #ADBAC7"> </span><span style="color: #6CB6FF">null</span><span style="color: #ADBAC7">) scheduler </span><span style="color: #F47067">=</span><span style="color: #ADBAC7"> </span><span style="color: #F47067">new</span><span style="color: #ADBAC7"> </span><span style="color: #F69D50">EventLoopScheduler</span><span style="color: #ADBAC7">();</span></span>
-<span data-line=""><span style="color: #ADBAC7">        mStream </span><span style="color: #F47067">=</span><span style="color: #ADBAC7"> baseStream.</span><span style="color: #DCBDFB">SubscribeOn</span><span style="color: #ADBAC7">(scheduler).</span><span style="color: #DCBDFB">Publish</span><span style="color: #ADBAC7">();</span></span>
-<span data-line=""><span style="color: #ADBAC7">        mStream.</span><span style="color: #DCBDFB">Connect</span><span style="color: #ADBAC7">();</span></span>
-<span data-line=""><span style="color: #ADBAC7">    }</span></span>
-<span data-line=""><span style="color: #ADBAC7">    </span><span style="color: #F47067">public</span><span style="color: #ADBAC7"> </span><span style="color: #F47067">void</span><span style="color: #ADBAC7"> </span><span style="color: #DCBDFB">OnNext</span><span style="color: #ADBAC7">()</span></span>
-<span data-line=""><span style="color: #ADBAC7">    {</span></span>
-<span data-line=""><span style="color: #ADBAC7">        mDequeueEvent.</span><span style="color: #DCBDFB">Set</span><span style="color: #ADBAC7">();</span></span>
-<span data-line=""><span style="color: #ADBAC7">    }</span></span>
-<span data-line=""> </span>
-<span data-line=""><span style="color: #ADBAC7">    </span><span style="color: #F47067">bool</span><span style="color: #ADBAC7"> </span><span style="color: #F69D50">bDisposed</span><span style="color: #ADBAC7"> </span><span style="color: #F47067">=</span><span style="color: #ADBAC7"> </span><span style="color: #6CB6FF">false</span><span style="color: #ADBAC7">;</span></span>
-<span data-line=""><span style="color: #ADBAC7">    </span><span style="color: #F47067">public</span><span style="color: #ADBAC7"> </span><span style="color: #F47067">void</span><span style="color: #ADBAC7"> </span><span style="color: #DCBDFB">Dispose</span><span style="color: #ADBAC7">()</span></span>
-<span data-line=""><span style="color: #ADBAC7">    {</span></span>
-<span data-line=""><span style="color: #ADBAC7">        </span><span style="color: #F47067">if</span><span style="color: #ADBAC7"> (bDisposed </span><span style="color: #F47067">==</span><span style="color: #ADBAC7"> </span><span style="color: #6CB6FF">false</span><span style="color: #ADBAC7">)</span></span>
-<span data-line=""><span style="color: #ADBAC7">        {</span></span>
-<span data-line=""><span style="color: #ADBAC7">            bDisposed </span><span style="color: #F47067">=</span><span style="color: #ADBAC7"> </span><span style="color: #6CB6FF">true</span><span style="color: #ADBAC7">;</span></span>
-<span data-line=""><span style="color: #ADBAC7">            mCancelToken.</span><span style="color: #DCBDFB">Cancel</span><span style="color: #ADBAC7">();</span></span>
-<span data-line=""><span style="color: #ADBAC7">            mDequeueEvent.</span><span style="color: #DCBDFB">Set</span><span style="color: #ADBAC7">();</span></span>
-<span data-line=""><span style="color: #ADBAC7">            Queue.</span><span style="color: #DCBDFB">Clear</span><span style="color: #ADBAC7">();</span></span>
-<span data-line=""><span style="color: #ADBAC7">        }</span></span>
-<span data-line=""><span style="color: #ADBAC7">    }</span></span>
-<span data-line=""><span style="color: #ADBAC7">}</span></span></code></pre></div>
-<p>위는 <code>Publish()</code>, <code>Connect()</code> 를 이용해 구현한 간단한 Hot Stream 이다. <code>Publish()</code> 는 내부적으로 <code>Subject&#x3C;T></code> 를 사용했고 사실 <code>Subject&#x3C;T></code> 가 Hot Stream 이기도 하다. 그래서 <code>Subject&#x3C;T></code> 만 써도 된다. 하지만 <code>Publish()</code> 특징을 보이기 위해서 위 코드를 들고왔다.</p>
-<p>Hot Stream 은 구독 전에 호출한 <code>OnNext()</code> 를 무시하며 바로바로 보내는 것이 특징이다.</p>
-<p>그래서 다음과 같은 결과를 보인다.</p>
-<div data-rehype-pretty-code-fragment=""><div data-rehype-pretty-code-title="" data-language="c#" data-theme="default" data-code="var stream = new HotStream<string>();
-stream.Queue.Enqueue(&#x22;1&#x22;);
-stream.OnNext();
-Thread.Sleep(1000); // thread 변환까지의 딜레이를 고려
-stream.Stream.Subscribe(s=>Console.WriteLine($&#x22;1 => {s}&#x22;));
-stream.Stream.Subscribe(s=>Console.WriteLine($&#x22;2 => {s}&#x22;));
-for (int i = 2; i < 5; i++)
-    stream.Queue.Enqueue(i.ToString());
-stream.OnNext();
-">input<button></button></div><pre style="background-color: #22272e" tabindex="0" data-language="c#" data-theme="default"><code data-language="c#" data-theme="default" style="display: grid;"><span data-line=""><span style="color: #F47067">var</span><span style="color: #ADBAC7"> </span><span style="color: #F69D50">stream</span><span style="color: #ADBAC7"> </span><span style="color: #F47067">=</span><span style="color: #ADBAC7"> </span><span style="color: #F47067">new</span><span style="color: #ADBAC7"> </span><span style="color: #F69D50">HotStream</span><span style="color: #ADBAC7">&#x3C;</span><span style="color: #F47067">string</span><span style="color: #ADBAC7">>();</span></span>
-<span data-line=""><span style="color: #ADBAC7">stream.Queue.</span><span style="color: #DCBDFB">Enqueue</span><span style="color: #ADBAC7">(</span><span style="color: #96D0FF">"1"</span><span style="color: #ADBAC7">);</span></span>
-<span data-line=""><span style="color: #ADBAC7">stream.</span><span style="color: #DCBDFB">OnNext</span><span style="color: #ADBAC7">();</span></span>
-<span data-line=""><span style="color: #ADBAC7">Thread.</span><span style="color: #DCBDFB">Sleep</span><span style="color: #ADBAC7">(</span><span style="color: #6CB6FF">1000</span><span style="color: #ADBAC7">); </span><span style="color: #768390">// thread 변환까지의 딜레이를 고려</span></span>
-<span data-line=""><span style="color: #ADBAC7">stream.Stream.</span><span style="color: #DCBDFB">Subscribe</span><span style="color: #ADBAC7">(</span><span style="color: #F69D50">s</span><span style="color: #F47067">=></span><span style="color: #ADBAC7">Console.</span><span style="color: #DCBDFB">WriteLine</span><span style="color: #ADBAC7">(</span><span style="color: #96D0FF">$"1 => {</span><span style="color: #ADBAC7">s</span><span style="color: #96D0FF">}"</span><span style="color: #ADBAC7">));</span></span>
-<span data-line=""><span style="color: #ADBAC7">stream.Stream.</span><span style="color: #DCBDFB">Subscribe</span><span style="color: #ADBAC7">(</span><span style="color: #F69D50">s</span><span style="color: #F47067">=></span><span style="color: #ADBAC7">Console.</span><span style="color: #DCBDFB">WriteLine</span><span style="color: #ADBAC7">(</span><span style="color: #96D0FF">$"2 => {</span><span style="color: #ADBAC7">s</span><span style="color: #96D0FF">}"</span><span style="color: #ADBAC7">));</span></span>
-<span data-line=""><span style="color: #F47067">for</span><span style="color: #ADBAC7"> (</span><span style="color: #F47067">int</span><span style="color: #ADBAC7"> </span><span style="color: #F69D50">i</span><span style="color: #ADBAC7"> </span><span style="color: #F47067">=</span><span style="color: #ADBAC7"> </span><span style="color: #6CB6FF">2</span><span style="color: #ADBAC7">; i </span><span style="color: #F47067">&#x3C;</span><span style="color: #ADBAC7"> </span><span style="color: #6CB6FF">5</span><span style="color: #ADBAC7">; i</span><span style="color: #F47067">++</span><span style="color: #ADBAC7">)</span></span>
-<span data-line=""><span style="color: #ADBAC7">    stream.Queue.</span><span style="color: #DCBDFB">Enqueue</span><span style="color: #ADBAC7">(i.</span><span style="color: #DCBDFB">ToString</span><span style="color: #ADBAC7">());</span></span>
-<span data-line=""><span style="color: #ADBAC7">stream.</span><span style="color: #DCBDFB">OnNext</span><span style="color: #ADBAC7">();</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><div data-rehype-pretty-code-title="" data-language="plaintext" data-theme="default" data-code="1 => 2
-2 => 2
-1 => 3
-2 => 3
-1 => 4
-2 => 4
-">output<button></button></div><pre style="background-color: #22272e" tabindex="0" data-language="plaintext" data-theme="default"><code data-language="plaintext" data-theme="default" style="display: grid;"><span data-line=""><span style="color: #adbac7">1 => 2</span></span>
-<span data-line=""><span style="color: #adbac7">2 => 2</span></span>
-<span data-line=""><span style="color: #adbac7">1 => 3</span></span>
-<span data-line=""><span style="color: #adbac7">2 => 3</span></span>
-<span data-line=""><span style="color: #adbac7">1 => 4</span></span>
-<span data-line=""><span style="color: #adbac7">2 => 4</span></span></code></pre></div>
-<p>만약 <code>Publish()</code> 를 사용하지 않았다면 어떨까?</p>
-<div data-rehype-pretty-code-fragment=""><div data-rehype-pretty-code-title="" data-language="plaintext" data-theme="default" data-code="1 => 1
-1 => 2
-1 => 3
-1 => 4
-">output<button></button></div><pre style="background-color: #22272e" tabindex="0" data-language="plaintext" data-theme="default"><code data-language="plaintext" data-theme="default" style="display: grid;"><span data-line=""><span style="color: #adbac7">1 => 1</span></span>
-<span data-line=""><span style="color: #adbac7">1 => 2</span></span>
-<span data-line=""><span style="color: #adbac7">1 => 3</span></span>
-<span data-line=""><span style="color: #adbac7">1 => 4</span></span></code></pre></div>
-<p>위는 Cold Stream 의 두가지 특징을 가지고 있다.</p>
-<ol>
-<li><code>Subscribe()</code> 하기 전의 값이 살아있다. 이는 <code>Subscribe()</code> 시점에 Observable Sequence 가 값을 넣기 시작하기 때문이다.</li>
-<li>1번 구독자만 살아있다가 끝난다. 왜냐하면 위 구현에서는 <code>Observable</code> 내부의 루프가 끝나지 않아서 다음 <code>Observer</code> 에게 순서가 가지 않기 때문이다. 만약 가더라도 queue 내부는 비워서 아무일도 안할 것이다.</li>
-</ol>
-<p>이러한 특징 때문에 요구사항에 맞는 stream 을 쓰는게 중요하다. ui 등 가장 최신 값이 필요하면 Hot Stream 을 사용한다던지 말이다.</p>
-<h3 id="Hot Stream 다른 구현 버전">Hot Stream 다른 구현 버전</h3>
-<div data-rehype-pretty-code-fragment=""><div data-rehype-pretty-code-title="" data-language="c#" data-theme="default" data-code="public class HotStream : IDisposable
-{
-    public IObservable<T?> Stream<T>() where T : class => mSource.Where(v => v is T)!.Cast<T?>();
-
-    private readonly IDisposable mSourceToken;
-    private readonly IConnectableObservable<object?> mSource;
-    private readonly CancellationTokenSource mCancelToken;
-    private readonly BlockingCollection<object?> mQueue = new();
-    
-    public MixStream(IScheduler? scheduler = null)
-    {
-        scheduler ??= new EventLoopScheduler();
-        this.mCancelToken = new CancellationTokenSource();
-
-        var baseStream = Observable.Create<object>(observer =>
-        {
-            while (this.mCancelToken.IsCancellationRequested == false)
-            {
-                while (this.mQueue.TryTake(out object? result) &#x26;&#x26; !this.mCancelToken.IsCancellationRequested)
-                {
-                    observer.OnNext(result);
-                }
-            }
-            observer.OnCompleted();
-            return Disposable.Create(() =>
-            {
-                Console.WriteLine(&#x22;Stream End&#x22;);
-            });
-        });
-
-        mSource = baseStream.SubscribeOn(scheduler).Publish();
-        mSourceToken = this.mSource.Connect();
-    }
-    public void OnNext(object? message)
-    {
-        this.mQueue.TryAdd(message);
-    }
-    public void Dispose()
-    {
-        mSourceToken.Dispose();
-        mCancelToken.Dispose();
-    }    
-}
-">hot stream<button></button></div><pre style="background-color: #22272e" tabindex="0" data-language="c#" data-theme="default"><code data-language="c#" data-theme="default" style="display: grid;"><span data-line=""><span style="color: #F47067">public</span><span style="color: #ADBAC7"> </span><span style="color: #F47067">class</span><span style="color: #ADBAC7"> </span><span style="color: #F69D50">HotStream</span><span style="color: #ADBAC7"> : </span><span style="color: #F69D50">IDisposable</span></span>
-<span data-line=""><span style="color: #ADBAC7">{</span></span>
-<span data-line=""><span style="color: #ADBAC7">    </span><span style="color: #F47067">public</span><span style="color: #ADBAC7"> </span><span style="color: #F69D50">IObservable</span><span style="color: #ADBAC7">&#x3C;</span><span style="color: #F69D50">T</span><span style="color: #ADBAC7">?> </span><span style="color: #DCBDFB">Stream</span><span style="color: #ADBAC7">&#x3C;</span><span style="color: #F69D50">T</span><span style="color: #ADBAC7">>() </span><span style="color: #F47067">where</span><span style="color: #ADBAC7"> </span><span style="color: #F69D50">T</span><span style="color: #ADBAC7"> : </span><span style="color: #F47067">class</span><span style="color: #ADBAC7"> </span><span style="color: #F47067">=></span><span style="color: #ADBAC7"> mSource.</span><span style="color: #DCBDFB">Where</span><span style="color: #ADBAC7">(</span><span style="color: #F69D50">v</span><span style="color: #ADBAC7"> </span><span style="color: #F47067">=></span><span style="color: #ADBAC7"> v </span><span style="color: #F47067">is</span><span style="color: #ADBAC7"> </span><span style="color: #F69D50">T</span><span style="color: #ADBAC7">)</span><span style="color: #F47067">!</span><span style="color: #ADBAC7">.</span><span style="color: #DCBDFB">Cast</span><span style="color: #ADBAC7">&#x3C;</span><span style="color: #F69D50">T</span><span style="color: #ADBAC7">?>();</span></span>
-<span data-line=""> </span>
-<span data-line=""><span style="color: #ADBAC7">    </span><span style="color: #F47067">private</span><span style="color: #ADBAC7"> </span><span style="color: #F47067">readonly</span><span style="color: #ADBAC7"> </span><span style="color: #F69D50">IDisposable</span><span style="color: #ADBAC7"> </span><span style="color: #F69D50">mSourceToken</span><span style="color: #ADBAC7">;</span></span>
-<span data-line=""><span style="color: #ADBAC7">    </span><span style="color: #F47067">private</span><span style="color: #ADBAC7"> </span><span style="color: #F47067">readonly</span><span style="color: #ADBAC7"> </span><span style="color: #F69D50">IConnectableObservable</span><span style="color: #ADBAC7">&#x3C;</span><span style="color: #F47067">object</span><span style="color: #ADBAC7">?> </span><span style="color: #F69D50">mSource</span><span style="color: #ADBAC7">;</span></span>
-<span data-line=""><span style="color: #ADBAC7">    </span><span style="color: #F47067">private</span><span style="color: #ADBAC7"> </span><span style="color: #F47067">readonly</span><span style="color: #ADBAC7"> </span><span style="color: #F69D50">CancellationTokenSource</span><span style="color: #ADBAC7"> </span><span style="color: #F69D50">mCancelToken</span><span style="color: #ADBAC7">;</span></span>
-<span data-line=""><span style="color: #ADBAC7">    </span><span style="color: #F47067">private</span><span style="color: #ADBAC7"> </span><span style="color: #F47067">readonly</span><span style="color: #ADBAC7"> </span><span style="color: #F69D50">BlockingCollection</span><span style="color: #ADBAC7">&#x3C;</span><span style="color: #F47067">object</span><span style="color: #ADBAC7">?> </span><span style="color: #F69D50">mQueue</span><span style="color: #ADBAC7"> </span><span style="color: #F47067">=</span><span style="color: #ADBAC7"> </span><span style="color: #F47067">new</span><span style="color: #ADBAC7">();</span></span>
-<span data-line=""><span style="color: #ADBAC7">    </span></span>
-<span data-line=""><span style="color: #ADBAC7">    </span><span style="color: #F47067">public</span><span style="color: #ADBAC7"> </span><span style="color: #DCBDFB">MixStream</span><span style="color: #ADBAC7">(</span><span style="color: #F69D50">IScheduler</span><span style="color: #ADBAC7">? </span><span style="color: #F69D50">scheduler</span><span style="color: #ADBAC7"> </span><span style="color: #F47067">=</span><span style="color: #ADBAC7"> </span><span style="color: #6CB6FF">null</span><span style="color: #ADBAC7">)</span></span>
-<span data-line=""><span style="color: #ADBAC7">    {</span></span>
-<span data-line=""><span style="color: #ADBAC7">        scheduler </span><span style="color: #F47067">??=</span><span style="color: #ADBAC7"> </span><span style="color: #F47067">new</span><span style="color: #ADBAC7"> </span><span style="color: #F69D50">EventLoopScheduler</span><span style="color: #ADBAC7">();</span></span>
-<span data-line=""><span style="color: #ADBAC7">        </span><span style="color: #6CB6FF">this</span><span style="color: #ADBAC7">.mCancelToken </span><span style="color: #F47067">=</span><span style="color: #ADBAC7"> </span><span style="color: #F47067">new</span><span style="color: #ADBAC7"> </span><span style="color: #F69D50">CancellationTokenSource</span><span style="color: #ADBAC7">();</span></span>
-<span data-line=""> </span>
-<span data-line=""><span style="color: #ADBAC7">        </span><span style="color: #F47067">var</span><span style="color: #ADBAC7"> </span><span style="color: #F69D50">baseStream</span><span style="color: #ADBAC7"> </span><span style="color: #F47067">=</span><span style="color: #ADBAC7"> Observable.</span><span style="color: #DCBDFB">Create</span><span style="color: #ADBAC7">&#x3C;</span><span style="color: #F47067">object</span><span style="color: #ADBAC7">>(</span><span style="color: #F69D50">observer</span><span style="color: #ADBAC7"> </span><span style="color: #F47067">=></span></span>
-<span data-line=""><span style="color: #ADBAC7">        {</span></span>
-<span data-line=""><span style="color: #ADBAC7">            </span><span style="color: #F47067">while</span><span style="color: #ADBAC7"> (</span><span style="color: #6CB6FF">this</span><span style="color: #ADBAC7">.mCancelToken.IsCancellationRequested </span><span style="color: #F47067">==</span><span style="color: #ADBAC7"> </span><span style="color: #6CB6FF">false</span><span style="color: #ADBAC7">)</span></span>
-<span data-line=""><span style="color: #ADBAC7">            {</span></span>
-<span data-line=""><span style="color: #ADBAC7">                </span><span style="color: #F47067">while</span><span style="color: #ADBAC7"> (</span><span style="color: #6CB6FF">this</span><span style="color: #ADBAC7">.mQueue.</span><span style="color: #DCBDFB">TryTake</span><span style="color: #ADBAC7">(</span><span style="color: #F47067">out</span><span style="color: #ADBAC7"> </span><span style="color: #F47067">object</span><span style="color: #ADBAC7">? </span><span style="color: #F69D50">result</span><span style="color: #ADBAC7">) </span><span style="color: #F47067">&#x26;&#x26;</span><span style="color: #ADBAC7"> </span><span style="color: #F47067">!</span><span style="color: #6CB6FF">this</span><span style="color: #ADBAC7">.mCancelToken.IsCancellationRequested)</span></span>
-<span data-line=""><span style="color: #ADBAC7">                {</span></span>
-<span data-line=""><span style="color: #ADBAC7">                    observer.</span><span style="color: #DCBDFB">OnNext</span><span style="color: #ADBAC7">(result);</span></span>
-<span data-line=""><span style="color: #ADBAC7">                }</span></span>
-<span data-line=""><span style="color: #ADBAC7">            }</span></span>
-<span data-line=""><span style="color: #ADBAC7">            observer.</span><span style="color: #DCBDFB">OnCompleted</span><span style="color: #ADBAC7">();</span></span>
-<span data-line=""><span style="color: #ADBAC7">            </span><span style="color: #F47067">return</span><span style="color: #ADBAC7"> Disposable.</span><span style="color: #DCBDFB">Create</span><span style="color: #ADBAC7">(() </span><span style="color: #F47067">=></span></span>
-<span data-line=""><span style="color: #ADBAC7">            {</span></span>
-<span data-line=""><span style="color: #ADBAC7">                Console.</span><span style="color: #DCBDFB">WriteLine</span><span style="color: #ADBAC7">(</span><span style="color: #96D0FF">"Stream End"</span><span style="color: #ADBAC7">);</span></span>
-<span data-line=""><span style="color: #ADBAC7">            });</span></span>
-<span data-line=""><span style="color: #ADBAC7">        });</span></span>
-<span data-line=""> </span>
-<span data-line=""><span style="color: #ADBAC7">        mSource </span><span style="color: #F47067">=</span><span style="color: #ADBAC7"> baseStream.</span><span style="color: #DCBDFB">SubscribeOn</span><span style="color: #ADBAC7">(scheduler).</span><span style="color: #DCBDFB">Publish</span><span style="color: #ADBAC7">();</span></span>
-<span data-line=""><span style="color: #ADBAC7">        mSourceToken </span><span style="color: #F47067">=</span><span style="color: #ADBAC7"> </span><span style="color: #6CB6FF">this</span><span style="color: #ADBAC7">.mSource.</span><span style="color: #DCBDFB">Connect</span><span style="color: #ADBAC7">();</span></span>
-<span data-line=""><span style="color: #ADBAC7">    }</span></span>
-<span data-line=""><span style="color: #ADBAC7">    </span><span style="color: #F47067">public</span><span style="color: #ADBAC7"> </span><span style="color: #F47067">void</span><span style="color: #ADBAC7"> </span><span style="color: #DCBDFB">OnNext</span><span style="color: #ADBAC7">(</span><span style="color: #F47067">object</span><span style="color: #ADBAC7">? </span><span style="color: #F69D50">message</span><span style="color: #ADBAC7">)</span></span>
-<span data-line=""><span style="color: #ADBAC7">    {</span></span>
-<span data-line=""><span style="color: #ADBAC7">        </span><span style="color: #6CB6FF">this</span><span style="color: #ADBAC7">.mQueue.</span><span style="color: #DCBDFB">TryAdd</span><span style="color: #ADBAC7">(message);</span></span>
-<span data-line=""><span style="color: #ADBAC7">    }</span></span>
-<span data-line=""><span style="color: #ADBAC7">    </span><span style="color: #F47067">public</span><span style="color: #ADBAC7"> </span><span style="color: #F47067">void</span><span style="color: #ADBAC7"> </span><span style="color: #DCBDFB">Dispose</span><span style="color: #ADBAC7">()</span></span>
-<span data-line=""><span style="color: #ADBAC7">    {</span></span>
-<span data-line=""><span style="color: #ADBAC7">        mSourceToken.</span><span style="color: #DCBDFB">Dispose</span><span style="color: #ADBAC7">();</span></span>
-<span data-line=""><span style="color: #ADBAC7">        mCancelToken.</span><span style="color: #DCBDFB">Dispose</span><span style="color: #ADBAC7">();</span></span>
-<span data-line=""><span style="color: #ADBAC7">    }    </span></span>
-<span data-line=""><span style="color: #ADBAC7">}</span></span></code></pre></div>
-<p><code>BlockingCollection&#x3C;></code> 을 사용한 버전이다.</p>
-<h2 id="SubscribeOn vs ObserveOn">SubscribeOn vs ObserveOn</h2>
-<div data-rehype-pretty-code-fragment=""><div data-rehype-pretty-code-title="" data-language="c#" data-theme="default" data-code="    IObservable<int> observable = Observable.Create<int>(r =>
-        {
-            // SubscribeOn() 에서 스케듈러가 적용되는 부분
-            r.OnNext(1);
-            return Disposable.Empty;
-        })
-        .ObserveOn(new EventLoopScheduler())
-        .SubscribeOn(new EventLoopScheduler());
-    observable.Subscribe(_ =>
-    {
-        // ObserveOn() 에서 스케듈러가 적용되는 부분
-    });
-">c#<button></button></div><pre style="background-color: #22272e" tabindex="0" data-language="c#" data-theme="default"><code data-language="c#" data-theme="default" style="display: grid;"><span data-line=""><span style="color: #ADBAC7">    </span><span style="color: #F69D50">IObservable</span><span style="color: #ADBAC7">&#x3C;</span><span style="color: #F47067">int</span><span style="color: #ADBAC7">> </span><span style="color: #F69D50">observable</span><span style="color: #ADBAC7"> </span><span style="color: #F47067">=</span><span style="color: #ADBAC7"> Observable.</span><span style="color: #DCBDFB">Create</span><span style="color: #ADBAC7">&#x3C;</span><span style="color: #F47067">int</span><span style="color: #ADBAC7">>(</span><span style="color: #F69D50">r</span><span style="color: #ADBAC7"> </span><span style="color: #F47067">=></span></span>
-<span data-line=""><span style="color: #ADBAC7">        {</span></span>
-<span data-line=""><span style="color: #768390">            // SubscribeOn() 에서 스케듈러가 적용되는 부분</span></span>
-<span data-line=""><span style="color: #ADBAC7">            r.</span><span style="color: #DCBDFB">OnNext</span><span style="color: #ADBAC7">(</span><span style="color: #6CB6FF">1</span><span style="color: #ADBAC7">);</span></span>
-<span data-line=""><span style="color: #ADBAC7">            </span><span style="color: #F47067">return</span><span style="color: #ADBAC7"> Disposable.Empty;</span></span>
-<span data-line=""><span style="color: #ADBAC7">        })</span></span>
-<span data-line=""><span style="color: #ADBAC7">        .</span><span style="color: #DCBDFB">ObserveOn</span><span style="color: #ADBAC7">(</span><span style="color: #F47067">new</span><span style="color: #ADBAC7"> </span><span style="color: #F69D50">EventLoopScheduler</span><span style="color: #ADBAC7">())</span></span>
-<span data-line=""><span style="color: #ADBAC7">        .</span><span style="color: #DCBDFB">SubscribeOn</span><span style="color: #ADBAC7">(</span><span style="color: #F47067">new</span><span style="color: #ADBAC7"> </span><span style="color: #F69D50">EventLoopScheduler</span><span style="color: #ADBAC7">());</span></span>
-<span data-line=""><span style="color: #ADBAC7">    observable.</span><span style="color: #DCBDFB">Subscribe</span><span style="color: #ADBAC7">(</span><span style="color: #F69D50">_</span><span style="color: #ADBAC7"> </span><span style="color: #F47067">=></span></span>
-<span data-line=""><span style="color: #ADBAC7">    {</span></span>
-<span data-line=""><span style="color: #768390">        // ObserveOn() 에서 스케듈러가 적용되는 부분</span></span>
-<span data-line=""><span style="color: #ADBAC7">    });</span></span></code></pre></div>
-<p><code>ObserveOn()</code> 은 Subscriber 가 등록한 Callback 이 호출될 Scheduler 를 정한다. 기본은 <code>OnNext()</code> 가 호출되는 CallStack 에서 Callback 이 호출됨을 염두에 두자.</p>
-<p><code>SubscribeOn()</code> 은 Cold Stream 에 <code>Subscribe()</code> 를 할 때 Sequence 가 만들어지는 스케듈러를 바꾼다. 그래서 만약 <code>Publish()</code>/<code>Connect()</code> 를 쓰면 적용되지 않는다.</p>
-<h2 id="참고자료">참고자료</h2>
-<p><a href="https://learn.microsoft.com/en-us/previous-versions/dotnet/reactive-extensions/hh211887(v=vs.103)">msdn IConnectableObservable&#x3C;T> Interface</a></p>12:T1732,
+12:T1732,
 
 ## Hot Stream / Cold Stream
 
@@ -475,7 +201,7 @@ public class HotStream : IDisposable
 
 ## 참고자료
 
-[msdn IConnectableObservable\<T\> Interface](https://learn.microsoft.com/en-us/previous-versions/dotnet/reactive-extensions/hh211887(v=vs.103))13:T96bf,<h2 id="Hot Stream / Cold Stream">Hot Stream / Cold Stream</h2>
+[msdn IConnectableObservable\<T\> Interface](https://learn.microsoft.com/en-us/previous-versions/dotnet/reactive-extensions/hh211887(v=vs.103))13:T96bf,<h2 id="Hot-Stream-/-Cold-Stream">Hot Stream / Cold Stream</h2>
 <div data-rehype-pretty-code-fragment=""><div data-rehype-pretty-code-title="" data-language="c#" data-theme="default" data-code="
 using System.Collections.Concurrent;
 using System.Reactive.Concurrency;
@@ -634,7 +360,7 @@ stream.OnNext();
 <li>1번 구독자만 살아있다가 끝난다. 왜냐하면 위 구현에서는 <code>Observable</code> 내부의 루프가 끝나지 않아서 다음 <code>Observer</code> 에게 순서가 가지 않기 때문이다. 만약 가더라도 queue 내부는 비워서 아무일도 안할 것이다.</li>
 </ol>
 <p>이러한 특징 때문에 요구사항에 맞는 stream 을 쓰는게 중요하다. ui 등 가장 최신 값이 필요하면 Hot Stream 을 사용한다던지 말이다.</p>
-<h3 id="Hot Stream 다른 구현 버전">Hot Stream 다른 구현 버전</h3>
+<h3 id="Hot-Stream-다른-구현-버전">Hot Stream 다른 구현 버전</h3>
 <div data-rehype-pretty-code-fragment=""><div data-rehype-pretty-code-title="" data-language="c#" data-theme="default" data-code="public class HotStream : IDisposable
 {
     public IObservable<T?> Stream<T>() where T : class => mSource.Where(v => v is T)!.Cast<T?>();
@@ -722,7 +448,7 @@ stream.OnNext();
 <span data-line=""><span style="color: #ADBAC7">    }    </span></span>
 <span data-line=""><span style="color: #ADBAC7">}</span></span></code></pre></div>
 <p><code>BlockingCollection&#x3C;></code> 을 사용한 버전이다.</p>
-<h2 id="SubscribeOn vs ObserveOn">SubscribeOn vs ObserveOn</h2>
+<h2 id="SubscribeOn-vs-ObserveOn">SubscribeOn vs ObserveOn</h2>
 <div data-rehype-pretty-code-fragment=""><div data-rehype-pretty-code-title="" data-language="c#" data-theme="default" data-code="    IObservable<int> observable = Observable.Create<int>(r =>
         {
             // SubscribeOn() 에서 스케듈러가 적용되는 부분
@@ -750,5 +476,5 @@ stream.OnNext();
 <p><code>ObserveOn()</code> 은 Subscriber 가 등록한 Callback 이 호출될 Scheduler 를 정한다. 기본은 <code>OnNext()</code> 가 호출되는 CallStack 에서 Callback 이 호출됨을 염두에 두자.</p>
 <p><code>SubscribeOn()</code> 은 Cold Stream 에 <code>Subscribe()</code> 를 할 때 Sequence 가 만들어지는 스케듈러를 바꾼다. 그래서 만약 <code>Publish()</code>/<code>Connect()</code> 를 쓰면 적용되지 않는다.</p>
 <h2 id="참고자료">참고자료</h2>
-<p><a href="https://learn.microsoft.com/en-us/previous-versions/dotnet/reactive-extensions/hh211887(v=vs.103)">msdn IConnectableObservable&#x3C;T> Interface</a></p>2:[null,["$","html",null,{"lang":"en","children":["$","body",null,{"className":"tw-relative tw-min-h-screen tw-bg-color-page-background","children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(function() {\n    function setInitialColorMode() {\n    /**\r\n   * 만약 localStorage 가 유효하지 않다면 => media 설정으로 처리\r\n   * 만약 localStorage 가 유효하다면 => local Storage 로 처리\r\n   */ if (localStorage.getItem(\"theme\") == null && window.matchMedia(\"(prefers-color-scheme: dark)\").matches || localStorage.getItem(\"theme\") == \"dark\") {\n        document.documentElement.setAttribute(\"data-theme\", \"dark\");\n    }\n}\n    setInitialColorMode();\n  })()\n"}}],["$","link",null,{"rel":"stylesheet","href":"//fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+KR&display=swap"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css","integrity":"sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC","crossOrigin":"anonymous"}],["$","$L4",null,{"children":[["$","nav",null,{"className":"masthead_masthead__zVIwm","children":[["$","$L5",null,{}],["$","a",null,{"className":"tw-grow tw-self-center tw-ml-1   tw-font-sans tw-font-bold tw-text-color-primary tw-text-xl   hover:tw-text-color-text ","href":"/study-log/","rel":"$undefined","target":"_self","onClick":"$undefined","children":"LOG | STUDY"}],["$","$L6",null,{"className":"tw-flex tw-self-center tw-text-xl"}],["$","$L7",null,{"className":"tw-flex tw-self-center tw-ml-2 tw-mr-4 tw-text-xl "}]]}],["$","$L8",null,{"className":"tw-z-10"}],["$","aside",null,{"children":["$","$L9",null,{"children":["$","div",null,{"className":"sidebar_sidebar__Wqt36","children":[["$","$La",null,{"slug":"/","label":"HOME","refCount":-1,"depth":0}],["$","div",null,{"children":[["$","$La","/blog",{"slug":"/blog","label":"BLOG","refCount":17,"depth":0,"children":[["$","$La","/blog/blogging",{"slug":"/blog/blogging","label":"BLOGGING","refCount":4,"depth":1,"children":[["$","$La","/blog/blogging/test",{"slug":"/blog/blogging/test","label":"TEST","refCount":2,"depth":2,"children":"$undefined"}]]}],["$","$La","/blog/study",{"slug":"/blog/study","label":"STUDY","refCount":7,"depth":1,"children":[["$","$La","/blog/study/wpf",{"slug":"/blog/study/wpf","label":"WPF","refCount":1,"depth":2,"children":"$undefined"}]]}],["$","$La","/blog/web",{"slug":"/blog/web","label":"WEB","refCount":2,"depth":1,"children":"$undefined"}]]}]]}]]}]}]}],["$","section",null,{"children":["$","$Lb",null,{"children":["$","$Lc",null,{}]}]}],["$","main",null,{"className":"tw-mt-nav-height tw-pt-1 tw-pb-52","children":["$","$Ld",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","template":["$","$Le",null,{}],"templateStyles":"$undefined","notFound":["$","main",null,{"children":["$","div",null,{"children":"404"}]}],"notFoundStyles":[],"childProp":{"current":["$","$Ld",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children"],"loading":"$undefined","loadingStyles":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","template":["$","$Le",null,{}],"templateStyles":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","childProp":{"current":[null,["$","$Ld",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children",["categories","study/observable","c"],"children"],"loading":"$undefined","loadingStyles":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","template":["$","$Le",null,{}],"templateStyles":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","childProp":{"current":["$Lf",[["$","$L10",null,{"post":{"isMDX":false,"slug":"/blog/study/observable","content":"$11","raw":"$12","title":"Observable 에 관한 메모","description":"$undefined","date":"2023-09-26T00:00:00.000Z"}}],["$","article",null,{"children":[["$","meta",null,{"itemProp":"headline","content":"Observable 에 관한 메모"}],["$","meta",null,{"itemProp":"description","content":"$undefined"}],["$","meta",null,{"itemProp":"datePublished","content":"2023-09-26T00:00:00.000Z"}],[["$","h1",null,{"className":"text-3xl font-bold","children":"Observable 에 관한 메모"}],["$","div",null,{"dangerouslySetInnerHTML":{"__html":"$13"}}]]]}]],null],"segment":"__PAGE__?{\"categories\":[\"study\",\"observable\"]}"},"styles":[]}],null],"segment":["categories","study/observable","c"]},"styles":[]}],"segment":"blog"},"styles":[]}]}],["$","footer",null,{"className":"tw-absolute tw-w-full -tw-bottom-20","children":["$","div",null,{"className":"tw-backdrop-brightness-95  tw-text-xs","children":["$","div",null,{"className":"tw-flex tw-p-4 tw-mr-4 tw-ml-4   dark:tw-border-t-color-border dark:tw-border-t-2","children":[["$","div",null,{"className":"tw-flex-col","children":[["$","div",null,{"className":"tw-mb-3","children":["$","a",null,{"className":"tw-flex tw-self-center","href":"/study-loghttps://github.com/Mona04","rel":"$undefined","target":"_self","onClick":"$undefined","children":[["$","svg",null,{"stroke":"currentColor","fill":"currentColor","strokeWidth":"0","viewBox":"0 0 1024 1024","className":"tw-self-center","children":["$undefined",[["$","path","0",{"d":"M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0 1 38.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z","children":"$undefined"}]]],"style":{"color":"$undefined"},"height":"1em","width":"1em","xmlns":"http://www.w3.org/2000/svg"}],["$","div",null,{"className":"tw-ml-1 tw-font-bold","children":"GITHUB"}]]}]}],["$","div",null,{"className":"","children":["© 2023 Mona04. Powered by ",["$","a",null,{"className":"$undefined","href":"/study-loghttps://nextjs.org/","rel":"noopener noreferrer","target":"_blank","onClick":"$undefined","children":"NextJS"}]," & ",["$","a",null,{"className":"$undefined","href":"/study-loghttps://contentlayer.dev/","rel":"noopener noreferrer","target":"_blank","onClick":"$undefined","children":"ContentLayer"}],"."]}]]}],["$","div",null,{"className":"tw-flex tw-self-end tw-ml-auto   phone:tw-absolute phone:tw-collapse","children":[["$","div",null,{"className":"","children":"Last Build:"}],["$","div",null,{"className":"tw-ml-1","children":"2:5"}],["$","div",null,{"className":"tw-ml-1","children":"2023/11/3"}]]}]]}]}]}]]}],["$","link",null,{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n  (function() {\n    function copyButtonScript() {\n    if (!document) return;\n    const titlebars = document.querySelectorAll(\"[data-rehype-pretty-code-title]\");\n    for (const titlebar of titlebars){\n        var buttons = titlebar.getElementsByTagName(\"button\");\n        for (const button of buttons){\n            button.addEventListener(\"click\", function() {\n                if (navigator.clipboard) {\n                    var code = titlebar.getAttribute(\"data-code\");\n                    if (code != null) {\n                        navigator.clipboard.writeText(code);\n                        button.setAttribute(\"checked\", \"true\");\n                        button.disabled = true;\n                    }\n                    setTimeout(()=>{\n                        button.removeAttribute(\"checked\");\n                        button.disabled = false;\n                    }, 2000);\n                }\n            });\n        }\n    }\n}\n    copyButtonScript();\n  })()\n"},"defer":true}]]}]}],null]
-f:null
+<p><a href="https://learn.microsoft.com/en-us/previous-versions/dotnet/reactive-extensions/hh211887(v=vs.103)">msdn IConnectableObservable&#x3C;T> Interface</a></p>2:[null,["$","html",null,{"lang":"en","children":["$","body",null,{"className":"tw-relative tw-min-h-screen tw-bg-color-page-background","children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(function() {\n    function setInitialColorMode() {\n    /**\r\n   * 만약 localStorage 가 유효하지 않다면 => media 설정으로 처리\r\n   * 만약 localStorage 가 유효하다면 => local Storage 로 처리\r\n   */ if (localStorage.getItem(\"theme\") == null && window.matchMedia(\"(prefers-color-scheme: dark)\").matches || localStorage.getItem(\"theme\") == \"dark\") {\n        document.documentElement.setAttribute(\"data-theme\", \"dark\");\n    }\n}\n    setInitialColorMode();\n  })()\n"}}],["$","link",null,{"rel":"stylesheet","href":"//fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+KR&display=swap"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css","integrity":"sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC","crossOrigin":"anonymous"}],["$","$L5",null,{"children":[["$","nav",null,{"className":"masthead_masthead__zVIwm","children":[["$","$L6",null,{}],["$","a",null,{"className":"tw-grow tw-self-center tw-ml-1   tw-font-sans tw-font-bold tw-text-color-primary tw-text-xl   hover:tw-text-color-text ","href":"/study-log/","rel":"$undefined","target":"_self","onClick":"$undefined","children":"LOG | STUDY"}],["$","$L7",null,{"className":"tw-flex tw-self-center tw-text-xl"}],["$","$L8",null,{"className":"tw-flex tw-self-center tw-ml-2 tw-mr-4 tw-text-xl "}]]}],["$","$L9",null,{"className":"tw-z-10"}],["$","aside",null,{"children":["$","$La",null,{"children":["$","div",null,{"className":"sidebar_sidebar__Wqt36","children":[["$","$Lb",null,{"slug":"/","label":"HOME","refCount":-1,"depth":0}],["$","div",null,{"children":[["$","$Lb","/blog",{"slug":"/blog","label":"BLOG","refCount":1017,"depth":0,"children":[["$","$Lb","/blog/blogging",{"slug":"/blog/blogging","label":"BLOGGING","refCount":1004,"depth":1,"children":[["$","$Lb","/blog/blogging/test",{"slug":"/blog/blogging/test","label":"TEST","refCount":2,"depth":2,"children":"$undefined"}],["$","$Lb","/blog/blogging/samples",{"slug":"/blog/blogging/samples","label":"SAMPLES","refCount":1000,"depth":2,"children":"$undefined"}]]}],["$","$Lb","/blog/study",{"slug":"/blog/study","label":"STUDY","refCount":7,"depth":1,"children":[["$","$Lb","/blog/study/wpf",{"slug":"/blog/study/wpf","label":"WPF","refCount":1,"depth":2,"children":"$undefined"}]]}],["$","$Lb","/blog/web",{"slug":"/blog/web","label":"WEB","refCount":2,"depth":1,"children":"$undefined"}]]}]]}]]}]}]}],["$","section",null,{"children":["$","$Lc",null,{"children":["$","$Ld",null,{}]}]}],["$","main",null,{"className":"tw-mt-nav-height tw-pt-1 tw-pb-52","children":["$","$Le",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","template":["$","$Lf",null,{}],"templateStyles":"$undefined","notFound":["$","main",null,{"children":["$","div",null,{"children":"404"}]}],"notFoundStyles":[],"childProp":{"current":["$","$Le",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children"],"loading":"$undefined","loadingStyles":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","template":["$","$Lf",null,{}],"templateStyles":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","childProp":{"current":[null,["$","$Le",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children",["categories","study/observable","c"],"children"],"loading":"$undefined","loadingStyles":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","template":["$","$Lf",null,{}],"templateStyles":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","childProp":{"current":["$L10",[["$","$L11",null,{"mdSrc":"$12"}],["$","article",null,{"children":[["$","meta",null,{"itemProp":"headline","content":"Observable 에 관한 메모"}],["$","meta",null,{"itemProp":"description","content":"$undefined"}],["$","meta",null,{"itemProp":"datePublished","content":"2023-09-26T00:00:00.000Z"}],[["$","h1",null,{"className":"text-3xl font-bold","children":"Observable 에 관한 메모"}],["$","div",null,{"dangerouslySetInnerHTML":{"__html":"$13"}}]]]}]],null],"segment":"__PAGE__?{\"categories\":[\"study\",\"observable\"]}"},"styles":[["$","link","0",{"rel":"stylesheet","href":"/study-log/_next/static/css/204fa3972c658956.css","precedence":"next"}]]}],null],"segment":["categories","study/observable","c"]},"styles":[]}],"segment":"blog"},"styles":[]}]}],["$","footer",null,{"className":"tw-absolute tw-w-full -tw-bottom-20","children":["$","div",null,{"className":"tw-backdrop-brightness-95  tw-text-xs","children":["$","div",null,{"className":"tw-flex tw-p-4 tw-mr-4 tw-ml-4   dark:tw-border-t-color-border dark:tw-border-t-2","children":[["$","div",null,{"className":"tw-flex-col","children":[["$","div",null,{"className":"tw-mb-3","children":["$","a",null,{"className":"tw-flex tw-self-center","href":"/study-loghttps://github.com/Mona04","rel":"$undefined","target":"_self","onClick":"$undefined","children":[["$","svg",null,{"stroke":"currentColor","fill":"currentColor","strokeWidth":"0","viewBox":"0 0 1024 1024","className":"tw-self-center","children":["$undefined",[["$","path","0",{"d":"M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0 1 38.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z","children":"$undefined"}]]],"style":{"color":"$undefined"},"height":"1em","width":"1em","xmlns":"http://www.w3.org/2000/svg"}],["$","div",null,{"className":"tw-ml-1 tw-font-bold","children":"GITHUB"}]]}]}],["$","div",null,{"className":"","children":["© 2023 Mona04. Powered by ",["$","a",null,{"className":"$undefined","href":"/study-loghttps://nextjs.org/","rel":"noopener noreferrer","target":"_blank","onClick":"$undefined","children":"NextJS"}]," & ",["$","a",null,{"className":"$undefined","href":"/study-loghttps://contentlayer.dev/","rel":"noopener noreferrer","target":"_blank","onClick":"$undefined","children":"ContentLayer"}],"."]}]]}],["$","div",null,{"className":"tw-flex tw-self-end tw-ml-auto   phone:tw-absolute phone:tw-collapse","children":[["$","div",null,{"className":"","children":"Last Build:"}],["$","div",null,{"className":"tw-ml-1","children":"10:10"}],["$","div",null,{"className":"tw-ml-1","children":"2023/11/7"}]]}]]}]}]}]]}],["$","link",null,{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"}],["$","link",null,{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n  (function() {\n    function copyButtonScript() {\n    if (!document) return;\n    const titlebars = document.querySelectorAll(\"[data-rehype-pretty-code-title]\");\n    for (const titlebar of titlebars){\n        var buttons = titlebar.getElementsByTagName(\"button\");\n        for (const button of buttons){\n            button.addEventListener(\"click\", function() {\n                if (navigator.clipboard) {\n                    var code = titlebar.getAttribute(\"data-code\");\n                    if (code != null) {\n                        navigator.clipboard.writeText(code);\n                        button.setAttribute(\"checked\", \"true\");\n                        button.disabled = true;\n                    }\n                    setTimeout(()=>{\n                        button.removeAttribute(\"checked\");\n                        button.disabled = false;\n                    }, 2000);\n                }\n            });\n        }\n    }\n}\n    copyButtonScript();\n  })()\n"},"defer":true}]]}]}],null]
+10:null
