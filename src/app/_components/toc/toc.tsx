@@ -24,36 +24,51 @@ interface MakeTOCVariable{
 
 const useIntersectionObserver = (
   setActiveId: React.Dispatch<React.SetStateAction<string>>,
-  headers: string[]
+  ids: string[]
 ) => {
 
-  const headerID2Idx : { [id:string]: number | undefined } = {};
-  headers.forEach((header, idx) => { headerID2Idx[header] = idx;})
+  const ID2Idx : { [id:string]: number | undefined } = {};
+  ids.forEach((id, idx) => { ID2Idx[id] = idx;})
 
+  let prevY = 0;
+  let prevIdx = 0;
   useEffect(() => {
     // callback은 intersectionObserver로 관찰할 대상 비교 로직
     const callback: IntersectionObserverCallback = (headings) => {
-      console.log(headings.length)
+     
       // 첨에 등록한 전체 헤딩이 모두 들어오고 
       // 그 다음부터는 화면에 새로 오는애들이 옴.
       headings.map(heading => {
         const id = heading.target.id;
-        console.log(id)
-        const idx = headerID2Idx[id];
+        const idx = ID2Idx[id];
         if(idx == undefined) return;
+      
         if(heading.isIntersecting)
         {
+
           setActiveId(id);
+          prevY = heading.boundingClientRect.y;
+          prevIdx = idx;
+          console.log(`${id} is cur`)
         }
-        else{
-          //setActiveId(headers[])
+        else
+        {
+          if(prevIdx == idx && prevY < heading.boundingClientRect.y)
+          {
+            setActiveId(ids[prevIdx-1]);
+            prevIdx = idx-1;
+            console.log(`${ids[idx]} go down`)
+          }
+          else{
+            console.log(`${ids[idx]} go up`)
+          }
         }
       })
     };
 
     const observer = new IntersectionObserver(callback, {
       // 
-      rootMargin: '-70px 0px -50% 0px',
+      rootMargin: '-20% 0px -75% 0px',
       threshold: [0, 1.0]
     });
 
@@ -125,7 +140,7 @@ export default function TOCView({className, mdSrc}:Props) {
   });
   var toc = TOCList(headers, activeID);
 
-  useIntersectionObserver(setActiveID, headers.map(h=>getText(h)));
+  useIntersectionObserver(setActiveID, headers.map(h=>getText(h).replaceAll(' ', '-')));
   
   return (
 	  <section className={style.toc}>
