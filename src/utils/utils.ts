@@ -48,3 +48,16 @@ export async function copyToClipboard(text:string) {
     document.body.removeChild(textarea);
   }
 }
+
+export function throttle(callback: () => void, delayTime: number) {
+  let timerId : any = null;
+
+  return () => {
+    if (timerId) return;
+
+    timerId = setTimeout(() => {
+      callback();
+      timerId = null;
+    }, delayTime);
+  };
+};
