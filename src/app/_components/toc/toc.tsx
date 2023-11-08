@@ -46,7 +46,8 @@ const useIntersection = (
       for(let i = 0; i < loopLength; i++)
       {
         const cur = refs.current![i];
-        if(cur.getBoundingClientRect().top > 200)
+        // todo: header 바로 위인지 체크해야함.
+        if(cur.getBoundingClientRect().top > 100)
         {
           const idx = ID2Idx[cur.id];
           if(idx != null){
