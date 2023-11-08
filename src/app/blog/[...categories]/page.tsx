@@ -11,13 +11,27 @@ type Params = {
  * @returns  [ {categories: []:string }] 형태어야 함
  */
 export const generateStaticParams = () => {
+
   return Object.keys(postSlugs)
     .filter(slug=> slug.startsWith('/blog/'))
-    .map(slug=> ({ categories: encodeURI(slug).split('/').slice(2)}))
+    .map(slug=> {
+
+      /*
+       * build 시에 자동으로 encoding 을 해주는 문제
+       * https://github.com/vercel/next.js/issues/11016
+      */
+      if( process.env.NODE_ENV == 'development')
+      {
+        return { categories: encodeURI(slug).split('/').slice(2)};
+      }
+      else{
+        return { categories: (slug).split('/').slice(2)};
+      }    
+    })
 }
 
 export const generateMetadata = ({ params }: Params) => {
-  const path = ['/blog', ...params.categories].join('/')
+  const path = decodeURI(['/blog', ...params.categories].join('/'))
   const post = getPostByPath(path);
 
   if (!post) {
@@ -29,14 +43,17 @@ export const generateMetadata = ({ params }: Params) => {
 }
 
 export default function Page({ params }: Params) {
+  
+  let path =  decodeURI(['/blog', ...params.categories].join('/'));
 
-  const path = decodeURI(['/blog', ...params.categories].join('/'));
+
   if(!(path in postSlugs))
   {
     throw new Error(`Post not found for slug: ${params.categories}`)
   }
 
   const slug = postSlugs[path];
+
   if(slug.bPost == false)
   {
     return (
@@ -55,7 +72,7 @@ export default function Page({ params }: Params) {
         <PostView post={post}/>
       </>
     ) 
-  }    
+  }
 }
 
 export const dynamicParams = false // true | false,

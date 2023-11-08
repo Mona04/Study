@@ -12,7 +12,8 @@ export default (
     width?: number | undefined, height?: number | undefined,
     fill?: boolean | undefined
   })=>{
-  const cur_path : string = process.env.NODE_ENV == 'production' ? 
+    
+  const cur_path : string = process.env.NODE_ENV == 'development' ? 
     `${src}` :
     `${process.env.NEXT_PUBLIC_BASE_PATH}${src}`;
     

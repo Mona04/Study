@@ -162,7 +162,7 @@ int main() {
 
 ## Image
 
-![이미지 샘플 입니다.](/test/image.jpg)
+![이미지 샘플 입니다.](./test/image.jpg)
 
 ## Header Test
 

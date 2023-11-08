@@ -7,6 +7,7 @@ import type {Heading, Text} from 'mdast'
 import rm_parse from "remark-parse"
 import {visit} from "unist-util-visit"
 
+import {throttle} from "utils/utils"
 import style from "./toc.module.scss"
 
 const MAX_DEPTH = 4;
@@ -22,8 +23,58 @@ interface MakeTOCVariable{
   activeID: string,
 }
 
-// https://velog.io/@yrnana/OffsetTop%EC%9D%84-%EC%9D%BD%EC%9C%BC%EB%A9%B4-reflow%EA%B0%80-%EB%B0%9C%EC%83%9D%ED%95%9C%EB%8B%A4
+const useIntersection = ( 
+  setActiveId: React.Dispatch<React.SetStateAction<string>>,
+  ids: string[]
+  ) => {
 
+  const refs = useRef<Element[]>([]);
+
+  useEffect(()=> {
+
+    const ID2Idx : { [id:string]: number | undefined } = {};
+    ids.forEach((id, idx) => { ID2Idx[id] = idx;})
+
+    document.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(e=>{
+      if(e.id in ID2Idx) refs.current!.push(e);
+    })
+
+    const callback = ()=>{
+
+      const loopLength = refs.current!.length;
+
+      for(let i = 0; i < loopLength; i++)
+      {
+        const cur = refs.current![i];
+        if(cur.getBoundingClientRect().top > 200)
+        {
+          const idx = ID2Idx[cur.id];
+          if(idx != null){
+            setActiveId(ids[idx-1] ?? "");
+          }
+          break;
+        }
+        if(i == loopLength-1)
+        {
+          setActiveId(ids[ids.length-1]);
+        }
+      }
+    };
+
+    callback();
+    const throttledCallback = throttle(callback, 100);
+    
+    window.addEventListener('scroll', throttledCallback);
+
+    return () => {
+      window.removeEventListener('scroll', throttledCallback)
+    }
+  }, [])
+}
+
+/*
+ * https://velog.io/@yrnana/OffsetTop%EC%9D%84-%EC%9D%BD%EC%9C%BC%EB%A9%B4-reflow%EA%B0%80-%EB%B0%9C%EC%83%9D%ED%95%9C%EB%8B%A4
+ */
 const useIntersectionObserver = (
   setActiveId: React.Dispatch<React.SetStateAction<string>>,
   ids: string[]
@@ -129,7 +180,7 @@ function TOCList(headers: Heading[], activeID: string)
 }
 
 export default function TOCView({className, mdSrc}:Props) {
-  
+
   const [activeID, setActiveID] = useState('');
 	
   const headers : Heading[] = [];
@@ -142,7 +193,8 @@ export default function TOCView({className, mdSrc}:Props) {
   });
   var toc = TOCList(headers, activeID);
 
-  useIntersectionObserver(setActiveID, headers.map(h=>getText(h).replaceAll(' ', '-')));
+  //useIntersectionObserver(setActiveID, headers.map(h=>getText(h).replaceAll(' ', '-')));
+  useIntersection(setActiveID, headers.map(h=>getText(h).replaceAll(' ', '-')));
   
   return (
 	  <section className={style.toc}>

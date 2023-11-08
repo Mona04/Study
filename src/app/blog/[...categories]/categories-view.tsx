@@ -9,7 +9,7 @@ interface Props {
 function CategoryView({title, slug}:Props){
   return (
     <div>
-      <Link href={slug}>
+      <Link href={encodeURI(slug)}>
         {title}
       </Link>
     </div>
