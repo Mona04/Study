@@ -22,6 +22,8 @@ interface MakeTOCVariable{
   activeID: string,
 }
 
+// https://velog.io/@yrnana/OffsetTop%EC%9D%84-%EC%9D%BD%EC%9C%BC%EB%A9%B4-reflow%EA%B0%80-%EB%B0%9C%EC%83%9D%ED%95%9C%EB%8B%A4
+
 const useIntersectionObserver = (
   setActiveId: React.Dispatch<React.SetStateAction<string>>,
   ids: string[]
