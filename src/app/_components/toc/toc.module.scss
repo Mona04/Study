@@ -13,19 +13,17 @@
   font-size: var(--fontSize-sm);
 
   
-  @include breakpoint(max-width $medium){
-    margin: 1rem 1rem;
-  }
-  @include breakpoint(min-width $medium){
-    margin: 1rem 6rem;
+  @include breakpoint(max-width $medium-wide){
+
   }
   @include breakpoint(min-width $medium-wide){
     float: right;
     position: sticky;
     top: calc(var(--nav-height) + 1em);
-    margin: 0em 1rem;
     max-height: calc(100vh - var(--nav-height) - 2em);
-    width: 12rem;      
+    // margin + width 만큼 오른쪽으로 이동
+    margin: 0em -195px 0 0;
+    width: 180px;
   }
 
   header {
@@ -114,6 +112,7 @@
 }
 
 .selected{
+  transition: background-color 200ms linear;
   background-color:  #CCEFF0;
   a {
     color: #212121;

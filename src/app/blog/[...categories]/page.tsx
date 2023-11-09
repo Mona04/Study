@@ -1,6 +1,5 @@
 import PostView from './post-view'
 import CategoriesView from './categories-view'
-import TOCView from '@/components/toc/toc'
 import { postSlugs, getPostByPath } from 'utils/content-helper'
 
 type Params = {
@@ -68,7 +67,6 @@ export default function Page({ params }: Params) {
 
     return (
       <>
-        <TOCView mdSrc={post.raw}/>
         <PostView post={post}/>
       </>
     ) 

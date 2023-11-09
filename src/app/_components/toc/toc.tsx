@@ -13,7 +13,7 @@ import style from "./toc.module.scss"
 const MAX_DEPTH = 4;
 
 interface Props{
-  className? : string | undefined,
+  //className? : string | undefined,
   mdSrc : string,
 }
 
@@ -180,7 +180,7 @@ function TOCList(headers: Heading[], activeID: string)
   )
 }
 
-export default function TOCView({className, mdSrc}:Props) {
+export default function TOCView({mdSrc}:Props) {
 
   const [activeID, setActiveID] = useState('');
 	

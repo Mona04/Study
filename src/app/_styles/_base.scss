@@ -23,15 +23,17 @@ body {
   margin: 0;
 }
 
+main {
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
 article {
-  @include breakpoint(max-width $medium){
-    margin: 1rem 1rem;
-  }
-  @include breakpoint(min-width $medium){
-    margin: 1rem 6rem;
-  }
+  padding: 1rem;
+
   @include breakpoint(min-width $medium-wide){
-    margin: 1rem 16rem;
+    width: calc(100% - 190px);
+    padding-left:  190px;
   }
 }
 
