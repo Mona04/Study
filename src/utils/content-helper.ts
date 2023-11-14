@@ -24,6 +24,7 @@ export type BlogPost = {
   title : string,
   date: string,
   description?: string,
+  thumbnail?: string
 }
 
 export type PostDirectory = {
@@ -168,9 +169,12 @@ const _mdPostToBlogPost = (post:BlogMDPost):BlogPost => (
     slug: '/'+post._raw.flattenedPath,
     content: post.body.html,
     raw: post.body.raw,
-    title: post.title,
-    description: post.description,
-    date: post.date,
+
+    // 캐리지 리턴 같은 게 남아 있을 수도 있어서 trim 을 해야함.
+    title: post.title.trim(),
+    date: post.date.trim(),
+    description: post.description?.trim(),
+    thumbnail: post.thumbnail?.trim(),
   }
 )
 
@@ -180,8 +184,9 @@ const _mdxPostToBlogPost = (post:BlogMDXPost):BlogPost => (
     slug: '/'+post._raw.flattenedPath,
     content: post.body.code,
     raw: post.body.raw,
-    title: post.title,
-    description: post.description,
-    date: post.date,
+    title: post.title.trim(),
+    date: post.date.trim(),
+    description: post.description?.trim(),
+    thumbnail: post.thumbnail?.trim(),
   }
 )

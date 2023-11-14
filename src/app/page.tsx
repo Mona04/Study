@@ -3,7 +3,6 @@ import styles from '@/styles/Home.module.css';
 
 export const metadata: Metadata = {
   title: 'My Page Title',
-  icons: '/favicon.ico'
 }
 
 export default function Page() {

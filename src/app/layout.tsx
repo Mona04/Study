@@ -4,6 +4,7 @@ import { Metadata } from 'next'
 import { ContextProvider } from "@/context/context"
 import { SetInitialColorMode } from "utils/darkmode-helper"
 import { CopyButtonScript } from "utils/markdown-helper"
+import { getBasePath } from "utils/utils"
 
 import MastHead from "@/components/nav/masthead"
 import SideBar from "@/components/sidebar/sidebar"
@@ -16,6 +17,7 @@ import '@/styles/global.scss'
 export const metadata: Metadata = {
   title: '...',
   description: '...',
+  icons: `${getBasePath()}/favicon.ico`,
   other: {
     
   }

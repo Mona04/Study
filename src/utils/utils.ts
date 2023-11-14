@@ -15,7 +15,15 @@ export function sleep(ms: number){
   return new Promise((r) => setTimeout(r, ms));
 }
 
-
+export function getBasePath() : string {
+  if( process.env.NODE_ENV === 'development') // 실제 client 에서는 
+  {
+    return "";
+  }
+  else {
+    return process.env.NEXT_PUBLIC_BASE_PATH || "";
+  }
+}
 
 export async function copyToClipboard(text:string) {  
   // https://stackoverflow.com/questions/400212/how-do-i-copy-to-the-clipboard-in-javascript

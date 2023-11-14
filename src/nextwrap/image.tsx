@@ -1,5 +1,6 @@
 import Image from 'next/image'
-
+import ExportedImage from 'next-image-export-optimizer'
+import { getBasePath } from "utils/utils"
 
 export default (
   {
@@ -8,18 +9,25 @@ export default (
   }: 
   {
     children?: React.ReactNode | null, 
-    src: string, alt: string, 
-    width?: number | undefined, height?: number | undefined,
+    src: string | undefined, 
+    alt: string, 
+    width?: number | undefined, 
+    height?: number | undefined,
     fill?: boolean | undefined
   })=>{
+
+  const cur_path : string = `${getBasePath()}${src}`;
     
-  const cur_path : string = process.env.NODE_ENV == 'development' ? 
-    `${src}` :
-    `${process.env.NEXT_PUBLIC_BASE_PATH}${src}`;
-    
+  //return (
+  //  <img src={cur_path} alt={alt} width={width} height={height}>
+  //    {children}
+  //  </img>
+  //)
+  // s
   return (
-    <Image src={cur_path} alt={alt} width={width} height={height} fill={fill}>
+    <ExportedImage src={cur_path} alt={alt} 
+                   width={width} height={height} fill={fill}>
       {children}
-    </Image>
+    </ExportedImage>
   )    
 }

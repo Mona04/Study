@@ -37,6 +37,15 @@ article {
   }
 }
 
+.content {
+  padding: 1rem;
+
+  @include breakpoint(min-width $medium-wide){
+    width: calc(100% - 190px);
+    padding-left:  190px;
+  }
+}
+
 hr {
   background: var(--color-border);
   height: 1px;

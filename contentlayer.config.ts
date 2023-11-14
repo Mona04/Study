@@ -53,7 +53,8 @@ function blogFields() : FieldDefs {
     date:         { required: true,  type: 'date',     },
     description:  { required: false, type: 'string',   },
     tags:         { required: false, type: 'list', of: {type: 'string'} },
-    post_type:    { required: false, type: 'string'}
+    thumbnail:    { required: false, type: 'string'},
+    post_type:    { required: false, type: 'string'},
   }
 }
 

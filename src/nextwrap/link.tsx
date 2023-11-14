@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { MouseEventHandler } from "react";
+import { getBasePath } from "utils/utils"
 
 interface Props {
   children: React.ReactNode,
@@ -32,7 +33,7 @@ export default ({children, href, target = '_self', rel, className, onClick}:Prop
   else{
     return (
       <a className={className} 
-         href={`${process.env.NEXT_PUBLIC_BASE_PATH}${href}`} 
+         href={`${getBasePath()}${href}`} 
          rel={rel} 
          target={target}
          onClick={onClick}>
