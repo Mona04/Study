@@ -1,5 +1,5 @@
 import CategoryItem from "./sidebar-category-item"
-import {postDirectories, PostDirectory} from 'utils/content-helper'
+import {postDirectoryRoot, PostDirectory} from 'utils/content-helper'
 
 
 function MakeCategoryView({category, slug = '', depth = 0}: {category : PostDirectory, slug?: string , depth? : number})
@@ -18,11 +18,9 @@ function MakeCategoryView({category, slug = '', depth = 0}: {category : PostDire
 }
 
 export default () => {  
-  const categories = postDirectories;
-
   return (
     <div>
-      { Object.values(categories).map(sub => <MakeCategoryView key={sub.category} category={sub}/>) }
+      { Object.values(postDirectoryRoot.childs).map(sub => <MakeCategoryView key={sub.category} category={sub}/>) }
     </div>   
   );
 };

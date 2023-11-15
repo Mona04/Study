@@ -19,6 +19,8 @@ type PostSlugs = {
 
 export type BlogPost = {
   isMDX : boolean,
+  isDirectory: boolean,
+
   slug  : string,       // start from base path. root/aaa/bbb... => /aaa/bbb...
   content : string,     // html or code
   raw: string,
@@ -30,50 +32,93 @@ export type BlogPost = {
 }
 
 export type PostDirectory = {
-  category: string,
-  count: number,
-  childs: PostDirectories
+  category : string,
+  count    : number,
+  childs   : PostDirectories,
+  post?    : BlogPost,
 }
 
 
+const _mdPostToBlogPost = (post:BlogMDPost):BlogPost => (
+  {
+    isMDX : false,
+    isDirectory : post.isDirectory == true,
+
+    slug: '/' + post._raw.flattenedPath,
+    content: post.body.html,
+    raw: post.body.raw,
+
+    // 캐리지 리턴 같은 게 남아 있을 수도 있어서 trim 을 해야함.
+    title: post.title.trim(),
+    date: post.date?.trim() ?? "----",
+    description: post.description?.trim(),
+    thumbnail: post.thumbnail?.trim(),
+  }
+)
+
+const _mdxPostToBlogPost = (post:BlogMDXPost):BlogPost => (
+  {
+    isMDX: true,
+    isDirectory: post.isDirectory == true,
+
+    slug: '/' + post._raw.flattenedPath,
+    content: post.body.code,
+    raw: post.body.raw,
+ 
+    // 캐리지 리턴 같은 게 남아 있을 수도 있어서 trim 을 해야함.   
+    title: post.title.trim(),
+    date: post.date?.trim() ?? "----",
+    description: post.description?.trim(),
+    thumbnail: post.thumbnail?.trim(),
+  }
+)
 
 /**
  * Tree 구조로 현재 포스트 글을 표현
  */
-const _postDirectories = () => {
+const _postDirectoryRoot = (() => {
 
   const st = performance.now();  
   console.log("construct categories...")
   
-  const categories : PostDirectories = {};
+  const directory : PostDirectory = { 
+    category: "ROOT",
+    count: 0,
+    childs: {}
+  };
 
-  const callback = (post:any) => {
+  const callback = (post:any, isMDX : boolean) => {
     if(post._raw == undefined) return;
 
-    const slugs = post._raw.flattenedPath.split('/');
-    let cur_category = categories;
-    for(var slug of slugs)
+    const categories = post._raw.flattenedPath.split('/');
+    let cur_directory = directory;
+
+    for(let i = 0; i < categories.length; i++)
     {
-      if(cur_category[slug] === undefined) {
-        cur_category[slug] = {
+      cur_directory.count++;
+      const slug = categories[i];
+      const sub_directories = cur_directory.childs;
+      if(sub_directories[slug] === undefined) {
+        sub_directories[slug] = {
           category: slug,
           count: 0,
           childs: {}
         };
       }
-      cur_category[slug].count++;
-      cur_category = cur_category[slug].childs;
+      cur_directory = sub_directories[slug];
     }
+
+    cur_directory.post =  isMDX ? _mdxPostToBlogPost(post) : _mdPostToBlogPost(post);
   };
  
-  allBlogMDPosts.map(callback);
-  allBlogMDXPosts.map(callback);
+  allBlogMDPosts.map(p=>callback(p, false));
+  allBlogMDXPosts.map(p=>callback(p, true));
 
   var ed = performance.now();
   console.log(`post category takes ${(ed-st)/1000}`);
 
-  return categories;
-};
+  return directory;
+})();
 
 
 
@@ -91,16 +136,16 @@ const _postSlugs = (() => {
   const callback = (post:any) => {
     if(post._raw == undefined) return;
 
-    const paths = post._raw.flattenedPath.split('/');
-    let category: string = "";
+    const categories = post._raw.flattenedPath.split('/');
+    let cur_category: string = "";
 
-    for(let i = 0; i < paths.length; i++)
+    for(let i = 0; i < categories.length; i++)
     {
-      const slug = paths[i];
-      category += `/${slug}`
-      if(slugs[category] === undefined) {
-        slugs[category] = {
-          bPost : i == paths.length-1
+      const category = categories[i];
+      cur_category += `/${category}`
+      if(slugs[cur_category] === undefined) {
+        slugs[cur_category] = {
+          bPost : i == categories.length-1
         };
       }
     }
@@ -117,7 +162,7 @@ const _postSlugs = (() => {
 
 
 
-export const postDirectories = _postDirectories();
+export const postDirectoryRoot = _postDirectoryRoot;
 
 export const postSlugs = _postSlugs;
 
@@ -126,70 +171,50 @@ export const postSlugs = _postSlugs;
 
 export const getPostsByPath = (path: string) => {
   
-  console.log("GetPostsByPath")
   // flattenedPath don't starts with '/'
   if(path.startsWith('/')) path = path.slice(1);
 
   const res : BlogPost[] = [];
-  var re = new RegExp(`^${path}`, 'i');
 
-  allBlogMDPosts
-    .filter(post => post._raw.flattenedPath.match(re))
-    .map(_mdPostToBlogPost)
-    .map(post=>res.push(post));
+  const categories = path.split('/');
+  let cur_directory = _postDirectoryRoot;
 
-  allBlogMDXPosts
-    .filter(post => post._raw.flattenedPath.match(re))
-    .map(_mdxPostToBlogPost)
-    .map(post=>res.push(post));    
+  for(let i = 0; i < categories.length; i++)
+  {
+    const slug = categories[i];
+    if(cur_directory.childs[slug] === undefined)
+      break;
+    cur_directory = cur_directory.childs[slug]; 
+  }   
+  const recursive = (dir:PostDirectory)=>{
+    if(dir.post != undefined) {
+      res.push(dir.post);
+    }
+    Object.values(dir.childs).map(d=>{
+      recursive(d);
+    })
+  };
+  
+  recursive(cur_directory);
 
   return res;
 }
 
 export const getPostByPath = (path: string) => {  
-  console.log("GetPostByPath")
-  // flattenedPath don't starts with '/'
-  if(path.startsWith('/')) path = path.slice(1);
   
+  if(path.startsWith('/')) path = path.slice(1);
+
+  const categories = path.split('/');
+  let cur_directory = _postDirectoryRoot;
+
+  for(let i = 0; i < categories.length; i++)
   {
-    let res = allBlogMDPosts
-    .find(post => post._raw.flattenedPath === path)  
-    
-    if(res != undefined) return _mdPostToBlogPost(res);
+    const slug = categories[i];
+    if(cur_directory.childs[slug] === undefined) {
+      return undefined;
+    }
+    cur_directory = cur_directory.childs[slug]; 
   }
 
-  {
-    let res = allBlogMDXPosts
-    .find(post => post._raw.flattenedPath === path)  
-    
-    if(res != undefined) return _mdxPostToBlogPost(res);
-  }
+  return cur_directory.post;
 }
-
-const _mdPostToBlogPost = (post:BlogMDPost):BlogPost => (
-  {
-    isMDX : false,
-    slug: '/'+post._raw.flattenedPath,
-    content: post.body.html,
-    raw: post.body.raw,
-
-    // 캐리지 리턴 같은 게 남아 있을 수도 있어서 trim 을 해야함.
-    title: post.title.trim(),
-    date: post.date?.trim() ?? "----",
-    description: post.description?.trim(),
-    thumbnail: post.thumbnail?.trim(),
-  }
-)
-
-const _mdxPostToBlogPost = (post:BlogMDXPost):BlogPost => (
-  {
-    isMDX : true,
-    slug: '/'+post._raw.flattenedPath,
-    content: post.body.code,
-    raw: post.body.raw,
-    title: post.title.trim(),
-    date: post.date?.trim() ?? "----",
-    description: post.description?.trim(),
-    thumbnail: post.thumbnail?.trim(),
-  }
-)

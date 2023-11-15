@@ -50,11 +50,11 @@ export default makeSource({
 function blogFields() : FieldDefs {
   return {
     title:        { required: true,  type: 'string',  },
-    date:         { required: false,  type: 'date',     },
+    date:         { required: false, type: 'date',     },
     description:  { required: false, type: 'string',   },
     tags:         { required: false, type: 'list', of: {type: 'string'} },
     thumbnail:    { required: false, type: 'string'},
-    post_type:    { required: false, type: 'string'},
+    isDirectory:  { required: false, type: 'boolean'},
   }
 }
 

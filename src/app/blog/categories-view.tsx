@@ -1,7 +1,8 @@
 import Link from "nextwrap/link"
 import Image from "nextwrap/image"
 import BreadCrumbs from "../_components/breadcrumbs/breadcrumbs"
-import { getPostsByPath } from 'utils/content-helper'
+import { getPostByPath, getPostsByPath } from 'utils/content-helper'
+import { MDPostView, MDXPostView } from './post-component'
 
 interface Props {
   title: string,
@@ -30,16 +31,45 @@ function CategoryView({slug, title, description, thumbnail}:Props){
   )
 }
 
+
+function CategoryDetail({path}:{path:string}){
+  const post = getPostByPath(path);
+  if(post == undefined || post.isDirectory == false) {
+    const categories = path.split('/');
+    const label = categories[categories.length-1].toUpperCase();
+    return (
+      <div className="tw-m-4">
+        {
+           <h2>{label}</h2>
+        }
+      </div>
+    )
+  }
+
+  return (
+    <div className="tw-m-4">
+      {
+        post.isMDX ? <MDXPostView content={post.content}/> : <MDPostView content={post.content}/>
+      }
+    </div>
+  )
+}
+
 export default function CategoriesView({path}: {path:string}) {
   return (
     <section className="content">
+      {
+        <CategoryDetail path={path}/>
+      }
       <div className="tw-m-4">
         <BreadCrumbs path={path}/>
-      </div>
+      </div>      
       <hr className=""/>
       <div className="tw-grid tw-grid-cols-4">
         { 
-          getPostsByPath(path).map(post=>{ 
+          getPostsByPath(path)
+          .filter(post=>!post.isDirectory)
+          .map(post=>{ 
             return <CategoryView key={post.slug} 
                         title={post.title} description={post.description} 
                         thumbnail={post.thumbnail}
