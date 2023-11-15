@@ -1,10 +1,10 @@
-import CategoryView from './[...categories]/categories-view'
+import CategoryView from './categories-view'
 
 export default function PostView() {
 
   return (
     <>
-      <CategoryView path=''/>
+      <CategoryView path='/blog'/>
     </>
   )
 }

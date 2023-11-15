@@ -12,7 +12,9 @@ type PostDirectories = {
  * root/_content/mycategory1/... => /mycategory1/...
  */
 type PostSlugs = {
-  [category: string] : { bPost : boolean};
+  [category: string] : {
+     bPost : boolean
+  };
 }
 
 export type BlogPost = {
@@ -88,7 +90,7 @@ const _postSlugs = (() => {
   
   const callback = (post:any) => {
     if(post._raw == undefined) return;
-    
+
     const paths = post._raw.flattenedPath.split('/');
     let category: string = "";
 
@@ -101,7 +103,7 @@ const _postSlugs = (() => {
           bPost : i == paths.length-1
         };
       }
-    }    
+    }
   };
   
   allBlogMDPosts.map(callback);  
@@ -124,6 +126,7 @@ export const postSlugs = _postSlugs;
 
 export const getPostsByPath = (path: string) => {
   
+  console.log("GetPostsByPath")
   // flattenedPath don't starts with '/'
   if(path.startsWith('/')) path = path.slice(1);
 
@@ -144,7 +147,7 @@ export const getPostsByPath = (path: string) => {
 }
 
 export const getPostByPath = (path: string) => {  
-  
+  console.log("GetPostByPath")
   // flattenedPath don't starts with '/'
   if(path.startsWith('/')) path = path.slice(1);
   
@@ -172,7 +175,7 @@ const _mdPostToBlogPost = (post:BlogMDPost):BlogPost => (
 
     // 캐리지 리턴 같은 게 남아 있을 수도 있어서 trim 을 해야함.
     title: post.title.trim(),
-    date: post.date.trim(),
+    date: post.date?.trim() ?? "----",
     description: post.description?.trim(),
     thumbnail: post.thumbnail?.trim(),
   }
@@ -185,7 +188,7 @@ const _mdxPostToBlogPost = (post:BlogMDXPost):BlogPost => (
     content: post.body.code,
     raw: post.body.raw,
     title: post.title.trim(),
-    date: post.date.trim(),
+    date: post.date?.trim() ?? "----",
     description: post.description?.trim(),
     thumbnail: post.thumbnail?.trim(),
   }

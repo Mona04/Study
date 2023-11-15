@@ -5,6 +5,7 @@ import { getBasePath } from "utils/utils"
 
 import Link from 'nextwrap/link'
 import TOCView from '@/components/toc/toc'
+import BreadCrumbs from "../_components/breadcrumbs/breadcrumbs"
 
 const Components : MDXComponents = {
   a: ({ href, children }) => <Link href={href}>{children}</Link>,
@@ -51,10 +52,13 @@ export default function PostView({post}: {post:BlogPost})
       <meta itemProp='description' content={post.description}/>
       <meta itemProp='datePublished' content={post.date}/>      
       
+      <h1 className="tw-text-4xl tw-font-bol tw-mt-1">{post.title}</h1>
+      <BreadCrumbs className='tw-mb-4' path={post.slug}/>
       <TOCView mdSrc={post.raw}/>
+
+      <hr/>
       
-      <h1 className="tw-text-4xl tw-font-bold">{post.title}</h1>
-      <div className=''>
+      <div className='tw-mt-10'>
       {
         post.isMDX ? <MDXPostView content={content}/> : <MDPostView content={content}/>
       }

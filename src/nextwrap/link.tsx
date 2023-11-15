@@ -8,10 +8,11 @@ interface Props {
   target?: string | undefined,
   rel?: string | undefined,
   className?: string | undefined,
+  key?: string | undefined,
   onClick?: MouseEventHandler<HTMLAnchorElement> | undefined
 }
 
-export default ({children, href, target = '_self', rel, className, onClick}:Props
+export default ({children, href, target = '_self', rel, className, key, onClick}:Props
   )=>{
   
   if(target == '_blank'){
@@ -22,6 +23,7 @@ export default ({children, href, target = '_self', rel, className, onClick}:Prop
   {
     return (
       <Link className={className}
+            key={key}
             href={href === undefined ? "" : href} 
             rel={rel} 
             target={target}
@@ -33,6 +35,7 @@ export default ({children, href, target = '_self', rel, className, onClick}:Prop
   else{
     return (
       <a className={className} 
+         key={key}
          href={`${getBasePath()}${href}`} 
          rel={rel} 
          target={target}

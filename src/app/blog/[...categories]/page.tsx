@@ -1,5 +1,5 @@
-import PostView from './post-view'
-import CategoriesView from './categories-view'
+import PostView from '../post-view'
+import CategoriesView from '../categories-view'
 import { postSlugs, getPostByPath } from 'utils/content-helper'
 
 type Params = {
@@ -26,7 +26,8 @@ export const generateStaticParams = () => {
       else{
         return { categories: (slug).split('/').slice(2)};
       }    
-    })
+    }
+  )
 }
 
 export const generateMetadata = ({ params }: Params) => {
@@ -73,6 +74,6 @@ export default function Page({ params }: Params) {
   }
 }
 
-export const dynamicParams = false // true | false,
+//export const dynamicParams = false // true | false,
 //export const revalidate = 1 // revalidate this page every 60 seconds
 //export const dynamic = 'error'
