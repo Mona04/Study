@@ -24,7 +24,7 @@ export default function PostView({post}: {post:BlogPost})
       <meta itemProp='description' content={post.description}/>
       <meta itemProp='datePublished' content={post.date}/>      
       
-      <h1 className="tw-text-4xl tw-font-bol tw-mt-1">{post.title}</h1>
+      <h1 className="tw-text-4xl tw-font-bol tw-mt-1" itemProp='headline'>{post.title}</h1>
       <BreadCrumbs className='tw-mb-4' path={post.slug}/>
       <TOCView mdSrc={post.raw}/>
 

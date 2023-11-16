@@ -20,7 +20,7 @@ export default function BreadCrumbs({path, className}: {path:string, className?:
   });
 
   return (
-    <div className={"tw-flex tw-flex-row tw-font-sm" + className}>
+    <nav className={"tw-flex tw-flex-row tw-font-sm" + className}>
       {
         <>
           <span className="tw-mr-1 material-symbols-outlined">
@@ -33,6 +33,6 @@ export default function BreadCrumbs({path, className}: {path:string, className?:
       {
         links
       }
-    </div>
+    </nav>
   )
 }
