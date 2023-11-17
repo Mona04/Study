@@ -1,6 +1,9 @@
 import { getPostsByPath } from "./content-helper"
 import elasticlunr from 'elasticlunr';
 
+///https://www.ericturner.dev/blog/add-search-to-nextjs-blog
+//https://learn.cloudcannon.com/jekyll/jekyll-search-using-lunr-js/
+//https://www.reddit.com/r/nextjs/comments/t3n0sv/lunrjs_in_next_js_app/
 interface LUNR_INDEX{
   title: string,
   description? : string,
