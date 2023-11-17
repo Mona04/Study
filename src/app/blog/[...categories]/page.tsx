@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import PostView from '../post-view'
 import CategoriesView from '../categories-view'
 import { postSlugs, getPostByPath } from 'utils/content-helper'
@@ -30,7 +31,7 @@ export const generateStaticParams = () => {
   )
 }
 
-export const generateMetadata = ({ params }: Params) => {
+export const generateMetadata = ({ params }: Params) : Metadata => {
   const path = decodeURI(['/blog', ...params.categories].join('/'))
   const post = getPostByPath(path);
 
@@ -38,7 +39,9 @@ export const generateMetadata = ({ params }: Params) => {
     return {}    
   }
   return { 
-    title: post.title 
+    title: post.title,
+    description: post.description,
+    category: path,
   }
 }
 

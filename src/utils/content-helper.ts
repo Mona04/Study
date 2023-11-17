@@ -25,8 +25,8 @@ export type BlogPost = {
   content : string,     // html or code
   raw: string,
 
+  date: Date,
   title : string,
-  date: string,
   description?: string,
   thumbnail?: string
 }
@@ -49,8 +49,8 @@ const _mdPostToBlogPost = (post:BlogMDPost):BlogPost => (
     raw: post.body.raw,
 
     // 캐리지 리턴 같은 게 남아 있을 수도 있어서 trim 을 해야함.
+    date: post.date != undefined ? new Date(post.date.trim()) : new Date(),
     title: post.title.trim(),
-    date: post.date?.trim() ?? "----",
     description: post.description?.trim(),
     thumbnail: post.thumbnail?.trim(),
   }
@@ -66,8 +66,8 @@ const _mdxPostToBlogPost = (post:BlogMDXPost):BlogPost => (
     raw: post.body.raw,
  
     // 캐리지 리턴 같은 게 남아 있을 수도 있어서 trim 을 해야함.   
+    date: post.date != undefined ? new Date(post.date.trim()) : new Date(),
     title: post.title.trim(),
-    date: post.date?.trim() ?? "----",
     description: post.description?.trim(),
     thumbnail: post.thumbnail?.trim(),
   }

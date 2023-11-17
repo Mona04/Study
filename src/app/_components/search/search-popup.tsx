@@ -1,6 +1,7 @@
 'use client'
 
 import * as React from 'react'
+import {test} from 'utils/search-helper'
 
 interface IProps{}
 interface IState{
@@ -8,10 +9,9 @@ interface IState{
     searched: string
 }
 
+
 class BlogSearch extends React.Component<IProps, IState>
 {
-  defaultTheme : StyleSheet | undefined;
-  darkTheme : StyleSheet | undefined;
   constructor(props:IProps)
   {
     super(props);
@@ -22,6 +22,7 @@ class BlogSearch extends React.Component<IProps, IState>
     }
     this.onClick = this.onClick.bind(this);
     this.onInputChanged = this.onInputChanged.bind(this);
+
   }
   onInputChanged(e: React.ChangeEvent<HTMLInputElement>) : void 
   {   
@@ -34,8 +35,11 @@ class BlogSearch extends React.Component<IProps, IState>
     //  .filter((post) => post.title.includes(this.state.keyword))
     //  .reduce((acc, cur)=>{ return acc = acc + cur.title + '\n'; }, "");
     //this.setState({searched: posts});
+    
+    test();
+    //console.log(SearchIndices.search("love"))
   };
-
+  
   render()
   {
     return (

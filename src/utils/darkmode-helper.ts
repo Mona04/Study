@@ -45,8 +45,4 @@ function setInitialColorMode() {
  * mode 자동으로 감지해서 바꾸는 script string
  * 주석도 들어가서 주석은 replace() 로 제거했다.
  */
-export const SetInitialColorMode = `(function() {
-    ${setInitialColorMode.toString().replace(/(\/\*)[^(\*\/)]*(\*\/)/g,'')}
-    setInitialColorMode();
-  })()
-`;
+export const SetInitialColorMode = `(${setInitialColorMode.toString().replace(/(\/\*)[^(\*\/)]*(\*\/)/g,'')})()`;

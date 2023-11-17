@@ -36,9 +36,4 @@ function copyButtonScript() {
  * CopyButton 에 코드 복사기능 추가해주는 Script
  *   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
  */
-export const CopyButtonScript = `
-  (function() {
-    ${copyButtonScript.toString().replace(/(\/\*)[^(\*\/)]*(\*\/)/g,'')}
-    copyButtonScript();
-  })()
-`;
+export const CopyButtonScript = `(${copyButtonScript.toString().replace(/(\/\*)[^(\*\/)]*(\*\/)/g,'')})()`;

@@ -5,7 +5,7 @@ import { getBasePath } from "utils/utils"
 export default (
   {
     children = null, src, alt, 
-    width = undefined, height = undefined, fill = undefined
+    width = undefined, height = undefined, fill = undefined, priority = false
   }: 
   {
     children?: React.ReactNode | null, 
@@ -13,7 +13,8 @@ export default (
     alt: string, 
     width?: number | undefined, 
     height?: number | undefined,
-    fill?: boolean | undefined
+    fill?: boolean | undefined,
+    priority?: boolean,
   })=>{
 
   const cur_path : string = `${getBasePath()}${src}`;
@@ -26,7 +27,8 @@ export default (
   // s
   return (
     <ExportedImage src={cur_path} alt={alt} 
-                   width={width} height={height} fill={fill}>
+                   width={width} height={height} fill={fill}
+                   priority={priority}>
       {children}
     </ExportedImage>
   )    

@@ -17,7 +17,7 @@ function CategoryView({slug, title, description, thumbnail}:Props){
     <div className="tw-m-4">
       <Link href={encodeURI(slug)}>
         <div>
-          { thumbnail !== undefined && <Image src={thumbnail} alt="Thumbnail" width={1200} height={1200} /> }
+          { thumbnail !== undefined && <Image src={thumbnail} alt="Thumbnail" width={1200} height={1200}/> }
           <h4 className="tw-mb-1 tw-mt-1">
             {title}
           </h4>
@@ -65,7 +65,7 @@ export default function CategoriesView({path}: {path:string}) {
         <BreadCrumbs path={path}/>
       </div>      
       <hr className=""/>
-      <div className="tw-grid tw-grid-cols-4">
+      <div className="tw-grid tw-grid-cols-2 desk:tw-grid-cols-4">
         { 
           getPostsByPath(path)
           .filter(post=>!post.isDirectory)

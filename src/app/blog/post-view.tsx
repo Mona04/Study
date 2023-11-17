@@ -20,13 +20,23 @@ export default function PostView({post}: {post:BlogPost})
 
   return (
     <article>
-      <meta itemProp='headline' content={post.title}/>
-      <meta itemProp='description' content={post.description}/>
-      <meta itemProp='datePublished' content={post.date}/>      
       
-      <h1 className="tw-text-4xl tw-font-bol tw-mt-1" itemProp='headline'>{post.title}</h1>
+      <h1 className="tw-text-4xl tw-font-bold tw-mt-1" itemProp='headline'>{post.title}</h1>
       <BreadCrumbs className='tw-mb-4' path={post.slug}/>
       <TOCView mdSrc={post.raw}/>
+
+      <div>
+        <div className='tw-flex tw-flex-row tw-text-sm'>
+          <i className="material-symbols-outlined md-sm tw-self-center
+                        tw-w-5">
+            schedule
+          </i>        
+          <div className='tw-color-text-dimmed'>Posted  </div>
+          <div className='tw-ml-2'>
+            {post.date.toLocaleDateString()}
+          </div>
+        </div>
+      </div>
 
       <hr/>
       
@@ -35,6 +45,8 @@ export default function PostView({post}: {post:BlogPost})
         post.isMDX ? <MDXPostView content={content}/> : <MDPostView content={content}/>
       }
       </div>
+
+      <hr/>
 
     </article>
   )
