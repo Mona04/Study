@@ -1,5 +1,5 @@
 import { getPostsByPath } from "./content-helper"
-import elasticlunr from 'elasticlunr';
+import elasticlunr from 'elasticlunr'
 
 ///https://www.ericturner.dev/blog/add-search-to-nextjs-blog
 //https://learn.cloudcannon.com/jekyll/jekyll-search-using-lunr-js/
@@ -85,4 +85,8 @@ export async function test()
     const idx = await createSearchIndex();
     searchIndex = elasticlunr.Index.load(idx);
   }
+  else{
+  }
 }
+
+
