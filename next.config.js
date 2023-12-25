@@ -1,20 +1,24 @@
 const path = require('path')
 const { PHASE_PRODUCTION_BUILD, PHASE_DEVELOPMENT_SERVER } = require("next/constants");
 const { withContentlayer } = require('next-contentlayer')
-
+//import path from 'path'
+//import { PHASE_PRODUCTION_BUILD, PHASE_DEVELOPMENT_SERVER } from 'next/constants.js'
+//import { withContentlayer } from 'next-contentlayer';
 
 /**
  * @type {import('next').NextConfig}
  */
-const configs = (phase, { defaultConfig }) => 
+const config = (phase, { defaultConfig }) => 
 {
+  const __dirname = process.cwd();
+
   return withContentlayer({
     output: 'export',
     distDir: 'out',
     basePath: phase == PHASE_PRODUCTION_BUILD ? process.env.NEXT_PUBLIC_BASE_PATH : "",
 
     env: {
-      BASE_PATH: this.basePath ?? ""
+      //BASE_PATH: this.basePath ?? ""
     },
 
     sassOptions: {
@@ -73,4 +77,5 @@ const configs = (phase, { defaultConfig }) =>
   });
 }
 
-module.exports = configs;
+module.exports = config;
+//export default config;

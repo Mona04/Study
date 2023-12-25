@@ -53,12 +53,15 @@
     "**/*.tsx",
     ".contentlayer/generated",
     "out/types/**/*.ts"
-  ],
+, "src/scripts/search-cache.ts"  ],
   "exclude": [
     "node_modules"
   ],
   "ts-node": {
     "esm": true,
+    "compilerOptions": {
+      "module": "es6",
+    },
     "experimentalSpecifierResolution": "node"
   }
 }
