@@ -1,6 +1,6 @@
 // https://tailwindcss.com/docs/configuration0
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+const config = {
   prefix: 'tw-',
   darkMode: ['class', '[data-theme="dark"]'],
   content: ["./src/app/**/*.{jsx,tsx}"],
@@ -63,3 +63,4 @@ module.exports = {
   plugins: [],
 }
 
+export default config;

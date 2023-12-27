@@ -1,6 +1,7 @@
 {
   "homepage": "https://mona04.github.io/study-log/",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev":        "next dev -p 4000",  
     "build":      "next build & next-image-export-optimizer",
@@ -9,15 +10,15 @@
     "test":       "jest --watch ",
     "cb":         "contentlayer build ",
     "bt":         "node ./src/scripts/blog.js",
-    "cache":      "ts-node --loader ts-node/esm ./src/scripts/search-cache.ts"
+    "cache":      "ts-node ./src/scripts/search-cache.ts"
   },
   "dependencies": {
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "typescript": "5.3.3",
+    "typescript": "5.3.3",    
     "ts-node": "10.9.2",
-    
-    "next": "14.0.4",
+
+    "next": "13.5.6",
     "contentlayer": "0.3.4",
     "next-contentlayer": "0.3.4",
     "next-image-export-optimizer": "1.10.0",
