@@ -3,7 +3,8 @@
 //const { withContentlayer } = require('next-contentlayer')
 import path from 'path'
 import { PHASE_PRODUCTION_BUILD, PHASE_DEVELOPMENT_SERVER } from 'next/constants.js'
-import { withContentlayer } from 'next-contentlayer';
+//import { withContentlayer } from 'next-contentlayer';
+import { withContentlayer } from 'simple-contentlayer'
 
 /**
  * @type {import('next').NextConfig}
@@ -79,7 +80,7 @@ const config = (phase, { defaultConfig }) =>
     },
   };
 
-  return (config);
+  return withContentlayer(config);
 }
 
 //module.exports = config;

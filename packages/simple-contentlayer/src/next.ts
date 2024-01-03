@@ -7,7 +7,7 @@ export type { NextConfig }
 
 const devServerStartedRef = { current: false }
 
-//export const defaultPluginOptions: NextPluginOptions = {}
+export const defaultPluginOptions: NextPluginOptions = {}
 
 /**
  * This function allows you to provide custom plugin options (currently there are none however).
