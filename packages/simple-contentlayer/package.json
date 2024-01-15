@@ -13,8 +13,10 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "prepack": "tcs"
+    "prepare": "npm run build",
+    "build": "tsc"
   },
+
   "dependencies": {
     "react": "18.2.0",
     "typescript": "5.3.3",    
