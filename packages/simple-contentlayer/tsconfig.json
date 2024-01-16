@@ -1,5 +1,5 @@
 {
-  "extends": "../../tsconfig.base.json",
+  "extends": "../tsconfig.base.json",  
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "module": "esnext",
@@ -7,9 +7,11 @@
     "outDir": "./dist"
   },
   "include": [
-    "./src"
-  ],
+    "global.d.ts",
+    "**/*.ts",
+    "**/*.tsx"],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "./dist/**/*"
   ],
 }

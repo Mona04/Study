@@ -1,9 +1,7 @@
 import type { NextConfig } from 'next'
 import type webpack from 'webpack'
 
-import type {next} from 'next';
-
-//import { type NextPluginOptions, runBeforeWebpackCompile } from './plugin.js'
+import { type NextPluginOptions, runBeforeWebpackCompile } from './plugin.js'
 
 export type { NextConfig }
 
@@ -93,5 +91,3 @@ class ContentlayerWebpackPlugin {
     })
   }
 }
-
-export const withContentlayer = createContentlayerPlugin()
