@@ -2,11 +2,8 @@
   "homepage": "https://mona04.github.io/study-log/",
   "private": true,
   "type": "module",
-  "workspaces": [
-    "./packages/*"
-  ],
   "scripts": {
-    "dev":        "next dev -p 4000",  
+    "dev":        "contentlayer build  & next dev -p 4000",  
     "build":      "next build & next-image-export-optimizer",
     "predeploy":  "next build & next-image-export-optimizer",
     "deploy":     "next-sitemap & node ./src/scripts/nojekyll.js & gh-pages -d out -b gh-pages -t true",
@@ -15,6 +12,10 @@
     "bt":         "node ./src/scripts/blog.js",
     "cache":      "ts-node ./src/scripts/search-cache.ts"
   },
+  "workspaces": [
+    "./packages/*",
+    "./packages/@contentlayer/*"
+  ],
   "dependencies": {
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -22,8 +23,6 @@
     "ts-node": "10.9.2",
 
     "next": "13.5.6",
-    "contentlayer": "0.3.4",
-    "next-contentlayer": "0.3.4",
     "next-image-export-optimizer": "1.10.0",
     "elasticlunr": "0.9.5", 
 
@@ -45,7 +44,8 @@
     "tailwindcss": "^3.3.3",
     "postcss": "^8.4.27",
 
-    "simple-contentlayer": "0.0.0"
+    "contentlayer": "*",
+    "next-contentlayer": "*"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.22.10",
