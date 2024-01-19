@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev":        "contentlayer build  & next dev -p 4000",  
+    "dev":        "next dev -p 4000",  
     "build":      "next build & next-image-export-optimizer",
     "predeploy":  "next build & next-image-export-optimizer",
     "deploy":     "next-sitemap & node ./src/scripts/nojekyll.js & gh-pages -d out -b gh-pages -t true",
@@ -13,8 +13,7 @@
     "cache":      "ts-node ./src/scripts/search-cache.ts"
   },
   "workspaces": [
-    "./packages/*",
-    "./packages/@contentlayer/*"
+    "./packages/*"
   ],
   "dependencies": {
     "react": "18.2.0",
@@ -44,8 +43,8 @@
     "tailwindcss": "^3.3.3",
     "postcss": "^8.4.27",
 
-    "contentlayer": "*",
-    "next-contentlayer": "*"
+    "next-remote-watcher": "*",
+    "content-builder": "*"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.22.10",

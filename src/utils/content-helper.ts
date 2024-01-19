@@ -1,8 +1,9 @@
+/*
 import { 
   BlogMDPost, BlogMDXPost, 
   allBlogMDPosts, allBlogMDXPosts 
 } from '@/contentlayer/generated'
-
+*/
 
 type PostDirectories = {
   [category: string] : PostDirectory;
@@ -39,6 +40,7 @@ export type PostDirectory = {
 }
 
 
+/*
 const _mdPostToBlogPost = (post:BlogMDPost):BlogPost => (
   {
     isMDX : false,
@@ -60,26 +62,27 @@ const _mdxPostToBlogPost = (post:BlogMDXPost):BlogPost => (
   {
     isMDX: true,
     isDirectory: post.isDirectory == true,
-
+    
     slug: '/' + post._raw.flattenedPath,
     content: post.body.code,
     raw: post.body.raw,
- 
+    
     // 캐리지 리턴 같은 게 남아 있을 수도 있어서 trim 을 해야함.   
     date: post.date != undefined ? new Date(post.date.trim()) : new Date(),
     title: post.title.trim(),
     description: post.description?.trim(),
     thumbnail: post.thumbnail?.trim(),
   }
-)
-
+  )
+  */
+  
 /**
  * Tree 구조로 현재 포스트 글을 표현
- */
+*/
 const _postDirectoryRoot = (() => {
-
-  const st = performance.now();  
-  console.log("construct categories...")
+   
+   const st = performance.now();  
+   console.log("construct categories...")
   
   const directory : PostDirectory = { 
     category: "ROOT",
@@ -108,18 +111,17 @@ const _postDirectoryRoot = (() => {
       cur_directory = sub_directories[slug];
     }
 
-    cur_directory.post =  isMDX ? _mdxPostToBlogPost(post) : _mdPostToBlogPost(post);
+    //cur_directory.post =  isMDX ? _mdxPostToBlogPost(post) : _mdPostToBlogPost(post);
   };
  
-  allBlogMDPosts.map(p=>callback(p, false));
-  allBlogMDXPosts.map(p=>callback(p, true));
+  //allBlogMDPosts.map(p=>callback(p, false));
+  //allBlogMDXPosts.map(p=>callback(p, true));
 
   var ed = performance.now();
   console.log(`post category takes ${(ed-st)/1000}`);
 
   return directory;
 })();
-
 
 
 /**
@@ -151,8 +153,8 @@ const _postSlugs = (() => {
     }
   };
   
-  allBlogMDPosts.map(callback);  
-  allBlogMDXPosts.map(callback);  
+  //allBlogMDPosts.map(callback);  
+  //allBlogMDXPosts.map(callback);  
 
   var ed = performance.now();
   console.log(`post slug takes ${(ed-st)/1000}`);
