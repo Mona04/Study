@@ -1,6 +1,6 @@
 import path from 'path'
 import fs from 'fs'
-//import fss from '@simple'
+//import * as aaaa from '@simcontentlayer/utils'
 
 var configPath = path.join(process.cwd(), 'content-builder.config.js')
 ///configPath = "content-builder.config.js";
