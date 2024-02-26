@@ -2,8 +2,8 @@ import { createRequire } from 'module'
 
 export const checkConstraints = () => {
   console.log("AAA")
-  checkNodeVersion()
-  checkContentlayerVersionsMatch()
+  //checkNodeVersion()
+  //checkContentlayerVersionsMatch()
 }
 
 const MIN_NODE_VERSION_MAJOR = 14

@@ -4,7 +4,8 @@
     "allowSyntheticDefaultImports": true,
     "module": "esnext",
     "rootDir": "./src",
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "tsBuildInfoFile": "./dist/.tsbuildinfo.json"
   },
   "include": ["./src"],
   "exclude": [
