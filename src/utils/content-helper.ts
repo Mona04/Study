@@ -1,9 +1,7 @@
-/*
 import { 
   BlogMDPost, BlogMDXPost, 
   allBlogMDPosts, allBlogMDXPosts 
-} from '@/contentlayer/generated'
-*/
+} from '@/archivelayer/generated'
 
 type PostDirectories = {
   [category: string] : PostDirectory;
@@ -24,7 +22,7 @@ export type BlogPost = {
 
   slug  : string,       // start from base path. root/aaa/bbb... => /aaa/bbb...
   content : string,     // html or code
-  raw: string,
+  //raw: string,
 
   date: Date,
   title : string,
@@ -39,8 +37,6 @@ export type PostDirectory = {
   post?    : BlogPost,
 }
 
-
-/*
 const _mdPostToBlogPost = (post:BlogMDPost):BlogPost => (
   {
     isMDX : false,
@@ -48,10 +44,10 @@ const _mdPostToBlogPost = (post:BlogMDPost):BlogPost => (
 
     slug: '/' + post._raw.flattenedPath,
     content: post.body.html,
-    raw: post.body.raw,
+    //raw: post.body.raw,
 
     // 캐리지 리턴 같은 게 남아 있을 수도 있어서 trim 을 해야함.
-    date: post.date != undefined ? new Date(post.date.trim()) : new Date(),
+    date: post.date != undefined ? post.date : new Date(),
     title: post.title.trim(),
     description: post.description?.trim(),
     thumbnail: post.thumbnail?.trim(),
@@ -65,16 +61,15 @@ const _mdxPostToBlogPost = (post:BlogMDXPost):BlogPost => (
     
     slug: '/' + post._raw.flattenedPath,
     content: post.body.code,
-    raw: post.body.raw,
+    //raw: post.body.raw,
     
     // 캐리지 리턴 같은 게 남아 있을 수도 있어서 trim 을 해야함.   
-    date: post.date != undefined ? new Date(post.date.trim()) : new Date(),
+    date: post.date != undefined ? post.date : new Date(),
     title: post.title.trim(),
     description: post.description?.trim(),
     thumbnail: post.thumbnail?.trim(),
   }
   )
-  */
   
 /**
  * Tree 구조로 현재 포스트 글을 표현

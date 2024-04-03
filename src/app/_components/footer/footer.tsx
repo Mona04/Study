@@ -24,10 +24,6 @@ function Ment({className}:{className?: string})
       <Link href="https://nextjs.org/" target="_blank">
         NextJS
       </Link>
-      {' & '}
-      <Link href="https://contentlayer.dev/" target="_blank">
-        ContentLayer
-      </Link>
       .
     </div>
   )

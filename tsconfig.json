@@ -35,8 +35,8 @@
       "@/context/*": [
         "app/_context/*"
       ],
-      "@/contentlayer/generated": [
-        "../.contentlayer/generated"
+      "@/archivelayer/generated": [
+        "../.archivelayer/generated"
       ]
     },
     "plugins": [
@@ -51,7 +51,7 @@
     "global.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".contentlayer/generated",
+    ".archivelayer/generated",
     "out/types/**/*.ts" ],
   "exclude": [
     "node_modules"

@@ -1,26 +1,24 @@
-//import { useMDXComponent } from 'next-contentlayer/hooks';
-//import type { MDXComponents } from 'mdx/types'
+import { useMDXComponent } from 'archivelayer';
 
 import Link from 'nextwrap/link'
 
-//const Components : MDXComponents = {
-//  a: ({ href, children }) => <Link href={href}>{children}</Link>,
-//}
+const Components : MDXComponents = {
+  a: ({ href, children }) => <Link href={href}>{children}</Link>,
+}
 
 export function MDXPostView({content}: {content:string}) 
 { 
-  //const MDXComponent = useMDXComponent(content);
+  const MDXComponent = useMDXComponent({code:content});
 
   return (
     <>
+      <MDXComponent components={Components} />
     </>
   )
 }
-//<MDXComponent components={Components} />
 
 export function MDPostView({content}: {content:string}) 
 {
-
   return (
     <>
       <div dangerouslySetInnerHTML={{__html: content}}/>
