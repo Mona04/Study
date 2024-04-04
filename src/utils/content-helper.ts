@@ -47,7 +47,7 @@ const _mdPostToBlogPost = (post:BlogMDPost):BlogPost => (
     raw: post._raw.source,
 
     // 캐리지 리턴 같은 게 남아 있을 수도 있어서 trim 을 해야함.
-    date: post.date != undefined ? post.date : new Date(),
+    date: post.date != undefined ? new Date(post.date) : new Date(),
     title: post.title.trim(),
     description: post.description?.trim(),
     thumbnail: post.thumbnail?.trim(),
@@ -64,7 +64,7 @@ const _mdxPostToBlogPost = (post:BlogMDXPost):BlogPost => (
     raw: post._raw.source,
     
     // 캐리지 리턴 같은 게 남아 있을 수도 있어서 trim 을 해야함.   
-    date: post.date != undefined ? post.date : new Date(),
+    date: post.date != undefined ? new Date(post.date) : new Date(),
     title: post.title.trim(),
     description: post.description?.trim(),
     thumbnail: post.thumbnail?.trim(),
@@ -106,11 +106,11 @@ const _postDirectoryRoot = (() => {
       cur_directory = sub_directories[slug];
     }
 
-    //cur_directory.post =  isMDX ? _mdxPostToBlogPost(post) : _mdPostToBlogPost(post);
+    cur_directory.post =  isMDX ? _mdxPostToBlogPost(post) : _mdPostToBlogPost(post);
   };
  
-  //allBlogMDPosts.map(p=>callback(p, false));
-  //allBlogMDXPosts.map(p=>callback(p, true));
+  allBlogMDPosts.map(p=>callback(p, false));
+  allBlogMDXPosts.map(p=>callback(p, true));
 
   var ed = performance.now();
   console.log(`post category takes ${(ed-st)/1000}`);
@@ -148,8 +148,8 @@ const _postSlugs = (() => {
     }
   };
   
-  //allBlogMDPosts.map(callback);  
-  //allBlogMDXPosts.map(callback);  
+  allBlogMDPosts.map(callback);  
+  allBlogMDXPosts.map(callback);  
 
   var ed = performance.now();
   console.log(`post slug takes ${(ed-st)/1000}`);

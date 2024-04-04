@@ -43,7 +43,7 @@
     "tailwindcss": "^3.3.3",
     "postcss": "^8.4.27",
 
-    "archivelayer": "^0.0.10"
+    "archivelayer": "^0.0.16"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.22.10",

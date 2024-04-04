@@ -35,8 +35,8 @@ const configs = {
     rehypePlugins: [
       saveRawCode, attachHeaderID,
       [ prettyCode, prettyCodeOption ],
+      [ katex ],
       addCodeTitleBar,
-      [ mathjax ],
     ]
   },
   markdown:{ 
@@ -44,8 +44,8 @@ const configs = {
     rehypePlugins: [
       saveRawCode, attachHeaderID,
       [ prettyCode, prettyCodeOption ],
-      addCodeTitleBar,
       [ mathjax,],
+      addCodeTitleBar,
     ]
   },
 }

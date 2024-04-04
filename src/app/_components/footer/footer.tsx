@@ -1,5 +1,5 @@
 import Link from 'nextwrap/link'
-import {AUTHOR, GIT} from 'configs/blog-config'
+import {AUTHOR, GIT} from 'configs/blog-config.js'
 import {AiFillGithub} from 'react-icons/ai'
 
 function Follow({className}:{className?: string}){
