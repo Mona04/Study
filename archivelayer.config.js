@@ -10,7 +10,7 @@ import katex       from 'rehype-katex'
 
 export const BlogMDPost = defineDocumentType(() => ({
   name: 'BlogMDPost',
-  filePathPattern: `**/*.(md)`,
+  filePathPattern: `**/*.md`,
   contentType: 'markdown',
   fields: blogFields(),  
   computedFields: blogComputedFields(),
@@ -18,7 +18,7 @@ export const BlogMDPost = defineDocumentType(() => ({
 
 export const BlogMDXPost = defineDocumentType(() => ({
   name: 'BlogMDXPost',
-  filePathPattern: `**/*.(mdx)`,
+  filePathPattern: `**/*.mdx`,
   contentType: 'mdx',
   fields: blogFields(),
   computedFields: blogComputedFields(),
@@ -28,24 +28,24 @@ export const BlogMDXPost = defineDocumentType(() => ({
  * @type {import('archivelayer').ArchiveLayerConfigs}
  **/
 const configs = {
-  sourcePath: '_content/', 
+  sourcePath: './_content/', 
   documentTypes: [BlogMDPost, BlogMDXPost],
   mdx:{ 
     remarkPlugins: [ rm_gfm, [rm_math,]],
     rehypePlugins: [
-      //saveRawCode, attachHeaderID,
-      //[ prettyCode, prettyCodeOption ],
-      //addCodeTitleBar,
-      //[ katex ],
+      saveRawCode, attachHeaderID,
+      [ prettyCode, prettyCodeOption ],
+      addCodeTitleBar,
+      [ mathjax ],
     ]
   },
   markdown:{ 
     remarkPlugins: [ rm_gfm, [rm_math,] ],
     rehypePlugins: [
-      //saveRawCode, attachHeaderID,
-      //[ prettyCode, prettyCodeOption ],
-      //addCodeTitleBar,
-      //[ mathjax,],
+      saveRawCode, attachHeaderID,
+      [ prettyCode, prettyCodeOption ],
+      addCodeTitleBar,
+      [ mathjax,],
     ]
   },
 }

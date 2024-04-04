@@ -22,7 +22,7 @@ export type BlogPost = {
 
   slug  : string,       // start from base path. root/aaa/bbb... => /aaa/bbb...
   content : string,     // html or code
-  //raw: string,
+  raw: string,
 
   date: Date,
   title : string,
@@ -44,7 +44,7 @@ const _mdPostToBlogPost = (post:BlogMDPost):BlogPost => (
 
     slug: '/' + post._raw.flattenedPath,
     content: post.body.html,
-    //raw: post.body.raw,
+    raw: post._raw.source,
 
     // 캐리지 리턴 같은 게 남아 있을 수도 있어서 trim 을 해야함.
     date: post.date != undefined ? post.date : new Date(),
@@ -61,7 +61,7 @@ const _mdxPostToBlogPost = (post:BlogMDXPost):BlogPost => (
     
     slug: '/' + post._raw.flattenedPath,
     content: post.body.code,
-    //raw: post.body.raw,
+    raw: post._raw.source,
     
     // 캐리지 리턴 같은 게 남아 있을 수도 있어서 trim 을 해야함.   
     date: post.date != undefined ? post.date : new Date(),

@@ -33,5 +33,5 @@ yarn-error.log*
 .env.production.local
 
 # dependencies
-.contentlayer
+.archivelayer
 **/nextImageExportOptimizer
