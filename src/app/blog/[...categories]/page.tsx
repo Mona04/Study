@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import PostView from '../post-view'
 import CategoriesView from '../categories-view'
-import { postSlugs, getPostByPath } from 'utils/content-helper'
+import { postSlugs, getPostByPath } from 'content-manager'
 
 type Params = {
   params: { categories: string[] } 

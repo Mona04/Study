@@ -1,5 +1,5 @@
 import CategoryItem from "./sidebar-category-item"
-import {postDirectoryRoot, PostDirectory} from 'utils/content-helper'
+import {postDirectoryRoot, PostDirectory} from 'content-manager'
 
 
 function MakeCategoryView({category, slug = '', depth = 0}: {category : PostDirectory, slug?: string , depth? : number})

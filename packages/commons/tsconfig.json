@@ -1,15 +1,17 @@
 {
-  "extends": "../tsconfig.base.json",  
+  "extends": "../../tsconfig.base.json",  
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "module": "esnext",
+    "jsx": "react-jsx",
     "rootDir": "./src",
-    "outDir": "./dist",
-    "tsBuildInfoFile": "./dist/.tsbuildinfo.json"
+    "outDir": "./dist"
   },
   "include": ["./src"],
   "exclude": [
     "node_modules",
     "./dist/**/*"
-  ]
+  ],
+  "references": []
 }
+  

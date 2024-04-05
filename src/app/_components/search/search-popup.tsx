@@ -1,7 +1,7 @@
 'use client'
 
 import * as React from 'react'
-import {test} from 'utils/search-helper'
+import {test} from 'content-manager'
 
 interface IProps{}
 interface IState{

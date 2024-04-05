@@ -76,8 +76,7 @@ const _mdxPostToBlogPost = (post:BlogMDXPost):BlogPost => (
 */
 const _postDirectoryRoot = (() => {
    
-   const st = performance.now();  
-   console.log("construct categories...")
+  const st = performance.now();  
   
   const directory : PostDirectory = { 
     category: "ROOT",
@@ -85,7 +84,7 @@ const _postDirectoryRoot = (() => {
     childs: {}
   };
 
-  const callback = (post:any, isMDX : boolean) => {
+  const callback = (post:any, converter : (_:any)=>BlogPost) => {
     if(post._raw == undefined) return;
 
     const categories = post._raw.flattenedPath.split('/');
@@ -103,17 +102,17 @@ const _postDirectoryRoot = (() => {
           childs: {}
         };
       }
-      cur_directory = sub_directories[slug];
+      cur_directory = sub_directories[slug]!;
     }
 
-    cur_directory.post =  isMDX ? _mdxPostToBlogPost(post) : _mdPostToBlogPost(post);
+    cur_directory.post = converter(post);
   };
  
-  allBlogMDPosts.map(p=>callback(p, false));
-  allBlogMDXPosts.map(p=>callback(p, true));
+  allBlogMDPosts.map(p=>callback(p, _mdPostToBlogPost));
+  allBlogMDXPosts.map(p=>callback(p, _mdxPostToBlogPost));
 
   var ed = performance.now();
-  console.log(`post category takes ${(ed-st)/1000}`);
+  console.log(`construct post categories takes ${(ed-st)}ms`);
 
   return directory;
 })();
@@ -126,7 +125,6 @@ const _postDirectoryRoot = (() => {
 const _postSlugs = (() => {
 
   const st = performance.now();  
-  console.log("construct slugs...")
 
   const slugs: PostSlugs = {};
   
@@ -152,7 +150,7 @@ const _postSlugs = (() => {
   allBlogMDXPosts.map(callback);  
 
   var ed = performance.now();
-  console.log(`post slug takes ${(ed-st)/1000}`);
+  console.log(`Construct slugs takes ${(ed-st)}ms`);
 
   return slugs;
 })();
@@ -162,8 +160,6 @@ const _postSlugs = (() => {
 export const postDirectoryRoot = _postDirectoryRoot;
 
 export const postSlugs = _postSlugs;
-
-
 
 
 export const getPostsByPath = (path: string) => {
@@ -176,13 +172,13 @@ export const getPostsByPath = (path: string) => {
   const categories = path.split('/');
   let cur_directory = _postDirectoryRoot;
 
-  for(let i = 0; i < categories.length; i++)
+  for(const slug of categories)
   {
-    const slug = categories[i];
-    if(cur_directory.childs[slug] === undefined)
-      break;
-    cur_directory = cur_directory.childs[slug]; 
-  }   
+    const dir = cur_directory.childs[slug];
+    if(dir == undefined) break;
+    cur_directory = dir;
+  }
+
   const recursive = (dir:PostDirectory)=>{
     if(dir.post != undefined) {
       res.push(dir.post);
@@ -204,13 +200,11 @@ export const getPostByPath = (path: string) => {
   const categories = path.split('/');
   let cur_directory = _postDirectoryRoot;
 
-  for(let i = 0; i < categories.length; i++)
+  for(const slug of categories)
   {
-    const slug = categories[i];
-    if(cur_directory.childs[slug] === undefined) {
-      return undefined;
-    }
-    cur_directory = cur_directory.childs[slug]; 
+    const dir = cur_directory.childs[slug];
+    if(dir == undefined) break;
+    cur_directory = dir;
   }
 
   return cur_directory.post;

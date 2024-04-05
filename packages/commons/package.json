@@ -1,12 +1,7 @@
 {
-  "name": "next-remote-watcher",
-  "version": "0.0.0.1",
-  "description": "ContentLayer has been unmaintained since version 0.3.4, yet I still require its functionality.",
-  "license": "MIT",
-  "author": {
-    "name": "Mona04",
-    "email": "moksha1905@gmail.com"
-  },
+  "name": "commons",
+  "version": "0.0.0",
+  "description": "mdx 에서 상대경로로 못들고와서 이걸로?",
   "private": true,
   
   "type": "module",

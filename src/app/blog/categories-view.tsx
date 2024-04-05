@@ -1,7 +1,7 @@
 import Link from "nextwrap/link"
 import Image from "nextwrap/image"
 import BreadCrumbs from "../_components/breadcrumbs/breadcrumbs"
-import { getPostByPath, getPostsByPath } from 'utils/content-helper'
+import { getPostByPath, getPostsByPath } from 'content-manager'
 import { MDPostView, MDXPostView } from './post-component'
 
 interface Props {

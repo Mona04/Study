@@ -3,12 +3,13 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev":        "concurrently \"archivelayer dev\" \"next dev -p 4000\"",
-    "build":      "archivelayer build & next build & next-image-export-optimizer",
-    "predeploy":  "next build & next-image-export-optimizer",
+    "dev":        "concurrently \"content-manager dev\" \"next dev -p 4000\"",
+    "all-build":  "tsc --build tsconfig.all.json",
+    "build":      "content-manager build & next build & next-image-export-optimizer",
+    "predeploy":  "content-manager build & next build & next-image-export-optimizer",
     "deploy":     "next-sitemap & node ./src/scripts/nojekyll.js & gh-pages -d out -b gh-pages -t true",
     "test":       "jest --watch ",
-    "doc":        "archivelayer build",
+    "doc":        "content-manager build",
     "bt":         "node ./src/scripts/blog.js",
     "cache":      "ts-node ./src/scripts/search-cache.ts"
   },
@@ -43,7 +44,8 @@
     "tailwindcss": "^3.3.3",
     "postcss": "^8.4.27",
 
-    "archivelayer": "^0.0.16"
+    "content-manager": "file:./packages/content-manager",
+    "archivelayer": "0.0.17"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.22.10",

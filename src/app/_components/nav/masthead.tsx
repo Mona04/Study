@@ -6,7 +6,7 @@ import DarkModeToggle from "../darkmode-toggle/darkmode-toggle"
 
 import style from "./masthead.module.scss"
 
-import {BLOG_NAME} from "configs/blog-config.js"
+import {BLOG_NAME} from "configs/blog-config.json"
 
 
 function MastHead() {

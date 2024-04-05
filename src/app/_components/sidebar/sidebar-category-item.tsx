@@ -20,7 +20,8 @@ export default function CategoryItem({children, label, refCount, slug, depth} : 
   
   const pathname = usePathname()
   const isLeaf = children == null;
-  const isCurrent = pathname.split('/')[depth+1]?.toUpperCase() === label.toUpperCase();
+  const isCurrent = pathname != null && // pathname 이 jest 에서 null 나옴.
+                    pathname.split('/')[depth+1]?.toUpperCase() === label.toUpperCase();
 
   const [isCollapsed, setIsCollaped] = useState(!isCurrent || isLeaf);
 	const context = useContext(Context);

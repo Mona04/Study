@@ -1,6 +1,7 @@
 //https://nextjs.org/docs/pages/building-your-application/optimizing/testing#setting-up-jest-with-the-rust-compiler
 
-const nextJest = require('next/jest');
+import nextJest from 'next/jest.js'
+
 const createJestConfig = nextJest({
   // Provide the path to your Next.js app to load next.config.js and .env files in your test environment
   dir: './',
@@ -21,7 +22,7 @@ const config = async () => {
     */
 
     // compilerOptions.baseUrl 추가
-    moduleDirectories: ['node_modules', 'src'], 
+    moduleDirectories: ['node_modules', 'src', 'packages'], 
   }
 
   /**
@@ -43,6 +44,6 @@ const config = async () => {
   return ret;
 };
 
-module.exports = config;
+export default config;
 
 // https://www.daleseo.com/react-testing-library/
