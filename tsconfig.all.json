@@ -2,6 +2,7 @@
   "extends": "./tsconfig.base.json",
   "include": [],
   "references": [
+    { "path": "./packages/content-initializer" },
     { "path": "./packages/content-manager" },
     { "path": "./packages/utils" },
   ]

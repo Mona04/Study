@@ -66,6 +66,10 @@
   }
 }
 
+.animate {
+  border: none;
+}
+
 .animate.change .menu-lines {
   .line1 {
     animation: rotateR 150ms ease-in forwards reverse; 

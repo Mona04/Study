@@ -1,8 +1,5 @@
 import { useMDXComponent } from 'archivelayer/hooks';
 
-import Link from 'nextwrap/link'
-
-
 export function MDXPostView({content}: {content:string}) 
 { 
   const MDXComponent = useMDXComponent({code:content}, {});

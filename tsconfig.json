@@ -24,21 +24,11 @@
     
     "baseUrl": "./src/",
     "paths": {
-      "@/public/*": [
-        "./public/*"
-      ],
-      "@/styles/*": [
-        "app/_styles/*"
-      ],
-      "@/components/*": [
-        "app/_components/*"
-      ],
-      "@/context/*": [
-        "app/_context/*"
-      ],
-      "@/archivelayer/generated": [
-        "../.archivelayer/generated"
-      ]
+      "@/public/*": ["./public/*"],
+      "@/styles/*": ["app/_styles/*"],
+      "@/components/*": ["app/_components/*"],
+      "@/context/*": ["app/_context/*"],
+      "@/configs/*": ["configs/*"]
     },
     "plugins": [
       {
@@ -52,9 +42,9 @@
     "global.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".archivelayer/generated",
-    "out/types/**/*.ts" ],
+    "out/types/**/*.ts"],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "packages"
   ]
 }

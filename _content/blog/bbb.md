@@ -1,6 +1,7 @@
 ---
 title: My Second Post
-date: 2015-05-25
+date: 2015-05-25,
+tags: ["happy", "lucky", "sugoi"]
 ---
 
 ## Hello My Second Post

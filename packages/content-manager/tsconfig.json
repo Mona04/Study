@@ -2,18 +2,24 @@
   "extends": "../../tsconfig.base.json",  
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
-    "module": "esnext",
+    "module": "ESNext",
     "jsx": "react-jsx",
     "rootDir": "./src",
     "outDir": "./dist",
+    "baseUrl": ".",
     "tsBuildInfoFile": "./dist/.tsbuildinfo.json",
-    "paths": {
-      "@/archivelayer/generated": [
-        "../../.archivelayer/generated"
-      ]
-    }
+
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true
   },
-  "include": ["./src"],
+  "include": [
+    "./src",
+    "../../.archivelayer/generated"
+  ],
   "exclude": [
     "node_modules",
     "./dist/**/*"

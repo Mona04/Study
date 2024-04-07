@@ -8,7 +8,7 @@ export function getExtension(p: string): string | undefined{
 
 export function splitExtension(p: string): [name:string, extension:string] | undefined{
   let pp = p.split('.');
-  return pp.length != 2 ? undefined : [pp[0], pp[1]];
+  return pp.length != 2 ? undefined : [pp[0]!, pp[1]!];
 }
 
 export function sleep(ms: number){

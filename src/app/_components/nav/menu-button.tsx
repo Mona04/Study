@@ -20,7 +20,7 @@ function MenuButton() {
 
   const onClickMenu = (event:  React.MouseEvent<HTMLElement>) => {      
     const target = event.currentTarget;
-    target.classList.add(style.animate);
+    target.classList.add(style['animate']!);
     // 애니메이션이 끝나고 상태를 바꿈. 상태를 바꾸면 자동으로 다시 그리게 됨.
     setTimeout(()=>{
       bOpen ? context?.statemgr.closeMenu() : context?.statemgr.openMenu();

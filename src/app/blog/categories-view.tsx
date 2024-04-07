@@ -1,6 +1,6 @@
 import Link from "nextwrap/link"
 import Image from "nextwrap/image"
-import BreadCrumbs from "../_components/breadcrumbs/breadcrumbs"
+import BreadCrumbs from "@/components/post/breadcrumbs"
 import { getPostByPath, getPostsByPath } from 'content-manager'
 import { MDPostView, MDXPostView } from './post-component'
 
@@ -36,7 +36,7 @@ function CategoryDetail({path}:{path:string}){
   const post = getPostByPath(path);
   if(post == undefined || post.isDirectory == false) {
     const categories = path.split('/');
-    const label = categories[categories.length-1].toUpperCase();
+    const label = categories[categories.length-1]!.toUpperCase();
     return (
       <div className="tw-m-4">
         {

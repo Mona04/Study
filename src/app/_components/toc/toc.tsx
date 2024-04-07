@@ -1,6 +1,6 @@
 'use client'
 
-import {useContext, useState, useEffect, useRef} from "react"
+import {useState, useEffect, useRef} from "react"
 
 import {unified} from "unified"
 import type {Heading, Text} from 'mdast'
@@ -10,7 +10,7 @@ import {visit} from "unist-util-visit"
 import {throttle} from "utils/utils"
 import style from "./toc.module.scss"
 
-const MAX_DEPTH = 4;
+import BLOG_CONFIGS from '@/configs/blog-config.json'
 
 interface Props{
   //className? : string | undefined,
@@ -45,7 +45,7 @@ const useIntersection = (
 
       for(let i = 0; i < loopLength; i++)
       {
-        const cur = refs.current![i];
+        const cur = refs.current![i]!;
         // todo: header 바로 위인지 체크해야함.
         if(cur.getBoundingClientRect().top > 100)
         {
@@ -57,7 +57,7 @@ const useIntersection = (
         }
         if(i == loopLength-1)
         {
-          setActiveId(ids[ids.length-1]);
+          setActiveId(ids[ids.length-1]!);
         }
       }
     };
@@ -109,7 +109,7 @@ const useIntersectionObserver = (
         {
           if(prevIdx == idx && prevY < heading.boundingClientRect.y)
           {
-            setActiveId(ids[prevIdx-1]);
+            setActiveId(ids[prevIdx-1]!);
             prevIdx = idx-1;
             console.log(`${ids[idx]} go down`)
           }
@@ -134,12 +134,12 @@ const useIntersectionObserver = (
   }, []);
 };
 
-function getText(header: Heading) : string { return header.children.length > 0 && header.children[0].type == 'text' ? header.children[0].value : "";}
+function getText(header: Heading) : string { return header.children.length > 0 && header.children[0]!.type == 'text' ? header.children[0]!.value : "";}
 
 function TableItem(variable: MakeTOCVariable)
 {
   const idx = variable.idx;
-  const header = variable.headers[idx];
+  const header = variable.headers[idx]!;
   const headerText = getText(header);
   const headerID = headerText.replaceAll(' ', '-');
   const depth = header.depth;
@@ -147,7 +147,7 @@ function TableItem(variable: MakeTOCVariable)
   variable.idx+=1;
 
   const childs = [];
-  while(variable.headers.length > variable.idx && variable.headers[variable.idx].depth > depth)
+  while(variable.headers.length > variable.idx && variable.headers[variable.idx]!.depth > depth)
   {
     childs.push(TableItem(variable));
   }
@@ -175,9 +175,7 @@ function TOCList(headers: Heading[], activeID: string)
   for(; variable.idx < headers.length; )
     items.push(TableItem(variable));
   
-    return (
-    <ul>{items}</ul>
-  )
+  return <ul>{items}</ul>
 }
 
 export default function TOCView({mdSrc}:Props) {
@@ -186,8 +184,8 @@ export default function TOCView({mdSrc}:Props) {
 	
   const headers : Heading[] = [];
   const mdAst = unified().use(rm_parse).parse(mdSrc);
-  visit(mdAst, 'heading', (node) => {
-    if(node.depth <= MAX_DEPTH)
+  visit(mdAst, 'heading', (node:Heading) => {
+    if(node.depth <= BLOG_CONFIGS.MAX_DEPTH)
     {
         headers.push(node);
     }

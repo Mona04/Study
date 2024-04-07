@@ -1,11 +1,11 @@
 import Link from 'nextwrap/link'
-import {AUTHOR, GIT} from 'configs/blog-config.json'
+import BLOG_CONFIGS from '@/configs/blog-config.json'
 import {AiFillGithub} from 'react-icons/ai'
 
 function Follow({className}:{className?: string}){
   return (
     <div className={className}>
-      <Link href={GIT} target='_self' className='tw-flex tw-self-center'>
+      <Link href={BLOG_CONFIGS.GIT} target='_self' className='tw-flex tw-self-center'>
         <AiFillGithub className='tw-self-center'/>
         <div className='tw-ml-1 tw-font-bold'>
           GITHUB
@@ -20,7 +20,7 @@ function Ment({className}:{className?: string})
   var currentdate = new Date(); 
   return (
     <div className={className}>
-      {`© ${currentdate.getFullYear()} ${AUTHOR}. Powered by `}
+      {`© ${currentdate.getFullYear()} ${BLOG_CONFIGS.AUTHOR}. Powered by `}
       <Link href="https://nextjs.org/" target="_blank">
         NextJS
       </Link>

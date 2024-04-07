@@ -1,7 +1,7 @@
 import { 
   BlogMDPost, BlogMDXPost, 
   allBlogMDPosts, allBlogMDXPosts 
-} from '@/archivelayer/generated'
+} from '../../.archivelayer/generated/index.js'
 
 type PostDirectories = {
   [category: string] : PostDirectory;
@@ -27,7 +27,8 @@ export type BlogPost = {
   date: Date,
   title : string,
   description?: string,
-  thumbnail?: string
+  thumbnail?: string,
+  tags?: string[],
 }
 
 export type PostDirectory = {
@@ -51,6 +52,7 @@ const _mdPostToBlogPost = (post:BlogMDPost):BlogPost => (
     title: post.title.trim(),
     description: post.description?.trim(),
     thumbnail: post.thumbnail?.trim(),
+    tags: post.tags,
   }
 )
 
@@ -68,6 +70,7 @@ const _mdxPostToBlogPost = (post:BlogMDXPost):BlogPost => (
     title: post.title.trim(),
     description: post.description?.trim(),
     thumbnail: post.thumbnail?.trim(),
+    tags: post.tags,
   }
   )
   

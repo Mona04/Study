@@ -1,2 +1,2 @@
 export * from "./content-helper.js"
-export * from "./search-helper.js"
+export * from "./search-service.js"

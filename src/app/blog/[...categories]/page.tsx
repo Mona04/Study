@@ -49,13 +49,13 @@ export default function Page({ params }: Params) {
   
   let path =  decodeURI(['/blog', ...params.categories].join('/'));
 
+  const slug = postSlugs[path];
 
-  if(!(path in postSlugs))
+  if(slug == undefined)
   {
     throw new Error(`Post not found for slug: ${params.categories}`)
   }
 
-  const slug = postSlugs[path];
 
   if(slug.bPost == false)
   {

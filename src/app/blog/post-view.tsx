@@ -1,8 +1,10 @@
-import { BlogPost } from 'utils/content-helper'
+import { BlogPost } from 'content-manager'
 import { getBasePath } from "utils/utils"
 
 import TOCView from '@/components/toc/toc'
-import BreadCrumbs from "@/components/breadcrumbs/breadcrumbs"
+import BreadCrumbs from "@/components/post/breadcrumbs"
+import UpdateTime from "@/components/post/updatetime"
+import Tags from "@/components/post/tags"
 import { MDPostView, MDXPostView } from './post-component'
 
 /**
@@ -23,20 +25,9 @@ export default function PostView({post}: {post:BlogPost})
       
       <h1 className="tw-text-4xl tw-font-bold tw-mt-1" itemProp='headline'>{post.title}</h1>
       <BreadCrumbs className='tw-mb-4' path={post.slug}/>
+      <UpdateTime className='tw-mt-0.5' date={post.date}/>
       <TOCView mdSrc={post.raw}/>
 
-      <div>
-        <div className='tw-flex tw-flex-row tw-text-sm'>
-          <i className="material-symbols-outlined md-sm tw-self-center
-                        tw-w-5">
-            schedule
-          </i>        
-          <div className='tw-color-text-dimmed'>Posted  </div>
-          <div className='tw-ml-2'>
-            {post.date.toLocaleDateString()}
-          </div>
-        </div>
-      </div>
 
       <hr/>
       
@@ -47,6 +38,8 @@ export default function PostView({post}: {post:BlogPost})
       </div>
 
       <hr/>
+
+      <Tags tags={post.tags}/>
 
     </article>
   )
