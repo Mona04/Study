@@ -65,7 +65,7 @@ class BlogSearch extends React.Component<IProps, IState>
     }
     
     const res = this.mSearchService.searchPosts(this.state.keyword);
-    this.setState({results: res.map(f=>f.ref)});
+    this.setState({results: res.map((f:any&{ref:string})=>f.ref)});
   }
 
   render()

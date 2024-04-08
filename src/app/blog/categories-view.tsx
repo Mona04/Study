@@ -42,9 +42,9 @@ function CategoryView({slug, title, description, thumbnail}:Props)
  * @returns 
  */
 function CategoryDetail({path}:{path:string}){
-  const post = getPostByPath(path);
+  const post = getPostByPath(path+'/_index');
  
-  if(post == undefined || post.isDirectory == true) {
+  if(post == undefined) {
     const categories = path.split('/');
     const label = categories[categories.length-1]!.toUpperCase();
     return (
@@ -78,7 +78,7 @@ export default function CategoriesView({path}: {path:string}) {
       <div className="tw-grid tw-grid-cols-2 desk:tw-grid-cols-4">
         { 
           getPostsByPath(path)
-          .filter(post=>!post.isDirectory)
+          .filter(post=>post.useSearch)
           .map(post=>{ 
             return <CategoryView key={post.slug} 
                         title={post.title} description={post.description} 

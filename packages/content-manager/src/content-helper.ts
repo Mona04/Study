@@ -17,15 +17,15 @@ type PostSlugs = {
 }
 
 export type BlogPost = {
-  isMDX : boolean,
-  isDirectory: boolean,
+  isMDX    : boolean,
+  useSearch: boolean,
 
-  slug  : string,       // start from base path. root/aaa/bbb... => /aaa/bbb...
-  content : string,     // html or code
-  raw: string,
+  slug     : string,       // start from base path. root/aaa/bbb... => /aaa/bbb...
+  content  : string,     // html or code
+  raw      : string,
 
-  date: Date,
-  title : string,
+  date     : Date,
+  title    : string,
   description?: string,
   thumbnail?: string,
   tags?: string[],
@@ -41,7 +41,7 @@ export type PostDirectory = {
 const _mdPostToBlogPost = (post:BlogMDPost):BlogPost => (
   {
     isMDX : false,
-    isDirectory : post.isDirectory == true,
+    useSearch : post.useSearch == true,
 
     slug: '/' + post._raw.flattenedPath,
     content: post.body.html,
@@ -59,7 +59,7 @@ const _mdPostToBlogPost = (post:BlogMDPost):BlogPost => (
 const _mdxPostToBlogPost = (post:BlogMDXPost):BlogPost => (
   {
     isMDX: true,
-    isDirectory: post.isDirectory == true,
+    useSearch: post.useSearch == true,
     
     slug: '/' + post._raw.flattenedPath,
     content: post.body.code,
@@ -114,8 +114,12 @@ const _postDirectoryRoot = (() => {
   allBlogMDPosts.map(p=>callback(p, _mdPostToBlogPost));
   allBlogMDXPosts.map(p=>callback(p, _mdxPostToBlogPost));
 
-  var ed = performance.now();
-  console.log(`construct post categories takes ${(ed-st)}ms`);
+  
+  if(process != null && process.env.NODE_ENV == 'development')
+  {
+    var ed = performance.now();
+    console.log(`construct post categories takes ${(ed-st)}ms`);
+  }
 
   return directory;
 })();
@@ -152,8 +156,11 @@ const _postSlugs = (() => {
   allBlogMDPosts.map(callback);  
   allBlogMDXPosts.map(callback);  
 
-  var ed = performance.now();
-  console.log(`Construct slugs takes ${(ed-st)}ms`);
+  if(process != null && process.env.NODE_ENV == 'development')
+  {
+    var ed = performance.now();
+    console.log(`Construct slugs takes ${(ed-st)}ms`);
+  }  
 
   return slugs;
 })();
