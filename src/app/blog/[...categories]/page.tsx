@@ -76,7 +76,3 @@ export default function Page({ params }: Params) {
     ) 
   }
 }
-
-//export const dynamicParams = false // true | false,
-//export const revalidate = 1 // revalidate this page every 60 seconds
-//export const dynamic = 'error'

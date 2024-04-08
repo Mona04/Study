@@ -56,6 +56,8 @@ class BlogSearch extends React.Component<IProps, IState>
 
   async search()
   {
+    if(this.state.keyword == null || this.state.keyword.length < 2) return;
+
     if(this.mSearchService == null){
       const res = await fetch(getBasePath() + '/search-index.json')
       const json = await res.json();
@@ -70,21 +72,21 @@ class BlogSearch extends React.Component<IProps, IState>
   {
     return (
       <div className={`${style['search-popup']}`}>
-        <form className="tw-p-2 tw-flex tw-flex-row tw-border-2 tw-rounded-3xl"
+        <form className="tw-flex tw-border-2 tw-rounded-3xl tw-p-1 tw-m-2"
               onSubmit={this.onSubmit}>
-          <input className='tw-cursor-pointer tw-bg-color-page-background tw-pl-4' 
+          <input className='tw-grow tw-bg-transparent tw-pl-4' 
                  id='search-input' name='search-input' type='textbox'           
                  onChange={this.onInputChanged}/>
           <label htmlFor="search-input"/>       
           <input id='search-btn' 
-                 name='search-btn' type='button'/>         
-          <label className='tw_flex tw-cursor-pointer tw-ml-m-100px'  htmlFor="search-btn">
-            <i className="material-symbols-outlined md-sm tw-self-center
-                      tw-w-5">search</i>        
+                 name='search-btn' type='button'
+                 onClick={this.onClick}/>         
+          <label className='tw_flex tw-cursor-pointer '  htmlFor="search-btn">
+            <i className="material-symbols-outlined md-base tw-self-center tw-w-5">search</i>        
           </label>  
         </form>
 
-        <div className='tw_flex tw-bg-blue-600'>
+        <div className={`${style.results}`}>
           <SearchResult items={this.state.results}/>
         </div>
       </div>

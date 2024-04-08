@@ -14,7 +14,8 @@
     "moduleResolution": "node",
     "sourceMap": true,
     "declaration": true,
-    "declarationMap": true
+    "declarationMap": true,
+    "allowJs": true
   },
   "include": [
     "./src",
