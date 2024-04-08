@@ -6,7 +6,7 @@ export default function UpdateTime({className, date}: {className?:string, date:D
       <i className="material-symbols-outlined md-sm tw-self-center
                     tw-w-5">
         schedule
-      </i>        
+      </i>
       <div className='tw-color-text-dimmed'>Posted  :</div>
       <div className='tw-ml-2'>
         {date.toLocaleDateString()}

@@ -50,6 +50,8 @@ const config = {
         'color-text'            : 'var(--color-text)',
         'color-text-light'      : 'var(--color-text-light)',
         'color-text-dimmed'     : 'var(--color-text-dimmed)',
+        'color-text-bg'         : 'var(--color-text-bg)',
+        'color-text-bg-dimmed'   : 'var(--color-text-bg-dimmed)'
       },
       spacing: {
         'nav-height': 'var(--nav-height)',

@@ -188,6 +188,12 @@ function addCopyButton(parent)
     {
       type: 'element',
       tagName: 'button',
+      properties: 
+      {
+        // 다음의 문제 때문.
+        // Warning: Buttons must have discernible text: Element has no title attribute
+        'title': 'code-copy-btn' 
+      },
     }
   )
 }

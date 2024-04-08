@@ -18,13 +18,7 @@ export default (
   })=>{
 
   const cur_path : string = `${getBasePath()}${src}`;
-    
-  //return (
-  //  <img src={cur_path} alt={alt} width={width} height={height}>
-  //    {children}
-  //  </img>
-  //)
-  // s
+  
   return (
     <ExportedImage src={cur_path} alt={alt} 
                    width={width} height={height} fill={fill}

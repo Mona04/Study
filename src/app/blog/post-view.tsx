@@ -19,12 +19,12 @@ function postProcessContent(content: string) {
 export default function PostView({post}: {post:BlogPost}) 
 {
   const content = postProcessContent(post.content)
-
+  
   return (
     <article>
       
       <h1 className="tw-text-4xl tw-font-bold tw-mt-1" itemProp='headline'>{post.title}</h1>
-      <BreadCrumbs className='tw-mb-4' path={post.slug}/>
+      <BreadCrumbs className='tw-mb-4' path={post.slug} isDirectory={post.isDirectory}/>
       <UpdateTime className='tw-mt-0.5' date={post.date}/>
       <TOCView mdSrc={post.raw}/>
 

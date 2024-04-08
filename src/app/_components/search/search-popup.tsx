@@ -3,6 +3,8 @@
 import * as React from 'react'
 import { SearchService } from 'content-manager'
 import { getBasePath } from 'utils/utils';
+import SearchResult from './search-result'
+import style from "./search-popup.module.scss"
 
 interface IProps{}
 interface IState{
@@ -24,6 +26,7 @@ class BlogSearch extends React.Component<IProps, IState>
     }
     this.onClick = this.onClick.bind(this);
     this.onInputChanged = this.onInputChanged.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
     this.onKeyUp = this.onKeyUp.bind(this);
     this.search = this.search.bind(this);
   }
@@ -38,11 +41,16 @@ class BlogSearch extends React.Component<IProps, IState>
     this.search();
   };
 
+  onSubmit(e: React.FormEvent<HTMLFormElement>)
+  {
+    e.preventDefault();
+    this.search();
+  }
+
   onKeyUp(e: React.KeyboardEvent<HTMLInputElement>)
   {
     if(e.code == 'Enter')
     {
-      this.search();
     }
   }
 
@@ -61,14 +69,24 @@ class BlogSearch extends React.Component<IProps, IState>
   render()
   {
     return (
-      <div className='tw-left-1/2 -tw-translate-x-1/2 tw-fixed tw-top-nav-height  tw-bg-red-400 '>
-        <input className='tw_flex tw-bg-red-300' id='earch-input' name='search-input' type='textbox'           
-               onChange={this.onInputChanged}               
-               onKeyUp={this.onKeyUp}/>
-        <input id='search-btn' name='search-btn' type='button'           
-               onClick={this.onClick}/>               
-        <label className='tw_flex tw-cursor-pointer tw-bg-cyan-600'  htmlFor="search-btn">Search</label>  
-        <p className='tw_flex tw-bg-blue-600'>{this.state.results}</p>
+      <div className={`${style['search-popup']}`}>
+        <form className="tw-p-2 tw-flex tw-flex-row tw-border-2 tw-rounded-3xl"
+              onSubmit={this.onSubmit}>
+          <input className='tw-cursor-pointer tw-bg-color-page-background tw-pl-4' 
+                 id='search-input' name='search-input' type='textbox'           
+                 onChange={this.onInputChanged}/>
+          <label htmlFor="search-input"/>       
+          <input id='search-btn' 
+                 name='search-btn' type='button'/>         
+          <label className='tw_flex tw-cursor-pointer tw-ml-m-100px'  htmlFor="search-btn">
+            <i className="material-symbols-outlined md-sm tw-self-center
+                      tw-w-5">search</i>        
+          </label>  
+        </form>
+
+        <div className='tw_flex tw-bg-blue-600'>
+          <SearchResult items={this.state.results}/>
+        </div>
       </div>
     );
   }

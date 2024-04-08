@@ -1,6 +1,9 @@
 import Link from "nextwrap/link"
 
-export default function BreadCrumbs({path, className}: {path:string, className?:string}) {
+export default function BreadCrumbs(
+  {path, isDirectory, className}:
+  {path:string, isDirectory:boolean, className?:string}) 
+{
   let directory = '/';
 
   if(path.length > 0 && path[0] == '/'){
@@ -11,10 +14,10 @@ export default function BreadCrumbs({path, className}: {path:string, className?:
     directory += category + '/';
     return (
       <div key={directory} className="tw-flex tw-flex-row tw-text-sm">
+        <div>/</div>
         <Link href={directory}>
           {category}
         </Link>
-        <div>/</div>
       </div>
     )
   });
@@ -27,11 +30,13 @@ export default function BreadCrumbs({path, className}: {path:string, className?:
             folder_open
           </span>
           <Link className="tw-text-sm" href="/">Home</Link>
-          <div className="tw-text-sm">/</div>
         </>
       }
       {
         links
+      }
+      {
+        isDirectory ?? <div className="tw-text-sm">/</div>
       }
     </nav>
   )

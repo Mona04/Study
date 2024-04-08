@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev":        "concurrently \"content-initializer dev\" \"next dev -p 4000\"",
-    "packages":  "tsc --build tsconfig.all.json",
+    "packages":   "tsc --build tsconfig.all.json",
     "build":      "next build & next-image-export-optimizer",
     "predeploy":  "next build & next-image-export-optimizer",
     "deploy":     "next-sitemap & node ./src/scripts/nojekyll.js & gh-pages -d out -b gh-pages -t true",
@@ -24,7 +24,7 @@
     "ts-node": "10.9.2",
 
     "next": "14.1.4",
-    "next-image-export-optimizer": "1.10.0",
+    "next-image-export-optimizer": "1.12.3",
 
     "sass": "^1.63.6",
     "react-icons": "^4.10.1",    

@@ -2,9 +2,9 @@ import Link from "nextwrap/link"
 
 function Tag({tag}:{tag:string}) {
   return (
-    <div className="tw-ml-2 tw-pl-1 tw-pr-1
-                    
-                    tw-border-color-border tw-border-2
+    <div className="tw-ml-2 tw-pl-2 tw-pr-2               
+                    tw-rounded-md
+                    tw-bg-color-text-bg hover:tw-bg-color-text-bg-dimmed
                     ">
       <Link className="" href="asdf">
         {tag}

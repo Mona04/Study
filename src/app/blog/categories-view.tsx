@@ -11,13 +11,13 @@ interface Props {
   thumbnail?: string,
 }
 
-function CategoryView({slug, title, description, thumbnail}:Props){
-
+function CategoryView({slug, title, description, thumbnail}:Props)
+{
   return (
     <div className="tw-m-4">
       <Link href={encodeURI(slug)}>
         <div>
-          { thumbnail !== undefined && <Image src={thumbnail} alt="Thumbnail" width={1200} height={1200}/> }
+          { thumbnail !== undefined && <Image src={thumbnail} alt="Thumbnail" width={1200} height={1200} priority={true}/> }
           <h4 className="tw-mb-1 tw-mt-1">
             {title}
           </h4>
