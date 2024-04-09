@@ -1,48 +1,50 @@
-2:I[8646,["700","static/chunks/700-bfb956896023cae3.js","799","static/chunks/799-7b8e5d14f8ee1725.js","631","static/chunks/app/blog/%5B...categories%5D/page-5221100b938ff2ad.js"],""]
-5:I[5613,[],""]
-7:I[1778,[],""]
-8:I[8362,["929","static/chunks/4f9d9cd8-056db5515ffffa0d.js","712","static/chunks/3627521c-62f75f9ff2a6f39a.js","700","static/chunks/700-bfb956896023cae3.js","515","static/chunks/515-e3af64e356124e59.js","185","static/chunks/app/layout-7ec18c9793bfa8c2.js"],"ContextProvider"]
-9:I[5990,["929","static/chunks/4f9d9cd8-056db5515ffffa0d.js","712","static/chunks/3627521c-62f75f9ff2a6f39a.js","700","static/chunks/700-bfb956896023cae3.js","515","static/chunks/515-e3af64e356124e59.js","185","static/chunks/app/layout-7ec18c9793bfa8c2.js"],""]
-a:I[8427,["929","static/chunks/4f9d9cd8-056db5515ffffa0d.js","712","static/chunks/3627521c-62f75f9ff2a6f39a.js","700","static/chunks/700-bfb956896023cae3.js","515","static/chunks/515-e3af64e356124e59.js","185","static/chunks/app/layout-7ec18c9793bfa8c2.js"],""]
-b:I[3012,["929","static/chunks/4f9d9cd8-056db5515ffffa0d.js","712","static/chunks/3627521c-62f75f9ff2a6f39a.js","700","static/chunks/700-bfb956896023cae3.js","515","static/chunks/515-e3af64e356124e59.js","185","static/chunks/app/layout-7ec18c9793bfa8c2.js"],""]
-c:I[7380,["929","static/chunks/4f9d9cd8-056db5515ffffa0d.js","712","static/chunks/3627521c-62f75f9ff2a6f39a.js","700","static/chunks/700-bfb956896023cae3.js","515","static/chunks/515-e3af64e356124e59.js","185","static/chunks/app/layout-7ec18c9793bfa8c2.js"],""]
-d:I[8010,["929","static/chunks/4f9d9cd8-056db5515ffffa0d.js","712","static/chunks/3627521c-62f75f9ff2a6f39a.js","700","static/chunks/700-bfb956896023cae3.js","515","static/chunks/515-e3af64e356124e59.js","185","static/chunks/app/layout-7ec18c9793bfa8c2.js"],""]
-e:I[729,["929","static/chunks/4f9d9cd8-056db5515ffffa0d.js","712","static/chunks/3627521c-62f75f9ff2a6f39a.js","700","static/chunks/700-bfb956896023cae3.js","515","static/chunks/515-e3af64e356124e59.js","185","static/chunks/app/layout-7ec18c9793bfa8c2.js"],""]
-f:I[4099,["929","static/chunks/4f9d9cd8-056db5515ffffa0d.js","712","static/chunks/3627521c-62f75f9ff2a6f39a.js","700","static/chunks/700-bfb956896023cae3.js","515","static/chunks/515-e3af64e356124e59.js","185","static/chunks/app/layout-7ec18c9793bfa8c2.js"],""]
-10:I[6207,["929","static/chunks/4f9d9cd8-056db5515ffffa0d.js","712","static/chunks/3627521c-62f75f9ff2a6f39a.js","700","static/chunks/700-bfb956896023cae3.js","515","static/chunks/515-e3af64e356124e59.js","185","static/chunks/app/layout-7ec18c9793bfa8c2.js"],""]
-3:T1245,
+2:I[5250,["700","static/chunks/700-64528b002ca1adec.js","957","static/chunks/957-eff47dc6a4df8f44.js","631","static/chunks/app/blog/%5B...categories%5D/page-4c0ab7e67b59b46e.js"],""]
+3:I[8646,["700","static/chunks/700-64528b002ca1adec.js","957","static/chunks/957-eff47dc6a4df8f44.js","631","static/chunks/app/blog/%5B...categories%5D/page-4c0ab7e67b59b46e.js"],""]
+6:I[1558,["700","static/chunks/700-64528b002ca1adec.js","957","static/chunks/957-eff47dc6a4df8f44.js","631","static/chunks/app/blog/%5B...categories%5D/page-4c0ab7e67b59b46e.js"],""]
+7:I[5613,[],""]
+9:I[1778,[],""]
+a:I[8362,["929","static/chunks/4f9d9cd8-056db5515ffffa0d.js","712","static/chunks/3627521c-62f75f9ff2a6f39a.js","700","static/chunks/700-64528b002ca1adec.js","515","static/chunks/515-71a063128a7f1b28.js","185","static/chunks/app/layout-4c2c141dae1c424f.js"],"ContextProvider"]
+b:I[5990,["929","static/chunks/4f9d9cd8-056db5515ffffa0d.js","712","static/chunks/3627521c-62f75f9ff2a6f39a.js","700","static/chunks/700-64528b002ca1adec.js","515","static/chunks/515-71a063128a7f1b28.js","185","static/chunks/app/layout-4c2c141dae1c424f.js"],""]
+c:I[8427,["929","static/chunks/4f9d9cd8-056db5515ffffa0d.js","712","static/chunks/3627521c-62f75f9ff2a6f39a.js","700","static/chunks/700-64528b002ca1adec.js","515","static/chunks/515-71a063128a7f1b28.js","185","static/chunks/app/layout-4c2c141dae1c424f.js"],""]
+d:I[3012,["929","static/chunks/4f9d9cd8-056db5515ffffa0d.js","712","static/chunks/3627521c-62f75f9ff2a6f39a.js","700","static/chunks/700-64528b002ca1adec.js","515","static/chunks/515-71a063128a7f1b28.js","185","static/chunks/app/layout-4c2c141dae1c424f.js"],""]
+e:I[7380,["929","static/chunks/4f9d9cd8-056db5515ffffa0d.js","712","static/chunks/3627521c-62f75f9ff2a6f39a.js","700","static/chunks/700-64528b002ca1adec.js","515","static/chunks/515-71a063128a7f1b28.js","185","static/chunks/app/layout-4c2c141dae1c424f.js"],""]
+f:I[8010,["929","static/chunks/4f9d9cd8-056db5515ffffa0d.js","712","static/chunks/3627521c-62f75f9ff2a6f39a.js","700","static/chunks/700-64528b002ca1adec.js","515","static/chunks/515-71a063128a7f1b28.js","185","static/chunks/app/layout-4c2c141dae1c424f.js"],""]
+10:I[729,["929","static/chunks/4f9d9cd8-056db5515ffffa0d.js","712","static/chunks/3627521c-62f75f9ff2a6f39a.js","700","static/chunks/700-64528b002ca1adec.js","515","static/chunks/515-71a063128a7f1b28.js","185","static/chunks/app/layout-4c2c141dae1c424f.js"],""]
+11:I[4099,["929","static/chunks/4f9d9cd8-056db5515ffffa0d.js","712","static/chunks/3627521c-62f75f9ff2a6f39a.js","700","static/chunks/700-64528b002ca1adec.js","515","static/chunks/515-71a063128a7f1b28.js","185","static/chunks/app/layout-4c2c141dae1c424f.js"],""]
+12:I[8619,["929","static/chunks/4f9d9cd8-056db5515ffffa0d.js","712","static/chunks/3627521c-62f75f9ff2a6f39a.js","700","static/chunks/700-64528b002ca1adec.js","515","static/chunks/515-71a063128a7f1b28.js","185","static/chunks/app/layout-4c2c141dae1c424f.js"],""]
+4:T1834,
 ## 필요한 기능
 
 
 ### 블로그 포스트 관련
 
-1. Markdown / MDX 를 사용할 예정이다.
-
-2. 블로그 포스트를 Category 별로 표시하여 사이드 메뉴에 표시해야한다.
-
-3. Post Title, Content, Tag 및 Category 로 검색기능이 필요하다.
-
-4. 코드를 이쁘게 나오게 하고 싶다.
-
-5. 수식 표현을 위해 latex 지원이 필요하다.
-
+- [x] Markdown / MDX 를 사용할 예정이다.
+- [X] 글을 수정하면 바로 결과물을 보고싶다.
+- [x] 코드를 이쁘게 나오게 하고 싶다. 코드에 복사버튼도 필요하다.
+- [x] 수식 표현을 위해 latex 지원이 필요하다.
+- [x] Table of Content 기능이 필요하다.
++ [ ] 추천 포스트가 글 밑에 필요하다.
++ [ ] 태그를 눌렀을 때 관련 글을 볼 수 있어야한다.
+- [X] 블로그 포스트를 Category 별로 표시하여 사이드 메뉴에 표시해야한다.
+- [x] Post Title, Content, Tag 및 Category 로 검색기능이 필요하다.
 
 
 ### 페이지 관련
 
-1. 다크모드가 필요하다.
+1. [x] 다크모드가 필요하다.
 
-2. 밑에 가장 최근에 블로그를 업데이트한(빌드한) 시간을 표시하고 싶다. 
+2. [x] 밑에 가장 최근에 블로그를 업데이트한(빌드한) 시간을 표시하고 싶다. 
 
-3. 블로그 글 목록은 Grid 형식이고 스크롤을 내릴 때마다 나타낼때 서서히 나타나는 효과가 있었으면 좋겠다. [ex](https://blog.itcode.dev/comments)
+3. [ ] 블로그 글 목록은 Grid 형식이고 스크롤을 내릴 때마다 나타낼때 서서히 나타나는 효과가 있었으면 좋겠다. [ex](https://blog.itcode.dev/comments)
 
 
 
 ### 기타
 
-+ 공부상태 이쁘게 표현해서 화면에 띄우고 싶다. 
-+ 영작용 포스트 페이지가 필요하다. 한글 / 영어 이렇게 나오게 하고 싶다.
-+ open ai api 를 이용해서 뭐 하나 만들고 싶다.
++ [ ] 공부상태 이쁘게 표현해서 화면에 띄우고 싶다. 
++ [ ] 영작용 포스트 페이지가 필요하다. 한글 / 영어 이렇게 나오게 하고 싶다.
++ [ ] open ai api 를 이용해서 뭐 하나 만들고 싶다.
+
 
 
 
@@ -61,17 +63,15 @@ react 를 써보고 싶어 gatsby 랑 nextjs 중에 고민했는데 컴파일 �
 
 [TailwindCSS 사용기](https://fe-developers.kakaoent.com/2022/220303-tailwind-tips/)
 
+TailwindCSS 가 편한데 복잡한건 보기가 힘들어서 module.css 랑 병행해서 쓰고 있다.
+
 
 ### CMS
 
-내가 필요한 기능은 markdown hot reload 와 검색기능을 위한 전체 데이터 최적화이다. 
+콘텐츠 관리 프레임워크는 GraphGL 이나 ```next/mdx``` 등을 써보려다가 [contentlayer](https://www.contentlayer.dev/) 가 블로그용으로 쓸만해서 쓰고 있었다. md/mdx 에 필요한 기능인 remark/rehype 플러그인 및 yaml metadata 도 잘 작동하고, hot reload 도 잘 되고, 전체 글 목록도 js object 로 얻을 수 있어서 필요한 기능은 다 있었다. 무엇보다 단순히 js 코드를 생성하는 거라 Output 이 간단한게 마음에 들었다.
 
-결론부터 말하면 나는 그냥 [ContentLayer](https://www.contentlayer.dev/)를 쓰기로 했다. 
-글을 쓰는 2023.07 에는 아직 베타버전이라 버그도 많지만 내가 필요한 기능이 모두 있고 nextjs 공식 사이트에서 지원한다고 적혀져 있어 이후 지원도 기대할 수 있기 때문이다.
+그런데 이 모듈은 더이상 관리가 안되어 버그도 고쳐지지 않고 NextJS 14 랑 호환되지 않고있다. 그래서 비슷한 기능을 직접 구현한 [archivelayer](https://www.npmjs.com/package/archivelayer) 를 사용하고 있다.
 
-이전에 내가 고려한 것은  [next remote watch](https://github.com/hashicorp/next-remote-watch) 였는데 next.js 12 버전까지 지원하고 이후는 소식이 뚝 끊겨있었다. 
-그래서 내가 직접 파일변경 이벤트를 받아오고 nextjs hot reload api 를 호출하려고 했는데 이게 private api 라 숨겨져있었고 찾을 수 없었다. 
-나중에 보니까 ```next/router``` 를 사용하던데 자세히는 모르겠다.
 
 ### Search Framework
 
@@ -79,13 +79,12 @@ react 를 써보고 싶어 gatsby 랑 nextjs 중에 고민했는데 컴파일 �
 
 [lunrjs](https://lunrjs.com/)
 
+외부 검색 엔진에 내 글을 올리는 것이 마음에 안들고 정적 블로그기도 해서 jekyll 때도 신세를 졌던 ```lunr``` 을 사용하기로 했다.
 
 
 ## Content
 
-### Syntax Highlight
-
-Contentlayer 에서 rehype 관련 모듈을 넣어줄 수가 있다.
+### Code Highlight
 
 많이 사용되는 것으로는
 [Rehype Highlight](https://www.npmjs.com/package/rehype-highlight), 
@@ -96,16 +95,13 @@ Contentlayer 에서 rehype 관련 모듈을 넣어줄 수가 있다.
 + 줄/단어 하이라이트 같은 부가 기능도 붙어있고 커스터마이즈도 편하다.
 + 문서도 잘되어있어서 Rehype Prism Plus 대신 써보았다. 
 
-#### Copy 버튼
+### Code Copy 버튼
 
 요즘 Code Block 은 Copy 버튼이 붙어있다. 이를 구현하기 위해서 [claritydev blog](https://claritydev.net/blog/copy-to-clipboard-button-nextjs-mdx-rehype) 를 참고하여 구현하였다.
 
 ```unist-util-visit``` 을 이용해서 code 가 parse 되기 전에 원본 데이터를 따로 저장해둔다는 것이 핵심이다.
-+ 성능 차이가 궁금해서 포스트 1000개로 테스트도 해봤다.```Measure-Command { start-process npm 'run contentlayer build' -wait}``` 를 사용했는데 전처리/후처리 여부는 결과에 큰 영향을 주지 않았다.
 
-이렇게 저장한 데이터를 실질적으로 복사하는 부분을 ```<script>``` 를 통해서 Copy 를 구현했다. markdown 에도 적용하고 싶었기 때문에 react 를 쓸 수 없었기 때문이다.
-
-
+이렇게 저장한 데이터를 실질적으로 복사하는 부분을 ```<script>``` 를 통해서 구현했다. markdown 에도 적용하고 싶었기 때문에 react 를 쓸 수 없었기 때문이다.
 
 ### Latex
 
@@ -119,50 +115,71 @@ markdown 은 처음부터 html 로 바꿔서 문제가 없는데 mdx 은 바뀐 
 
 ### TOC
 
+```unist-util-visit``` 을 이용해서 md/mdx 문서에서 헤더만 읽어서 ID 를 부여해준다. 그렇지 않으면 ```#id``` 로 스크롤 하기가 힘들어진다.
+
+그리고 런타임에 헤더 목록을 가지고 TOC 를 구성한다. 현재 저장된 원본 md/mdx 를 매번 파싱해서 헤더 목록을 구하고 있는데 너무 느리면 캐싱를 해야할지도 모르겠다.
+
+현재 위치를 TOC 에 그리는 방법은 현재 윈도우에 있는 모든 헤더에 대해서 ```getBoundingClientRect()``` 를 사용해서 검색한다. 이는 스크롤이 움직일 때마다 호출해야하는데 계속 그러면 과부하가 있으므로 ```throttle()``` 함수를 따로 구현해서 일정 시간마다 호출이 가능하도록 했다.
+
+```js
+useEffect(()=> {
+    const callback = ()=>{/*헤더를 순차대로 찾아서 화면에 나오면 그걸로 state 변경*/}
+
+    callback();
+    // 100ms 가 지나야지 callback 호출 가능하게 하는 래핑함수사용.
+    const throttledCallback = throttle(callback, 100);
+    
+    window.addEventListener('scroll', throttledCallback);
+
+    return () => {
+      window.removeEventListener('scroll', throttledCallback)
+    }
+}, [])
+```
 
 
-### 
+## 구현시 에로사항
 
+### Style
 
+external css 가 scss 에서 ```@import``` 하면 적용이 안된다. ```<Link>``` 를 쓰던가 css 로 하면 된다. ```@import``` 가 순서대로 하나씩 로딩하는거라 시간이 걸린다고 하지만 유지관리 하기가 불편해서 그냥 css 로 했다.
 
-## Issue
+### SEO Checker
 
-ContentLayer 가 table 을 parse 하지 않아서 ```remark-gfm``` 을 사용했는데 ```4.0.0``` 버전에서는 에러가 뜬다. ```3.x``` 버전에는 잘 동작하고 있다.4:T152b,<h2 id="필요한-기능">필요한 기능</h2>
+https://seoblog.kr/posts/seo-checker/5:T2ad2,<h2 id="필요한-기능">필요한 기능</h2>
 <h3 id="블로그-포스트-관련">블로그 포스트 관련</h3>
-<ol>
-<li>
-<p>Markdown / MDX 를 사용할 예정이다.</p>
-</li>
-<li>
-<p>블로그 포스트를 Category 별로 표시하여 사이드 메뉴에 표시해야한다.</p>
-</li>
-<li>
-<p>Post Title, Content, Tag 및 Category 로 검색기능이 필요하다.</p>
-</li>
-<li>
-<p>코드를 이쁘게 나오게 하고 싶다.</p>
-</li>
-<li>
-<p>수식 표현을 위해 latex 지원이 필요하다.</p>
-</li>
-</ol>
+<ul class="contains-task-list">
+<li class="task-list-item"><div type="checkbox" checked disabled data-checkbox=""></div> Markdown / MDX 를 사용할 예정이다.</li>
+<li class="task-list-item"><div type="checkbox" checked disabled data-checkbox=""></div> 글을 수정하면 바로 결과물을 보고싶다.</li>
+<li class="task-list-item"><div type="checkbox" checked disabled data-checkbox=""></div> 코드를 이쁘게 나오게 하고 싶다. 코드에 복사버튼도 필요하다.</li>
+<li class="task-list-item"><div type="checkbox" checked disabled data-checkbox=""></div> 수식 표현을 위해 latex 지원이 필요하다.</li>
+<li class="task-list-item"><div type="checkbox" checked disabled data-checkbox=""></div> Table of Content 기능이 필요하다.</li>
+</ul>
+<ul class="contains-task-list">
+<li class="task-list-item"><div type="checkbox" disabled data-checkbox=""></div> 추천 포스트가 글 밑에 필요하다.</li>
+<li class="task-list-item"><div type="checkbox" disabled data-checkbox=""></div> 태그를 눌렀을 때 관련 글을 볼 수 있어야한다.</li>
+</ul>
+<ul class="contains-task-list">
+<li class="task-list-item"><div type="checkbox" checked disabled data-checkbox=""></div> 블로그 포스트를 Category 별로 표시하여 사이드 메뉴에 표시해야한다.</li>
+<li class="task-list-item"><div type="checkbox" checked disabled data-checkbox=""></div> Post Title, Content, Tag 및 Category 로 검색기능이 필요하다.</li>
+</ul>
 <h3 id="페이지-관련">페이지 관련</h3>
-<ol>
-<li>
-<p>다크모드가 필요하다.</p>
+<ol class="contains-task-list">
+<li class="task-list-item">
+<p><div type="checkbox" checked disabled data-checkbox=""></div> 다크모드가 필요하다.</p>
 </li>
-<li>
-<p>밑에 가장 최근에 블로그를 업데이트한(빌드한) 시간을 표시하고 싶다.</p>
+<li class="task-list-item">
+<p><div type="checkbox" checked disabled data-checkbox=""></div> 밑에 가장 최근에 블로그를 업데이트한(빌드한) 시간을 표시하고 싶다.</p>
 </li>
-<li>
-<p>블로그 글 목록은 Grid 형식이고 스크롤을 내릴 때마다 나타낼때 서서히 나타나는 효과가 있었으면 좋겠다. <a href="https://blog.itcode.dev/comments">ex</a></p>
+<li class="task-list-item">
+<p><div type="checkbox" disabled data-checkbox=""></div> 블로그 글 목록은 Grid 형식이고 스크롤을 내릴 때마다 나타낼때 서서히 나타나는 효과가 있었으면 좋겠다. <a href="https://blog.itcode.dev/comments">ex</a></p>
 </li>
 </ol>
 <h3 id="기타">기타</h3>
-<ul>
-<li>공부상태 이쁘게 표현해서 화면에 띄우고 싶다.</li>
-<li>영작용 포스트 페이지가 필요하다. 한글 / 영어 이렇게 나오게 하고 싶다.</li>
-<li>open ai api 를 이용해서 뭐 하나 만들고 싶다.</li>
+<ul class="contains-task-list">
+<li class="task-list-item"><div type="checkbox" disabled data-checkbox=""></div> 공부상태 이쁘게 표현해서 화면에 띄우고 싶다.</li>
+<li class="task-list-item"><div type="checkbox" disabled data-checkbox=""></div> 영작용 포스트 페이지가 필요하다. 한글 / 영어 이렇게 나오게 하고 싶다.</li>
+<li class="task-list-item"><div type="checkbox" disabled data-checkbox=""></div> open ai api 를 이용해서 뭐 하나 만들고 싶다.</li>
 </ul>
 <h2 id="프레임워크">프레임워크</h2>
 <h3 id="웹-개발-프레임워크">웹 개발 프레임워크</h3>
@@ -171,19 +188,16 @@ ContentLayer 가 table 을 parse 하지 않아서 ```remark-gfm``` 을 사용했
 <h3 id="CSS-프레임워크">CSS 프레임워크</h3>
 <p><a href="https://ykss.netlify.app/translation/the_pros_and_cons_of_tailwindcss/">Tailwind 장단점</a></p>
 <p><a href="https://fe-developers.kakaoent.com/2022/220303-tailwind-tips/">TailwindCSS 사용기</a></p>
+<p>TailwindCSS 가 편한데 복잡한건 보기가 힘들어서 module.css 랑 병행해서 쓰고 있다.</p>
 <h3 id="CMS">CMS</h3>
-<p>내가 필요한 기능은 markdown hot reload 와 검색기능을 위한 전체 데이터 최적화이다.</p>
-<p>결론부터 말하면 나는 그냥 <a href="https://www.contentlayer.dev/">ContentLayer</a>를 쓰기로 했다.
-글을 쓰는 2023.07 에는 아직 베타버전이라 버그도 많지만 내가 필요한 기능이 모두 있고 nextjs 공식 사이트에서 지원한다고 적혀져 있어 이후 지원도 기대할 수 있기 때문이다.</p>
-<p>이전에 내가 고려한 것은  <a href="https://github.com/hashicorp/next-remote-watch">next remote watch</a> 였는데 next.js 12 버전까지 지원하고 이후는 소식이 뚝 끊겨있었다.
-그래서 내가 직접 파일변경 이벤트를 받아오고 nextjs hot reload api 를 호출하려고 했는데 이게 private api 라 숨겨져있었고 찾을 수 없었다.
-나중에 보니까 <code>next/router</code> 를 사용하던데 자세히는 모르겠다.</p>
+<p>콘텐츠 관리 프레임워크는 GraphGL 이나 <code>next/mdx</code> 등을 써보려다가 <a href="https://www.contentlayer.dev/">contentlayer</a> 가 블로그용으로 쓸만해서 쓰고 있었다. md/mdx 에 필요한 기능인 remark/rehype 플러그인 및 yaml metadata 도 잘 작동하고, hot reload 도 잘 되고, 전체 글 목록도 js object 로 얻을 수 있어서 필요한 기능은 다 있었다. 무엇보다 단순히 js 코드를 생성하는 거라 Output 이 간단한게 마음에 들었다.</p>
+<p>그런데 이 모듈은 더이상 관리가 안되어 버그도 고쳐지지 않고 NextJS 14 랑 호환되지 않고있다. 그래서 비슷한 기능을 직접 구현한 <a href="https://www.npmjs.com/package/archivelayer">archivelayer</a> 를 사용하고 있다.</p>
 <h3 id="Search-Framework">Search Framework</h3>
 <p><a href="https://blog.rhostem.com/posts/2018-08-23-blog-search">rhostem 의 커스텀 검색</a></p>
 <p><a href="https://lunrjs.com/">lunrjs</a></p>
+<p>외부 검색 엔진에 내 글을 올리는 것이 마음에 안들고 정적 블로그기도 해서 jekyll 때도 신세를 졌던 <code>lunr</code> 을 사용하기로 했다.</p>
 <h2 id="Content">Content</h2>
-<h3 id="Syntax-Highlight">Syntax Highlight</h3>
-<p>Contentlayer 에서 rehype 관련 모듈을 넣어줄 수가 있다.</p>
+<h3 id="Code-Highlight">Code Highlight</h3>
 <p>많이 사용되는 것으로는
 <a href="https://www.npmjs.com/package/rehype-highlight">Rehype Highlight</a>,
 <a href="https://www.npmjs.com/package/rehype-prism-plus">Rehype Prism Plus</a>,
@@ -194,21 +208,49 @@ ContentLayer 가 table 을 parse 하지 않아서 ```remark-gfm``` 을 사용했
 <li>줄/단어 하이라이트 같은 부가 기능도 붙어있고 커스터마이즈도 편하다.</li>
 <li>문서도 잘되어있어서 Rehype Prism Plus 대신 써보았다.</li>
 </ul>
-<h4 id="Copy-버튼">Copy 버튼</h4>
+<h3 id="Code-Copy-버튼">Code Copy 버튼</h3>
 <p>요즘 Code Block 은 Copy 버튼이 붙어있다. 이를 구현하기 위해서 <a href="https://claritydev.net/blog/copy-to-clipboard-button-nextjs-mdx-rehype">claritydev blog</a> 를 참고하여 구현하였다.</p>
 <p><code>unist-util-visit</code> 을 이용해서 code 가 parse 되기 전에 원본 데이터를 따로 저장해둔다는 것이 핵심이다.</p>
-<ul>
-<li>성능 차이가 궁금해서 포스트 1000개로 테스트도 해봤다.<code>Measure-Command { start-process npm 'run contentlayer build' -wait}</code> 를 사용했는데 전처리/후처리 여부는 결과에 큰 영향을 주지 않았다.</li>
-</ul>
-<p>이렇게 저장한 데이터를 실질적으로 복사하는 부분을 <code>&#x3C;script></code> 를 통해서 Copy 를 구현했다. markdown 에도 적용하고 싶었기 때문에 react 를 쓸 수 없었기 때문이다.</p>
+<p>이렇게 저장한 데이터를 실질적으로 복사하는 부분을 <code>&#x3C;script></code> 를 통해서 구현했다. markdown 에도 적용하고 싶었기 때문에 react 를 쓸 수 없었기 때문이다.</p>
 <h3 id="Latex">Latex</h3>
 <p><code>MathJax</code> 는 <a href="https://github.com/remarkjs/remark-math/issues/80">NextJS hydration issue</a> 가 현재 블로그를 만드는 시점에 있다.</p>
 <p>markdown 은 처음부터 html 로 바꿔서 문제가 없는데 mdx 은 바뀐 결과물이 react 문법과 겹쳐서 그런가 문제가 생긴다.</p>
 <p>그래서 mdx 는 <code>katex</code> 를 사용했다.</p>
 <h3 id="TOC">TOC</h3>
-<h3></h3>
-<h2 id="Issue">Issue</h2>
-<p>ContentLayer 가 table 을 parse 하지 않아서 <code>remark-gfm</code> 을 사용했는데 <code>4.0.0</code> 버전에서는 에러가 뜬다. <code>3.x</code> 버전에는 잘 동작하고 있다.</p>6:["categories","blogging/construct","c"]
-0:["GmXTBbIkiW6Dv5Wdfna3b",[[["",{"children":["blog",{"children":[["categories","blogging/construct","c"],{"children":["__PAGE__?{\"categories\":[\"blogging\",\"construct\"]}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["blog",{"children":[["categories","blogging/construct","c"],{"children":["__PAGE__",{},["$L1",["$","article",null,{"children":[["$","h1",null,{"className":"tw-text-4xl tw-font-bold tw-mt-1","itemProp":"headline","children":"Make a Blog using NextJS"}],["$","nav",null,{"className":"tw-flex tw-flex-row tw-text-smtw-mb-4","children":[[["$","span",null,{"className":"material-symbols-outlined md-base tw-self-center tw-w-5","children":"folder_open"}],["$","a",null,{"className":"tw-text-sm","href":"/study-log/","rel":"$undefined","target":"_self","onClick":"$undefined","children":"Home"}]],[["$","div","/blog/",{"className":"tw-flex tw-flex-row tw-text-sm","children":[["$","div",null,{"children":"/"}],["$","a",null,{"className":"$undefined","href":"/study-log/blog/","rel":"$undefined","target":"_self","onClick":"$undefined","children":"blog"}]]}],["$","div","/blog/blogging/",{"className":"tw-flex tw-flex-row tw-text-sm","children":[["$","div",null,{"children":"/"}],["$","a",null,{"className":"$undefined","href":"/study-log/blog/blogging/","rel":"$undefined","target":"_self","onClick":"$undefined","children":"blogging"}]]}],["$","div","/blog/blogging/construct/",{"className":"tw-flex tw-flex-row tw-text-sm","children":[["$","div",null,{"children":"/"}],["$","a",null,{"className":"$undefined","href":"/study-log/blog/blogging/construct/","rel":"$undefined","target":"_self","onClick":"$undefined","children":"construct"}]]}]],false]}],["$","div",null,{"className":"tw-mt-0.5","children":["$","div",null,{"className":"tw-flex tw-flex-row tw-text-sm","children":[["$","i",null,{"className":"material-symbols-outlined md-sm tw-self-center   tw-w-5","children":"schedule"}],["$","div",null,{"className":"tw-color-text-dimmed","children":"Posted  :"}],["$","div",null,{"className":"tw-ml-2","children":"6/21/2023"}]]}]}],["$","$L2",null,{"mdSrc":"$3"}],["$","hr",null,{}],["$","div",null,{"className":"tw-mt-10","children":["$","div",null,{"dangerouslySetInnerHTML":{"__html":"$4"}}]}],["$","hr",null,{}],["$","div",null,{"className":"tw-flex tw-flex-row tw-text-sm undefined","children":[["$","i",null,{"className":"material-symbols-outlined md-sm tw-self-center   tw-w-5","children":"Sell"}],["$","div",null,{"className":"tw-color-text-dimmed","children":"Tags :"}],"$undefined"]}]]}],null]]},[null,["$","$L5",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$6","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":[["$","link","0",{"rel":"stylesheet","href":"/study-log/_next/static/css/e91ee3580e5cd3d5.css","precedence":"next","crossOrigin":""}]]}],null]]},["$","$L5",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},[null,["$","html",null,{"lang":"en","children":["$","body",null,{"className":"tw-relative tw-min-h-screen tw-bg-color-page-background","children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(function(){(null==localStorage.getItem(\"theme\")&&window.matchMedia(\"(prefers-color-scheme: dark)\").matches||\"dark\"==localStorage.getItem(\"theme\"))&&document.documentElement.setAttribute(\"data-theme\",\"dark\")})()"}}],["$","link",null,{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+KR&display=swap"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css","integrity":"sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC","crossOrigin":"anonymous"}],["$","link",null,{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"}],["$","$L8",null,{"children":[["$","nav",null,{"className":"masthead_masthead__zVIwm","children":[["$","$L9",null,{}],["$","a",null,{"className":"tw-self-center tw-ml-1   tw-font-sans tw-font-bold tw-text-color-primary tw-text-xl   hover:tw-text-color-text","href":"/study-log/","rel":"$undefined","target":"_self","onClick":"$undefined","children":"LOG | STUDY"}],["$","div",null,{"className":"tw-grow"}],["$","$La",null,{"className":"tw-flex tw-self-center tw-text-xl"}],["$","$Lb",null,{"className":"tw-flex tw-self-center tw-ml-2 tw-mr-4 tw-text-xl "}]]}],["$","$Lc",null,{"className":"tw-z-10"}],["$","aside",null,{"children":["$","$Ld",null,{"children":["$","div",null,{"className":"sidebar_sidebar__Wqt36","children":[["$","$Le",null,{"slug":"/","label":"HOME","refCount":-1,"depth":0}],["$","div",null,{"children":[["$","$Le","/todo",{"slug":"/todo","label":"TODO","refCount":1,"depth":0,"children":"$undefined"}],["$","$Le","/blog",{"slug":"/blog","label":"BLOG","refCount":42,"depth":0,"children":[["$","$Le","/blog/blogging",{"slug":"/blog/blogging","label":"BLOGGING","refCount":2,"depth":1,"children":"$undefined"}],["$","$Le","/blog/study",{"slug":"/blog/study","label":"STUDY","refCount":8,"depth":1,"children":[["$","$Le","/blog/study/wpf",{"slug":"/blog/study/wpf","label":"WPF","refCount":2,"depth":2,"children":"$undefined"}]]}],["$","$Le","/blog/test",{"slug":"/blog/test","label":"TEST","refCount":27,"depth":1,"children":[["$","$Le","/blog/test/hello-world",{"slug":"/blog/test/hello-world","label":"HELLO-WORLD","refCount":2,"depth":2,"children":"$undefined"}],["$","$Le","/blog/test/한글",{"slug":"/blog/test/한글","label":"한글","refCount":1,"depth":2,"children":"$undefined"}],["$","$Le","/blog/test/big-data",{"slug":"/blog/test/big-data","label":"BIG-DATA","refCount":21,"depth":2,"children":"$undefined"}]]}],["$","$Le","/blog/web",{"slug":"/blog/web","label":"WEB","refCount":2,"depth":1,"children":"$undefined"}],["$","$Le","/blog/computer-science",{"slug":"/blog/computer-science","label":"COMPUTER-SCIENCE","refCount":3,"depth":1,"children":[["$","$Le","/blog/computer-science/graphics",{"slug":"/blog/computer-science/graphics","label":"GRAPHICS","refCount":3,"depth":2,"children":"$undefined"}]]}]]}]]}]]}]}]}],["$","section",null,{"children":["$","$Lf",null,{"children":["$","$L10",null,{}]}]}],["$","main",null,{"className":"tw-mt-nav-height tw-pt-1 tw-pb-52","children":["$","$L5",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","main",null,{"children":["$","div",null,{"children":"404"}]}],"notFoundStyles":[],"styles":null}]}],["$","footer",null,{"className":"tw-absolute tw-w-full -tw-bottom-20","children":["$","div",null,{"className":"tw-backdrop-brightness-95  tw-text-xs","children":["$","div",null,{"className":"tw-flex tw-p-4 tw-mr-4 tw-ml-4   dark:tw-border-t-color-border dark:tw-border-t-2","children":[["$","div",null,{"className":"tw-flex-col","children":[["$","div",null,{"className":"tw-mb-3","children":["$","a",null,{"className":"tw-flex tw-self-center","href":"/study-loghttps://github.com/Mona04","rel":"$undefined","target":"_self","onClick":"$undefined","children":[["$","svg",null,{"stroke":"currentColor","fill":"currentColor","strokeWidth":"0","viewBox":"0 0 1024 1024","className":"tw-self-center","children":["$undefined",[["$","path","0",{"d":"M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0 1 38.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z","children":"$undefined"}]]],"style":{"color":"$undefined"},"height":"1em","width":"1em","xmlns":"http://www.w3.org/2000/svg"}],["$","div",null,{"className":"tw-ml-1 tw-font-bold","children":"GITHUB"}]]}]}],["$","div",null,{"className":"","children":["© 2024 Mona04. Powered by ",["$","a",null,{"className":"$undefined","href":"/study-loghttps://nextjs.org/","rel":"noopener noreferrer","target":"_blank","onClick":"$undefined","children":"NextJS"}],"."]}]]}],["$","div",null,{"className":"tw-flex tw-self-end tw-ml-auto   phone:tw-absolute phone:tw-collapse","children":[["$","div",null,{"className":"","children":"Last Build:"}],["$","div",null,{"className":"tw-ml-1","children":"11:8"}],["$","div",null,{"className":"tw-ml-1","children":"2024/4/9"}]]}]]}]}]}]]}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(function(){if(document)for(let e of document.querySelectorAll(\"[data-rehype-pretty-code-title]\"))for(let a of e.getElementsByTagName(\"button\"))a.addEventListener(\"click\",function(){if(navigator.clipboard){var n=e.getAttribute(\"data-code\");null!=n&&(navigator.clipboard.writeText(n),a.setAttribute(\"checked\",\"true\"),a.disabled=!0),setTimeout(()=>{a.removeAttribute(\"checked\"),a.disabled=!1},2e3)}})})()"},"defer":true}]]}]}],null]],[[["$","link","0",{"rel":"stylesheet","href":"/study-log/_next/static/css/c8f0bd7642634811.css","precedence":"next","crossOrigin":""}]],"$L11"]]]]
-11:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Make a Blog using NextJS"}],["$","meta","3",{"name":"description","content":"Hello World"}],["$","link","4",{"rel":"author","href":"moksha1905@gmail.com"}],["$","meta","5",{"name":"author","content":"Mona04"}],["$","meta","6",{"name":"category","content":"/blog/blogging/construct"}],["$","link","7",{"rel":"icon","href":"/study-log/favicon.ico"}]]
+<p><code>unist-util-visit</code> 을 이용해서 md/mdx 문서에서 헤더만 읽어서 ID 를 부여해준다. 그렇지 않으면 <code>#id</code> 로 스크롤 하기가 힘들어진다.</p>
+<p>그리고 런타임에 헤더 목록을 가지고 TOC 를 구성한다. 현재 저장된 원본 md/mdx 를 매번 파싱해서 헤더 목록을 구하고 있는데 너무 느리면 캐싱를 해야할지도 모르겠다.</p>
+<p>현재 위치를 TOC 에 그리는 방법은 현재 윈도우에 있는 모든 헤더에 대해서 <code>getBoundingClientRect()</code> 를 사용해서 검색한다. 이는 스크롤이 움직일 때마다 호출해야하는데 계속 그러면 과부하가 있으므로 <code>throttle()</code> 함수를 따로 구현해서 일정 시간마다 호출이 가능하도록 했다.</p>
+<figure data-rehype-pretty-code-figure=""><div data-rehype-pretty-code-title="" data-language="js" data-theme="github-dark-dimmed" data-code="useEffect(()=> {
+    const callback = ()=>{/*헤더를 순차대로 찾아서 화면에 나오면 그걸로 state 변경*/}
+
+    callback();
+    // 100ms 가 지나야지 callback 호출 가능하게 하는 래핑함수사용.
+    const throttledCallback = throttle(callback, 100);
+    
+    window.addEventListener(&#x27;scroll&#x27;, throttledCallback);
+
+    return () => {
+      window.removeEventListener(&#x27;scroll&#x27;, throttledCallback)
+    }
+}, [])
+">js<button title="code-copy-btn"></button></div><pre style="background-color:#22272e;color:#adbac7" tabindex="0" data-language="js" data-theme="github-dark-dimmed"><code data-language="js" data-theme="github-dark-dimmed" style="display: grid;"><span data-line=""><span style="color:#DCBDFB">useEffect</span><span style="color:#ADBAC7">(()</span><span style="color:#F47067">=></span><span style="color:#ADBAC7"> {</span></span>
+<span data-line=""><span style="color:#F47067">    const</span><span style="color:#DCBDFB"> callback</span><span style="color:#F47067"> =</span><span style="color:#ADBAC7"> ()</span><span style="color:#F47067">=></span><span style="color:#ADBAC7">{</span><span style="color:#768390">/*헤더를 순차대로 찾아서 화면에 나오면 그걸로 state 변경*/</span><span style="color:#ADBAC7">}</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#DCBDFB">    callback</span><span style="color:#ADBAC7">();</span></span>
+<span data-line=""><span style="color:#768390">    // 100ms 가 지나야지 callback 호출 가능하게 하는 래핑함수사용.</span></span>
+<span data-line=""><span style="color:#F47067">    const</span><span style="color:#6CB6FF"> throttledCallback</span><span style="color:#F47067"> =</span><span style="color:#DCBDFB"> throttle</span><span style="color:#ADBAC7">(callback, </span><span style="color:#6CB6FF">100</span><span style="color:#ADBAC7">);</span></span>
+<span data-line=""><span style="color:#ADBAC7">    </span></span>
+<span data-line=""><span style="color:#ADBAC7">    window.</span><span style="color:#DCBDFB">addEventListener</span><span style="color:#ADBAC7">(</span><span style="color:#96D0FF">'scroll'</span><span style="color:#ADBAC7">, throttledCallback);</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#F47067">    return</span><span style="color:#ADBAC7"> () </span><span style="color:#F47067">=></span><span style="color:#ADBAC7"> {</span></span>
+<span data-line=""><span style="color:#ADBAC7">      window.</span><span style="color:#DCBDFB">removeEventListener</span><span style="color:#ADBAC7">(</span><span style="color:#96D0FF">'scroll'</span><span style="color:#ADBAC7">, throttledCallback)</span></span>
+<span data-line=""><span style="color:#ADBAC7">    }</span></span>
+<span data-line=""><span style="color:#ADBAC7">}, [])</span></span></code></pre></figure>
+<h2 id="구현시-에로사항">구현시 에로사항</h2>
+<h3 id="Style">Style</h3>
+<p>external css 가 scss 에서 <code>@import</code> 하면 적용이 안된다. <code>&#x3C;Link></code> 를 쓰던가 css 로 하면 된다. <code>@import</code> 가 순서대로 하나씩 로딩하는거라 시간이 걸린다고 하지만 유지관리 하기가 불편해서 그냥 css 로 했다.</p>
+<h3 id="SEO-Checker">SEO Checker</h3>
+<p><a href="https://seoblog.kr/posts/seo-checker/">https://seoblog.kr/posts/seo-checker/</a></p>8:["categories","blogging/construct","c"]
+0:["R7U8f0l4dy_Rfd785YqQ2",[[["",{"children":["blog",{"children":[["categories","blogging/construct","c"],{"children":["__PAGE__?{\"categories\":[\"blogging\",\"construct\"]}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["blog",{"children":[["categories","blogging/construct","c"],{"children":["__PAGE__",{},["$L1",["$","article",null,{"children":[["$","h1",null,{"className":"tw-text-4xl tw-font-bold tw-mt-1","itemProp":"headline","children":"My Blog: Requirements and Implementation"}],["$","nav",null,{"className":"tw-flex tw-flex-row tw-text-smtw-mb-4","children":[[["$","span",null,{"className":"material-symbols-outlined md-base tw-self-center tw-w-5","children":"folder_open"}],["$","$L2",null,{"className":"tw-text-sm","href":"/","rel":"$undefined","target":"_self","onClick":"$undefined","children":"Home"}]],[["$","div","/blog/",{"className":"tw-flex tw-flex-row tw-text-sm","children":[["$","div",null,{"children":"/"}],["$","$L2",null,{"className":"$undefined","href":"/blog/","rel":"$undefined","target":"_self","onClick":"$undefined","children":"blog"}]]}],["$","div","/blog/blogging/",{"className":"tw-flex tw-flex-row tw-text-sm","children":[["$","div",null,{"children":"/"}],["$","$L2",null,{"className":"$undefined","href":"/blog/blogging/","rel":"$undefined","target":"_self","onClick":"$undefined","children":"blogging"}]]}],["$","div","/blog/blogging/construct/",{"className":"tw-flex tw-flex-row tw-text-sm","children":[["$","div",null,{"children":"/"}],["$","$L2",null,{"className":"$undefined","href":"/blog/blogging/construct/","rel":"$undefined","target":"_self","onClick":"$undefined","children":"construct"}]]}]],false]}],["$","div",null,{"className":"tw-mt-0.5","children":["$","div",null,{"className":"tw-flex tw-flex-row tw-text-sm","children":[["$","i",null,{"className":"material-symbols-outlined md-sm tw-self-center   tw-w-5","children":"schedule"}],["$","div",null,{"className":"tw-color-text-dimmed","children":"Posted  :"}],["$","div",null,{"className":"tw-ml-2","children":"6/21/2023"}]]}]}],["$","$L3",null,{"mdSrc":"$4"}],["$","hr",null,{}],["$","div",null,{"className":"tw-mt-10","children":["$","div",null,{"dangerouslySetInnerHTML":{"__html":"$5"}}]}],["$","hr",null,{}],["$","$L6",null,{"tags":["blog"]}]]}],null]]},[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$8","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":[["$","link","0",{"rel":"stylesheet","href":"/study-log/_next/static/css/2f59bda397c47447.css","precedence":"next","crossOrigin":""}]]}],null]]},["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},[null,["$","html",null,{"lang":"en","children":["$","body",null,{"className":"tw-relative tw-min-h-screen tw-bg-color-page-background","children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(function(){(null==localStorage.getItem(\"theme\")&&window.matchMedia(\"(prefers-color-scheme: dark)\").matches||\"dark\"==localStorage.getItem(\"theme\"))&&document.documentElement.setAttribute(\"data-theme\",\"dark\")})()"}}],["$","link",null,{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+KR&display=swap"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css","integrity":"sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC","crossOrigin":"anonymous"}],["$","link",null,{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"}],["$","$La",null,{"children":[["$","nav",null,{"className":"masthead_masthead__zVIwm","children":[["$","$Lb",null,{}],["$","$L2",null,{"className":"tw-self-center tw-ml-1   tw-font-sans tw-font-bold tw-text-color-primary tw-text-xl   hover:tw-text-color-text","href":"/","rel":"$undefined","target":"_self","onClick":"$undefined","children":"LOG | STUDY"}],["$","div",null,{"className":"tw-grow"}],["$","$Lc",null,{"className":"tw-flex tw-self-center tw-text-xl"}],["$","$Ld",null,{"className":"tw-flex tw-self-center tw-ml-2 tw-mr-4 tw-text-xl "}]]}],["$","$Le",null,{"className":"tw-z-10"}],["$","aside",null,{"children":["$","$Lf",null,{"children":["$","div",null,{"className":"sidebar_sidebar__Wqt36","children":[["$","$L10",null,{"slug":"/","label":"HOME","refCount":-1,"depth":0}],["$","div",null,{"children":[["$","$L10","/todo",{"slug":"/todo","label":"TODO","refCount":1,"depth":0,"children":"$undefined"}],["$","$L10","/blog",{"slug":"/blog","label":"BLOG","refCount":42,"depth":0,"children":[["$","$L10","/blog/study",{"slug":"/blog/study","label":"STUDY","refCount":8,"depth":1,"children":[["$","$L10","/blog/study/wpf",{"slug":"/blog/study/wpf","label":"WPF","refCount":2,"depth":2,"children":"$undefined"}]]}],["$","$L10","/blog/test",{"slug":"/blog/test","label":"TEST","refCount":27,"depth":1,"children":[["$","$L10","/blog/test/hello-world",{"slug":"/blog/test/hello-world","label":"HELLO-WORLD","refCount":2,"depth":2,"children":"$undefined"}],["$","$L10","/blog/test/한글",{"slug":"/blog/test/한글","label":"한글","refCount":1,"depth":2,"children":"$undefined"}],["$","$L10","/blog/test/big-data",{"slug":"/blog/test/big-data","label":"BIG-DATA","refCount":21,"depth":2,"children":"$undefined"}]]}],["$","$L10","/blog/web",{"slug":"/blog/web","label":"WEB","refCount":2,"depth":1,"children":"$undefined"}],["$","$L10","/blog/computer-science",{"slug":"/blog/computer-science","label":"COMPUTER-SCIENCE","refCount":3,"depth":1,"children":[["$","$L10","/blog/computer-science/graphics",{"slug":"/blog/computer-science/graphics","label":"GRAPHICS","refCount":3,"depth":2,"children":"$undefined"}]]}],["$","$L10","/blog/blogging",{"slug":"/blog/blogging","label":"BLOGGING","refCount":2,"depth":1,"children":"$undefined"}]]}]]}]]}]}]}],["$","section",null,{"children":["$","$L11",null,{"children":["$","$L12",null,{}]}]}],["$","main",null,{"className":"tw-mt-nav-height tw-pt-1 tw-pb-52","children":["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","main",null,{"children":["$","div",null,{"children":"404"}]}],"notFoundStyles":[],"styles":null}]}],["$","footer",null,{"className":"tw-absolute tw-w-full -tw-bottom-20","children":["$","div",null,{"className":"tw-backdrop-brightness-95  tw-text-xs","children":["$","div",null,{"className":"tw-flex tw-p-4 tw-mr-4 tw-ml-4   dark:tw-border-t-color-border dark:tw-border-t-2","children":[["$","div",null,{"className":"tw-flex-col","children":[["$","div",null,{"className":"tw-mb-3","children":["$","$L2",null,{"className":"tw-flex tw-self-center","href":"https://github.com/Mona04","rel":"$undefined","target":"_self","onClick":"$undefined","children":[["$","svg",null,{"stroke":"currentColor","fill":"currentColor","strokeWidth":"0","viewBox":"0 0 1024 1024","className":"tw-self-center","children":["$undefined",[["$","path","0",{"d":"M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0 1 38.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z","children":"$undefined"}]]],"style":{"color":"$undefined"},"height":"1em","width":"1em","xmlns":"http://www.w3.org/2000/svg"}],["$","div",null,{"className":"tw-ml-1 tw-font-bold","children":"GITHUB"}]]}]}],["$","div",null,{"className":"","children":["© 2024 Mona04. Powered by ",["$","$L2",null,{"className":"$undefined","href":"https://nextjs.org/","rel":"noopener noreferrer","target":"_blank","onClick":"$undefined","children":"NextJS"}],"."]}]]}],["$","div",null,{"className":"tw-flex tw-self-end tw-ml-auto   phone:tw-absolute phone:tw-collapse","children":[["$","div",null,{"className":"","children":"Last Build:"}],["$","div",null,{"className":"tw-ml-1","children":"23:44"}],["$","div",null,{"className":"tw-ml-1","children":"2024/4/9"}]]}]]}]}]}]]}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(function(){if(document)for(let e of document.querySelectorAll(\"[data-rehype-pretty-code-title]\"))for(let a of e.getElementsByTagName(\"button\"))a.addEventListener(\"click\",function(){if(navigator.clipboard){var n=e.getAttribute(\"data-code\");null!=n&&(navigator.clipboard.writeText(n),a.setAttribute(\"checked\",\"true\"),a.disabled=!0),setTimeout(()=>{a.removeAttribute(\"checked\"),a.disabled=!1},2e3)}})})()"},"defer":true}]]}]}],null]],[[["$","link","0",{"rel":"stylesheet","href":"/study-log/_next/static/css/4c75bf76e0fb9a27.css","precedence":"next","crossOrigin":""}]],"$L13"]]]]
+13:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"My Blog: Requirements and Implementation"}],["$","meta","3",{"name":"description","content":"블로그 요구사항 및 구현 방법 서술."}],["$","link","4",{"rel":"author","href":"moksha1905@gmail.com"}],["$","meta","5",{"name":"author","content":"Mona04"}],["$","meta","6",{"name":"category","content":"/blog/blogging/construct"}],["$","link","7",{"rel":"icon","href":"/study-log/favicon.ico"}]]
 1:null
