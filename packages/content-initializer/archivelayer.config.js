@@ -34,7 +34,7 @@ const configs = {
   mdx:{ 
     remarkPlugins: [ rm_gfm, [rm_math,]],
     rehypePlugins: [
-      saveRawCode, attachHeaderID,
+      modifyInput, saveRawCode, attachHeaderID,
       [ prettyCode, prettyCodeOption ],
       [ katex ],
       addCodeTitleBar,
@@ -43,7 +43,7 @@ const configs = {
   markdown:{ 
     remarkPlugins: [ rm_gfm, [rm_math,] ],
     rehypePlugins: [
-      saveRawCode, attachHeaderID,
+      modifyInput, saveRawCode, attachHeaderID,
       [ prettyCode, prettyCodeOption ],
       [ mathjax,],
       addCodeTitleBar,
@@ -61,7 +61,7 @@ function blogFields() {
     description:  { required: false, type: 'string',   },
     tags:         { required: false, type: 'list', of: {type: 'string'} },
     thumbnail:    { required: false, type: 'string'},
-    useSearch:      { required: false, type: 'boolean', default: true},
+    useSearch:    { required: false, type: 'boolean', default: true},
   }
 }
 
@@ -94,7 +94,7 @@ function prettyCodeOption()
 }
 
 /**
-   Unified transformer 
+   TOC 용 ID 만들기.
  * @returns 
  */
 function attachHeaderID() {
@@ -120,7 +120,7 @@ function attachHeaderID() {
 }
 
 /**
-   Unified transformer 
+   Copy 버튼 용 rawcode 저장.
  * @returns 
  */
 function saveRawCode() {
@@ -134,6 +134,27 @@ function saveRawCode() {
         if (codeEl.tagName === "code"){
           node.raw = codeEl.children?.[0].value;
         }  
+      }
+    });
+  }
+}
+
+/**
+   Input 은 Label 안붙으면 경고 떠서 딴거로 바꿈.
+ * @returns 
+ */
+function modifyInput() {
+  return  async (tree, ...prop)  => {
+    
+    // save the original code because it will be parsed for styling. 
+    visit(tree, 'element', (node) => {
+      if(node == null || node.tagName != 'input') return;
+
+      if(node.properties.type === 'checkbox'){
+        const isChecked  = node.properties.checked;
+        const isDisabled = node.properties.disabled;
+        node.tagName = 'div';
+        node.properties['data-checkbox'] = "";
       }
     });
   }

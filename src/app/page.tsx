@@ -1,4 +1,4 @@
-import CategoryView from './blog/categories-view'
+import CategoryView from '@/components/post/category-view'
 
 export default function PostView() {
 

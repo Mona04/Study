@@ -1,0 +1,228 @@
+/**
+* container 
+*/
+pre > code {
+  display: grid;
+  background-color: transparent; 
+}
+
+figure[data-rehype-pretty-code-figure] {
+  margin-bottom: 1.5em;
+
+  pre {
+    /*left padding is 0 for highlight line*/
+    padding: 0.4rem 0.0rem;   
+    margin-top: 5px 0;
+    border-radius: 8px;
+  
+    /* make scrollbar if overflow */
+    overflow-x: auto;
+  }
+}
+
+
+/* container with title */
+div[data-rehype-pretty-code-title] + pre {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  margin-top: 0px;
+}
+
+/* title */
+div[data-rehype-pretty-code-title] 
+{  
+  display: flex;
+  justify-content: left;
+  align-items: center;
+
+  background-color: #343541;
+
+  color: #999999;
+  font-size: 0.7rem;
+  font-weight: 700;
+
+  padding: 3px 1.25em;
+  height: 2rem;
+  border-radius: 8px 8px 0px 0px;
+  margin-top: 5px;
+
+  //https://fonts.google.com/icons?selected=Material+Symbols+Outlined:content_paste:FILL@0;wght@400;GRAD@0;opsz@24&icon.query=clip
+  button
+  {
+    display: inline;
+    margin-left: auto; // align to right
+  
+    &::before
+    {
+      font-family: "Material Symbols Outlined";
+      content: "\e14d";
+      font-size: 1.2em;
+      line-height: 0em;
+      vertical-align: sub;
+    }
+    &[checked]::before
+    {
+      font-family: "Material Symbols Outlined";
+      content: "\f88b";
+      font-size: 1.2em;
+      line-height: 0em;
+      vertical-align: sub;
+    }
+    &::after
+    {
+      content: "Copy code";
+      margin-left: 0.5em;
+    }
+    &[checked]::after
+    {
+      content: "Copied!";
+      margin-left: 0.5em;
+    }
+  }
+}
+
+/** 
+* content
+*/
+
+[data-line] {
+  display: inline-block;
+
+  padding: 0.1em 0;
+  border-left-width: 2px;
+  border-left-color: #0000;
+}
+
+// inline content
+p {
+  code{
+    padding: 0.2em 0.2em;
+    //background-color: transparent!important;
+  }
+}
+
+
+/**
+* highlight
+*/
+
+[data-highlighted-line] {
+  background: #c8c8ff1a;
+  border-left-color:#005b99;
+}
+
+[data-highlighted-chars] {
+  border-radius: .25rem;
+  background-color: #52525b80;
+  box-shadow: 0 0 0 4px #52525b80
+}
+
+[data-chars-id] {
+  border-bottom-width: 2px;
+  //padding: .25rem;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  //box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)
+}
+
+[data-chars-id] span {
+  color: inherit!important
+}
+
+[data-chars-id=v] {
+  border-bottom-color: rgb(219 39 119/var(--tw-border-opacity));
+  background-color: #9f123980;
+  color: rgb(249 168 212/var(--tw-text-opacity))!important
+}
+
+[data-chars-id=s],[data-chars-id=v] {
+  font-weight: 700;
+  --tw-border-opacity: 1;
+  --tw-text-opacity: 1!important
+}
+
+[data-chars-id=s] {
+  border-bottom-color: rgb(202 138 4/var(--tw-border-opacity));
+  background-color: #854d0e80;
+  color: rgb(253 224 71/var(--tw-text-opacity))!important
+}
+
+[data-chars-id=i] {
+  border-bottom-color: rgb(147 51 234/var(--tw-border-opacity));
+  background-color: #6b21a880;
+  font-weight: 700;
+  --tw-border-opacity: 1;
+  --tw-text-opacity: 1!important;
+  color: rgb(233 213 255/var(--tw-text-opacity))!important
+}
+
+
+/**
+* Code Line Numbering 
+*/
+
+pre>code {
+  counter-reset: line;
+}
+
+pre>code {
+  display: grid;
+  counter-reset: line
+}
+ 
+pre>code > [data-line]::before {
+  counter-increment: line;
+  content: counter(line);
+ 
+  /* Other styling */
+
+  display: inline-block;
+  width: 1rem;
+  margin-right: 1.2rem;
+  margin-left: 0.4rem;
+  text-align: right;
+  color: gray;
+}
+
+/* Increase the width of line numbers based on the digit count */
+code[data-line-numbers-max-digits='2'] > [data-line]::before {
+  width: 2rem;
+}
+ 
+code[data-line-numbers-max-digits='3'] > [data-line]::before {
+  width: 3rem;
+}
+
+code[data-line-numbers-max-digits='3'] > [data-line]::before {
+  width: 4rem;
+}
+
+/**
+* scrollbar
+*/
+
+figure[data-rehype-pretty-code-figure] pre::-webkit-scrollbar {
+  height: 12px;
+  background-color: transparent;
+}
+
+figure[data-rehype-pretty-code-figure] pre::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+figure[data-rehype-pretty-code-figure] pre::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: rgba(150,150,150);
+}
+
+/**
+* Dark / Light Mode
+
+[data-theme="dark"] pre[data-theme='light']{
+  display: none;
+}
+[data-theme="light"]  pre[data-theme='dark'] {
+  display: none;
+}
+*/

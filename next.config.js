@@ -81,5 +81,4 @@ const configs = (phase, { defaultConfig }) =>
   return config;
 }
 
-//module.exports = config;
 export default configs;

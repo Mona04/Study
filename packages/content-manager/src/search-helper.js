@@ -1,5 +1,4 @@
-import { getPostsByPath } from "./content-helper.js"
-
+// lunr-language 에 typescript 가 없어서 js 로 해야함.
 import lunr from "lunr";
 import lunr_stemmer from 'lunr-languages/lunr.stemmer.support.js'
 import lunr_multi from 'lunr-languages/lunr.multi.js'
@@ -8,6 +7,8 @@ import lunr_ko from './lunr.ko.js'
 lunr_stemmer(lunr);
 lunr_multi(lunr);
 lunr_ko(lunr);
+
+import { getPostsByPath } from "./content-helper.js"
 
 /*
 export interface LUNR_INDEX{
@@ -38,7 +39,7 @@ export async function createSearchIndex() {
     this.field('body', {boost: 3});
     this.ref('slug');
 
-    const posts = getPostsByPath('/').filter(p => p.isDirectory == false);
+    const posts = getPostsByPath('/').filter(p => p.useSearch);
     posts.forEach(post => {
       this.add({
         title: post.title,

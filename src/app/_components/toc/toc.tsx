@@ -55,7 +55,7 @@ const useIntersection = (
           }
           break;
         }
-        if(i == loopLength-1)
+        else if(i == loopLength-1)
         {
           setActiveId(ids[ids.length-1]!);
         }
@@ -156,7 +156,7 @@ function TableItem(variable: MakeTOCVariable)
   const isHighlighted = variable.activeID === headerID;
  
   return (
-    <li key={`toc-item-id-${headerText}${idx}`} className={isHighlighted ? style.selected : ""}>
+    <li key={`${idx}`} className={isHighlighted ? style.selected : ""}>
       <a href={`#${headerID}`} className="tw-scroll-smooth">{headerText}</a>
       { !isLeaf && <ul>{childs}</ul>}
     </li>

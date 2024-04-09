@@ -2,7 +2,7 @@ import Link from "nextwrap/link"
 import Image from "nextwrap/image"
 import BreadCrumbs from "@/components/post/breadcrumbs"
 import { getPostByPath, getPostsByPath } from 'content-manager'
-import { MDPostView, MDXPostView } from './post-component'
+import { MDPostView, MDXPostView } from 'content-manager';
 
 interface Props {
   title: string,
@@ -65,7 +65,8 @@ function CategoryDetail({path}:{path:string}){
   )
 }
 
-export default function CategoriesView({path}: {path:string}) {
+export default function CategoriesView({path}: {path:string})
+{
   return (
     <section className="content">
       {
@@ -87,7 +88,6 @@ export default function CategoriesView({path}: {path:string}) {
           })
         }
       </div>
-
     </section>
   )
 }

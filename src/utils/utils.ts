@@ -57,6 +57,14 @@ export async function copyToClipboard(text:string) {
   }
 }
 
+/**
+ * 함수로 한번 래핑해서 일정시간마다 함수가 호출 가능하도록 한다.
+ * 리턴 값이 함수임에 주의.
+ * const myCallbackT = throttle(myCallback, 100);
+ * @param callback 
+ * @param delayTime 
+ * @returns 
+ */
 export function throttle(callback: () => void, delayTime: number) {
   let timerId : any = null;
 

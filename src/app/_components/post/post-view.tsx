@@ -5,7 +5,7 @@ import TOCView from '@/components/toc/toc'
 import BreadCrumbs from "@/components/post/breadcrumbs"
 import UpdateTime from "@/components/post/updatetime"
 import Tags from "@/components/post/tags"
-import { MDPostView, MDXPostView } from './post-component'
+import { MDPostView, MDXPostView } from 'content-manager';
 
 /**
  * contentlayer 는 캐시를 쓰므로 컴파일 단계에서 링크를 바꿔놔야함.
@@ -27,7 +27,6 @@ export default function PostView({post}: {post:BlogPost})
       <BreadCrumbs className='tw-mb-4' path={post.slug} isDirectory={false}/>
       <UpdateTime className='tw-mt-0.5' date={post.date}/>
       <TOCView mdSrc={post.raw}/>
-
 
       <hr/>
       

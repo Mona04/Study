@@ -1,3 +1,4 @@
+// lunr-language 에 typescript 가 없어서 js 로 해야함.
 import lunr from "lunr";
 import lunr_stemmer from 'lunr-languages/lunr.stemmer.support'
 import lunr_multi from 'lunr-languages/lunr.multi'
