@@ -1,36 +1,11 @@
-import Link from "nextwrap/link"
-import Image from "nextwrap/image"
-import { getPostByPath, getPostsByPath } from 'content-manager'
+import { getPostByPath } from 'content-manager'
+import { CategoryView } from "../post/category-view"
 
 interface Props {
   title: string,
   slug: string,
   description?: string,
   thumbnail?: string,
-}
-
-function CategoryView({slug, title, description, thumbnail}:Props)
-{
-  return (
-    <div className="tw-m-4">
-      <Link href={encodeURI(slug)}>
-        <div className="tw-flex tw-flex-row desk:tw-flex-col">
-          <div>
-            { thumbnail !== undefined && <Image src={thumbnail} alt="Thumbnail" width={1200} height={1200} priority={true}/> }
-          </div>
-          <div className="tw-flex-grow-2">
-            <h4 className="tw-mb-1 tw-mt-1">
-              {title}
-            </h4>
-            <p className="tw-max-h-24 tw-overflow-hidden  
-                          tw-text-color-text-light tw-text-sm">
-              {description}
-            </p>
-          </div>
-        </div>
-      </Link>
-    </div>
-  )
 }
 
 function SearchItem({item}:{item:string}){
@@ -41,13 +16,16 @@ function SearchItem({item}:{item:string}){
 }
 
 function SearchContent({items}:{items:string[]|null}){
-  if(items == null) return <></>
+  if(items == null || items.length < 1) 
+  {
+      return <p className="tw-text-color-text-light tw-ml-auto tw-mr-auto">No Results!</p>
+  }
   return items.map((r,i)=><SearchItem key={i} item={r}/>);
 }
 
 function SearchContainer({children,}: {children: React.ReactNode}){
   return (
-    <div className="tw-grid tw-grid-cols-1 desk:tw-grid-cols-2">
+    <div className="tw-grid tw-grid-cols-1 desk:tw-grid-cols-2 tw-m-3">
       {children}
     </div>
   )

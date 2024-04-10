@@ -65,7 +65,6 @@ class BlogSearch extends React.Component<IProps, IState>
 
   onClickClear()
   {
-    console.log("asdf")
     this.setState({keyword: ""});
   }
 
@@ -84,24 +83,28 @@ class BlogSearch extends React.Component<IProps, IState>
   {
     return (
       <div className={`${style['search-popup']}`}>
-        <form className="tw-flex tw-border-2 tw-rounded-3xl tw-p-1 tw-pl-4 tw-pr-4 tw-m-2"
+        <form className="tw-flex tw-flex-row-reverse tw-border-2 tw-rounded-3xl tw-p-1 tw-pl-4 tw-pr-4 tw-m-2"
               onSubmit={this.onSubmit}>
-          <input className='tw-grow tw-bg-transparent' 
-                 id='search-input' name='search-input' type='textbox'           
-                 onChange={this.onInputChanged} value={this.state.keyword}/>
-          <label htmlFor="search-input"/>
+          
+          <input id='search-btn'
+                 name='search-btn' type='button'
+                 onClick={this.onClickSearch}/>       
+          <label className='tw_flex tw-cursor-pointer'  htmlFor="search-btn">
+            <i className="material-symbols-outlined tw-text-xl tw-align-middle tw-self-center">search</i>        
+          </label> 
+          
+          <div className='tw-border-l-2 tw-border-color-border tw-ml-2 tw-mr-2'/>
+          
           <button id='search-input-clear-btn' 
                  name='clear-btn' type='button'
                  onClick={this.onClickClear}>
             <i className="material-symbols-outlined tw-text-xl tw-align-middle tw-self-center">close</i>    
-          </button>
-          <div className='tw-border-l-2 tw-border-color-border tw-ml-2 tw-mr-2'/>
-          <input id='search-btn' 
-                 name='search-btn' type='button'
-                 onClick={this.onClickSearch}/>       
-          <label className='tw_flex tw-cursor-pointer '  htmlFor="search-btn">
-            <i className="material-symbols-outlined tw-text-xl tw-align-middle tw-self-center">search</i>        
-          </label>  
+          </button> 
+
+          <input className='tw-bg-transparent tw-w-full'
+                 id='search-input' name='search-input' type='textbox'           
+                 onChange={this.onInputChanged} value={this.state.keyword}/>
+          <label htmlFor="search-input"/>
         </form>
 
         <div className={`${style.results}`}>

@@ -23,7 +23,7 @@ export default function PostView({post}: {post:BlogPost})
   return (
     <article>
       
-      <h1 className="tw-text-4xl tw-font-bold tw-mt-1" itemProp='headline'>{post.title}</h1>
+      <h1 className="tw-text-4xl tw-font-bold tw-mt-m-0" itemProp='headline'>{post.title}</h1>
       <BreadCrumbs className='tw-mb-4' path={post.slug} isDirectory={false}/>
       <UpdateTime className='tw-mt-0.5' date={post.date}/>
       <TOCView mdSrc={post.raw}/>
