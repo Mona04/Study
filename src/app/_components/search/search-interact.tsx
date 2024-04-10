@@ -1,6 +1,6 @@
 'use client'
 
-import {useState, useContext, useEffect, MouseEventHandler, PointerEventHandler} from "react"
+import {useState, useContext, useEffect} from "react"
 import {Context} from "@/context/context"
 
 

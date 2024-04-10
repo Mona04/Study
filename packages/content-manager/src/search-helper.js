@@ -8,8 +8,8 @@ lunr_stemmer(lunr);
 lunr_multi(lunr);
 lunr_ko(lunr);
 
+import chalk from 'chalk'
 import { getPostsByPath } from "./content-helper.js"
-
 /*
 export interface LUNR_INDEX{
   title: string,
@@ -52,8 +52,8 @@ export async function createSearchIndex() {
   })
 
   var ed = performance.now();
-  console.log(`Constructing Search DataBase takes ${(ed-st)} ms`);
-
+  console.log(chalk.green(`Constructing Search DataBase takes ${(ed-st)} ms`));
+  
   return index.toJSON();
 }
 

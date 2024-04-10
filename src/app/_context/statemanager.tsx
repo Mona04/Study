@@ -25,11 +25,13 @@ class StateManager {
     return this.mMenuOpenEvent.subscribe(func);
   }
 
-  public openSearch() : void {
+  public openSearch() : void 
+  {
     this.mMenuOpenEvent.invoke(false);
     this.mSearchOpenEvent.invoke(true);
   }
-  public closeSearch() : void {
+  public closeSearch() : void 
+  {
     this.mSearchOpenEvent.invoke(false);
   }
   public registSearchEvent(func : (bOpen:boolean) => void) : EventDisposer<boolean>

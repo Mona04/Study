@@ -16,7 +16,7 @@ tags: [blog]
 - [x] 수식 표현을 위해 latex 지원이 필요하다.
 - [x] Table of Content 기능이 필요하다.
 + [ ] 추천 포스트가 글 밑에 필요하다.
-+ [ ] 태그를 눌렀을 때 관련 글을 볼 수 있어야한다.
++ [x] 태그를 눌렀을 때 관련 글을 볼 수 있어야한다.
 - [X] 블로그 포스트를 Category 별로 표시하여 사이드 메뉴에 표시해야한다.
 - [x] Post Title, Content, Tag 및 Category 로 검색기능이 필요하다.
 

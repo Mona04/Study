@@ -58,7 +58,8 @@ const config = {
       }
     },
     screens: {
-      'desk': {'min': '640px'},
+      'mobile': {"max": '640px'},
+      'desk'  : {'min': '640px'},
       'medium': {'min': '768px'},
     }
   },

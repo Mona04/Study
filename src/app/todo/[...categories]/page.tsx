@@ -6,6 +6,7 @@ import CategoryView from '@/components/post/category-view'
 type Params = {
   params: { categories: string[] } 
 }
+const BASECIR = '/todo';
 
 /**
  * @returns  [ {categories: []:string }] 형태어야 함
@@ -13,7 +14,7 @@ type Params = {
 export const generateStaticParams = () => {
 
   return Object.keys(postSlugs)
-    .filter(slug=> slug.startsWith('/blog/'))
+    .filter(slug=> slug.startsWith(`${BASECIR}/`))
     .map(slug=> {
 
       /*
@@ -32,7 +33,7 @@ export const generateStaticParams = () => {
 }
 
 export const generateMetadata = ({ params }: Params) : Metadata => {
-  const path = decodeURI(['/blog', ...params.categories].join('/'))
+  const path = decodeURI([BASECIR, ...params.categories].join('/'))
   const post = getPostByPath(path);
 
   if (!post) {
@@ -47,7 +48,7 @@ export const generateMetadata = ({ params }: Params) : Metadata => {
 
 export default function Page({ params }: Params) {
   
-  let path =  decodeURI(['/blog', ...params.categories].join('/'));
+  let path =  decodeURI([BASECIR, ...params.categories].join('/'));
 
   const slug = postSlugs[path];
 

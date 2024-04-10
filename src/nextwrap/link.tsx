@@ -19,7 +19,7 @@ export default ({children, href, target = '_self', rel, className, key, onClick}
     rel = 'noopener noreferrer';
   }
 
-  if(process.env.NODE_ENV == 'development') // 실제 client 에서는 context 가 맛이감
+  if(true||process.env.NODE_ENV == 'development') // 실제 client 에서는 context 가 맛이감
   {
     return (
       <Link className={className}
@@ -27,7 +27,9 @@ export default ({children, href, target = '_self', rel, className, key, onClick}
             href={href === undefined ? "" : href} 
             rel={rel} 
             target={target}
-            onClick={onClick}>
+            onClick={onClick} 
+            prefetch={false} // ssr 라 그런가 Error: Connection closed. 로 고장남.
+            >
         {children}
       </Link>
     )

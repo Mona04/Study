@@ -20,7 +20,11 @@ function MakeCategoryView({category, slug = '', depth = 0}: {category : PostDire
 export default () => {  
   return (
     <div>
-      { Object.values(postDirectoryRoot.childs).map(sub => <MakeCategoryView key={sub.category} category={sub}/>) }
+    { 
+      Object.values(postDirectoryRoot.childs)
+        .filter(d=>d.category.toLowerCase() != 'test')
+        .map(sub => <MakeCategoryView key={sub.category} category={sub}/>) 
+    }
     </div>   
   );
 };

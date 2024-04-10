@@ -1,14 +1,25 @@
+'use client'
 import Link from "nextwrap/link"
+import { useContext } from "react"
+import { Context } from "@/context/context"
 
-function Tag({tag}:{tag:string}) {
+function Tag({tag}:{tag:string}) 
+{
+  const context = useContext(Context);
+
+  const onClick = ()=>{
+    context?.statemgr.openSearch();
+    context?.searchmgr.searchByTags([tag]);
+  };
+
   return (
     <div className="tw-ml-2 tw-pl-2 tw-pr-2               
                     tw-rounded-md
                     tw-bg-color-text-bg hover:tw-bg-color-text-bg-dimmed
                     ">
-      <Link className="" href="asdf">
+      <p className="tw-inline" onClick={onClick}>
         {tag}
-      </Link>
+      </p>
     </div>
   )
 }
