@@ -25,15 +25,25 @@ function SearchContent({items}:{items:string[]|null}){
 
 function SearchContainer({children,}: {children: React.ReactNode}){
   return (
-    <div className="tw-grid tw-grid-cols-1 desk:tw-grid-cols-2 tw-m-3">
+    <div className="tw-grid tw-grid-cols-1 desk:tw-grid-cols-2">
       {children}
     </div>
   )
 }
 
-export default function SearchResults({items}:{items:string[]|null}) {
+function EmptySearch(){
   return (
-    <section>
+    <div className="tw-grid">
+     <p className="tw-text-color-text-light tw-ml-auto tw-mr-auto">No Results!</p>
+    </div>
+  )
+}
+
+export default function SearchResults({items}:{items:string[]|null}) {
+  if(items == null || items.length < 1)
+    return <EmptySearch/>;
+  return (
+    <section className='tw-m-3'>
       <SearchContainer>
         <SearchContent items={items}/>
       </SearchContainer> 

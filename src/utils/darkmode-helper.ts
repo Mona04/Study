@@ -35,10 +35,12 @@ function setInitialColorMode() {
    * 만약 localStorage 가 유효하지 않다면 => media 설정으로 처리
    * 만약 localStorage 가 유효하다면 => local Storage 로 처리
    */
-  if((localStorage.getItem("theme") == null && window.matchMedia("(prefers-color-scheme: dark)").matches) ||
-     (localStorage.getItem("theme") == 'dark')){
-      document.documentElement.setAttribute("data-theme", "dark");
-  } 
+  try{
+    if((localStorage.getItem("theme") == null && window.matchMedia("(prefers-color-scheme: dark)").matches) ||
+       (localStorage.getItem("theme") == 'dark')){
+        document.documentElement.setAttribute("data-theme", "dark");
+    }
+  } catch(err){}
 }
 
 /**

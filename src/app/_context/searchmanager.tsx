@@ -24,7 +24,7 @@ export class SearchManager
     this.mKeyword = input;
     this.mSearchInputEvent.invoke(input);
 
-    if(input == null || input.length < 2) return;
+    if(input == null || input.length < 2) return this.mSearchOutputEvent.invoke([]);
     
     this.getSearchService().then(s=>{
       const res = s.searchPosts(input).map((f:any&{ref:string})=>f.ref);

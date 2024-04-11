@@ -39,10 +39,10 @@
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
-    "global.d.ts",
+    "global.d.ts",    
+    "out/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx",
-    "out/types/**/*.ts"],
+    "**/*.tsx"],
   "exclude": [
     "node_modules",
     "packages"

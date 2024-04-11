@@ -14,9 +14,7 @@ interface Props {
 export function ToolTip({input}:{input:string|undefined})
 {
   return (
-    <span className="tw-absolute tw-scale-0 desk:group-hover:tw-scale-100 
-                      tw-rounded tw-bg-color-text-bg-dimmed tw-text-color-text 
-                      tw-m-4 tw-px-2 tw-text-xs">
+    <span className="tooltip-popup">
       {input}
     </span>
   )
@@ -41,12 +39,12 @@ export function CategoryView({slug, title, description, thumbnail}:Props)
           </div>
           <div className="mobile:tw-col-span-2 mobile:tw-h-20 desk:tw-h-32 desk:tw-my-2 tw-mx-2 tw-overflow-hidden">
             {/* h4 위 아래에 기본으로 margin padding 붙는거 제거 + Tooltip */}
-            <h4 className="tw-mb-0 tw-mt-0 tw-group tw-whitespace-nowrap">
-              <ToolTip input={title}/>
-               {title}
+            <h4 className="tw-mb-0 tw-mt-0 tw-group tw-whitespace-nowrap tooltip-hover tooltip-popup">
+       
+              {title}
             </h4>          
-            <p className="tw-text-color-text-light tw-text-sm tw-break-words tw-group">
-              <ToolTip input={description}/>
+            <p className="tw-text-color-text-light tw-text-sm tw-break-words tooltip-hover tooltip-popup">
+
               {description}
             </p>
           </div>
