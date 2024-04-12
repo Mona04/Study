@@ -65,14 +65,13 @@ export async function copyToClipboard(text:string) {
  * @param delayTime 
  * @returns 
  */
-export function throttle(callback: () => void, delayTime: number) {
+export function throttle<T>(callback: (args:T) => void, delayTime: number) {
   let timerId : any = null;
 
-  return () => {
+  return (args:T) => {
     if (timerId) return;
-
     timerId = setTimeout(() => {
-      callback();
+      callback(args);
       timerId = null;
     }, delayTime);
   };

@@ -9,15 +9,17 @@ class StateManager {
   }
 
   public closeAll() : void {
-    this.mMenuOpenEvent.invoke(false);
-    this.mSearchOpenEvent.invoke(false);
+    this.closeMenu();
+    this.closeSearch();
   }
-
-  public openMenu() : void {
+  
+  public openMenu() : void 
+  {
+    this.closeSearch();
     this.mMenuOpenEvent.invoke(true);
-    this.mSearchOpenEvent.invoke(false);
   }
-  public closeMenu() : void {
+  public closeMenu() : void 
+  {
     this.mMenuOpenEvent.invoke(false);
   }
   public registMenuEvent(func : (bOpen:boolean) => void) : EventDisposer<boolean>
@@ -27,7 +29,7 @@ class StateManager {
 
   public openSearch() : void 
   {
-    this.mMenuOpenEvent.invoke(false);
+    this.closeMenu();
     this.mSearchOpenEvent.invoke(true);
   }
   public closeSearch() : void 

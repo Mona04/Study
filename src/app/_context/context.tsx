@@ -23,7 +23,7 @@ class GlobalContext {
 }
 
 // 거의 준 싱글톤.
-export const globalContext = new GlobalContext();
+const globalContext = new GlobalContext();
 
 export const Context = createContext<GlobalContext | null>(null);
 

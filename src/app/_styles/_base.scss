@@ -278,6 +278,8 @@ a:focus {
 .tooltip {
   position: absolute;
   opacity: 0;
+  margin:0;
+  padding: 6px;
   color: var(--color-text);
   background: var(--color-text-bg);
   border-radius: 2px;
@@ -285,17 +287,7 @@ a:focus {
 }
 
 .tooltip.go {
-  animation: fadein 2s; 
-  transition: opacity 0.5s 1s;
+  transition: opacity 0.5s 0.3s;
   opacity: 100%;
-  
-}
-
-@keyframes fadein {
-  from {
-      display:block;
-  }
-  to {
-      display:block;
-  }
+  z-index: 99990;
 }

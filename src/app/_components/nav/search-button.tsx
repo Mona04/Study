@@ -26,7 +26,7 @@ function SearchButton({className}: {className?: string|undefined}) {
   };
 
   return (
-    <button className={className} title="search button" id='search-open-btn' 
+    <button className={className} title="search button" id='search-open-btn' type='button'
             onClick={onClickMenu}>
       <AiOutlineSearch />
     </button>
