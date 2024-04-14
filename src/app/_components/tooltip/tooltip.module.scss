@@ -1,0 +1,49 @@
+/* tooltip */
+.tooltip {
+  position: relative;
+  opacity: 0;
+  visibility: collapse;
+  padding: 6px;
+  color: var(--color-text-bg);
+  background: var(--color-text);
+  border-radius: 0.5em;  
+  font-size: var(--fontSize-sm);
+  align-content: center;
+
+  min-width: 50px;
+
+  &.go {
+    transition: opacity 0.5s 0.3s;
+    opacity: 100%;
+    visibility: visible;
+    z-index: 99990;
+  }
+}
+
+.tooltip.left{
+  margin-top:24px;
+  
+  &.left::after {
+    content: "  ";
+    position: absolute;       /* 절대 위치 사용 */
+    border-style: solid;
+    border-width: 8px;        /* 테두리 넓이를 5px 로 설정 */
+    border-color: transparent transparent var(--color-text) transparent;
+    top: -14px;                /* border-width * 2 - 2px. 1px 정도 틈이 가끔 생겨서 안전빵임 */
+    left: 10px;              
+  }
+}
+
+.tooltip.right{
+  margin-top:24px;
+
+  &.right::after {
+    content: "  ";
+    position: absolute;
+    border-style: solid;
+    border-width: 8px;
+    border-color: transparent transparent var(--color-text) transparent;
+    top: -14px;
+    right: 10px;              
+  }  
+}

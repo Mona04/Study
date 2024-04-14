@@ -1,18 +1,11 @@
 import { getPostByPath } from 'content-manager'
-import { CategoryView } from "../post/category-view"
-
-interface Props {
-  title: string,
-  slug: string,
-  description?: string,
-  thumbnail?: string,
-}
+import PostItem from "@/components/post/post-item" 
 
 function SearchItem({item}:{item:string}){
   const post = getPostByPath(item);
   if(post == null) return <></>
 
-  return <CategoryView slug={post.slug} title={post.title} description={post.description} thumbnail={post.thumbnail}/>
+  return <PostItem slug={post.slug} title={post.title} description={post.description} thumbnail={post.thumbnail}/>
 }
 
 function SearchContent({items}:{items:string[]|null}){
@@ -25,7 +18,7 @@ function SearchContent({items}:{items:string[]|null}){
 
 function SearchContainer({children,}: {children: React.ReactNode}){
   return (
-    <div className="tw-grid tw-grid-cols-1 desk:tw-grid-cols-2">
+    <div className="tw-grid tw-grid-cols-1 desk:tw-grid-cols-2 desk-medium:tw-grid-cols-3 desk-wide:tw-grid-cols-4">
       {children}
     </div>
   )

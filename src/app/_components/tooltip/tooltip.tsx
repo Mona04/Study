@@ -1,28 +1,59 @@
 'use client'
 import { useEffect, useState, useRef, MutableRefObject } from "react";
 import { throttle } from "utils/utils";
+import style from './tooltip.module.scss'
 
+interface POS {
+  top: string|number,
+  left: string|number,
+  right: string|number,
+}
 
 export  function Tooltip(
-  {hoverRef, children}:
-  {children:React.ReactNode, hoverRef:MutableRefObject<HTMLDivElement|null>}
+  {hoverRef}:
+  {hoverRef:MutableRefObject<HTMLDivElement|null>}
 ){
+  const [content, setContent] = useState<any>();
   const [isOpen, setIsOpen] = useState<boolean>();
-  const [cursorPosition, setCursorPosition] = useState({ top: 0, left: 0 })
+  const [isLeft, setIsLeft] = useState<boolean>();
+  const [cursorPosition, setCursorPosition] = useState<POS>({ top: 'auto', left: 'auto', right:'auto' })
   const isOut = useRef(true);
   const IsOut = (v:any)=>v.current;
+  
   //https://stackoverflow.com/questions/66382585/tooltip-inside-a-scrollable-component
-  const onMove = (o:HTMLElement, e:MouseEvent) => {
-    isOut.current = false;
-    setCursorPosition({left:e.pageX+10, top:e.pageY-30})
-    setIsOpen(false);
+  const onMove = ( e:MouseEvent) => {
+    if(hoverRef.current == null) return;
 
+    const owner = hoverRef.current;
+    
+    const o : HTMLElement = e.target as HTMLElement;
+    const pos : POS= { 
+      top: e.offsetY  + o.offsetTop, 
+      left: e.offsetX + o.offsetLeft, 
+      right: 'auto', };
+    if(owner.clientWidth - (pos.left as number) < owner.clientWidth/3)
+    {
+      pos.right = owner.clientWidth - (pos.left as number);
+      pos.left = 'auto';
+      setIsLeft(false);
+    }
+    else{
+      setIsLeft(true);
+    }
+
+    setContent(o.innerHTML)
+    setIsOpen(false);
+    
     setTimeout(()=>{   
       if(IsOut(isOut)) return;
+      setCursorPosition(pos)
       setIsOpen(true);
     }, 100);  
   };
-  const onLeave = (o:HTMLElement) => {
+  const onEnter = (e:MouseEvent) => {
+    isOut.current = false;
+  }
+  const onLeave = (e:MouseEvent) => {
     isOut.current = true;
     setIsOpen(false);
   };
@@ -30,35 +61,41 @@ export  function Tooltip(
     const callbacks:(()=>void)[] = [];
     
     const o = hoverRef.current!
-    
-    const _move = (e:any)=>{onMove(o, e);}
-    const _leave = ()=>{onLeave(o);};
-    
-    o.addEventListener('mousemove', _move);
-    o.addEventListener('mouseleave', _leave);
-    
-    callbacks.push(()=>{        
-      o.removeEventListener('mousemove', _move);
-      o.removeEventListener('mouseleave',_leave);
-    });
+    const _enter = (e:any)=>onEnter(e);
+    const _move = throttle((e:any)=>onMove(e),100);
+    const _leave = (e:any)=>onLeave(e);
+  
+    o.querySelectorAll(".tooltip-hover").forEach(node=>{
+      node.addEventListener('mouseenter', _enter);
+      node.addEventListener('mousemove', _move);
+      node.addEventListener('mouseleave', _leave);
+      callbacks.push(()=>{        
+        node.removeEventListener('mouseenter', _enter);
+        node.removeEventListener('mousemove', _move);
+        node.removeEventListener('mouseleave',_leave);
+      });      
+    })
 
     return ()=>{callbacks.forEach(c=>c());}
   }, []);
 
   return (
-    <div className={`tooltip ${isOpen ? "go" : ''} `} 
+    <div className={`${style.tooltip} ${isOpen ? style.go : ''} ${isLeft ? style.left : style.right} `} 
          style={{position: "absolute", ...cursorPosition }}>
-      {children}
+      {content}
     </div>
   )
 }
 
-export function WithTooltip({children, tooltip}:{children:React.ReactNode, tooltip:string|undefined}){
+/*
+여기서 wrapper div 만들어서 여기를 기준으로 tooltip 좌표를 계산하게 됨
+ */
+export function WithTooltip({children}:{children:React.ReactNode}){
   const hoverRef = useRef<HTMLDivElement|null>(null);
   return (
-    <div ref={hoverRef}>
-    {children}
-    <Tooltip hoverRef={hoverRef}>{tooltip}</Tooltip>
+    <div className="tw-relative" ref={hoverRef}>
+      {children}
+      <Tooltip hoverRef={hoverRef}/>
     </div>
   )
 }

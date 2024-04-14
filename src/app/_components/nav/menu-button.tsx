@@ -13,6 +13,7 @@ function MenuButton() {
 
     // 버튼 이벤트랑 연결
     disposables.push(context?.statemgr.registMenuEvent(v=>{
+      if(v == bOpen) return;
       setAnim(true);
       setTimeout(()=>{
         setOpen(v);

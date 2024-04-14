@@ -4,9 +4,10 @@ import { visit } from 'unist-util-visit'
 
 import rm_gfm      from 'remark-gfm'
 import rm_math     from 'remark-math'
-import prettyCode  from 'rehype-pretty-code'
-import mathjax     from 'rehype-mathjax'
-import katex       from 'rehype-katex'
+import rh_raw      from 'rehype-raw'
+import rh_prettyCode  from 'rehype-pretty-code'
+import rh_mathjax     from 'rehype-mathjax'
+import rh_katex       from 'rehype-katex'
 
 export const BlogMDPost = defineDocumentType(() => ({
   name: 'BlogMDPost',
@@ -35,8 +36,8 @@ const configs = {
     remarkPlugins: [ rm_gfm, [rm_math,]],
     rehypePlugins: [
       modifyInput, saveRawCode, attachHeaderID,
-      [ prettyCode, prettyCodeOption ],
-      [ katex ],
+      [ rh_prettyCode, prettyCodeOption ],
+      [ rh_katex ],
       addCodeTitleBar,
     ]
   },
@@ -44,8 +45,9 @@ const configs = {
     remarkPlugins: [ rm_gfm, [rm_math,] ],
     rehypePlugins: [
       modifyInput, saveRawCode, attachHeaderID,
-      [ prettyCode, prettyCodeOption ],
-      [ mathjax,],
+      [ rh_raw ],
+      [ rh_prettyCode, prettyCodeOption ],
+      [ rh_mathjax,],
       addCodeTitleBar,
     ]
   },
@@ -144,8 +146,8 @@ function saveRawCode() {
  * @returns 
  */
 function modifyInput() {
-  return  async (tree, ...prop)  => {
-    
+  return  async (tree, ...prop)  => 
+  {
     // save the original code because it will be parsed for styling. 
     visit(tree, 'element', (node) => {
       if(node == null || node.tagName != 'input') return;
@@ -178,6 +180,8 @@ function addCodeTitleBar() {
       if(header != node){
         const code = parent.raw;
         header.tagName = 'div';
+        // code 종류 안적으면 properties 가 없음.
+        if(header.properties==null) header.properties={}
         header.properties['data-code'] = code;
         addCopyButton(header);
       }
@@ -185,6 +189,7 @@ function addCodeTitleBar() {
       else{   
         const lang = node.properties['data-language'];
         const theme = node.properties['data-theme'];
+        // unshift 된건 다시 위의 코드로 들어오게 됨.
         parent.children.unshift(
           {
             type: 'element',
@@ -196,8 +201,6 @@ function addCodeTitleBar() {
             },
             children: [{ type: 'text', value: lang }]
           });
-        // unshift 된건 다시 검색하므로 또 넣을 이유가 없음.
-        //addCopyButton(parent.children[1]);
       }
     })
   }

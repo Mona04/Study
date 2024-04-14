@@ -2,7 +2,7 @@
 @import "@/styles/_breakpoint.scss";
 
 .sidebar {
-  z-index: 10000;
+  z-index: 20;
   position: fixed;
   top: var(--nav-height);
   
@@ -14,11 +14,9 @@
   height: calc(100% - var(--nav-height));//100%;
   padding: 0.5rem;
 
-  @include breakpoint(max-width $medium){
+  width: 18rem;
+  @include breakpoint(max-width $mobile){
    width: 100%;
-  }
-  @include breakpoint(min-width $medium){
-    width: 18rem;
   }
 }
 

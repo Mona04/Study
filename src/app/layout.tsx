@@ -7,9 +7,9 @@ import { CopyButtonScript } from "utils/markdown-helper"
 import { getBasePath } from "utils/utils"
 
 import MastHead from "@/components/nav/masthead"
-import SideBar from "@/components/sidebar/sidebar"
-import Search from "@/components/search/search"
 import Footer from "@/components/footer/footer"
+import SideBar         from "@/components/popup/sidebar/sidebar"
+import Search          from "@/components/popup/search/search"
 import PopupBackground from '@/components/popup/popup-background'
 
 import '@/styles/global.scss'
@@ -43,7 +43,7 @@ export default function RootLayout({children,}: {children: React.ReactNode}) {
           <MastHead/>
          
           {/* popups */}
-          <PopupBackground className='tw-z-10'/>
+          <PopupBackground/>
           <SideBar/>
           <Search/>
             

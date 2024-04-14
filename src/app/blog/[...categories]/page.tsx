@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { postSlugs, getPostByPath } from 'content-manager'
 import PostView from '@/components/post/post-view'
 import CategoryView from '@/components/post/category-view'
+import RelatedPost from '@/components/post/related-posts'
 
 type Params = {
   params: { categories: string[] } 
@@ -11,8 +12,8 @@ const BASECIR = '/blog';
 /**
  * @returns  [ {categories: []:string }] 형태어야 함
  */
-export const generateStaticParams = () => {
-
+export const generateStaticParams = () => 
+{
   return Object.keys(postSlugs)
     .filter(slug=> slug.startsWith(`${BASECIR}/`))
     .map(slug=> {
@@ -46,8 +47,8 @@ export const generateMetadata = ({ params }: Params) : Metadata => {
   }
 }
 
-export default function Page({ params }: Params) {
-  
+export default function Page({ params }: Params) 
+{
   let path =  decodeURI([BASECIR, ...params.categories].join('/'));
 
   const slug = postSlugs[path];
@@ -73,6 +74,7 @@ export default function Page({ params }: Params) {
     return (
       <>
         <PostView post={post}/>
+        <RelatedPost post={post}/>
       </>
     ) 
   }
