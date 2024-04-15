@@ -1,0 +1,13 @@
+
+
+/* mathjax */
+mjx-container.MathJax {
+
+  // inline 이 아니면 display 속성이 붙음.
+  &:not([display]){
+    max-height: 1.5em;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+  }
+}

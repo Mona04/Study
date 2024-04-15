@@ -106,6 +106,7 @@
 @import "./themes/_variables-dark.scss";
 @import "@/styles/_breakpoint.scss";
 @import "@/styles/_base.scss";
-@import '@/styles/_code.scss';
-@import '@/styles/_rehype.scss';
+@import '@/styles/plugins/_code.scss';
+@import '@/styles/plugins/_rehype.scss';
+@import '@/styles/plugins/_math.scss';
 @import '@/styles/_material_icons.scss'

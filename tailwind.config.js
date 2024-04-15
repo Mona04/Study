@@ -58,8 +58,10 @@ const config = {
       }
     },
     screens: {
-      'mobile':      {"max": '640px'},
-      'desk':        {'min': '640px'},
+      'mobile':      {"max": '480px'},
+      'desk':        {'min': '480px'},
+      'medium':      {'min': '640px'},
+      'medium-arge': {'min': '860px'},
       'desk-medium': {'min': '1024px'},
       'desk-wide'  : {'min': '1280px'},
     }

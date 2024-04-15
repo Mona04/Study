@@ -15,7 +15,7 @@
   padding: 0.5rem;
 
   width: 18rem;
-  @include breakpoint(max-width $mobile){
+  @include breakpoint(max-width $small){
    width: 100%;
   }
 }
