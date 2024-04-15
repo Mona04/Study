@@ -17,7 +17,7 @@ $$
 \cfrac{\sqrt{\resX^{2} + \resY^{2}}}{\resI}
 $$
 
-IPhone 12 Mini 를 예로 들어보자. 이 휴대폰은 5.4 인치 2340x1080 해상도를 가진다.[^iphone] 이를 위 수식에 넣어보면 477.260702109 가 나오고 다른 웹 계산기도 같은 결과를 가져온다. 실제로 이 폰은 476 PPI 를 가진다. 1 의 오차는 아마 소수점으로 생긴듯 하다.
+IPhone 12 Mini 를 예로 들어보자. 이 휴대폰은 5.4 인치 2340x1080 해상도를 가진다. 이를 위 수식에 넣어보면 477.260702109 가 나오고 다른 웹 계산기도 같은 결과를 가져온다. 실제로 이 폰은 476 PPI 를 가진다. 1 의 오차는 아마 소수점으로 생긴듯 하다.
 
 
 ## 논리적 픽셀
@@ -32,13 +32,40 @@ PPI 는 디스플레이에 따라 다르다. 다시말해 디스플레이에 따
 
 $$ \text{DPR} = \frac{\text{Num Physical Pixel}}{\text{Num Logical Pixel}}$$
 
-DPR 은 고유한 값이 있는 것은 아니고 프로그램마다 다른 DPR 을 사용할 수 있다. 이중에 가장 유명한게 CSS Pixel 이다.
+DPR 은 맥락에 따라 다른 이름을 가지기도 하고, 서로 Logical Pixel 간의 비율을 말할 수도 있다. 또한 이 값은 장치에 따라 가변적일 수도 있다.
 
 
 ### CSS Pixel
 
-js 에서 ```window.devicePixelRatio``` 라는 읽기전용 속성으로 현재 브라우저의 DPR 를 얻을 수 있다.[^js-dpr]
+그럼 예를 들어 보자. css 환경에서 IPhone 12 Mini 의 css pixel 는 몇일까?
 
+```js
+window.devicePixelRatio; // 3
+window.outerWidth;       // 375
+window.outerHeight;      // 812
+```
+
+위 코드를 통해 현재 휴대폰의 css pixel 갯수를 알 수 있다. 실제로 돌려보면 dpr 은 3, 해상도는 375x812 가 나오고 DPR 을 고려해보면 실제 해상도는 1125x2436 가 된다. 
+
+그런데 IPhone 12 Mini 의 해상도는 1080x2340 이지 않은가? 왜 두 값이 다른 것일까? 
+
+이는 IPhone 12/13 Mini 의 특징으로 1125x2436 으로 그린 결과를 1080x2340 으로 다시 축소하기 때문이다(정확한 매커니즘은 모름). 그래서 벡터 이미지인 폰트 마저도 흐릿하게 된다.[^reddit] 그래서 Scale Factor(3) 과 별개로 Native Scale Factor(2.88) 를 표기하기도 한다.[^iphone]  참고로 대부분의 기종은 이 둘이 차이가 없다.
+
+
+## Reference Pixel
+
+Logical Pixel 은 해상도가 다른 디스플레이에 대해서 같은 비율의 레이아웃을 구성하기 위해서 만들어졌다. 그런데 문제가 하나 더 있다. 거리가 먼 / 가까운 디스플레이에 대해서 Logical Pixel 을 구성하면 
+
+Logical Pixel 인 CSS Pixel 은 96 PPI 를 기준으로 만들어졌다. 문제는 이를 매우 먼 / 가까운 디스플레이에 대해서 적용하면 화면의 전체 비율이 달라지게 된다는 것이다. 그렇다고 Logical Pixel 의 단위를 디스플레이마다 다르게 적용하는 것은 그 그렇기 때문에 실사용자가 관측하는 비율을 고정한 기준이 필요해졌고 그게 Reference Pixel 이다.
+
+Reference Pixel 은 CSS Pixel 의 PPI 를 실제 길이가 아니라 디스플레이에 대한 시야각과 거리로 정의한다. 
+
+ 당시 많이 쓰이고 현재 CSS px 가 사용하는 96 PPI 는 시야각 0.0213 Degree 에서 28 Inch 거리의 디스플레이가 조건이라는 것이 요지이다. 휴대폰 환경에서는 
+
+
+### DPI 를 정하는 방법
+
+web div
 
 ### 예제
 
@@ -99,14 +126,23 @@ css 는 ```1in``` 를 96 개의 Logical Pixel 로 간주한다.[^css-doc] 그래
 
 [mdn mozilla: resolution](https://developer.mozilla.org/en-US/docs/Web/CSS/resolution)
 
+[mdn mozilla: devicePixelRatio](https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio)
+
 [web.dev:high-dpi](https://web.dev/articles/high-dpi?hl=ko)
 
 [web.dev:device-pixel-radio](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/-webkit-device-pixel-ratio)
 
-[^iphone]:[blisk: IPhone 12 Mini Spec](https://blisk.io/devices/details/iphone-12-mini)
+[apple dev: IPhone 12 Mini Spec](https://developer.apple.com/design/human-interface-guidelines/layout)
+
+
+[^iphone]:[apple: IPhone 12 Mini Spec](https://www.ios-resolution.com/iphone-12-mini/)
+
+[^reddit]:[reddit: IPhone1213 Mini Screen Res](https://www.reddit.com/r/iPhone12Mini/comments/rktxed/the_iphone_1213_minis_screen_resolution_is/)
 
 [^js-dpr]:[mozilla: device pixel ratio](https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio)
 
 [^css-doc]:[css-doc](https://drafts.csswg.org/css-values/#absolute-lengths)
 
 [^andriod-doc]:[andriod-doc](https://developer.android.com/training/multiscreen/screendensities?hl=ko)
+
+http://inamidst.com/stuff/notes/csspx
