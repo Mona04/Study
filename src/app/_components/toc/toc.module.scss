@@ -13,10 +13,10 @@
   font-size: var(--fontSize-sm);
 
   
-  @include breakpoint(max-width $medium-wide){
+  @include breakpoint(max-width $large){
 
   }
-  @include breakpoint(min-width $medium-wide){
+  @include breakpoint(min-width $large){
     float: right;
     position: sticky;
     top: calc(var(--nav-height) + 1em);
@@ -74,7 +74,7 @@
     text-overflow: ellipsis;
 
     margin:0;
-    padding: 0 1.0em 0 1.0em;
+    padding: 0.1em 1.0em 0.1em 1.0em;
     
     color: var(--color-text);
     font-size: var(--fontSize-sm);

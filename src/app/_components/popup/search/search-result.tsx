@@ -18,7 +18,7 @@ function SearchContent({items}:{items:string[]|null}){
 
 function SearchContainer({children,}: {children: React.ReactNode}){
   return (
-    <div className="tw-grid tw-grid-cols-1 desk:tw-grid-cols-2 desk-medium:tw-grid-cols-3 desk-wide:tw-grid-cols-4">
+    <div className="tw-grid tw-grid-cols-1 desk:tw-grid-cols-2 medium:tw-grid-cols-3">
       {children}
     </div>
   )

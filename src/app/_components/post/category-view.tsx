@@ -43,7 +43,7 @@ export default function CategoriesView({path}: {path:string})
         <BreadCrumbs path={path} isDirectory={true}/>
       </div>      
       <hr className=""/>
-      <div className="tw-grid tw-grid-cols-1 desk:tw-grid-cols-2 desk-medium:tw-grid-cols-3 desk-wide:tw-grid-cols-4">
+      <div className="tw-grid tw-grid-cols-1 desk:tw-grid-cols-2 medium:tw-grid-cols-3 medium-wide:tw-grid-cols-4">
         { 
           getPostsByPath(path)
           .filter(post=>post.useSearch)

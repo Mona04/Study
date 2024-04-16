@@ -32,7 +32,8 @@ main {
 article {
   padding: 1rem;
 
-  @include breakpoint(min-width $medium-wide){
+  // toc 자리를 강제로 만들고 main.max-width 로 최대너비 한정함.
+  @include breakpoint(min-width $large){
     width: calc(100% - 190px);
     padding-left:  190px;
   }
@@ -42,10 +43,10 @@ article {
 .content {
   padding: 1rem;
 
-  @include breakpoint(min-width $medium-wide){
-    width: calc(100% - 190px);
-    padding-left:  190px;
-  }
+  // 가독성을 위해 최대 너비 한정.
+  max-width: $medium-wide;
+  margin-left: auto;
+  margin-right: auto;;
 }
 
 hr {

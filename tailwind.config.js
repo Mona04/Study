@@ -60,10 +60,11 @@ const config = {
     screens: {
       'mobile':      {"max": '480px'},
       'desk':        {'min': '480px'},
+      'small':       {'min': '480px'},
       'medium':      {'min': '640px'},
-      'medium-arge': {'min': '860px'},
-      'desk-medium': {'min': '1024px'},
-      'desk-wide'  : {'min': '1280px'},
+      'medium-wide': {'min': '940px'},
+      'large':       {'min': '1024px'},
+      'large-wide'  : {'min': '1280px'},
     }
   },
   plugins: [],
