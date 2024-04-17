@@ -1,6 +1,7 @@
 ---
 title: Let's study React
 date: 2015-01-01
+tags: [web]
 ---
 
 [react 튜토리얼](https://react.vlpt.us/basic/01-concept.html)

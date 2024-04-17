@@ -1,7 +1,7 @@
 ---
 title: next-js global scss order in production 
 date: 2015-01-01
-tags: [nextjs, css, scss]
+tags: [web, nextjs, css, scss]
 ---
 
 ## 문제점

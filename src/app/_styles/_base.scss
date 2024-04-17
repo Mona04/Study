@@ -28,17 +28,6 @@ main {
   max-width: 1280px;
 }
 
-// 문서
-article {
-  padding: 1rem;
-
-  // toc 자리를 강제로 만들고 main.max-width 로 최대너비 한정함.
-  @include breakpoint(min-width $large){
-    width: calc(100% - 190px);
-    padding-left:  190px;
-  }
-}
-
 // 문서 제외
 .content {
   padding: 1rem;
@@ -47,6 +36,17 @@ article {
   max-width: $medium-wide;
   margin-left: auto;
   margin-right: auto;;
+}
+
+// 문서
+.content2 {
+  padding: 1rem;
+
+  // toc 자리를 강제로 만들고 main.max-width 로 최대너비 한정함.
+  @include breakpoint(min-width $large){
+    width: calc(100% - 190px);
+    padding-left:  190px;
+  }
 }
 
 hr {

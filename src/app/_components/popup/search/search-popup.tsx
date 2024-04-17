@@ -40,8 +40,8 @@ class BlogSearch extends React.Component<IProps, IState>
   componentDidMount(): void {
     const context : any = this.context;
     this.mSearchManager = context.searchmgr;
-    this.mDisposables.push(this.mSearchManager?.registSearchInputEvent(this.onSearchInput));
-    this.mDisposables.push(this.mSearchManager?.registSearchOutputEvent(this.onSearchOutput));
+    this.mDisposables.push(this.mSearchManager?.registerSearchInputEvent(this.onSearchInput));
+    this.mDisposables.push(this.mSearchManager?.registerSearchOutputEvent(this.onSearchOutput));
     // mount 전에 누가 검색을 외부에서 하면 반영이 안되므로.
     this.mSearchManager?.re_search();
   }

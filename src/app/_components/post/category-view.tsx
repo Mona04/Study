@@ -44,17 +44,17 @@ export default function CategoriesView({path}: {path:string})
       </div>      
       <hr className=""/>
       <div className="tw-grid tw-grid-cols-1 desk:tw-grid-cols-2 medium:tw-grid-cols-3 medium-wide:tw-grid-cols-4">
-        { 
-          getPostsByPath(path)
-          .filter(post=>post.useSearch)
-          .sort((a,b)=>b.date.getTime()-a.date.getTime()) // 최신순
-          .map(post=>{ 
-            return <PostItem key={post.slug} 
-                        title={post.title} description={post.description} 
-                        thumbnail={post.thumbnail}
-                        slug={post.slug}/>
-          })
-        }
+      { 
+        getPostsByPath(path)
+        .filter(post=>post.useSearch)
+        .sort((a,b)=>b.date.getTime()-a.date.getTime()) // 최신순
+        .map(post=>{ 
+          return <PostItem key={post.slug} 
+                      title={post.title} description={post.description} 
+                      thumbnail={post.thumbnail}
+                      slug={post.slug}/>
+        })
+      }
       </div>
     </section>
   )

@@ -32,10 +32,11 @@ export type BlogPost = {
 }
 
 export type PostDirectory = {
-  category : string,
-  count    : number,
-  childs   : PostDirectories,
-  post?    : BlogPost,
+  category      : string,
+  count         : number,
+  searchedCount : number,
+  childs        : PostDirectories,
+  post?         : BlogPost,
 }
 
 const _mdPostToBlogPost = (post:BlogMDPost):BlogPost => (
@@ -72,7 +73,7 @@ const _mdxPostToBlogPost = (post:BlogMDXPost):BlogPost => (
     thumbnail: post.thumbnail?.trim(),
     tags: post.tags,
   }
-  )
+)
   
 /**
  * Tree 구조로 현재 포스트 글을 표현
@@ -84,6 +85,7 @@ const _postDirectoryRoot = (() => {
   const directory : PostDirectory = { 
     category: "ROOT",
     count: 0,
+    searchedCount: 0,
     childs: {}
   };
 
@@ -96,12 +98,16 @@ const _postDirectoryRoot = (() => {
     for(let i = 0; i < categories.length; i++)
     {
       cur_directory.count++;
+      cur_directory.searchedCount += post.useSearch ? 1 : 0;
+      
       const slug = categories[i];
       const sub_directories = cur_directory.childs;
-      if(sub_directories[slug] === undefined) {
+      if(sub_directories[slug] === undefined) 
+      {
         sub_directories[slug] = {
           category: slug,
           count: 0,
+          searchedCount: 0,
           childs: {}
         };
       }

@@ -1,6 +1,7 @@
 ---
 title: DTO
 date: 2015-05-28
+tags: [design-pattern]
 ---
 
 ## DTO 란

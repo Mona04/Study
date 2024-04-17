@@ -1,6 +1,7 @@
 ---
 title: Particle System
 date: 2023-11-09
+tags: [graphics]
 ---
 
 ## 참고자료

@@ -1,6 +1,7 @@
 ---
 title: Attached Property VS Behavior
 date: 2015-05-28
+tags: [wpf]
 ---
 
 ## 차이점

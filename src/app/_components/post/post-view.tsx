@@ -21,7 +21,7 @@ export default function PostView({post}: {post:BlogPost})
   const content = postProcessContent(post.content)
   
   return (
-    <article>
+    <article className='content2'>
       
       <h1 className="mobile:tw-text-2xl tw-text-3xl tw-leading-normal tw-font-bold tw-mt-m-0" itemProp='headline'>{post.title}</h1>
       <BreadCrumbs className='tw-mb-4' path={post.slug} isDirectory={false}/>

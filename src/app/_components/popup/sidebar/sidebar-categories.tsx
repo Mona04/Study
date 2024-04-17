@@ -11,7 +11,7 @@ function MakeCategoryView({category, slug = '', depth = 0}: {category : PostDire
                     .map(sub => <MakeCategoryView key={slug} category={sub} slug={slug} depth={depth + 1}/>);
 
   return (
-    <CategoryItem key={slug} slug={slug} label={category.category.toUpperCase()} refCount={category.count} depth={depth}>
+    <CategoryItem key={slug} slug={slug} label={category.category.toUpperCase()} refCount={category.searchedCount} depth={depth}>
       {subviews.length > 0 ? subviews : <></>}
     </CategoryItem>
   );
@@ -22,7 +22,7 @@ export default () => {
     <div>
     { 
       Object.values(postDirectoryRoot.childs)
-        .filter(d=>d.category.toLowerCase() != 'test')
+        .filter(d=>d.category.toLowerCase() != 'private' )
         .map(sub => <MakeCategoryView key={sub.category} category={sub}/>) 
     }
     </div>   

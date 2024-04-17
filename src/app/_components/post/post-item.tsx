@@ -19,7 +19,7 @@ export default function PostItem({slug, title, description, thumbnail}:Props)
   // 
   return (
     <WithTooltip>
-    <div className="mobile:tw-h-24 desk:tw-h-72 tw-border-2 
+    <article className="mobile:tw-h-24 desk:tw-h-72 tw-border-2 
                     tw-m-1 tw-rounded-2xl tw-border-color-border
                     hover:tw-border-color-primary hover:tw-transition-all hover:tw-duration-500">
       <Link href={encodeURI(slug)}>
@@ -40,7 +40,7 @@ export default function PostItem({slug, title, description, thumbnail}:Props)
           </div>
         </div>
       </Link>
-    </div>
+    </article>
     </WithTooltip>
   )
 }

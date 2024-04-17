@@ -1,6 +1,7 @@
 ---
 title: Particle System
 date: 2023-11-09
+tags: [graphics]
 ---
 
 ## 앞서서

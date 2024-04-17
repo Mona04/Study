@@ -1,6 +1,7 @@
 ---
 title: WPF Xaml 작성요령
 date: 2015-05-28
+tags: [wpf]
 ---
 
 ## Override 로 쓸 필드는 Global Style 에 넣지 않는다.

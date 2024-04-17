@@ -76,3 +76,15 @@ export function throttle<T>(callback: (args:T) => void, delayTime: number) {
     }, delayTime);
   };
 };
+
+
+export function shuffle<T>(input:T[], count:number){
+  const datas = input.map(m=>m);
+  for (let index = datas.length - 1; index > 0; index--) {
+    // 무작위 index 값을 만든다. (0 이상의 배열 길이 값)
+    const randomPosition = Math.floor(Math.random() * (index + 1));
+
+    [datas[index], datas[randomPosition]] = [datas[randomPosition]!, datas[index]!]
+  }
+  return datas.slice(0, count > datas.length ? datas.length : count);
+}
