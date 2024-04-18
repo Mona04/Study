@@ -14,10 +14,10 @@ export default function BreadCrumbs(
     directory += category + '/';
     return (
       <div key={directory} className="tw-flex tw-flex-row tw-text-sm">
-        <div>/</div>
         <Link href={directory}>
           {category}
         </Link>
+        <div>/</div>
       </div>
     )
   });
@@ -26,17 +26,15 @@ export default function BreadCrumbs(
     <nav className={"tw-flex tw-flex-row tw-text-sm" + className}>
       {
         <>
-          <span className="material-symbols-outlined md-base tw-self-center tw-w-5">
+          <span className="material-symbols-outlined md-base tw-self-center tw-align-text-top  tw-w-5">
             folder_open
           </span>
           <Link className="tw-text-sm" href="/">Home</Link>
         </>
       }
+      <div className="tw-text-sm">/</div>
       {
-        links
-      }
-      {
-        isDirectory ?? <div className="tw-text-sm">/</div>
+        isDirectory ? links : links.slice(0, -1)
       }
     </nav>
   )

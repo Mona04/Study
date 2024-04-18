@@ -1,6 +1,7 @@
 ---
 title: next-js global scss order in production 
-date: 2015-01-01
+description : ""
+date: 2024-02-01
 tags: [web, nextjs, css, scss]
 ---
 

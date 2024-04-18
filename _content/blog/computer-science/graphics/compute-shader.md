@@ -1,5 +1,6 @@
 ---
 title: Particle System
+description : ""
 date: 2023-11-09
 tags: [graphics]
 ---

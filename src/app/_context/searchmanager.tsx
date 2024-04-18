@@ -46,7 +46,9 @@ export class SearchManager
 
   public searchByTags(tags:string[])
   {
-    this.search(`tags:${[...tags].join(' ')}`);
+    // Because spaces and hyphens are special characters, 
+    // in order to recognize a string as one word, we need to replace them with normal characters.
+    this.search(`tags:${[...tags.map(tag=>tag.replace(/[\- ]/gi, '_'))].join(' ')}`);
   }
 
   public registerSearchInputEvent(func : (input:SearchInput) => void) : EventDisposer<SearchInput>{

@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import { postSlugs, getPostByPath } from 'content-manager'
 import PostView from '@/components/post/post-view'
 import CategoryView from '@/components/post/category-view'
-import RelatedPost from '@/components/post/related-posts'
 
 type Params = {
   params: { categories: string[] } 
@@ -74,7 +73,6 @@ export default function Page({ params }: Params)
     return (
       <>
         <PostView post={post}/>
-        <RelatedPost post={post}/>
       </>
     ) 
   }

@@ -1,7 +1,8 @@
 ---
 title: DTO
+description: Data Transport Object 의 역할
 date: 2015-05-28
-tags: [design-pattern]
+tags: [design pattern]
 ---
 
 ## DTO 란

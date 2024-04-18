@@ -1,5 +1,6 @@
 ---
 title: Attached Property VS Behavior
+description : ""
 date: 2015-05-28
 tags: [wpf]
 ---

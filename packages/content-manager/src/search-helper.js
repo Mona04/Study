@@ -29,6 +29,9 @@ export async function createSearchIndex() {
   console.log("Construct Search Database...");
   const st = performance.now();  
 
+  // Because spaces and hyphens are special characters, 
+  // in order to recognize a string as one word, we need to replace them with normal characters.
+  const normalize = (p)=>p?.replace(/[\- ]/gi, '_')
 
   const index = lunr(function(){
     
@@ -36,17 +39,19 @@ export async function createSearchIndex() {
     this.field('title', {boost: 10});
     this.field('description', {boost: 5});
     this.field('tags', {boost: 10});
+    this.field('categories', {boost: 10});
     this.field('body', {boost: 3});
     this.ref('slug');
 
     const posts = getPostsByPath('/').filter(p => p.useSearch);
     posts.forEach(post => {
       this.add({
-        title: post.title,
+        title:       post.title,
         description: post.description,
-        tags: post.tags,
-        body: post.raw,
-        slug: post.slug,
+        tags:        post.tags?.map(p=>normalize(p)),
+        categories:  normalize(post.slug)?.replace(/[\/]/gi, ' '),
+        body:        post.raw,
+        slug:        post.slug,
       })
     });
   })

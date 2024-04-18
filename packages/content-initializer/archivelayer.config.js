@@ -59,9 +59,9 @@ const configs = {
 function blogFields() {
   return {
     title:        { required: true,  type: 'string',  },
-    date:         { required: false, type: 'date',     },
-    description:  { required: false, type: 'string',   },
-    tags:         { required: false, type: 'list', of: {type: 'string'} },
+    date:         { required: true, type: 'date',     },
+    description:  { required: true, type: 'string',   },
+    tags:         { required: true, type: 'list', of: {type: 'string'} },
     thumbnail:    { required: false, type: 'string'},
     useSearch:    { required: false, type: 'boolean', default: true},
   }

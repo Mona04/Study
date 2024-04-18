@@ -1,5 +1,6 @@
 ---
 title: WPF Xaml 작성요령
+description : ""
 date: 2015-05-28
 tags: [wpf]
 ---

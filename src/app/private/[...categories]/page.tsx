@@ -73,8 +73,7 @@ export default function Page({ params }: Params) {
 
     return (
       <>
-        <PostView post={post}/>
-        <RelatedPost post={post}/>
+        <PostView post={post}/>\
       </>
     ) 
   }

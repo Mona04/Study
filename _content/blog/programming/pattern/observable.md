@@ -2,7 +2,7 @@
 title: Observable 에 관한 메모
 description: Observable 의 여러 기능. Hot/Cold Stream , 스레드 동기화 등
 date: 2023-09-26
-tags: [design-pattern, c#]
+tags: [design pattern, c#]
 ---
 
 

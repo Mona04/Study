@@ -1,7 +1,8 @@
 ---
 title: MVVM 에서 사용하는 Design Pattern
+description : ""
 date: 2023-09-26
-tags: [design-pattern, wpf]
+tags: [design pattern, wpf]
 ---
 
 

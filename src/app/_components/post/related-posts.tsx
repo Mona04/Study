@@ -1,14 +1,14 @@
-import { BlogPost, getPostsByPath } from "content-manager";
-import PostItem from "./post-item";
+import { getPostsByPath } from "content-manager";
 import { shuffle } from "utils/utils";
+import PostItem from "./post-item";
 
-export default function RelatedPost({post}: {post:BlogPost})
+export default function RelatedPost({slug}: {slug:string})
 {
-  const relatedPosts = shuffle(getPostsByPath(post.slug.substring(0, post.slug.lastIndexOf('/'))).filter(p=>p.slug != post.slug), 3);
+  const relatedPosts = shuffle(getPostsByPath(slug.substring(0, slug.lastIndexOf('/'))).filter(p=>p.slug != slug), 4);
   return (
-    <section className="content2 ">
-      <h2>Related Posts</h2>
-      <div className="tw-grid tw-grid-cols-1 desk:tw-grid-cols-2 medium:tw-grid-cols-3">
+    <section className="">
+      <h4 className="tw-mt-0 tw-mb-2">Related Posts</h4>
+      <div className="tw-grid tw-grid-cols-1 desk:tw-grid-cols-2 medium:tw-grid-cols-4 medium-wide:tw-grid-cols-4">
       {
         relatedPosts?.map(
           p => 
@@ -18,7 +18,6 @@ export default function RelatedPost({post}: {post:BlogPost})
         )
       }
       </div>
-      <hr/>
     </section>
   )
 }
