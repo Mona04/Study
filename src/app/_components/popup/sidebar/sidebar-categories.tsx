@@ -1,6 +1,6 @@
+import {postDirectoryRoot, PostDirectory } from 'content-manager'
 import CategoryItem from "./sidebar-category-item"
-import {postDirectoryRoot, PostDirectory} from 'content-manager'
-
+import SideBarTags from './sidebar-tags'
 
 function MakeCategoryView({category, slug = '', depth = 0}: {category : PostDirectory, slug?: string , depth? : number})
 {
@@ -24,6 +24,9 @@ export default () => {
       Object.values(postDirectoryRoot.childs)
         .filter(d=>d.category.toLowerCase() != 'private' )
         .map(sub => <MakeCategoryView key={sub.category} category={sub}/>) 
+    }
+    {
+      <SideBarTags/>
     }
     </div>   
   );
