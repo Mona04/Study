@@ -3,14 +3,17 @@ import {Event, EventDisposer} from 'utils/event'
 class StateManager {
   private mMenuOpenEvent = new Event<boolean>();
   private mSearchOpenEvent = new Event<boolean>();
-  private mIsMenuOpened = false;
-  private mIsSearchOpened = false;
+  private isMenuOpened = false;
+  private isSearchOpened = false;
+  
+  private mDarkModeEvent = new Event<boolean>();
+  private isDarkMode = false;
 
   constructor()
   {
   }
 
-  public IsPopupOpened() { return this.mIsMenuOpened || this.mIsSearchOpened;}
+  public IsPopupOpened() { return this.isMenuOpened || this.isSearchOpened;}
 
   public closeAll() : void {
     this.closeMenu();
@@ -20,12 +23,12 @@ class StateManager {
   public openMenu() : void 
   {
     this.closeSearch();
-    this.mIsMenuOpened = true;
+    this.isMenuOpened = true;
     this.mMenuOpenEvent.invoke(true);
   }
   public closeMenu() : void 
   {
-    this.mIsMenuOpened = false;
+    this.isMenuOpened = false;
     this.mMenuOpenEvent.invoke(false);
   }
   public registMenuEvent(func : (bOpen:boolean) => void) : EventDisposer<boolean>
@@ -36,17 +39,28 @@ class StateManager {
   public openSearch() : void 
   {
     this.closeMenu();
-    this.mIsSearchOpened = true;
+    this.isSearchOpened = true;
     this.mSearchOpenEvent.invoke(true);
   }
   public closeSearch() : void 
   {
-    this.mIsSearchOpened = false;
+    this.isSearchOpened = false;
     this.mSearchOpenEvent.invoke(false);
   }
   public registSearchEvent(func : (bOpen:boolean) => void) : EventDisposer<boolean>
   {
     return this.mSearchOpenEvent.subscribe(func);
+  }
+
+  public IsDarkMode() { return this.isDarkMode; }
+  public setDarkMode(isDark:boolean) : void 
+  {
+    this.isDarkMode = isDark;
+    this.mDarkModeEvent.invoke(isDark);
+  }
+  public registerDarkModeEvent(func : (bOpen:boolean) => void) : EventDisposer<boolean>
+  {
+    return this.mDarkModeEvent.subscribe(func);
   }
 }
 

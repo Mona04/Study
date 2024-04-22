@@ -1,10 +1,14 @@
-import CategoryView from '@/components/post/category-view'
+import { getPostByPath } from 'content-manager';
+import PostView from '@/components/post/post-view'
 
-export default function PostView() {
-
+export default function Home() {
+  const post = getPostByPath('/home/page');
+  if (post == undefined){
+    throw new Error(`Post not found /home/page file.`)
+  }    
   return (
-    <>
-      <CategoryView path='/blog'/>
-    </>
+    <div>     
+      <PostView post={post}/>
+    </div>
   )
 }

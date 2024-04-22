@@ -12,6 +12,8 @@ export default function SideBar() {
       <Interact>  
         <div className={style.sidebar} >
           <CategoryItem slug="/" label="HOME" refCount={-1} depth={0}/>
+          <CategoryItem slug="/portfolio" label="PORTFOLIO★" refCount={-1} depth={0}/>
+          <CategoryItem slug="/tags" label="TAGS" refCount={-1} depth={0}/>
           <SideBarCategory/>
         </div>
       </Interact>  

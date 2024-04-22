@@ -53,9 +53,8 @@ export default function CategoryItem({children, label, refCount, slug, depth} : 
               ${depth < 1 ? "tw-font-bold" : "tw-font-normal"}
               ${depth < 1 ? "mobile:tw-text-xl tw-text-lg" : depth < 2 ? "mobile:tw-text-lg tw-text-lg" : "mobile:tw-text-base tw-text-base"}
            `}>       
-        <button 
-          className="tw-flex tw-flex-row tw-grow"
-          onClick={onClickToggle}> 
+        <button className="tw-flex tw-flex-row tw-grow"
+                onClick={onClickToggle}> 
           <div className="tw-self-center tw-w-6">
             { isLeaf ? <></> : isCollapsed ? <RiArrowRightSLine/> : <RiArrowDownSLine/>} 
           </div>
@@ -69,6 +68,7 @@ export default function CategoryItem({children, label, refCount, slug, depth} : 
         </button>
     
       </div> 
+
       {!isCollapsed && <div className="tw-border-l-2 tw-ml-1.5 tw-pl-1.5">{children}</div>}   
     </>
   );

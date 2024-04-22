@@ -39,7 +39,9 @@ export default function PrevNex({slug}:{slug:string})
 {
   let prev : BlogPost | undefined = undefined;
   let next : BlogPost | undefined = undefined;
-  const posts = getPostsByPath(slug.substring(0, slug.lastIndexOf('/'))).sort((a,b)=>b.date.getTime()-a.date.getTime());
+  const posts = getPostsByPath(slug.substring(0, slug.lastIndexOf('/')))
+                .filter(v=>v.useSearch)
+                .sort((a,b)=>b.date.getTime()-a.date.getTime());
 
   for(let i = 0; i < posts.length; i++)
   {

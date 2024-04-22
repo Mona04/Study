@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { postSlugs, getPostByPath } from 'content-manager'
-import PostView from '@/components/post/post-view'
+import PostView     from '@/components/post/post-view'
 import CategoryView from '@/components/post/category-view'
 
 type Params = {
@@ -43,6 +43,10 @@ export const generateMetadata = ({ params }: Params) : Metadata => {
     title: post.title,
     description: post.description,
     category: path,
+
+    alternates: {
+      canonical: `${path}`
+    },    
   }
 }
 
@@ -72,7 +76,7 @@ export default function Page({ params }: Params)
 
     return (
       <>
-        <PostView post={post}/>
+        <PostView post={post} useComments={true}/>
       </>
     ) 
   }

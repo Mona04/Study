@@ -2,7 +2,7 @@ import Link from "nextwrap/link"
 
 import MenuButton from './menu-button'
 import SearchButton from './search-button'
-import DarkModeToggle from "../darkmode-toggle/darkmode-toggle"
+import DarkModeToggle from "./darkmode-toggle"
 
 import style from "./masthead.module.scss"
 

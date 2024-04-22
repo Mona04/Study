@@ -1,4 +1,5 @@
 'use client'
+
 import { useContext } from "react"
 import { Context } from "@/context/context"
 
@@ -15,8 +16,9 @@ function Tag({tag}:{tag:string})
     <div className="tw-ml-2 tw-pl-2 tw-pr-2               
                     tw-rounded-md
                     tw-bg-color-text-bg hover:tw-bg-color-text-bg-dimmed
-                    ">
-      <p className="tw-inline" onClick={onClick}>
+                    "
+         onClick={onClick}>
+      <p className="tw-inline" >
         {tag}
       </p>
     </div>
