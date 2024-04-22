@@ -2,7 +2,6 @@
 
 import {useState, useEffect, useContext} from 'react'
 import { Context } from '@/context/context'
-import * as Utils from "utils/darkmode-helper"
 import style from "./darkmode-toggle.module.scss"
 
 //https://alvarotrigo.com/blog/toggle-switch-css/
@@ -18,7 +17,7 @@ function DarkModeToggle({className}: {className?: string|undefined})
     const disposables : (IDisposable|undefined)[] = [];
 
     disposables.push(context?.statemgr.registerDarkModeEvent(v=>setDarkMode(v)));
-    context?.statemgr.setDarkMode(Utils.isDarkMode());
+    context?.statemgr.setDarkMode(context?.statemgr.IsDarkMode());
 
     return ()=>{
       disposables.map(v=>v?.dispose());
@@ -27,8 +26,7 @@ function DarkModeToggle({className}: {className?: string|undefined})
 
   const onChange = (e: React.InputHTMLAttributes<HTMLInputElement>) : void =>
   {   
-    Utils.toggleDarkMode();
-    context?.statemgr.setDarkMode(Utils.isDarkMode());
+    context?.statemgr.setDarkMode(context?.statemgr.IsDarkMode() ? false : true);
   };
 
   return (

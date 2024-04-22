@@ -28,7 +28,7 @@ export default function Comments()
     scriptElem.setAttribute('data-input-position', 'top');
     scriptElem.setAttribute('data-theme', isDarkMode ? "dark" : "light");
     scriptElem.setAttribute('data-lang', 'en');
-    scriptElem.setAttribute('data-loading', 'lazy');
+    //scriptElem.setAttribute('data-loading', 'lazy'); // 로딩 전에 theme 을 바꾸면 적용이 안되던데.
     
     ref.current.appendChild(scriptElem);
   }

@@ -1,5 +1,5 @@
 import { getPostByPath } from 'content-manager';
-import { MDPostView, MDXPostView } from 'content-manager'
+import { MDPostView, MDXPostView } from 'content-manager/hooks'
 import RelatedPosts from '@/components/post/related-posts'
 
 

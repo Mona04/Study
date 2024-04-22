@@ -18,7 +18,7 @@ tags: [blog]
   - [x] 코드를 이쁘게 나오게 하고 싶다. 코드에 복사버튼도 필요하다.
   - [x] 수식 표현을 위해 latex 지원이 필요하다.
   - [x] Table of Content 기능이 필요하다.
-  - [ ] 댓글 기능이 필요하다.
+  - [x] 댓글 기능이 필요하다.
 
 + 검색
   + [x] 태그를 눌렀을 때 관련 글을 볼 수 있어야한다.
@@ -82,6 +82,14 @@ TailwindCSS 가 편한데 복잡한건 보기가 힘들어서 module.css 랑 병
 외부 검색 엔진에 내 글을 올리는 것이 마음에 안들고 정적 블로그기도 해서 jekyll 때도 신세를 졌던 ```lunr``` 을 사용하기로 했다.
 
 
+### Comment Framework
+
+[Giscus](https://giscus.app/) 를 사용하기로 했다. 
+
+DISQUS 는 광고가 붙어서 제외했고 Utterance 보다 Giscus 가 여러 기능이 있었기 때문이다.
+
+
+
 ## Content
 
 ### Code Highlight
@@ -90,7 +98,7 @@ TailwindCSS 가 편한데 복잡한건 보기가 힘들어서 module.css 랑 병
 [Rehype Highlight](https://www.npmjs.com/package/rehype-highlight), 
 [Rehype Prism Plus](https://www.npmjs.com/package/rehype-prism-plus), 
 [Rehype Pretty Code](https://rehype-pretty-code.netlify.app/)
-가 있엇는데 난 마지막 것을 선택했다.
+가 있었는데 난 마지막 것을 선택했다.
 + server side 에서 미리 파싱하는 특성 상 html 용량이 조금 나가지만 더 빠르다.
 + 줄/단어 하이라이트 같은 부가 기능도 붙어있고 커스터마이즈도 편하다.
 + 문서도 잘되어있어서 Rehype Prism Plus 대신 써보았다. 
@@ -115,9 +123,11 @@ markdown 은 처음부터 html 로 바꿔서 문제가 없는데 mdx 은 바뀐 
 
 ### TOC
 
+커스터마이즈를 위해 직접 구현했다. 구현은 다음과 같이 하였다.
+
 ```unist-util-visit``` 을 이용해서 md/mdx 문서에서 헤더만 읽어서 ID 를 부여해준다. 그렇지 않으면 ```#id``` 로 스크롤 하기가 힘들어진다.
 
-그리고 런타임에 헤더 목록을 가지고 TOC 를 구성한다. 현재 저장된 원본 md/mdx 를 매번 파싱해서 헤더 목록을 구하고 있는데 너무 느리면 캐싱를 해야할지도 모르겠다.
+그리고 런타임에 헤더 목록을 가지고 TOC 를 구성한다. 이때 현재 저장된 원본 md/mdx 를 매번 파싱해서 헤더 목록을 구하고 있는데 너무 느리면 캐싱를 해야할지도 모르겠다.
 
 현재 위치를 TOC 에 그리는 방법은 현재 윈도우에 있는 모든 헤더에 대해서 ```getBoundingClientRect()``` 를 사용해서 검색한다. 이는 스크롤이 움직일 때마다 호출해야하는데 계속 그러면 과부하가 있으므로 ```throttle()``` 함수를 따로 구현해서 일정 시간마다 호출이 가능하도록 했다.
 

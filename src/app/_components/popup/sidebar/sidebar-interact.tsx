@@ -3,7 +3,6 @@
 import {useState, useContext, useEffect} from "react"
 import {Context} from "@/context/context"
 
-
 export default function Interact({children,}: {children: React.ReactNode}) {
   const [visible, setvisible] = useState(false);
   const context = useContext(Context);

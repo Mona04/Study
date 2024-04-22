@@ -1,9 +1,7 @@
-import CategoryItem from "./sidebar-category-item"
-
-import Interact from './sidebar-interact'
+import CategoryItem     from "./sidebar-category-item"
+import Interact         from './sidebar-interact'
 import SideBarCategorys from './sidebar-categories'
-import style from "./sidebar.module.scss"
-
+import style            from "./sidebar.module.scss"
 
 export default function SideBar() {
 

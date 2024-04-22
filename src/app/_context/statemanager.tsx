@@ -1,4 +1,5 @@
 import {Event, EventDisposer} from 'utils/event'
+import {setDarkMode, setLightMode, isDarkMode} from "utils/darkmode-helper"
 
 class StateManager {
   private mMenuOpenEvent = new Event<boolean>();
@@ -7,7 +8,7 @@ class StateManager {
   private isSearchOpened = false;
   
   private mDarkModeEvent = new Event<boolean>();
-  private isDarkMode = false;
+  private isDarkMode = isDarkMode();
 
   constructor()
   {
@@ -56,6 +57,7 @@ class StateManager {
   public setDarkMode(isDark:boolean) : void 
   {
     this.isDarkMode = isDark;
+    this.isDarkMode ? setDarkMode() : setLightMode();
     this.mDarkModeEvent.invoke(isDark);
   }
   public registerDarkModeEvent(func : (bOpen:boolean) => void) : EventDisposer<boolean>

@@ -13,8 +13,24 @@
     ".": {
       "import": "./dist/index.js",
       "require": "./dist/index-cjs.cjs"
+    },
+    "./hooks": {
+      "import": "./dist/hooks/index.js"
     }
   },
+  "typesVersions": {
+    "*": {
+      "packge.json": [
+        "./package.json"
+      ],
+      ".": [
+        "./dist"
+      ],
+      "hooks": [
+        "./dist/hooks"
+      ]
+    }
+  },  
   "sideEffects": false,
 
   "dependencies": {

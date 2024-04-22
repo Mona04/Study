@@ -32,7 +32,7 @@ function MenuButton() {
   
   return (
     <button className={[style['menu-btn'], bOpen ? style.change : '', bAnim ? style.animate:''].join(' ')} 
-         title="toggle menu" id='menu-toggle-btn' type='button'
+         title="menu button" id='menu-toggle-btn' type='button'
          onClick={onClickMenu}>
       <div className={style["menu-lines"]}>
         <div className={[style['line'], style['line1']].join(' ')}></div>

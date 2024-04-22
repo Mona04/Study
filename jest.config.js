@@ -37,7 +37,7 @@ const config = async () => {
    * 근데 input 에서 추가하면 맨 뒤에 붙어서, 기본적으로 있는 '/node_modules/' 에 의해 무효화되어 따로 추가한다.
    */
   ret.transformIgnorePatterns = [
-    '/node_modules/(?!(contentlayer|@contentlayer))',
+    '/node_modules/(?!(archivelayer|@archivelayer|next-image-export-optimizer))',
     '^.+\\.module\\.(css|sass|scss)$',
   ];
 

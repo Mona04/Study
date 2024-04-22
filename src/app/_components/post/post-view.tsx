@@ -1,6 +1,6 @@
-import { BlogPost, MDPostView, MDXPostView } from 'content-manager'
+import { BlogPost } from 'content-manager'
+import { MDPostView, MDXPostView } from 'content-manager/hooks'
 
-import { getBasePath } from "utils/utils"
 import TOCView      from '@/components/toc/toc'
 import BreadCrumbs  from "@/components/post/breadcrumbs"
 import UpdateTime   from "@/components/post/updatetime"

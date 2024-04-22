@@ -1,5 +1,5 @@
 import { getPostByPath, getPostsByPath } from 'content-manager'
-import { MDPostView, MDXPostView } from 'content-manager';
+import { MDPostView, MDXPostView } from 'content-manager/hooks';
 import BreadCrumbs from "@/components/post/breadcrumbs"
 import PostItem    from "@/components/post/post-item" 
 
