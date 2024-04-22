@@ -9,18 +9,10 @@ import PrevNext     from '@/components/post/prev-next'
 import RelatedPosts from '@/components/post/related-posts'
 import Comments     from '@/components/post/comments'
 
-/**
- * contentlayer 는 캐시를 쓰므로 컴파일 단계에서 링크를 바꿔놔야함.
- * @param content 
- * @returns 
- */
-function postProcessContent(content: string) {
-  return content.replaceAll("PUBLIC_BASE_PATH", getBasePath());
-}
 
 export default function PostView({post, useComments}: {post:BlogPost, useComments?:boolean}) 
 {
-  const content = postProcessContent(post.content)
+  const content = post.content;
   
   return (
     <article className='content2'>

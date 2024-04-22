@@ -1,7 +1,7 @@
 import CategoryItem from "./sidebar-category-item"
 
 import Interact from './sidebar-interact'
-import SideBarCategory from './sidebar-categories'
+import SideBarCategorys from './sidebar-categories'
 import style from "./sidebar.module.scss"
 
 
@@ -14,7 +14,7 @@ export default function SideBar() {
           <CategoryItem slug="/" label="HOME" refCount={-1} depth={0}/>
           <CategoryItem slug="/portfolio" label="PORTFOLIO★" refCount={-1} depth={0}/>
           <CategoryItem slug="/tags" label="TAGS" refCount={-1} depth={0}/>
-          <SideBarCategory/>
+          <SideBarCategorys/>
         </div>
       </Interact>  
     </aside>

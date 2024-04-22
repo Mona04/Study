@@ -191,7 +191,7 @@ export const getPostsByPath = (path: string) => {
   for(const slug of categories)
   {
     const dir = cur_directory.childs[slug];
-    if(dir == undefined) break;
+    if(dir == undefined) return res;
     cur_directory = dir;
   }
 

@@ -21,7 +21,7 @@ export default () => {
     <div>
     { 
       Object.values(postDirectoryRoot.childs)
-        .filter(d=>d.category.toLowerCase() != 'private' )
+        .filter(d=>d.category.toLowerCase() == 'blog' )
         .map(sub => <MakeCategoryView key={sub.category} category={sub}/>) 
     }
     </div>   

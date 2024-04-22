@@ -1,7 +1,7 @@
-import BreadCrumbs from "@/components/post/breadcrumbs"
 import { getPostByPath, getPostsByPath } from 'content-manager'
 import { MDPostView, MDXPostView } from 'content-manager';
-import PostItem from "@/components/post/post-item" 
+import BreadCrumbs from "@/components/post/breadcrumbs"
+import PostItem    from "@/components/post/post-item" 
 
 /**
  * 카테고리와 같은 위치에 같은 이름을 가진 파일이 있으면 그걸 띄워준다.
@@ -24,7 +24,7 @@ function CategoryDetail({path}:{path:string}){
   }
 
   return (
-    <div className="tw-m-0">
+    <div className="tw-mx-3">
       {
         post.isMDX ? <MDXPostView content={post.content}/> : <MDPostView content={post.content}/>
       }
