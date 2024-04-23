@@ -1,4 +1,5 @@
 'use client'
+
 import { useEffect, useState, useRef, MutableRefObject } from "react";
 import { throttle } from "utils/utils";
 import style from './tooltip.module.scss'
@@ -9,7 +10,7 @@ interface POS {
   right: string|number,
 }
 
-export  function Tooltip(
+export function Tooltip(
   {hoverRef}:
   {hoverRef:MutableRefObject<HTMLDivElement|null>}
 ){
@@ -57,6 +58,7 @@ export  function Tooltip(
     isOut.current = true;
     setIsOpen(false);
   };
+
   useEffect(()=>{
     const callbacks:(()=>void)[] = [];
     

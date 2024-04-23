@@ -18,30 +18,21 @@ interface Props {
 
 export default function CategoryItem({children, label, refCount, slug, depth} : Props) {
   
-  const pathname = usePathname()
-  const isLeaf = children == null;
+  const pathname  = usePathname()
   const isCurrent = pathname != null && // pathname 이 jest 에서 null 나옴.
                     pathname.split('/')[depth+1]?.toUpperCase() === label.toUpperCase();
+  const isLeaf    = children == null;
 
-  const [isCollapsed, setIsCollaped] = useState(!isCurrent || isLeaf);
+  const [isCollapsed, setIsCollapsed] = useState(!isCurrent || isLeaf);
 	const context = useContext(Context);
 
-  useEffect(()=>{
-    const disposables : (IDisposable|undefined)[] = [];
-
-    return ()=>{
-      disposables.map(v=>v?.dispose());
-    }
-  }, []);
-
   const onClickToggle = (event:  React.MouseEvent<HTMLElement>) => {      
-    setIsCollaped(!isCollapsed);
+    setIsCollapsed(!isCollapsed);
   };
 
   const onClickLink = () => {
     context?.statemgr.closeAll();
   };
-
 
   return (
     <>
@@ -66,7 +57,6 @@ export default function CategoryItem({children, label, refCount, slug, depth} : 
             {`${label}${refCount > 0 ? ` (${refCount})` : ""}`}
           </Link>
         </button>
-    
       </div> 
 
       {!isCollapsed && <div className="tw-border-l-2 tw-ml-1.5 tw-pl-1.5">{children}</div>}   

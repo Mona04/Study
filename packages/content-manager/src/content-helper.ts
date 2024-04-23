@@ -178,11 +178,8 @@ export const postDirectoryRoot = _postDirectoryRoot;
 export const postSlugs = _postSlugs;
 
 
-export const getPostsByPath = (path: string) => {
-  
-  // flattenedPath don't starts with '/'
-  if(path.startsWith('/')) path = path.slice(1);
-
+export const getPostsByPath = (path: string) =>
+{
   const res : BlogPost[] = [];
 
   const categories = path.split('/');
@@ -190,6 +187,8 @@ export const getPostsByPath = (path: string) => {
 
   for(const slug of categories)
   {
+    // '/' 로 양 끝이 시작하는 경우임. 이는 제외함.
+    if(slug.length <= 0) continue;
     const dir = cur_directory.childs[slug];
     if(dir == undefined) return res;
     cur_directory = dir;

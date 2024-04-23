@@ -16,13 +16,13 @@ function MakeCategoryView({category, slug = '', depth = 0}: {category : PostDire
   );
 }
 
-export default () => {  
+export default ({filter}:{filter:(v:string)=>boolean}) => {  
   return (
     <div>
     { 
       Object.values(postDirectoryRoot.childs)
-        .filter(d=>d.category.toLowerCase() == 'blog' )
-        .map(sub => <MakeCategoryView key={sub.category} category={sub}/>) 
+        .filter(d=>filter(d.category.toLowerCase()))
+        .map(d => <MakeCategoryView key={d.category} category={d}/>) 
     }
     </div>   
   );

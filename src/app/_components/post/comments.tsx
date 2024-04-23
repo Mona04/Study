@@ -45,7 +45,7 @@ export default function Comments()
     }
   }, [])
 
-    // https://github.com/giscus/giscus/blob/main/ADVANCED-USAGE.md#isetconfigmessage
+  // https://github.com/giscus/giscus/blob/main/ADVANCED-USAGE.md#isetconfigmessage
   useEffect(() => {
     const iframe = document.querySelector<HTMLIFrameElement>('iframe.giscus-frame');
     iframe?.contentWindow?.postMessage(

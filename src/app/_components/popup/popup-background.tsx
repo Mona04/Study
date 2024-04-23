@@ -36,7 +36,8 @@ export default function PopupBackground({className}:Props) {
     /* A fixed-position element without a specified top value 
         defaults to a position that may not be 0, depending on the situation*/
 		<>
-		  { nOpenedPopup > 0 && 
+		  { 
+        nOpenedPopup > 0 && 
 			  <section className={`${className} tw-z-10  tw-fixed tw-w-full tw-h-full tw-mt-0 tw-top-nav-height tw-opacity-30 tw-bg-color-text-dimmed`}
 		      			 onClick={onClick}>
 				</section>

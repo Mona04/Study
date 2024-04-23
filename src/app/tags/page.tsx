@@ -29,15 +29,18 @@ function Tag({tag, label}:{tag:string, label:string})
 function Tags({className}: {className?: string}) 
 {
   const tags : {[tag:string]:{tag:string, num:number}} = {};
-  getPostsByPath('.').filter(p=>p.useSearch).forEach(post => {
-    post.tags?.forEach(tag=>{
-      if(tags[tag] == undefined)
+  getPostsByPath('blog')
+    .filter(p=>p.useSearch)
+    .forEach(post => 
       {
-        tags[tag] = {tag:tag, num:0};
-      }
-      tags[tag]!.num++;
-    })
-  });
+        post.tags?.forEach(tag=>{
+        if(tags[tag] == undefined)
+        {
+          tags[tag] = {tag:tag, num:0};
+        }
+        tags[tag]!.num++;
+      })
+    });
 
   return (
     <div className={`tw-flex tw-flex-row tw-text-sm ${className}`}>
