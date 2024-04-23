@@ -16,7 +16,6 @@ interface Props {
  */
 export default function PostItem({slug, title, description, thumbnail}:Props)
 {
-  // 
   return (
     <WithTooltip>
     <article className="mobile:tw-h-24 tw-m-1

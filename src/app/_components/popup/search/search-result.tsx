@@ -3,15 +3,14 @@ import PostItem from "@/components/post/post-item"
 
 function SearchItem({item}:{item:string}){
   const post = getPostByPath(item);
-  if(post == null) return <></>
-
+  if(post == undefined) return <></>
   return <PostItem slug={post.slug} title={post.title} description={post.description} thumbnail={post.thumbnail}/>
 }
 
 function SearchContent({items}:{items:string[]|null}){
   if(items == null || items.length < 1) 
   {
-      return <p className="tw-text-color-text-light tw-ml-auto tw-mr-auto">No Results!</p>
+    return <p className="tw-text-color-text-light tw-ml-auto tw-mr-auto">No Results!</p>
   }
   return items.map((r,i)=><SearchItem key={i} item={r}/>);
 }
@@ -27,14 +26,17 @@ function SearchContainer({children,}: {children: React.ReactNode}){
 function EmptySearch(){
   return (
     <div className="tw-grid">
-     <p className="tw-text-color-text-light tw-ml-auto tw-mr-auto">No Results!</p>
+      <p className="tw-text-color-text-light tw-ml-auto tw-mr-auto">No Results!</p>
     </div>
   )
 }
 
-export default function SearchResults({items}:{items:string[]|null}) {
+export default function SearchResults({items}:{items?:string[]|null})
+{
   if(items == null || items.length < 1)
+  {
     return <EmptySearch/>;
+  }
   return (
     <section className='tw-m-3'>
       <SearchContainer>
