@@ -1,0 +1,85 @@
+{
+ "/home/about": {
+  "title": "About",
+  "description": "홈페이지."
+ },
+ "/portfolios/test": {
+  "title": "test",
+  "description": "test."
+ },
+ "/blog/study/index": {
+  "title": "New Beginnings",
+  "description": ""
+ },
+ "/blog/study/how-to-write-git-commit-message": {
+  "title": "New Beginnings",
+  "description": ""
+ },
+ "/blog/computer-science/graphics/compute-shader": {
+  "title": "Particle System",
+  "description": ""
+ },
+ "/blog/computer-science/graphics/dx12": {
+  "title": "DirectX12",
+  "description": ""
+ },
+ "/blog/computer-science/graphics/particle-system": {
+  "title": "Particle System",
+  "description": ""
+ },
+ "/blog/programming/pattern/dto": {
+  "title": "DTO",
+  "description": "Data Transport Object 의 역할"
+ },
+ "/blog/programming/pattern/mvvm-disign-pattern": {
+  "title": "MVVM 에서 사용하는 Design Pattern",
+  "description": ""
+ },
+ "/blog/programming/pattern/observable": {
+  "title": "Observable 에 관한 메모",
+  "description": "Observable 의 여러 기능. Hot/Cold Stream , 스레드 동기화 등"
+ },
+ "/blog/programming/web/next-js-global-scss-order-problem": {
+  "title": "next-js global scss order in production",
+  "description": ""
+ },
+ "/blog/programming/web/react": {
+  "title": "Let's study React",
+  "description": ""
+ },
+ "/blog/programming/web/ppi": {
+  "title": "What is PPI, Logical Pixel and Reference Pixel?",
+  "description": "The concepts of PPI, logical pixel, and reference pixel, and how they are related, with an example of the iPhone 12 Mini."
+ },
+ "/blog/programming/wpf/attached-property-vs-behavior": {
+  "title": "Attached Property VS Behavior",
+  "description": ""
+ },
+ "/blog/programming/wpf/wpf-xaml-saku": {
+  "title": "WPF Xaml 작성요령",
+  "description": ""
+ },
+ "/blog/blogging/construct": {
+  "title": "My Blog: Requirements and Implementation",
+  "description": "블로그 요구사항 및 구현 방법 서술."
+ },
+ "/blog/blogging/how-to-use": {
+  "title": "Blog Manual",
+  "description": "블로그 사용 및 글 작성 시에 참고할 여러 기능에 대해서 정리."
+ },
+ "/private/test/한글/한글": {
+  "title": "한글",
+  "description": "한글 테스트용 문서.",
+  "thumbnail": "/test/test2.png"
+ },
+ "/private/test/mdtest": {
+  "title": "Markdown Test",
+  "description": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.",
+  "thumbnail": "/test/image.jpg"
+ },
+ "/private/test/mdxtest": {
+  "title": "MDX Test",
+  "description": "mdx test 용 파일",
+  "thumbnail": "/test/image.jpg"
+ }
+}
