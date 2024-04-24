@@ -8,7 +8,6 @@ lunr_stemmer(lunr);
 lunr_multi(lunr);
 lunr_ko(lunr);
 
-import chalk from 'chalk'
 import { getPostsByPath } from "./content-helper.js"
 /*
 export interface LUNR_INDEX{
@@ -24,11 +23,8 @@ export interface LUNR_INDEX{
 //https://learn.cloudcannon.com/jekyll/jekyll-search-using-lunr-js/
 //https://www.reddit.com/r/nextjs/comments/t3n0sv/lunrjs_in_next_js_app/
 
-export async function createSearchIndex() {
-  
-  console.log("Construct Search Database...");
-  const st = performance.now();  
-
+export async function createSearchIndex() 
+{
   // Because spaces and hyphens are special characters, 
   // in order to recognize a string as one word, we need to replace them with normal characters.
   const normalize = (p)=>p?.replace(/[\- ]/gi, '_')
@@ -55,11 +51,27 @@ export async function createSearchIndex() {
       })
     });
   })
-
-  var ed = performance.now();
-  console.log(chalk.green(`Constructing Search DataBase takes ${(ed-st)} ms`));
   
   return index.toJSON();
 }
 
+/**
+ * 검색 결과로부터 데이터 조회용. 
+ * 글 내용처럼 고용량 데이터는 제외하고 필요한 데이터만 넣어야함.
+ */
+export async function createSlugIndex() 
+{
+  const res = {};
 
+  getPostsByPath('/')
+  .filter(p => p.useSearch)
+  .forEach(post => {
+    res[post.slug] = {
+      title:       post.title,
+      description: post.description,
+      thumbnail:   post.thumbnail,
+    }
+  });
+  
+  return res;
+}

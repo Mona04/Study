@@ -3,6 +3,7 @@ title: "My Blog: Requirements and Implementation"
 description: 블로그 요구사항 및 구현 방법 서술.
 date: 2023-06-21
 tags: [blog]
+thumbnail: /images/blog/construct-0.png
 ---
 
 ## 필요한 기능
@@ -156,4 +157,8 @@ external css 가 scss 에서 ```@import``` 하면 적용이 안된다. ```<Link>
 
 ### SEO Checker
 
-https://seoblog.kr/posts/seo-checker/
+![Blog Test Results](/images/blog/construct-0.png)
+
+https://pagespeed.web.dev/
+
+정적 블로그라 그런지 결과가 잘 나온다.

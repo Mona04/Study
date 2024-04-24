@@ -1,8 +1,7 @@
 ---
-title: Hello World!
+title: INDEX
 date: 2015-05-01
 description: Hello World Example
-thumbnail: /test/image.jpg
 tags: []
 useSearch: false
 ---

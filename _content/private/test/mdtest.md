@@ -165,7 +165,7 @@ int main() {
 
 ## Image
 
-![이미지 샘플 입니다.](PUBLIC_BASE_PATH/test/image.jpg)
+![이미지 샘플 입니다.](/test/image.jpg)
 
 ## Youtube
 

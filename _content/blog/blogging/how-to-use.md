@@ -64,3 +64,10 @@ void main()
 의 결과물은 다음과 같다. 
 
 `int a = 10;{:cpp}` is good
+
+
+## Image
+
+```md
+![Alternative](/Public이후경로)
+```

@@ -102,7 +102,7 @@ const _postDirectoryRoot = (() => {
       
       const slug = categories[i];
       const sub_directories = cur_directory.childs;
-      if(sub_directories[slug] === undefined) 
+      if(sub_directories[slug] == undefined) 
       {
         sub_directories[slug] = {
           category: slug,

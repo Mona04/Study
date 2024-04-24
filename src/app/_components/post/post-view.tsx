@@ -1,5 +1,6 @@
 import { BlogPost } from 'content-manager'
 import { MDPostView, MDXPostView } from 'content-manager/hooks'
+import { getBasePath } from 'utils/utils'
 
 import TOCView      from '@/components/toc/toc'
 import BreadCrumbs  from "@/components/post/breadcrumbs"
@@ -9,11 +10,19 @@ import PrevNext     from '@/components/post/prev-next'
 import RelatedPosts from '@/components/post/related-posts'
 import Comments     from '@/components/post/comments'
 
+/**
+ * 본문 내용에서 링크는 퍼블리쉬 이후에 위치가 달라질 수 있어서 필요함.
+ * @param content 
+ * @returns 
+ */
+function postProcessContent(content: string) {
+  return content.replaceAll('<img src="', `<img src="${getBasePath()}`);
+}
 
 export default function PostView({post, useComments}: {post:BlogPost, useComments?:boolean}) 
 {
-  const content = post.content;
-  
+  const content = postProcessContent(post.content);
+
   return (
     <article className='content2'>
       
@@ -24,11 +33,11 @@ export default function PostView({post, useComments}: {post:BlogPost, useComment
 
       <hr/>
       
-      <div className='tw-my-10'>
+      <section className='tw-my-10'>
       {
         post.isMDX ? <MDXPostView content={content}/> : <MDPostView content={content}/>
       }
-      </div>
+      </section>
       
       <Tags tags={post.tags}/>
       <hr className='tw-my-4'/>

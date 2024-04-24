@@ -10,7 +10,6 @@
     "deploy":     "next-sitemap & node ./src/scripts/nojekyll.js & gh-pages -d out -b gh-pages -t true",
     "test":       "jest --watch ",
     "doc":        "content-initializer build & content-manager build",
-    "bt":         "node ./src/scripts/blog.js",
     "cache":      "next-image-export-optimizer"
   },
   "workspaces": [
