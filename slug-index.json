@@ -1,8 +1,4 @@
 {
- "/portfolios/test": {
-  "title": "test",
-  "description": "test."
- },
  "/home/about": {
   "title": "About",
   "description": "홈페이지."
@@ -82,5 +78,9 @@
   "title": "MDX Test",
   "description": "mdx test 용 파일",
   "thumbnail": "/test/image.jpg"
+ },
+ "/portfolios/test": {
+  "title": "test",
+  "description": "test."
  }
 }
