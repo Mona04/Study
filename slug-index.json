@@ -3,6 +3,10 @@
   "title": "About",
   "description": "홈페이지."
  },
+ "/portfolios/test": {
+  "title": "test",
+  "description": "test."
+ },
  "/blog/blogging/construct": {
   "title": "My Blog: Requirements and Implementation",
   "description": "블로그 요구사항 및 구현 방법 서술.",
@@ -78,9 +82,5 @@
   "title": "MDX Test",
   "description": "mdx test 용 파일",
   "thumbnail": "/test/image.jpg"
- },
- "/portfolios/test": {
-  "title": "test",
-  "description": "test."
  }
 }
