@@ -10,7 +10,7 @@ const program = new Command();
 program.command("dev")
   .action(()=>Startup(dirname));
 program.command("build")
-  .action(()=>Build(dirname));
+  .action(()=>Build({baseFolder:dirname, clearCache:true}));
 program
   .version("0.0.0", "-v, --version")
   .name("content-manager")
