@@ -35,4 +35,5 @@ yarn-error.log*
 # dependencies
 .archivelayer
 **/nextImageExportOptimizer
+public/slug-index.json
 public/search-index.json
