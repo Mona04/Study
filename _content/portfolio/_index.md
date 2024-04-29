@@ -6,6 +6,6 @@ tags: []
 useSearch: false
 ---
 
-## PORTFOLIOS
+## PORTFOLIO
 
 준비중...

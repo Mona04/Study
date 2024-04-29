@@ -3,19 +3,23 @@
  * https://stackoverflow.com/questions/44661707/addeventlistener-vs-onclick
  * https://stackoverflow.com/questions/18247289/what-is-the-difference-between-queryselectorall-and-getelementsbytagname
  */
-function copyButtonScript() {
+function copyButtonScript() 
+{
   if(!document) return;
   
   const titlebars = document.querySelectorAll("[data-rehype-pretty-code-title]");
+
   for (const titlebar of titlebars)
   {
     var buttons = titlebar.getElementsByTagName("button");
     for(const button of buttons)
     {
-      button.addEventListener('click', function(){
+      button.addEventListener('click', function()
+      {
         if(navigator.clipboard)
         {
           var code = titlebar.getAttribute('data-code');
+
           if(code != null)
           {
             navigator.clipboard.writeText(code);

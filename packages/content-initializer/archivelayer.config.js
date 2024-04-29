@@ -35,7 +35,7 @@ const configs = {
   mdx:{ 
     remarkPlugins: [ rm_gfm, [rm_math,]],
     rehypePlugins: [
-      modifyInput, saveRawCode, attachHeaderID,
+      modifyInput, attachHeaderID, saveRawCode,
       [ rh_prettyCode, prettyCodeOptions() ],
       [ rh_katex ],
       addCodeTitleBar,
@@ -44,8 +44,8 @@ const configs = {
   markdown:{ 
     remarkPlugins: [ rm_gfm, [rm_math,] ],
     rehypePlugins: [
-      modifyInput, saveRawCode, attachHeaderID,
-      [ rh_raw ],
+      modifyInput, attachHeaderID,
+      [ rh_raw ], saveRawCode,
       [ rh_prettyCode, prettyCodeOptions() ],
       [ rh_mathjax, mathjaxOptions()],
       addCodeTitleBar,

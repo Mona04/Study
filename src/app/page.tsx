@@ -4,7 +4,7 @@ import RelatedPosts from '@/components/post/related-posts'
 
 
 export default function Home() {
-  const post = getPostByPath('/home/about');
+  const post = getPostByPath('/home/_index');
   if (post == undefined){
     throw new Error(`Post not found /home/page file.`)
   }    
@@ -17,7 +17,7 @@ export default function Home() {
       }
       </div>
       <hr className='tw-my-4'/>
-      <RelatedPosts slug={'blog/blogging/'}/>
+      <RelatedPosts slug={'portfolio/'}/>
     </article>
   )
 }
