@@ -139,9 +139,29 @@ function attachHeaderID() {
       if(node.children.length < 1) return;     
 
       // add an id to headers
-      const id = node.children[0].value.replaceAll(' ', '-');
-      node.properties.id = id;
+      let cur = node.children[0];
+      let id = null;
 
+      switch(cur.type)
+      {
+        case 'text':
+          id = cur.value.replaceAll(' ', '-');
+          break;
+        case 'element':
+          if(cur.tagName === 'a')
+            id = cur.children[0].value.replaceAll(' ', '-');
+          break;
+        default:
+      }
+
+      if(id != null)
+      {
+        node.properties.id = id;
+      }
+      else
+      {
+        console.warn(`Cannot Attach ID to html Header\n${cur}`)    
+      }
     });
   }
 }

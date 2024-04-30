@@ -134,7 +134,10 @@ const useIntersectionObserver = (
   }, []);
 };
 
-function getText(header: Heading) : string { return header.children.length > 0 && header.children[0]!.type == 'text' ? header.children[0]!.value : "";}
+function getText(header: any) : string 
+{ 
+  return header.children.length <= 0 ? "" : (header.children[0]!.type == 'text' ? header.children[0]!.value : getText(header.children[0]));
+}
 
 function TableItem(variable: MakeTOCVariable)
 {
