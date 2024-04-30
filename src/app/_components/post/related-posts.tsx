@@ -4,7 +4,8 @@ import PostItem from "./post-item";
 
 export default function RelatedPost({slug}: {slug:string})
 {
-  const relatedPosts = shuffle(getPostsByPath(slug.substring(0, slug.lastIndexOf('/'))).filter(p=>p.slug != slug), 4);
+  const relatedPosts = shuffle(getPostsByPath(slug.substring(0, slug.lastIndexOf('/'))).filter(p=>p.useSearch && p.slug != slug), 4);
+  
   return (
     <section className="">
       <h4 className="tw-mt-0 tw-mb-2">Related Posts</h4>
@@ -12,7 +13,7 @@ export default function RelatedPost({slug}: {slug:string})
       {
         relatedPosts?.map(
           p => 
-          <PostItem key={p.slug} slug={p.slug} title={p.title} 
+          <PostItem key={p.slug} slug={p.slug} title={p.title}
                     description={p.description} 
                     thumbnail={p.thumbnail}/>
         )

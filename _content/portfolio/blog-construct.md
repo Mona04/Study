@@ -6,8 +6,9 @@ tags: [blog]
 thumbnail: /images/blog/construct-0.png
 ---
 
-## 필요한 기능
+이 글은 현 블로그의 요구사항과 구현방법을 간략히 기술합니다.
 
+## 필요한 기능
 
 ### 블로그 포스트 관련
 
