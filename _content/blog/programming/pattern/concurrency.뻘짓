@@ -1,0 +1,66 @@
+### Condition
+
+
+java 의 ```java.util.concurrent``` 에서 제공하는 ```ReentrantLock``` 은 
+wait 에 들어간 특정한 thread 를 지정해서 notify 를 줄 수 있는 기능이 있다. 
+그 밖에 일정 시간동안 lock 을 시도하고 아니면 다른 분기를 탈 수 있는 기능 등이 들어 있다.
+
+
+아래의 코드는 특정 thread 를 지정해 notify 를 주는 기능을 구현한 것이다.
+이처럼 많은 추가 기능들은 위에서 살펴본 기본적인 기능을 바탕으로 짜여져 있다. 
+물론 실제 개발 시에는 직접 구현을 지양하는게 좋다.
+
+
+```java title="MyBaseLock.java"
+// 내부에서만 사용하는 클래스
+public class MyBaseLock
+{
+    private volatile boolean isLocked = false;
+
+    public synchronized void lock() throws InterruptedException{
+        while(isLocked){ // 내부 락
+            wait();
+        }
+        isLocked = true;
+    }
+    public synchronized void unlock(){
+        isLocked = false;
+        notify();
+    }
+    public synchronized void await(MyBaseLock lock2) throws InterruptedException
+    {
+        isLocked = true;
+        while(isLocked){
+            wait();
+        }
+    }
+}
+```
+
+```java title="MyCondition.java"
+public class MyCondition {
+    MyBaseLock mLock;
+    MyBaseLock mPrivateLock = new MyBaseLock();
+    public MyCondition(MyBaseLock lock)
+    {
+        mLock = lock;
+    }
+    public void signal() { mPrivateLock.unlock(); }
+    public void await() throws InterruptedException { mLock.unlock(); mPrivateLock.await(mLock); mLock.lock();}
+}
+```
+
+```java title="MyLock"
+public class MyLock {
+    MyBaseLock mLock = new MyBaseLock();
+    public MyCondition newCondition(){
+        return new MyCondition(mLock);
+    }
+    public void lock() throws InterruptedException {
+        mLock.lock();
+    }
+    public void unlock() throws InterruptedException {
+        mLock.unlock();
+    }
+}
+```
