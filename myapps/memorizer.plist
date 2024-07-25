@@ -16,12 +16,14 @@
             </array>
             <key>metadata</key>
             <dict>
-                <key>com.mona04.wordmemorizer</key>
-                <string>kr.co.ddoc.project</string>
+                <key>bundle-identifier</key>
+                <string>com.mona04.wordmemorizer</string>
+                <key>bundle-version</key>
+                <string>1.0.6</string>
                 <key>kind</key>
                 <string>software</string>
-                <key>memorizer</key>
-                <string>app for memorize</string>
+                <key>title</key>
+                <string>word memorizer</string>
             </dict>
         </dict>
     </array>
