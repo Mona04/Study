@@ -1,12 +1,16 @@
 {
- "/portfolio/mind-mapping-memorizer": {
-  "title": "Mind Mapping Memorizer",
-  "description": "일본어를 공부하려는데 단어 외우기 빡세서 만드는 앱."
+ "/home/_index": {
+  "title": "About",
+  "description": "홈페이지."
  },
  "/portfolio/blog-construct": {
   "title": "My Blog: Requirements and Implementation",
   "description": "블로그 요구사항 및 구현 방법 서술.",
   "thumbnail": "/images/blog/construct-0.png"
+ },
+ "/portfolio/mind-mapping-memorizer": {
+  "title": "Mind Mapping Memorizer",
+  "description": "일본어를 공부하려는데 단어 외우기 빡세서 만드는 앱."
  },
  "/blog/study/index": {
   "title": "New Beginnings",
@@ -36,24 +40,24 @@
   "title": "MVVM 에서 사용하는 Design Pattern",
   "description": ""
  },
- "/blog/programming/pattern/flutter-di": {
-  "title": "Understanding Provider in Flutter.",
-  "description": "Flutter 의 Provider Pattern 이 어떻게 구현되는지 살펴보기."
+ "/blog/programming/pattern/concurrency": {
+  "title": "Patterns for Concurrency Programming",
+  "description": "Concurrency Programming 에서 쓰이는 패턴과 쉽게 범할 요류들 정리"
  },
  "/blog/programming/pattern/observable": {
   "title": "Observable 에 관한 메모",
   "description": "Observable 의 여러 기능. Hot/Cold Stream , 스레드 동기화 등"
  },
- "/blog/programming/pattern/concurrency": {
-  "title": "Patterns for Concurrency Programming",
-  "description": "Concurrency Programming 에서 쓰이는 패턴과 쉽게 범할 요류들 정리"
- },
- "/blog/programming/web/react": {
-  "title": "Let's study React",
-  "description": ""
+ "/blog/programming/pattern/flutter-di": {
+  "title": "How DI works in Flutter.",
+  "description": "Flutter 의 Provider Pattern 이 어떻게 구현되는지 살펴보기."
  },
  "/blog/programming/web/next-js-global-scss-order-problem": {
   "title": "next-js global scss order in production",
+  "description": ""
+ },
+ "/blog/programming/web/react": {
+  "title": "Let's study React",
   "description": ""
  },
  "/blog/programming/web/ppi": {
@@ -67,6 +71,10 @@
  "/blog/programming/wpf/wpf-xaml-saku": {
   "title": "WPF Xaml 작성요령",
   "description": ""
+ },
+ "/blog/programming/tips/visual-studio-tips": {
+  "title": "Visual Studio Tips",
+  "description": "Useful Visual Studio Tips."
  },
  "/private/memo/mac-commands": {
   "title": "useful mac commands",
@@ -90,9 +98,5 @@
   "title": "MDX Test",
   "description": "mdx test 용 파일",
   "thumbnail": "/test/image.jpg"
- },
- "/home/_index": {
-  "title": "About",
-  "description": "홈페이지."
  }
 }
