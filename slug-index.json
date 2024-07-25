@@ -1,7 +1,12 @@
 {
- "/home/_index": {
-  "title": "About",
-  "description": "홈페이지."
+ "/portfolio/mind-mapping-memorizer": {
+  "title": "Mind Mapping Memorizer",
+  "description": "일본어를 공부하려는데 단어 외우기 빡세서 만드는 앱."
+ },
+ "/portfolio/blog-construct": {
+  "title": "My Blog: Requirements and Implementation",
+  "description": "블로그 요구사항 및 구현 방법 서술.",
+  "thumbnail": "/images/blog/construct-0.png"
  },
  "/blog/study/index": {
   "title": "New Beginnings",
@@ -9,6 +14,18 @@
  },
  "/blog/study/how-to-write-git-commit-message": {
   "title": "New Beginnings",
+  "description": ""
+ },
+ "/blog/computer-science/graphics/compute-shader": {
+  "title": "Particle System",
+  "description": ""
+ },
+ "/blog/computer-science/graphics/dx12": {
+  "title": "DirectX12",
+  "description": ""
+ },
+ "/blog/computer-science/graphics/particle-system": {
+  "title": "Particle System",
   "description": ""
  },
  "/blog/programming/pattern/dto": {
@@ -19,16 +36,24 @@
   "title": "MVVM 에서 사용하는 Design Pattern",
   "description": ""
  },
+ "/blog/programming/pattern/flutter-di": {
+  "title": "Understanding Provider in Flutter.",
+  "description": "Flutter 의 Provider Pattern 이 어떻게 구현되는지 살펴보기."
+ },
  "/blog/programming/pattern/observable": {
   "title": "Observable 에 관한 메모",
   "description": "Observable 의 여러 기능. Hot/Cold Stream , 스레드 동기화 등"
  },
- "/blog/programming/web/next-js-global-scss-order-problem": {
-  "title": "next-js global scss order in production",
-  "description": ""
+ "/blog/programming/pattern/concurrency": {
+  "title": "Patterns for Concurrency Programming",
+  "description": "Concurrency Programming 에서 쓰이는 패턴과 쉽게 범할 요류들 정리"
  },
  "/blog/programming/web/react": {
   "title": "Let's study React",
+  "description": ""
+ },
+ "/blog/programming/web/next-js-global-scss-order-problem": {
+  "title": "next-js global scss order in production",
   "description": ""
  },
  "/blog/programming/web/ppi": {
@@ -43,22 +68,13 @@
   "title": "WPF Xaml 작성요령",
   "description": ""
  },
- "/blog/computer-science/graphics/dx12": {
-  "title": "DirectX12",
-  "description": ""
+ "/private/memo/mac-commands": {
+  "title": "useful mac commands",
+  "description": "mac 에서 자수 쓰는 commands 모음."
  },
- "/blog/computer-science/graphics/particle-system": {
-  "title": "Particle System",
-  "description": ""
- },
- "/blog/computer-science/graphics/compute-shader": {
-  "title": "Particle System",
-  "description": ""
- },
- "/portfolio/blog-construct": {
-  "title": "My Blog: Requirements and Implementation",
-  "description": "블로그 요구사항 및 구현 방법 서술.",
-  "thumbnail": "/images/blog/construct-0.png"
+ "/private/memo/how-to-use": {
+  "title": "Blog Manual",
+  "description": "블로그 사용 및 글 작성 시에 참고할 여러 기능에 대해서 정리."
  },
  "/private/test/한글/한글": {
   "title": "한글",
@@ -75,8 +91,8 @@
   "description": "mdx test 용 파일",
   "thumbnail": "/test/image.jpg"
  },
- "/private/memo/how-to-use": {
-  "title": "Blog Manual",
-  "description": "블로그 사용 및 글 작성 시에 참고할 여러 기능에 대해서 정리."
+ "/home/_index": {
+  "title": "About",
+  "description": "홈페이지."
  }
 }
