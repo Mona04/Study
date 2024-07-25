@@ -1521,61 +1521,6 @@
    ]
   ],
   [
-   "title//blog/study/index",
-   [
-    676,
-    22.766,
-    677,
-    26.662
-   ]
-  ],
-  [
-   "description//blog/study/index",
-   []
-  ],
-  [
-   "tags//blog/study/index",
-   []
-  ],
-  [
-   "categories//blog/study/index",
-   [
-    13,
-    0.657,
-    678,
-    20.881,
-    679,
-    29.88
-   ]
-  ],
-  [
-   "body//blog/study/index",
-   [
-    4,
-    1.12,
-    322,
-    9.685,
-    680,
-    13.858,
-    681,
-    13.858,
-    682,
-    13.858,
-    683,
-    13.858,
-    684,
-    13.858,
-    685,
-    13.858,
-    686,
-    13.858,
-    687,
-    13.858,
-    688,
-    13.858
-   ]
-  ],
-  [
    "title//blog/study/how-to-write-git-commit-message",
    [
     676,
@@ -1599,19 +1544,74 @@
     0.657,
     678,
     20.881,
-    689,
+    679,
     29.88
    ]
   ],
   [
    "body//blog/study/how-to-write-git-commit-message",
    [
-    690,
+    680,
     14.175,
-    691,
+    681,
     7.629,
-    692,
+    682,
     14.175
+   ]
+  ],
+  [
+   "title//blog/study/index",
+   [
+    676,
+    22.766,
+    677,
+    26.662
+   ]
+  ],
+  [
+   "description//blog/study/index",
+   []
+  ],
+  [
+   "tags//blog/study/index",
+   []
+  ],
+  [
+   "categories//blog/study/index",
+   [
+    13,
+    0.657,
+    678,
+    20.881,
+    683,
+    29.88
+   ]
+  ],
+  [
+   "body//blog/study/index",
+   [
+    4,
+    1.12,
+    322,
+    9.685,
+    684,
+    13.858,
+    685,
+    13.858,
+    686,
+    13.858,
+    687,
+    13.858,
+    688,
+    13.858,
+    689,
+    13.858,
+    690,
+    13.858,
+    691,
+    13.858,
+    692,
+    13.858
    ]
   ],
   [
@@ -2544,7 +2544,7 @@
     7.21,
     640,
     7.21,
-    691,
+    681,
     4.741,
     693,
     10.623,
@@ -3366,7 +3366,7 @@
     5.409,
     643,
     7.06,
-    691,
+    681,
     3.557,
     698,
     2.273,
@@ -7237,7 +7237,7 @@
     5.801,
     643,
     4.32,
-    691,
+    681,
     5.521,
     804,
     4.32,
@@ -8527,7 +8527,7 @@
     3.418,
     507,
     3.342,
-    691,
+    681,
     5.55,
     757,
     3.088,
@@ -9336,7 +9336,7 @@
   [
    "%eb%8d%b0%ec%9d%b4%ed%84%b0%ec%85%8bdata",
    {
-    "_index": 686,
+    "_index": 690,
     "title": {},
     "description": {},
     "tags": {},
@@ -9349,7 +9349,7 @@
   [
    "%ec%86%8d%ec%84%b1#",
    {
-    "_index": 687,
+    "_index": 691,
     "title": {},
     "description": {},
     "tags": {},
@@ -9440,7 +9440,7 @@
   [
    "%f0%9f%93%9a",
    {
-    "_index": 685,
+    "_index": 689,
     "title": {},
     "description": {},
     "tags": {},
@@ -11757,7 +11757,7 @@
   [
    "[freecodecamp](https://wwwfreecodecamporg/learn/)",
    {
-    "_index": 681,
+    "_index": 685,
     "title": {},
     "description": {},
     "tags": {},
@@ -14342,8 +14342,8 @@
    {
     "_index": 677,
     "title": {
-     "/blog/study/index": {},
-     "/blog/study/how-to-write-git-commit-message": {}
+     "/blog/study/how-to-write-git-commit-message": {},
+     "/blog/study/index": {}
     },
     "description": {},
     "tags": {},
@@ -14585,8 +14585,8 @@
      "/private/memo/how-to-use": {}
     },
     "categories": {
-     "/blog/study/index": {},
      "/blog/study/how-to-write-git-commit-message": {},
+     "/blog/study/index": {},
      "/blog/computer-science/graphics/compute-shader": {},
      "/blog/computer-science/graphics/dx12": {},
      "/blog/computer-science/graphics/particle-system": {},
@@ -17783,7 +17783,7 @@
   [
    "githtml",
    {
-    "_index": 692,
+    "_index": 682,
     "title": {},
     "description": {},
     "tags": {},
@@ -18597,7 +18597,7 @@
   [
    "how_to_write_git_commit_message",
    {
-    "_index": 689,
+    "_index": 679,
     "title": {},
     "description": {},
     "tags": {},
@@ -18678,7 +18678,7 @@
   [
    "https://blogullim/engineering/2019/03/10/logs",
    {
-    "_index": 690,
+    "_index": 680,
     "title": {},
     "description": {},
     "tags": {},
@@ -18691,7 +18691,7 @@
   [
    "https://codepenio/your",
    {
-    "_index": 682,
+    "_index": 686,
     "title": {},
     "description": {},
     "tags": {},
@@ -18770,7 +18770,7 @@
   [
    "https://inpatistorycom/entry/js",
    {
-    "_index": 684,
+    "_index": 688,
     "title": {},
     "description": {},
     "tags": {},
@@ -19244,7 +19244,7 @@
   [
    "index",
    {
-    "_index": 679,
+    "_index": 683,
     "title": {},
     "description": {},
     "tags": {},
@@ -19329,6 +19329,19 @@
     "categories": {},
     "body": {
      "/private/test/한글/한글": {}
+    }
+   }
+  ],
+  [
+   "install",
+   {
+    "_index": 670,
+    "title": {},
+    "description": {},
+    "tags": {},
+    "categories": {},
+    "body": {
+     "/portfolio/mind-mapping-memorizer": {}
     }
    }
   ],
@@ -21511,8 +21524,8 @@
    {
     "_index": 676,
     "title": {
-     "/blog/study/index": {},
-     "/blog/study/how-to-write-git-commit-message": {}
+     "/blog/study/how-to-write-git-commit-message": {},
+     "/blog/study/index": {}
     },
     "description": {},
     "tags": {},
@@ -21983,7 +21996,7 @@
   [
    "on",
    {
-    "_index": 691,
+    "_index": 681,
     "title": {},
     "description": {},
     "tags": {},
@@ -24924,8 +24937,8 @@
     "description": {},
     "tags": {},
     "categories": {
-     "/blog/study/index": {},
-     "/blog/study/how-to-write-git-commit-message": {}
+     "/blog/study/how-to-write-git-commit-message": {},
+     "/blog/study/index": {}
     },
     "body": {}
    }
@@ -27640,7 +27653,7 @@
   [
    "work",
    {
-    "_index": 683,
+    "_index": 687,
     "title": {},
     "description": {},
     "tags": {},
@@ -38469,19 +38482,6 @@
    }
   ],
   [
-   "설지",
-   {
-    "_index": 670,
-    "title": {},
-    "description": {},
-    "tags": {},
-    "categories": {},
-    "body": {
-     "/portfolio/mind-mapping-memorizer": {}
-    }
-   }
-  ],
-  [
    "성능",
    {
     "_index": 168,
@@ -41435,7 +41435,7 @@
   [
    "완료",
    {
-    "_index": 688,
+    "_index": 692,
     "title": {},
     "description": {},
     "tags": {},
@@ -45291,7 +45291,7 @@
   [
    "진행중",
    {
-    "_index": 680,
+    "_index": 684,
     "title": {},
     "description": {},
     "tags": {},
