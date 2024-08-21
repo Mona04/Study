@@ -1,8 +1,4 @@
 {
- "/home/_index": {
-  "title": "About",
-  "description": "홈페이지."
- },
  "/blog/study/how-to-write-git-commit-message": {
   "title": "New Beginnings",
   "description": ""
@@ -11,7 +7,7 @@
   "title": "New Beginnings",
   "description": ""
  },
- "/blog/computer-science/graphics/compute-shader": {
+ "/blog/computer-science/graphics/particle-system": {
   "title": "Particle System",
   "description": ""
  },
@@ -19,7 +15,7 @@
   "title": "DirectX12",
   "description": ""
  },
- "/blog/computer-science/graphics/particle-system": {
+ "/blog/computer-science/graphics/compute-shader": {
   "title": "Particle System",
   "description": ""
  },
@@ -35,13 +31,13 @@
   "title": "Patterns for Concurrency Programming",
   "description": "Concurrency Programming 에서 쓰이는 패턴과 쉽게 범할 요류들 정리"
  },
- "/blog/programming/pattern/observable": {
-  "title": "Observable 에 관한 메모",
-  "description": "Observable 의 여러 기능. Hot/Cold Stream , 스레드 동기화 등"
- },
  "/blog/programming/pattern/flutter-di": {
   "title": "How DI works in Flutter.",
   "description": "Flutter 의 Provider Pattern 이 어떻게 구현되는지 살펴보기."
+ },
+ "/blog/programming/pattern/observable": {
+  "title": "Observable 에 관한 메모",
+  "description": "Observable 의 여러 기능. Hot/Cold Stream , 스레드 동기화 등"
  },
  "/blog/programming/web/next-js-global-scss-order-problem": {
   "title": "next-js global scss order in production",
@@ -63,9 +59,31 @@
   "title": "WPF Xaml 작성요령",
   "description": ""
  },
+ "/blog/programming/wpf/wpf-bugs-win32exception-122": {
+  "title": "WPF Win32Exception 122",
+  "description": "WPF 에서 윈도우 타이틀을 써야하는 이유"
+ },
+ "/blog/programming/cpp/c-runtime-library": {
+  "title": "c runtime library 에 대하여.",
+  "description": "mt, md 는 무엇일까? crt 는 무엇일까?"
+ },
  "/blog/programming/tips/visual-studio-tips": {
   "title": "Visual Studio Tips",
   "description": "Useful Visual Studio Tips."
+ },
+ "/home/_index": {
+  "title": "About",
+  "description": "홈페이지."
+ },
+ "/portfolio/blog-construct": {
+  "title": "My Blog: Requirements and Implementation",
+  "description": "블로그 요구사항 및 구현 방법 서술.",
+  "thumbnail": "/images/blog/construct-0.png"
+ },
+ "/portfolio/vocalink": {
+  "title": "VocaLink",
+  "description": "일본어를 공부하려는데 단어 외우기 빡세서 만드는 앱.",
+  "thumbnail": "/portfolio/memorizer.png"
  },
  "/private/memo/mac-commands": {
   "title": "useful mac commands",
@@ -89,15 +107,5 @@
   "title": "MDX Test",
   "description": "mdx test 용 파일",
   "thumbnail": "/test/image.jpg"
- },
- "/portfolio/blog-construct": {
-  "title": "My Blog: Requirements and Implementation",
-  "description": "블로그 요구사항 및 구현 방법 서술.",
-  "thumbnail": "/images/blog/construct-0.png"
- },
- "/portfolio/lang-memorizer": {
-  "title": "Language Memorizer",
-  "description": "일본어를 공부하려는데 단어 외우기 빡세서 만드는 앱.",
-  "thumbnail": "/portfolio/memorizer.png"
  }
 }
