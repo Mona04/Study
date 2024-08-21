@@ -72,7 +72,7 @@ export default function Page({ params }: Params) {
 
     return (
       <>
-        <PostView post={post}/>\
+        <PostView post={post}/>
       </>
     ) 
   }

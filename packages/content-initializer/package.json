@@ -10,7 +10,7 @@
 
   "dependencies": {
     "typescript": "5.3.3",    
-    "archivelayer": "0.1.4",
+    "archivelayer": "0.1.5",
 
     "fs": "^0.0.1-security",
 

@@ -2,7 +2,7 @@
 title: "Blog Manual"
 description: "블로그 사용 및 글 작성 시에 참고할 여러 기능에 대해서 정리."
 date: 2024-04-09
-tags: [blog]
+tags: [blog, memo]
 ---
 
 ## 검색
