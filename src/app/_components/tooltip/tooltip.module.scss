@@ -1,3 +1,6 @@
+@import "@/styles/_variables.scss";
+@import "@/styles/_breakpoint.scss";
+
 /* tooltip */
 .tooltip {
   position: relative;
@@ -17,6 +20,10 @@
     opacity: 100%;
     visibility: visible;
     z-index: 99990;
+
+    @include breakpoint(max-width $medium){
+      visibility: collapse;
+    }
   }
 }
 

@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 
 import { ContextProvider }     from "@/context/context"
 import { SetInitialColorMode } from "utils/darkmode-helper"
-import { CopyButtonScript }    from "utils/markdown-helper"
+import { CopyButtonScript, CopyButtonScriptor }    from "utils/markdown-helper"
 import { getBasePath }         from "utils/utils"
 
 import MastHead        from "@/components/nav/masthead"
@@ -59,10 +59,9 @@ export default function RootLayout({children,}: {children: React.ReactNode})
         </ContextProvider>
    
         {/* After React DOM is loaded. cf. defer has no effect on script tags without src attribute. */}
-
-        <script dangerouslySetInnerHTML={{__html: CopyButtonScript }} defer />
-
+        <CopyButtonScriptor/>
       </body>   
     </html>
   )
 }
+//<script dangerouslySetInnerHTML={{__html: CopyButtonScript }} defer />

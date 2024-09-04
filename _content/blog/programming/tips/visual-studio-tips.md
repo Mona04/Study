@@ -1,8 +1,8 @@
 ---
 title: Visual Studio Tips
 description: Useful Visual Studio Tips.
-date: 2015-05-28
-tags: [design pattern]
+date: 2024-05-28
+tags: [tip]
 ---
 
 ### Always Do Build Event
