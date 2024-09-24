@@ -9,11 +9,11 @@
   "description": "블로그 요구사항 및 구현 방법 서술.",
   "thumbnail": "/images/blog/construct-0.png"
  },
- "/blog/study/index": {
-  "title": "New Beginnings",
-  "description": ""
+ "/home/_index": {
+  "title": "About",
+  "description": "홈페이지."
  },
- "/blog/study/how-to-write-git-commit-message": {
+ "/blog/study/index": {
   "title": "New Beginnings",
   "description": ""
  },
@@ -21,17 +21,13 @@
   "title": "Particle System",
   "description": ""
  },
- "/blog/computer-science/graphics/particle-system": {
-  "title": "Particle System",
-  "description": ""
- },
  "/blog/computer-science/graphics/dx12": {
   "title": "DirectX12",
   "description": ""
  },
- "/blog/programming/cpp/c-runtime-library": {
-  "title": "c runtime library 에 대하여.",
-  "description": "mt, md 는 무엇일까? crt 는 무엇일까?"
+ "/blog/computer-science/graphics/particle-system": {
+  "title": "Particle System",
+  "description": ""
  },
  "/blog/programming/pattern/dto": {
   "title": "DTO",
@@ -45,13 +41,21 @@
   "title": "Observable 에 관한 메모",
   "description": "Observable 의 여러 기능. Hot/Cold Stream , 스레드 동기화 등"
  },
- "/blog/programming/pattern/concurrency": {
+ "/blog/programming/pattern/concurrency/concurrency-parallelism": {
   "title": "Patterns for Concurrency Programming",
-  "description": "Concurrency Programming 에서 쓰이는 패턴과 쉽게 범할 요류들 정리"
+  "description": "Concurrency Programming 에서 쓰이는 도구와 쉽게 범할 요류들 정리"
+ },
+ "/blog/programming/pattern/concurrency/dining-philosopher": {
+  "title": "Dining Philosopher",
+  "description": "Dining Philosopher 관련 정리"
  },
  "/blog/programming/pattern/flutter-di": {
   "title": "How DI works in Flutter.",
   "description": "Flutter 의 Provider Pattern 이 어떻게 구현되는지 살펴보기."
+ },
+ "/blog/programming/cpp/c-runtime-library": {
+  "title": "c runtime library 에 대하여.",
+  "description": "mt, md 는 무엇일까? crt 는 무엇일까?"
  },
  "/blog/programming/web/next-js-global-scss-order-problem": {
   "title": "next-js global scss order in production",
@@ -81,17 +85,17 @@
   "title": "WPF Win32Exception 122",
   "description": "WPF 에서 윈도우 타이틀을 써야하는 이유"
  },
- "/blog/programming/tips/visual-studio-tips": {
-  "title": "Visual Studio Tips",
-  "description": "Useful Visual Studio Tips."
- },
  "/blog/programming/tips/win-cmd-tips": {
   "title": "Window Cmd Tips",
   "description": "Useful Window Command Tips."
  },
- "/home/_index": {
-  "title": "About",
-  "description": "홈페이지."
+ "/blog/programming/tips/visual-studio-tips": {
+  "title": "Visual Studio Tips",
+  "description": "Useful Visual Studio Tips."
+ },
+ "/private/memo/git-related": {
+  "title": "git 관련 메모",
+  "description": "git 관련하여 메모."
  },
  "/private/memo/mac-commands": {
   "title": "useful mac commands",

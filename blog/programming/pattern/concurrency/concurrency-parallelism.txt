@@ -1,0 +1,195 @@
+2:I[231,["309","static/chunks/309-6df188acb387243a.js","490","static/chunks/490-ef2bcd41c3cdfff1.js","56","static/chunks/56-115f08a27ee3228c.js","572","static/chunks/572-150c611821fb7b07.js","631","static/chunks/app/blog/%5B...categories%5D/page-b741aec8b582f78c.js"],""]
+3:I[4676,["309","static/chunks/309-6df188acb387243a.js","490","static/chunks/490-ef2bcd41c3cdfff1.js","56","static/chunks/56-115f08a27ee3228c.js","572","static/chunks/572-150c611821fb7b07.js","631","static/chunks/app/blog/%5B...categories%5D/page-b741aec8b582f78c.js"],"default"]
+6:I[8778,["309","static/chunks/309-6df188acb387243a.js","490","static/chunks/490-ef2bcd41c3cdfff1.js","56","static/chunks/56-115f08a27ee3228c.js","572","static/chunks/572-150c611821fb7b07.js","631","static/chunks/app/blog/%5B...categories%5D/page-b741aec8b582f78c.js"],"default"]
+7:I[565,["309","static/chunks/309-6df188acb387243a.js","490","static/chunks/490-ef2bcd41c3cdfff1.js","56","static/chunks/56-115f08a27ee3228c.js","572","static/chunks/572-150c611821fb7b07.js","631","static/chunks/app/blog/%5B...categories%5D/page-b741aec8b582f78c.js"],"default"]
+8:I[2396,["309","static/chunks/309-6df188acb387243a.js","490","static/chunks/490-ef2bcd41c3cdfff1.js","56","static/chunks/56-115f08a27ee3228c.js","572","static/chunks/572-150c611821fb7b07.js","631","static/chunks/app/blog/%5B...categories%5D/page-b741aec8b582f78c.js"],"WithTooltip"]
+9:I[9275,[],""]
+b:I[1343,[],""]
+c:I[8572,["929","static/chunks/4f9d9cd8-3c939e9f6426a766.js","712","static/chunks/3627521c-41a0d2f0bc3971f2.js","309","static/chunks/309-6df188acb387243a.js","490","static/chunks/490-ef2bcd41c3cdfff1.js","572","static/chunks/572-150c611821fb7b07.js","185","static/chunks/app/layout-99e04a9914f0847a.js"],"ContextProvider"]
+d:I[1890,["929","static/chunks/4f9d9cd8-3c939e9f6426a766.js","712","static/chunks/3627521c-41a0d2f0bc3971f2.js","309","static/chunks/309-6df188acb387243a.js","490","static/chunks/490-ef2bcd41c3cdfff1.js","572","static/chunks/572-150c611821fb7b07.js","185","static/chunks/app/layout-99e04a9914f0847a.js"],"default"]
+e:I[8832,["929","static/chunks/4f9d9cd8-3c939e9f6426a766.js","712","static/chunks/3627521c-41a0d2f0bc3971f2.js","309","static/chunks/309-6df188acb387243a.js","490","static/chunks/490-ef2bcd41c3cdfff1.js","572","static/chunks/572-150c611821fb7b07.js","185","static/chunks/app/layout-99e04a9914f0847a.js"],"default"]
+f:I[9482,["929","static/chunks/4f9d9cd8-3c939e9f6426a766.js","712","static/chunks/3627521c-41a0d2f0bc3971f2.js","309","static/chunks/309-6df188acb387243a.js","490","static/chunks/490-ef2bcd41c3cdfff1.js","572","static/chunks/572-150c611821fb7b07.js","185","static/chunks/app/layout-99e04a9914f0847a.js"],"default"]
+10:I[1116,["929","static/chunks/4f9d9cd8-3c939e9f6426a766.js","712","static/chunks/3627521c-41a0d2f0bc3971f2.js","309","static/chunks/309-6df188acb387243a.js","490","static/chunks/490-ef2bcd41c3cdfff1.js","572","static/chunks/572-150c611821fb7b07.js","185","static/chunks/app/layout-99e04a9914f0847a.js"],"default"]
+11:I[3871,["929","static/chunks/4f9d9cd8-3c939e9f6426a766.js","712","static/chunks/3627521c-41a0d2f0bc3971f2.js","309","static/chunks/309-6df188acb387243a.js","490","static/chunks/490-ef2bcd41c3cdfff1.js","572","static/chunks/572-150c611821fb7b07.js","185","static/chunks/app/layout-99e04a9914f0847a.js"],"default"]
+12:I[9838,["929","static/chunks/4f9d9cd8-3c939e9f6426a766.js","712","static/chunks/3627521c-41a0d2f0bc3971f2.js","309","static/chunks/309-6df188acb387243a.js","490","static/chunks/490-ef2bcd41c3cdfff1.js","572","static/chunks/572-150c611821fb7b07.js","185","static/chunks/app/layout-99e04a9914f0847a.js"],"default"]
+13:I[3809,["929","static/chunks/4f9d9cd8-3c939e9f6426a766.js","712","static/chunks/3627521c-41a0d2f0bc3971f2.js","309","static/chunks/309-6df188acb387243a.js","490","static/chunks/490-ef2bcd41c3cdfff1.js","572","static/chunks/572-150c611821fb7b07.js","185","static/chunks/app/layout-99e04a9914f0847a.js"],"default"]
+14:I[2527,["929","static/chunks/4f9d9cd8-3c939e9f6426a766.js","712","static/chunks/3627521c-41a0d2f0bc3971f2.js","309","static/chunks/309-6df188acb387243a.js","490","static/chunks/490-ef2bcd41c3cdfff1.js","572","static/chunks/572-150c611821fb7b07.js","185","static/chunks/app/layout-99e04a9914f0847a.js"],"default"]
+15:I[426,["929","static/chunks/4f9d9cd8-3c939e9f6426a766.js","712","static/chunks/3627521c-41a0d2f0bc3971f2.js","309","static/chunks/309-6df188acb387243a.js","490","static/chunks/490-ef2bcd41c3cdfff1.js","572","static/chunks/572-150c611821fb7b07.js","185","static/chunks/app/layout-99e04a9914f0847a.js"],"CopyButtonScriptor"]
+4:T17db,
+## 병렬성과 동시성
+
+병렬성(parallelism)은 문제에 대한 해결 수단 중 하나라고 생각할 수 있다. 
++ 32비트, 64비트 cpu 처럼 기본 처리 단위도 병렬성을 갖고 있다. 나아가 cpu 는 pipelining, out-of-order execution, speculative execution 등으로 병렬성을 통해 성능을 향상시키고 있다. SIMD 같은 명령어 셋 역시 그렇다. 나아가 멀티코어프로세서 역시 병렬성을 갖고 있다.
+
+동시성(concurrency)은 문제의 속성이라고 생각할 수 있다. 노래를 들으며 웹서핑을 하는 것부터 유튜브가 세계 곳곳에 지어놓은 데이터센터까지 생활 속에서 다양하게 찾을 수 있다.
+
+이 글은 위의 성격을 갖는 프로그램을 만들기 위해 사용하는 도구들과 쉽게 범할 오류들을 공부하며 정리하는 글이다.
+
+## Thread Synchronize
+
+### Lock
+
+multithread programming 에서는 critical section 문제가 존재한다. 이를 해결하기 위해 semaphore, mutex, conditional variable 이라는 개념이 만들어졌다. 이들은 kernal 에서 운영체제와 하드웨어의 지원을 받아 구현되며 환경마다 구현방법이 다르다. 이에 대해선 아래를 참고.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VxVF6QzwtwI?si=6iDSUkaWckzT5pSi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<br/>
+
+이를 기초로 해서 더 복잡한 기능이 구현된다.
++ 예를들어 monitor 는 java 나 c# 의 프레임워크 차원에서 제공하는 기능으로 process 안에서의 mutex 와 conditional variable 기능을 지원한다. process 간에는 적용되지 않으므로 파일 시스템 등에는 적절하지 않지만 대신 더 빠르다.[^so-mutex-vs-monitor]
++ 이외에 interrupt 가능한 lock(일반적으로 데드락 스레드는 interrupt 불가능하다), 타임아웃 기능이 붙은 lock 도 있다.
++ 하드웨어에서 지원하지 않는 크기의 데이터에 대한 atomic 연산을 구현하기 위해 lock 을 내부적으로 사용한다.
+
+### Memory Model
+
+lock 뿐만 아니라 Memory Model 이 환경마다 다르므로 주의할 필요가 있다.
+
++ c 환경에서 힙에 있는 값을 변경하면 모든 스레드에 적용이 된다. 
++ [Java Memory Model](https://docs.oracle.com/javase/specs/jls/se8/html/jls-17.html) 에서는 ```volatile``` 키워드를 쓰는 등의 방법을 쓰지 않으면 보장이 되지 않는다. 다시말해 read 에도 스레드 동기화가 필요하다는 말이다. 또한 Constructor 가 호출되기 전에 외부스레드가 인스턴스에 접근할 수도 있어서 주의해야한다.[^so1]
+
+
+### 주의사항
+
+#### Dead Lock
+
+기본적으로 두 개 이상의 lock 을 가지면 생길 수 있는 Dead Lock 은 두가지 규칙만 지키면 예방은 할 수 있다.
+1. 두개 이상의 lock 을 건다면 lock 의 순서를 부여하여 그 순서대로만 한다. 
+2. lock 을 걸고 외부 함수를 호출하는 경우 잠재적으로 위 규칙을 깰 수 있으니 자제한다.
+
+lock 을 걸면 안정성 테스트도 힘들어서 가능하면 lock 을 최소화하는게 좋다. 예를 들어서 race condition 이 있는 list 에 대해 루프를 돈다면 그 전체를 lock 걸고 복사한 뒤 이 복사본에 대해 루프를 도는게 좋다.
+
+유사품으로 live lock 이 있다.
+
+#### Try Catch
+
+```java
+mylock.lock();
+try{
+    ...
+} finally { table.unlock();}
+```
+
+lock/unlock 을 각각 호출하는 경우 ```try...finally``` 문으로 예외가 일어나도 반드시 unlock 을 할 수 있도록 해야한다.
+
+#### Spurious Wakeup
+
+```java
+synchronized(this){
+    while(isValidCondition) // wake 후 Condition 을 반드시 체크해야하므로 if 로 대체 불가능.
+        wait();
+}
+```
+
+wait 시 의도하지 않았는데 Thread 가 깨어나는 [__spurious wakeup__](https://en.wikipedia.org/wiki/Spurious_wakeup) 을 유의하여 wakeup 이후에 Condition 을 다시 체크해야한다. 그래서 위처럼 ```while``` 문처럼 반복문을 사용하여 구현한다. 그렇지 않으면 의도치 않은 wakeup 이 발생한 경우 공유자원에 여러 스레드가 접근하게 되어 프로그램이 오작동을 할 수 있다.
+
+### Patterns
+
+copy on write array list. 내부 리스트 값을 변경할 때 카피 본을 생성하고 외부에서 루프를 돌 때는 카피본에 대해서 돌게하여 루프 시에 lock 을 걸지 않도록 해준다. 대신 수정이 잦으면 copy 때문에 더 느릴 수 있다.
+
+#### Thread Pool
+
+Thread 의 생성 비용 및 과도한 생성을 막는 패턴이다. 이는 다양한 패턴으로 분화된다.
+
+분할정복을 위한 fork/join pool, 
+
+#### [Double Checked Pattern](https://en.wikipedia.org/wiki/Double-checked_locking)
+
+잘못쓰면 잡기 힘든 오류를 만들어내는 안티패턴이다. 대개 싱글톤에서 사용되므로 직접 구현하기 보단 안전하다고 판명된 코드를 쓰는게 편하다.
+
+#### Producer Consumer Pattern
+
+Producer 와 Consummer 사이를 concurrency 를 지원하는 queue 로 연결해서 multi-threads 의 이점을 살리는 패턴이다. 이때 Producer 의 생산 속도가 너무 빠르면 메모리가 부족할 수 있으므로 둘 사이의 속도를 조절하는게 중요하다. java 에서는 ```ArrayBlockingQueue``` 가 이를 지원하는 예이다.
+
+#### Lock Striping
+
+HashMap 의 Atomicity 최적화 기법. Container 전체가 아니라 Bucket 마다 lock 을 걸게 해서 높은 수준의 병렬성을 지원한다.
+
+0.
+
+## 참고자료
+
+[7가지 동시성 모델, 폴 부처](https://m.hanbit.co.kr/store/books/book_view.html?p_code=B3745244799)
+
+[^so1]:[java constructor and thread safety, so](https://stackoverflow.com/questions/61803042/java-constructors-and-thread-safety)
+
+[^so-mutex-vs-monitor]:[mutex vs montior, so](https://stackoverflow.com/questions/38159668/monitor-vs-mutex)5:T24c1,<h2 id="병렬성과-동시성">병렬성과 동시성</h2>
+<p>병렬성(parallelism)은 문제에 대한 해결 수단 중 하나라고 생각할 수 있다.</p>
+<ul>
+<li>32비트, 64비트 cpu 처럼 기본 처리 단위도 병렬성을 갖고 있다. 나아가 cpu 는 pipelining, out-of-order execution, speculative execution 등으로 병렬성을 통해 성능을 향상시키고 있다. SIMD 같은 명령어 셋 역시 그렇다. 나아가 멀티코어프로세서 역시 병렬성을 갖고 있다.</li>
+</ul>
+<p>동시성(concurrency)은 문제의 속성이라고 생각할 수 있다. 노래를 들으며 웹서핑을 하는 것부터 유튜브가 세계 곳곳에 지어놓은 데이터센터까지 생활 속에서 다양하게 찾을 수 있다.</p>
+<p>이 글은 위의 성격을 갖는 프로그램을 만들기 위해 사용하는 도구들과 쉽게 범할 오류들을 공부하며 정리하는 글이다.</p>
+<h2 id="Thread-Synchronize">Thread Synchronize</h2>
+<h3 id="Lock">Lock</h3>
+<p>multithread programming 에서는 critical section 문제가 존재한다. 이를 해결하기 위해 semaphore, mutex, conditional variable 이라는 개념이 만들어졌다. 이들은 kernal 에서 운영체제와 하드웨어의 지원을 받아 구현되며 환경마다 구현방법이 다르다. 이에 대해선 아래를 참고.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VxVF6QzwtwI?si=6iDSUkaWckzT5pSi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<br>
+<p>이를 기초로 해서 더 복잡한 기능이 구현된다.</p>
+<ul>
+<li>예를들어 monitor 는 java 나 c# 의 프레임워크 차원에서 제공하는 기능으로 process 안에서의 mutex 와 conditional variable 기능을 지원한다. process 간에는 적용되지 않으므로 파일 시스템 등에는 적절하지 않지만 대신 더 빠르다.<sup><a href="#user-content-fn-so-mutex-vs-monitor" id="user-content-fnref-so-mutex-vs-monitor" data-footnote-ref="" aria-describedby="footnote-label">1</a></sup></li>
+<li>이외에 interrupt 가능한 lock(일반적으로 데드락 스레드는 interrupt 불가능하다), 타임아웃 기능이 붙은 lock 도 있다.</li>
+<li>하드웨어에서 지원하지 않는 크기의 데이터에 대한 atomic 연산을 구현하기 위해 lock 을 내부적으로 사용한다.</li>
+</ul>
+<h3 id="Memory-Model">Memory Model</h3>
+<p>lock 뿐만 아니라 Memory Model 이 환경마다 다르므로 주의할 필요가 있다.</p>
+<ul>
+<li>c 환경에서 힙에 있는 값을 변경하면 모든 스레드에 적용이 된다.</li>
+<li><a href="https://docs.oracle.com/javase/specs/jls/se8/html/jls-17.html">Java Memory Model</a> 에서는 <code>volatile</code> 키워드를 쓰는 등의 방법을 쓰지 않으면 보장이 되지 않는다. 다시말해 read 에도 스레드 동기화가 필요하다는 말이다. 또한 Constructor 가 호출되기 전에 외부스레드가 인스턴스에 접근할 수도 있어서 주의해야한다.<sup><a href="#user-content-fn-so1" id="user-content-fnref-so1" data-footnote-ref="" aria-describedby="footnote-label">2</a></sup></li>
+</ul>
+<h3 id="주의사항">주의사항</h3>
+<h4 id="Dead-Lock">Dead Lock</h4>
+<p>기본적으로 두 개 이상의 lock 을 가지면 생길 수 있는 Dead Lock 은 두가지 규칙만 지키면 예방은 할 수 있다.</p>
+<ol>
+<li>두개 이상의 lock 을 건다면 lock 의 순서를 부여하여 그 순서대로만 한다.</li>
+<li>lock 을 걸고 외부 함수를 호출하는 경우 잠재적으로 위 규칙을 깰 수 있으니 자제한다.</li>
+</ol>
+<p>lock 을 걸면 안정성 테스트도 힘들어서 가능하면 lock 을 최소화하는게 좋다. 예를 들어서 race condition 이 있는 list 에 대해 루프를 돈다면 그 전체를 lock 걸고 복사한 뒤 이 복사본에 대해 루프를 도는게 좋다.</p>
+<p>유사품으로 live lock 이 있다.</p>
+<h4 id="Try-Catch">Try Catch</h4>
+<figure data-rehype-pretty-code-figure=""><div data-rehype-pretty-code-title="" data-language="java" data-theme="github-dark" data-code="mylock.lock();
+try{
+    ...
+} finally { table.unlock();}
+">java<button title="code-copy-btn"></button></div><pre style="background-color:#24292e;color:#e1e4e8" tabindex="0" data-language="java" data-theme="github-dark"><code data-language="java" data-theme="github-dark" style="display: grid;"><span data-line=""><span style="color:#E1E4E8">mylock.</span><span style="color:#B392F0">lock</span><span style="color:#E1E4E8">();</span></span>
+<span data-line=""><span style="color:#F97583">try</span><span style="color:#E1E4E8">{</span></span>
+<span data-line=""><span style="color:#E1E4E8">    ...</span></span>
+<span data-line=""><span style="color:#E1E4E8">} </span><span style="color:#F97583">finally</span><span style="color:#E1E4E8"> { table.</span><span style="color:#B392F0">unlock</span><span style="color:#E1E4E8">();}</span></span></code></pre></figure>
+<p>lock/unlock 을 각각 호출하는 경우 <code>try...finally</code> 문으로 예외가 일어나도 반드시 unlock 을 할 수 있도록 해야한다.</p>
+<h4 id="Spurious-Wakeup">Spurious Wakeup</h4>
+<figure data-rehype-pretty-code-figure=""><div data-rehype-pretty-code-title="" data-language="java" data-theme="github-dark" data-code="synchronized(this){
+    while(isValidCondition) // wake 후 Condition 을 반드시 체크해야하므로 if 로 대체 불가능.
+        wait();
+}
+">java<button title="code-copy-btn"></button></div><pre style="background-color:#24292e;color:#e1e4e8" tabindex="0" data-language="java" data-theme="github-dark"><code data-language="java" data-theme="github-dark" style="display: grid;"><span data-line=""><span style="color:#F97583">synchronized</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">this</span><span style="color:#E1E4E8">){</span></span>
+<span data-line=""><span style="color:#F97583">    while</span><span style="color:#E1E4E8">(isValidCondition) </span><span style="color:#6A737D">// wake 후 Condition 을 반드시 체크해야하므로 if 로 대체 불가능.</span></span>
+<span data-line=""><span style="color:#B392F0">        wait</span><span style="color:#E1E4E8">();</span></span>
+<span data-line=""><span style="color:#E1E4E8">}</span></span></code></pre></figure>
+<p>wait 시 의도하지 않았는데 Thread 가 깨어나는 <a href="https://en.wikipedia.org/wiki/Spurious_wakeup"><strong>spurious wakeup</strong></a> 을 유의하여 wakeup 이후에 Condition 을 다시 체크해야한다. 그래서 위처럼 <code>while</code> 문처럼 반복문을 사용하여 구현한다. 그렇지 않으면 의도치 않은 wakeup 이 발생한 경우 공유자원에 여러 스레드가 접근하게 되어 프로그램이 오작동을 할 수 있다.</p>
+<h3 id="Patterns">Patterns</h3>
+<p>copy on write array list. 내부 리스트 값을 변경할 때 카피 본을 생성하고 외부에서 루프를 돌 때는 카피본에 대해서 돌게하여 루프 시에 lock 을 걸지 않도록 해준다. 대신 수정이 잦으면 copy 때문에 더 느릴 수 있다.</p>
+<h4 id="Thread-Pool">Thread Pool</h4>
+<p>Thread 의 생성 비용 및 과도한 생성을 막는 패턴이다. 이는 다양한 패턴으로 분화된다.</p>
+<p>분할정복을 위한 fork/join pool,</p>
+<h4 id="Double-Checked-Pattern"><a href="https://en.wikipedia.org/wiki/Double-checked_locking">Double Checked Pattern</a></h4>
+<p>잘못쓰면 잡기 힘든 오류를 만들어내는 안티패턴이다. 대개 싱글톤에서 사용되므로 직접 구현하기 보단 안전하다고 판명된 코드를 쓰는게 편하다.</p>
+<h4 id="Producer-Consumer-Pattern">Producer Consumer Pattern</h4>
+<p>Producer 와 Consummer 사이를 concurrency 를 지원하는 queue 로 연결해서 multi-threads 의 이점을 살리는 패턴이다. 이때 Producer 의 생산 속도가 너무 빠르면 메모리가 부족할 수 있으므로 둘 사이의 속도를 조절하는게 중요하다. java 에서는 <code>ArrayBlockingQueue</code> 가 이를 지원하는 예이다.</p>
+<h4 id="Lock-Striping">Lock Striping</h4>
+<p>HashMap 의 Atomicity 최적화 기법. Container 전체가 아니라 Bucket 마다 lock 을 걸게 해서 높은 수준의 병렬성을 지원한다.</p>
+<ol start="0">
+<li></li>
+</ol>
+<h2 id="참고자료">참고자료</h2>
+<p><a href="https://m.hanbit.co.kr/store/books/book_view.html?p_code=B3745244799">7가지 동시성 모델, 폴 부처</a></p>
+<section data-footnotes="" class="footnotes"><h2 class="sr-only" id="Footnotes">Footnotes</h2>
+<ol>
+<li id="user-content-fn-so-mutex-vs-monitor">
+<p><a href="https://stackoverflow.com/questions/38159668/monitor-vs-mutex">mutex vs montior, so</a> <a href="#user-content-fnref-so-mutex-vs-monitor" data-footnote-backref="" aria-label="Back to reference 1" class="data-footnote-backref">↩</a></p>
+</li>
+<li id="user-content-fn-so1">
+<p><a href="https://stackoverflow.com/questions/61803042/java-constructors-and-thread-safety">java constructor and thread safety, so</a> <a href="#user-content-fnref-so1" data-footnote-backref="" aria-label="Back to reference 2" class="data-footnote-backref">↩</a></p>
+</li>
+</ol>
+</section>a:["categories","programming/pattern/concurrency/concurrency-parallelism","c"]
+0:["MVHYlpv2M9tySlnBA9SXy",[[["",{"children":["blog",{"children":[["categories","programming/pattern/concurrency/concurrency-parallelism","c"],{"children":["__PAGE__?{\"categories\":[\"programming\",\"pattern\",\"concurrency\",\"concurrency-parallelism\"]}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["blog",{"children":[["categories","programming/pattern/concurrency/concurrency-parallelism","c"],{"children":["__PAGE__",{},[["$L1",["$","article",null,{"className":"content2","children":[["$","h1",null,{"className":"mobile:tw-text-2xl tw-text-3xl tw-leading-normal tw-font-bold tw-mt-0","itemProp":"headline","children":"Patterns for Concurrency Programming"}],["$","nav",null,{"className":"tw-flex tw-flex-row tw-text-smtw-mb-4","children":[["$","span",null,{"className":"material-symbols-outlined md-base tw-self-center tw-align-text-top  tw-w-5","children":"folder_open"}],["$","$L2",null,{"className":"tw-text-sm","href":"/","rel":"$undefined","target":"_self","onClick":"$undefined","prefetch":false,"children":"Home"}],[["$","div","/blog/",{"className":"tw-flex tw-flex-row tw-text-sm","children":[["$","div",null,{"children":"/"}],["$","$L2",null,{"className":"$undefined","href":"/blog/","rel":"$undefined","target":"_self","onClick":"$undefined","prefetch":false,"children":"blog"}]]}],["$","div","/blog/programming/",{"className":"tw-flex tw-flex-row tw-text-sm","children":[["$","div",null,{"children":"/"}],["$","$L2",null,{"className":"$undefined","href":"/blog/programming/","rel":"$undefined","target":"_self","onClick":"$undefined","prefetch":false,"children":"programming"}]]}],["$","div","/blog/programming/pattern/",{"className":"tw-flex tw-flex-row tw-text-sm","children":[["$","div",null,{"children":"/"}],["$","$L2",null,{"className":"$undefined","href":"/blog/programming/pattern/","rel":"$undefined","target":"_self","onClick":"$undefined","prefetch":false,"children":"pattern"}]]}],["$","div","/blog/programming/pattern/concurrency/",{"className":"tw-flex tw-flex-row tw-text-sm","children":[["$","div",null,{"children":"/"}],["$","$L2",null,{"className":"$undefined","href":"/blog/programming/pattern/concurrency/","rel":"$undefined","target":"_self","onClick":"$undefined","prefetch":false,"children":"concurrency"}]]}],["$","div","/blog/programming/pattern/concurrency/concurrency-parallelism/",{"className":"tw-flex tw-flex-row tw-text-sm","children":[["$","div",null,{"children":"/"}],["$","$L2",null,{"className":"$undefined","href":"/blog/programming/pattern/concurrency/concurrency-parallelism/","rel":"$undefined","target":"_self","onClick":"$undefined","prefetch":false,"children":"concurrency-parallelism"}]]}]],"$undefined"]}],["$","div",null,{"className":"tw-mt-0.5","children":["$","div",null,{"className":"tw-flex tw-flex-row tw-text-sm","children":[["$","i",null,{"className":"material-symbols-outlined md-sm tw-self-center tw-w-5","children":"schedule"}],["$","div",null,{"className":"tw-color-text-dimmed","children":"Posted  :"}],["$","div",null,{"className":"tw-ml-2","children":"4/29/2024"}]]}]}],["$","$L3",null,{"mdSrc":"$4"}],["$","hr",null,{}],["$","section",null,{"className":"tw-my-10","children":["$","div",null,{"dangerouslySetInnerHTML":{"__html":"$5"}}]}],["$","$L6",null,{"tags":["design pattern","concurrency"]}],["$","hr",null,{"className":"tw-my-4"}],["$","section",null,{"className":"tw-m-0 tw-p-0","children":["$","div",null,{"className":"tw-grid tw-grid-cols-2","children":[["$","article",null,{"className":"tw-m-1 tw-rounded-2xl tw-border-2 tw-border-color-border tw-overflow-hidden hover:tw-border-color-primary hover:tw-transition-all hover:tw-duration-500","children":["$","$L2",null,{"className":"$undefined","href":"/blog/programming/pattern/concurrency/dining-philosopher","rel":"$undefined","target":"_self","onClick":"$undefined","prefetch":false,"children":["$","div",null,{"className":"tw-m-2 tw-overflow-hidden tw-text-center","children":[["$","h5",null,{"className":"tw-mb-0 tw-mt-0 false","children":"Previous Post"}],["$","h4",null,{"className":"tw-mb-0 tw-mt-0  tw-whitespace-nowrap tw-text-ellipsis tw-overflow-hidden","children":"Dining Philosopher"}]]}]}]}],["$","article",null,{"className":"tw-m-1 tw-rounded-2xl tw-border-color-border tw-border-2 ","children":["$","div",null,{"className":"tw-m-2 tw-overflow-hidden tw-text-center","children":[["$","h5",null,{"className":"tw-mb-0 tw-mt-0 tw-text-color-border","children":"Next Post"}],["$","h4",null,{"className":"tw-mb-0 tw-mt-0  tw-whitespace-nowrap tw-text-ellipsis tw-overflow-hidden","children":"$undefined"}]]}]}]]}]}],["$","hr",null,{"className":"tw-my-4"}],[["$","$L7",null,{}]," ",["$","hr",null,{"className":"tw-my-4"}]],["$","section",null,{"className":"","children":[["$","h4",null,{"className":"tw-mt-0 tw-mb-2","children":"Related Posts"}],["$","div",null,{"className":"tw-grid tw-grid-cols-1 desk:tw-grid-cols-2 medium:tw-grid-cols-4 medium-wide:tw-grid-cols-4","children":[["$","$L8",null,{"children":["$","article",null,{"className":"mobile:tw-h-24 tw-m-1 tw-border-2 tw-rounded-2xl tw-border-color-border hover:tw-border-color-primary hover:tw-transition-all hover:tw-duration-500","children":["$","$L2",null,{"className":"$undefined","href":"/blog/programming/pattern/concurrency/dining-philosopher","rel":"$undefined","target":"_self","onClick":"$undefined","prefetch":false,"children":["$","div",null,{"className":"tw-grid mobile:tw-grid-cols-3 tw-m-2 tw-overflow-hidden","children":["$undefined",["$","div",null,{"className":"mobile:tw-col-span-2 mobile:tw-h-20 desk:tw-max-h-36 tw-mx-2 tw-overflow-hidden","children":[["$","h4",null,{"className":"tw-mb-0 tw-mt-0  tw-whitespace-nowrap tw-text-ellipsis tw-overflow-hidden tooltip-hover","children":"Dining Philosopher"}],["$","p",null,{"className":"tw-text-color-text-light tw-text-sm  tw-text-ellipsis tw-overflow-hidden tooltip-hover","children":"Dining Philosopher 관련 정리"}]]}]]}]}]}]}]]}]]}]]}],[["$","link","0",{"rel":"stylesheet","href":"/study-log/_next/static/css/d1ab85c59d8dbdc1.css","precedence":"next","crossOrigin":"$undefined"}]]],null],null]},[[null,["$","$L9",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$a","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Lb",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null],null]},[null,["$","$L9",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Lb",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/study-log/_next/static/css/dd7e91777d3df03c.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/study-log/_next/static/css/0f19ac8f456a8076.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"tw-relative tw-min-h-screen tw-bg-color-page-background","children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(function(){try{(null==localStorage.getItem(\"theme\")&&window.matchMedia(\"(prefers-color-scheme: dark)\").matches||\"dark\"==localStorage.getItem(\"theme\"))&&document.documentElement.setAttribute(\"data-theme\",\"dark\")}catch(e){}})()"}}],["$","link",null,{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+KR&display=swap"}],["$","link",null,{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css","integrity":"sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC","crossOrigin":"anonymous"}],["$","$Lc",null,{"children":[["$","nav",null,{"className":"masthead_masthead__zVIwm","children":[["$","$Ld",null,{}],["$","$L2",null,{"className":"tw-self-center tw-ml-1 tw-font-sans tw-font-bold tw-text-color-primary tw-text-xl hover:tw-text-color-text","href":"/","rel":"$undefined","target":"_self","onClick":"$undefined","prefetch":false,"children":"LOG | STUDY"}],["$","div",null,{"className":"tw-grow"}],["$","$Le",null,{"className":"tw-flex tw-self-center tw-text-xl"}],["$","$Lf",null,{"className":"tw-flex tw-self-center tw-ml-2 tw-mr-4 tw-text-xl "}]]}],["$","$L10",null,{}],["$","aside",null,{"children":["$","$L11",null,{"children":["$","div",null,{"className":"sidebar_sidebar__gN2ma","children":[["$","$L12",null,{"slug":"/","label":"HOME","refCount":-1,"depth":0}],["$","$L12",null,{"slug":"/portfolio","label":"PORTFOLIO★","refCount":-1,"depth":0}],["$","$L12",null,{"slug":"/tags","label":"TAGS","refCount":-1,"depth":0}],["$","div",null,{"children":[["$","$L12","/blog",{"slug":"/blog","label":"BLOG","refCount":20,"depth":0,"children":[["$","$L12","/blog/study",{"slug":"/blog/study","label":"STUDY","refCount":1,"depth":1,"children":"$undefined"}],["$","$L12","/blog/computer-science",{"slug":"/blog/computer-science","label":"COMPUTER-SCIENCE","refCount":3,"depth":1,"children":[["$","$L12","/blog/computer-science/graphics",{"slug":"/blog/computer-science/graphics","label":"GRAPHICS","refCount":3,"depth":2,"children":"$undefined"}]]}],["$","$L12","/blog/programming",{"slug":"/blog/programming","label":"PROGRAMMING","refCount":16,"depth":1,"children":[["$","$L12","/blog/programming/pattern",{"slug":"/blog/programming/pattern","label":"PATTERN","refCount":6,"depth":2,"children":[["$","$L12","/blog/programming/pattern/concurrency",{"slug":"/blog/programming/pattern/concurrency","label":"CONCURRENCY","refCount":2,"depth":3,"children":"$undefined"}]]}],["$","$L12","/blog/programming/cpp",{"slug":"/blog/programming/cpp","label":"CPP","refCount":1,"depth":2,"children":"$undefined"}],["$","$L12","/blog/programming/web",{"slug":"/blog/programming/web","label":"WEB","refCount":3,"depth":2,"children":"$undefined"}],["$","$L12","/blog/programming/wpf",{"slug":"/blog/programming/wpf","label":"WPF","refCount":4,"depth":2,"children":"$undefined"}],["$","$L12","/blog/programming/tips",{"slug":"/blog/programming/tips","label":"TIPS","refCount":2,"depth":2,"children":"$undefined"}]]}]]}]]}]]}]}]}],["$","section",null,{"children":["$","$L13",null,{"children":["$","$L14",null,{}]}]}],["$","main",null,{"className":"tw-mt-nav-height tw-pb-52","children":["$","$L9",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Lb",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","main",null,{"children":["$","div",null,{"children":"404"}]}],"notFoundStyles":[]}]}],["$","footer",null,{"className":"tw-absolute tw-w-full -tw-bottom-20","children":["$","div",null,{"className":"tw-backdrop-brightness-95 tw-text-xs","children":["$","div",null,{"className":"tw-flex tw-p-4 tw-mr-4 tw-ml-4 mobile:tw-flex-col dark:tw-border-t-color-border dark:tw-border-t-2","children":[["$","div",null,{"className":"tw-flex-col","children":[["$","div",null,{"className":"tw-mb-3","children":["$","$L2",null,{"className":"tw-flex tw-self-center","href":"https://github.com/Mona04","rel":"$undefined","target":"_self","onClick":"$undefined","prefetch":false,"children":[["$","svg",null,{"stroke":"currentColor","fill":"currentColor","strokeWidth":"0","viewBox":"0 0 1024 1024","className":"tw-self-center","children":["$undefined",[["$","path","0",{"d":"M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0 1 38.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z","children":"$undefined"}]]],"style":{"color":"$undefined"},"height":"1em","width":"1em","xmlns":"http://www.w3.org/2000/svg"}],["$","div",null,{"className":"tw-ml-1 tw-font-bold","children":"GITHUB"}]]}]}],["$","div",null,{"className":"","children":["© 2024 Mona04. Powered by ",["$","$L2",null,{"className":"$undefined","href":"https://nextjs.org/","rel":"noopener noreferrer","target":"_blank","onClick":"$undefined","prefetch":false,"children":"NextJS"}],"."]}]]}],["$","div",null,{"className":"tw-flex tw-self-end tw-ml-auto mobile:tw-hidden","children":[["$","div",null,{"className":"","children":"Last Build:"}],["$","div",null,{"className":"tw-ml-1","children":"21:1"}],["$","div",null,{"className":"tw-ml-1","children":"2024/9/24"}]]}]]}]}]}]]}],["$","$L15",null,{}]]}]}]],null],null],["$L16",null]]]]
+16:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Patterns for Concurrency Programming"}],["$","meta","3",{"name":"description","content":"Concurrency Programming 에서 쓰이는 도구와 쉽게 범할 요류들 정리"}],["$","link","4",{"rel":"author","href":"moksha1905@gmail.com"}],["$","meta","5",{"name":"author","content":"Mona04"}],["$","meta","6",{"name":"category","content":"/blog/programming/pattern/concurrency/concurrency-parallelism"}],["$","link","7",{"rel":"canonical","href":"https://mona04.github.io/study-log/blog/programming/pattern/concurrency/concurrency-parallelism"}],["$","link","8",{"rel":"icon","href":"/study-log/favicon.ico"}]]
+1:null
