@@ -20,7 +20,7 @@
     "concurrently": "^8.2.2",
     "content-manager": "file:./packages/content-manager",
     "fs": "^0.0.1-security",
-    "next": "14.1.4",
+    "next": "14.2.12",
     "next-image-export-optimizer": "1.12.3",
     "next-sitemap": "^4.1.8",
     "postcss": "^8.4.27",

@@ -1,30 +1,36 @@
 ---
 title: Patterns for Concurrency Programming
-description: Concurrency Programming 에서 쓰이는 패턴과 쉽게 범할 요류들 정리
+description: Concurrency Programming 에서 쓰이는 도구와 쉽게 범할 요류들 정리
 date: 2024-04-29
 tags: [design pattern, concurrency]
 ---
 
-이 글은 Concurrency Programming 을 하면서 사용하게 되는 패턴들과 쉽게 범할 오류들을 공부하며 정리하는 글입니다.
+## 병렬성과 동시성
 
-## Lock
+병렬성(parallelism)은 문제에 대한 해결 수단 중 하나라고 생각할 수 있다. 
++ 32비트, 64비트 cpu 처럼 기본 처리 단위도 병렬성을 갖고 있다. 나아가 cpu 는 pipelining, out-of-order execution, speculative execution 등으로 병렬성을 통해 성능을 향상시키고 있다. SIMD 같은 명령어 셋 역시 그렇다. 나아가 멀티코어프로세서 역시 병렬성을 갖고 있다.
 
-### Primitives
+동시성(concurrency)은 문제의 속성이라고 생각할 수 있다. 노래를 들으며 웹서핑을 하는 것부터 유튜브가 세계 곳곳에 지어놓은 데이터센터까지 생활 속에서 다양하게 찾을 수 있다.
 
-multithread programming 에서는 critical section 문제가 생기고 이를 위해서 semaphore, mutex, conditional variable 이라는 개념이 만들어졌다. 이들은 kernal 에서 운영체제와 하드웨어의 지원을 받아 구현되며 환경마다 구현방법이 다르다. 이에 대해선 아래를 참고.
+이 글은 위의 성격을 갖는 프로그램을 만들기 위해 사용하는 도구들과 쉽게 범할 오류들을 공부하며 정리하는 글이다.
+
+## Thread Synchronize
+
+### Lock
+
+multithread programming 에서는 critical section 문제가 존재한다. 이를 해결하기 위해 semaphore, mutex, conditional variable 이라는 개념이 만들어졌다. 이들은 kernal 에서 운영체제와 하드웨어의 지원을 받아 구현되며 환경마다 구현방법이 다르다. 이에 대해선 아래를 참고.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/VxVF6QzwtwI?si=6iDSUkaWckzT5pSi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<br/>
 
-이를 기초로 해서 monitor 같이 더 복잡한 기능이 구현된다.
-
-### Extension
-
-monitor 는 java 나 c# 의 프레임워크 차원에서 제공하는 기능으로 process 안에서의 mutex 와 conditional variable 기능을 지원한다. process 간에는 적용되지 않으므로 파일 시스템 등에는 적절하지 않고 대신 더 빠르다.[^so-mutex-vs-monitor]
-
+이를 기초로 해서 더 복잡한 기능이 구현된다.
++ 예를들어 monitor 는 java 나 c# 의 프레임워크 차원에서 제공하는 기능으로 process 안에서의 mutex 와 conditional variable 기능을 지원한다. process 간에는 적용되지 않으므로 파일 시스템 등에는 적절하지 않지만 대신 더 빠르다.[^so-mutex-vs-monitor]
++ 이외에 interrupt 가능한 lock(일반적으로 데드락 스레드는 interrupt 불가능하다), 타임아웃 기능이 붙은 lock 도 있다.
++ 하드웨어에서 지원하지 않는 크기의 데이터에 대한 atomic 연산을 구현하기 위해 lock 을 내부적으로 사용한다.
 
 ### Memory Model
 
-Memory Model 이 환경마다 다르므로 주의할 필요가 있다.
+lock 뿐만 아니라 Memory Model 이 환경마다 다르므로 주의할 필요가 있다.
 
 + c 환경에서 힙에 있는 값을 변경하면 모든 스레드에 적용이 된다. 
 + [Java Memory Model](https://docs.oracle.com/javase/specs/jls/se8/html/jls-17.html) 에서는 ```volatile``` 키워드를 쓰는 등의 방법을 쓰지 않으면 보장이 되지 않는다. 다시말해 read 에도 스레드 동기화가 필요하다는 말이다. 또한 Constructor 가 호출되기 전에 외부스레드가 인스턴스에 접근할 수도 있어서 주의해야한다.[^so1]
