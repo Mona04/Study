@@ -2,7 +2,7 @@
 
 import {Command} from 'commander'
 import {Startup, Build} from 'archivelayer'
-import fs from 'fs'
+
 // base directory 가 아닌 현 모듈에 archivelayer.config.js 를 넣어뒀기 때문.
 const dirname = process.cwd() + '/packages/content-initializer/';
 const program = new Command();

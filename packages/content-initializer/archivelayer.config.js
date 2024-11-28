@@ -1,4 +1,4 @@
-import {defineDocumentType} from "archivelayer"
+import { defineDocumentType } from "archivelayer"
 import { readFileSync } from 'fs'
 import { visit } from 'unist-util-visit'
 

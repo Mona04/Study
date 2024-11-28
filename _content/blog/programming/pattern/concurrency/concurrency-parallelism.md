@@ -8,7 +8,7 @@ tags: [design pattern, concurrency]
 ## 병렬성과 동시성
 
 병렬성(parallelism)은 문제에 대한 해결 수단 중 하나라고 생각할 수 있다. 
-+ 32비트, 64비트 cpu 처럼 기본 처리 단위도 병렬성을 갖고 있다. 나아가 cpu 는 pipelining, out-of-order execution, speculative execution 등으로 병렬성을 통해 성능을 향상시키고 있다. SIMD 같은 명령어 셋 역시 그렇다. 나아가 멀티코어프로세서 역시 병렬성을 갖고 있다.
++ 32비트, 64비트 cpu 처럼 하드웨어도 병렬성을 갖고 있다. 나아가 cpu 는 pipelining, out-of-order execution, speculative execution 등으로 병렬성을 통해 성능을 향상시키고 있다. SIMD 같은 명령어 셋 역시 그렇다. 나아가 멀티코어프로세서 역시 병렬성을 갖고 있다.
 
 동시성(concurrency)은 문제의 속성이라고 생각할 수 있다. 노래를 들으며 웹서핑을 하는 것부터 유튜브가 세계 곳곳에 지어놓은 데이터센터까지 생활 속에서 다양하게 찾을 수 있다.
 
@@ -72,7 +72,9 @@ wait 시 의도하지 않았는데 Thread 가 깨어나는 [__spurious wakeup__]
 
 ### Patterns
 
-copy on write array list. 내부 리스트 값을 변경할 때 카피 본을 생성하고 외부에서 루프를 돌 때는 카피본에 대해서 돌게하여 루프 시에 lock 을 걸지 않도록 해준다. 대신 수정이 잦으면 copy 때문에 더 느릴 수 있다.
+#### copy on write array list. 
+
+내부 리스트 값을 변경할 때 카피 본을 생성하고 외부에서 루프를 돌 때는 카피본에 대해서 돌게하여 루프 시에 lock 을 걸지 않도록 해준다. 대신 수정이 잦으면 copy 때문에 더 느릴 수 있다.
 
 #### Thread Pool
 
@@ -90,9 +92,9 @@ Producer 와 Consummer 사이를 concurrency 를 지원하는 queue 로 연결�
 
 #### Lock Striping
 
-HashMap 의 Atomicity 최적화 기법. Container 전체가 아니라 Bucket 마다 lock 을 걸게 해서 높은 수준의 병렬성을 지원한다.
+HashMap 의 Atomicity 최적화 기법. Container 전체가 아니라 Bucket 마다 lock 을 걸게 해서 높은 수준의 병렬성을 지원한다. 
 
-0.
+비슷하게 리스트 같은 것도 Node 마다 lock 을 두고 Current/Next 만 Lock 을 걸어서 병렬성을 높일 수 있다.
 
 ## 참고자료
 
