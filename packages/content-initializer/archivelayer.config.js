@@ -39,7 +39,7 @@ const configs = {
       saveRawCode,
       [ rh_prettyCode, prettyCodeOptions() ],
       addCodeTitleBar,
-      [ rh_katex ],
+      [ rh_katex, makeKatexOptions() ],
     ]
   },
   markdown:{ 
@@ -97,6 +97,12 @@ function prettyCodeOptions()
   };
 }
 
+function latexMacros(){ 
+  return {
+  '\\abs': '\\left|#1\\right|',
+  '\\norm': '\\left\\|#1\\right\\|',
+  // ... other macros
+};}
 /**
  * https://docs.mathjax.org/en/latest/options/output/svg.html
  * @returns 
@@ -104,6 +110,7 @@ function prettyCodeOptions()
 function mathjaxOptions()
 {
   return {
+    tex: { macros: latexMacros()},
     svg: {
       scale: 1,                      // global scaling factor for all expressions
       minScale: .5,                  // smallest scaling factor to use
@@ -119,6 +126,14 @@ function mathjaxOptions()
       internalSpeechTitles: true,    // insert <title> tags with speech content
       titleID: 0                     // initial id number to use for aria-labeledby titles
     }
+  };
+}
+
+function makeKatexOptions() {
+  return {
+    macros: latexMacros(),
+    throwOnError: false,
+    strict: false
   };
 }
 
@@ -163,6 +178,23 @@ function attachHeaderID() {
       else
       {
         console.warn(`Cannot Attach ID to html Header\n${cur}`)    
+      }
+    });
+  }
+}
+
+/**
+   link prefix?
+ * @returns 
+ */
+function addLinkPrefix() {
+  return  async (tree , ...prop)  => {
+
+    visit(tree, 'element', (node) => {
+      if(node?.tagName !== 'a') return;
+      const link = node.properties?.href;
+      if(link !== undefined && link[0] == "/"){
+        node.properties.href = "/study-log" + link;
       }
     });
   }
