@@ -1,5 +1,5 @@
 ---
-title: VocaLink
+title: VocaNote
 description: 일본어를 공부하려는데 단어 외우기 빡세서 만드는 앱.
 date: 2024-05-23
 tags: [flutter]
