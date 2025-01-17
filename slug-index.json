@@ -3,15 +3,15 @@
   "title": "About",
   "description": "홈페이지."
  },
- "/portfolio/vocalink": {
-  "title": "VocaLink",
-  "description": "일본어를 공부하려는데 단어 외우기 빡세서 만드는 앱.",
-  "thumbnail": "/portfolio/memorizer.png"
- },
  "/portfolio/blog-construct": {
   "title": "My Blog: Requirements and Implementation",
   "description": "블로그 요구사항 및 구현 방법 서술.",
   "thumbnail": "/images/blog/construct-0.png"
+ },
+ "/portfolio/vocanote": {
+  "title": "VocaNote",
+  "description": "일본어를 공부하려는데 단어 외우기 빡세서 만드는 앱.",
+  "thumbnail": "/portfolio/memorizer.png"
  },
  "/blog/ps/ps-boj-5972": {
   "title": "백준 5972 - Package Delivery",
@@ -21,11 +21,19 @@
   "title": "New Beginnings",
   "description": ""
  },
- "/blog/computer-science/graphics/compute-shader": {
-  "title": "Particle System",
-  "description": ""
+ "/blog/thinking/new-year-obsidian": {
+  "title": "새해에 Obsidian 을 시작하는 글",
+  "description": "년이 바뀌고 자아반성을 시스템하고자 옵시디언을 세팅하면서 쓴 글"
  },
- "/blog/computer-science/graphics/particle-system": {
+ "/blog/computer-science/algorithm/dijstra": {
+  "title": "Dijkstra Algorithm",
+  "description": "dijkstra 를 이해하고 구현해보자."
+ },
+ "/blog/computer-science/algorithm/priority-queue": {
+  "title": "Priority Queue",
+  "description": "Priority Queue 를 구현해보자."
+ },
+ "/blog/computer-science/graphics/compute-shader": {
   "title": "Particle System",
   "description": ""
  },
@@ -33,13 +41,9 @@
   "title": "DirectX12",
   "description": ""
  },
- "/blog/computer-science/algorithm/priority-queue": {
-  "title": "Priority Queue",
-  "description": "Priority Queue 를 구현해보자."
- },
- "/blog/computer-science/algorithm/dijstra": {
-  "title": "Dijkstra Algorithm",
-  "description": "dijkstra 를 이해하고 구현해보자."
+ "/blog/computer-science/graphics/particle-system": {
+  "title": "Particle System",
+  "description": ""
  },
  "/blog/programming/cpp/c-runtime-library": {
   "title": "c runtime library 에 대하여.",
@@ -49,6 +53,10 @@
   "title": "DTO",
   "description": "Data Transport Object 의 역할"
  },
+ "/blog/programming/pattern/flutter-di": {
+  "title": "How DI works in Flutter.",
+  "description": "Flutter 의 Provider Pattern 이 어떻게 구현되는지 살펴보기."
+ },
  "/blog/programming/pattern/mvvm-disign-pattern": {
   "title": "MVVM 에서 사용하는 Design Pattern",
   "description": ""
@@ -56,10 +64,6 @@
  "/blog/programming/pattern/observable": {
   "title": "Observable 에 관한 메모",
   "description": "Observable 의 여러 기능. Hot/Cold Stream , 스레드 동기화 등"
- },
- "/blog/programming/pattern/flutter-di": {
-  "title": "How DI works in Flutter.",
-  "description": "Flutter 의 Provider Pattern 이 어떻게 구현되는지 살펴보기."
  },
  "/blog/programming/pattern/concurrency/concurrency-parallelism": {
   "title": "Patterns for Concurrency Programming",
@@ -69,63 +73,63 @@
   "title": "Dining Philosopher",
   "description": "Dining Philosopher 관련 정리"
  },
+ "/blog/programming/tips/visual-studio-tips": {
+  "title": "Visual Studio Tips",
+  "description": "Useful Visual Studio Tips."
+ },
+ "/blog/programming/tips/win-cmd-tips": {
+  "title": "Window Cmd Tips",
+  "description": "Useful Window Command Tips."
+ },
  "/blog/programming/web/next-js-global-scss-order-problem": {
   "title": "next-js global scss order in production",
-  "description": ""
- },
- "/blog/programming/web/react": {
-  "title": "Let's study React",
   "description": ""
  },
  "/blog/programming/web/ppi": {
   "title": "What is PPI, Logical Pixel and Reference Pixel?",
   "description": "The concepts of PPI, logical pixel, and reference pixel, and how they are related, with an example of the iPhone 12 Mini."
  },
- "/blog/programming/wpf/attached-property-vs-behavior": {
-  "title": "Attached Property VS Behavior",
+ "/blog/programming/web/react": {
+  "title": "Let's study React",
   "description": ""
  },
- "/blog/programming/wpf/xaml-binding-precaution": {
-  "title": "WPF Binding 주의사항",
-  "description": "WPF Binding 이 언제되는가?"
- },
- "/blog/programming/wpf/wpf-style-issue": {
-  "title": "WPF Xaml 작성요령",
+ "/blog/programming/wpf/attached-property-vs-behavior": {
+  "title": "Attached Property VS Behavior",
   "description": ""
  },
  "/blog/programming/wpf/wpf-bugs-win32exception-122": {
   "title": "WPF Win32Exception 122",
   "description": "WPF 에서 윈도우 타이틀을 써야하는 이유"
  },
- "/blog/programming/tips/win-cmd-tips": {
-  "title": "Window Cmd Tips",
-  "description": "Useful Window Command Tips."
+ "/blog/programming/wpf/wpf-style-issue": {
+  "title": "WPF Xaml 작성요령",
+  "description": ""
  },
- "/blog/programming/tips/visual-studio-tips": {
-  "title": "Visual Studio Tips",
-  "description": "Useful Visual Studio Tips."
+ "/blog/programming/wpf/xaml-binding-precaution": {
+  "title": "WPF Binding 주의사항",
+  "description": "WPF Binding 이 언제되는가?"
  },
  "/private/memo/git-related": {
   "title": "git 관련 메모",
   "description": "git 관련하여 메모."
  },
- "/private/memo/mac-commands": {
-  "title": "useful mac commands",
-  "description": "mac 에서 자수 쓰는 commands 모음."
- },
  "/private/memo/how-to-use": {
   "title": "Blog Manual",
   "description": "블로그 사용 및 글 작성 시에 참고할 여러 기능에 대해서 정리."
  },
- "/private/test/한글/한글": {
-  "title": "한글",
-  "description": "한글 테스트용 문서.",
-  "thumbnail": "/test/test2.png"
+ "/private/memo/mac-commands": {
+  "title": "useful mac commands",
+  "description": "mac 에서 자수 쓰는 commands 모음."
  },
  "/private/test/mdtest": {
   "title": "Markdown Test",
   "description": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.",
   "thumbnail": "/test/image.jpg"
+ },
+ "/private/test/한글/한글": {
+  "title": "한글",
+  "description": "한글 테스트용 문서.",
+  "thumbnail": "/test/test2.png"
  },
  "/private/test/mdxtest": {
   "title": "MDX Test",
